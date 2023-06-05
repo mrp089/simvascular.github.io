@@ -1,0 +1,19 @@
+img {
+    height: 50%;
+    width: 50%;
+}
+
+#skippyskip {
+    underline
+}
+
+a {
+    padding: 10px;
+    color: grey;
+    text-decoration: none;
+
+}
+
+a:hover {
+    color: lightgrey;
+}
