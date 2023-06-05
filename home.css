@@ -1,19 +1,82 @@
-img {
+.creditsLogo {
+    height: 60px;
+}
+
+.homeLogo {
     height: 50%;
     width: 50%;
 }
 
 #skippyskip {
-    underline
 }
 
 a {
-    padding: 10px;
-    color: grey;
-    text-decoration: none;
-
+    color: green;
 }
 
 a:hover {
+    color: lightseagreen;
+}
+
+.navy {
+    padding: 10px;
+    color: grey;
+    text-decoration: none;
+}
+
+.navy:hover {
     color: lightgrey;
+}
+
+.columnForGuides {
+    column-count: 3;
+    padding: 15px;
+}
+
+.columnImg {
+    float: left;
+    width: 20%;
+}
+
+.columnDesc {
+    float: right;
+    width: 80%;
+}
+
+.imgVMR {
+    height: 150px;
+    padding-right: 10%;
+}
+
+.column {
+    float: left;
+    width: 50%;
+}
+  
+.left {
+    width: 65%;
+}
+  
+.right {
+    width: 35%;
+}
+
+.twitterBox {
+    border: 15px solid lightblue;
+    padding: 50px;
+    margin: 20px;
+    height: 150px;
+}
+
+.boxybox {
+    border: 15px solid lightgrey;
+    padding: 50px;
+    margin: 20px;
+}
+  
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
