@@ -4,6 +4,31 @@
     object-fit: scale-down;
 }
 
+.headerBar {
+    height: 55px;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    border: 3px solid black;
+    background-color: white;
+}
+
+.skippyskip {
+    float: right;
+}
+
+.headerLogoContainer {
+    float: left;
+    height: 100%;
+}
+.headerLogoImage {
+    height: 100%;
+}
+
+.notHeader {
+    padding-top: 55px;
+}
+
 @media only screen and (min-width: 960px) {
     .creditContainer {
         padding: 0px;
@@ -31,10 +56,6 @@
     height: 100%;
     padding-top: 30px;
     padding-bottom: 30px;
-}
-
-#skippyskip {
-    border: 3px solid red;
 }
 
 a {
