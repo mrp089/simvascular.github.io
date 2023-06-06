@@ -1,7 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" class="html">
-  <head>
+<head>
+  <!-- This corresponds to a fontawesome kit but can be customized -->
+  <script src="https://kit.fontawesome.com/48644805cd.js" crossorigin="anonymous"></script>
+  
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  
+    <!-- Style CSS -->  
     <link rel="stylesheet" href="home.css">
+
+    <!-- browser tab labels -->
     <link rel="shortcut icon" type="image/jpg" href="svIcon.png"></link>
     <title>SimVascular</title>
   </head>
@@ -18,21 +37,32 @@
       <a class="navy" href="#team">Team</a>
       <a class="navy" href="#contact">Contact</a>
     </div>
-    <div class="row">
-      <div class="column left">
-        <img class="homeLogo" src="svLogoTitle.png" alt="SimVascular Logo"></img>
-        <p>The only fully opensource software package providing a complete pipeline from medical image data segmentation to patient specific blood flow simulation and analysis.</p>
-        <p>The <a href="https://gateway.simvascular.org/">SimVascular Supercomputing Gateway</a> provides access to High-Performance Computing (HPC) clusters for running simulations using SimVascular CFD solvers. Simulations benefit from the performance levels that only large-scale HPC systems can offer and typically run an order of magnitude faster than on most workstations.</p>
+
+    <!-- opening logo -->
+    <div class="homeLogoContainingDiv">
+      <img class="homeLogo" src="svLogoTitle.png" alt="SimVascular Logo"></img>
+    </div>
+
+    <p>The only fully opensource software package providing a complete pipeline from medical image data segmentation to patient specific blood flow simulation and analysis.</p>
+    <p>The <a href="https://gateway.simvascular.org/">SimVascular Supercomputing Gateway</a> provides access to High-Performance Computing (HPC) clusters for running simulations using SimVascular CFD solvers. Simulations benefit from the performance levels that only large-scale HPC systems can offer and typically run an order of magnitude faster than on most workstations.</p>
+    
+    <div class="row creditsRow">
+      <div class="col-lg-2 col-sm-4 col-12 creditContainer">
+        <img class="creditImage" src="stanfordmedicine.png" alt="Logo for Stanford Medicine"></img>
       </div>
-      <div class="column right">
-        <div class="twitterBox">boxy box</div>
+      <div class="col-lg-2 col-sm-4 col-12 creditContainer">
+        <img class="creditImage" src="ucberkeley.png" alt="Logo for UC Berkeley"></img>
+      </div>
+      <div class="col-lg-2 col-sm-4 col-12 creditContainer">
+        <img class="creditImage" src="osmsc.png" alt="Logo for osmsc"></img>
+      </div>
+      <div class="col-lg-2 col-sm-4 col-12 creditContainer">
+        <img class="creditImage" src="nsf.jpg" alt="Logo for NSF"></img>
+      </div>
+      <div class="col-lg-2 col-sm-4 col-12 creditContainer">
+        <img class="creditImage" src="simtk.png" alt="Logo for SimTK"></img>
       </div>
     </div>
-    <img class="creditsLogo" src="stanfordmedicine.png" alt="Logo for Stanford Medicine"></img>
-    <img class="creditsLogo" src="ucberkeley.png" alt="Logo for UC Berkeley"></img>
-    <img class="creditsLogo" src="osmsc.png" alt="Logo for osmsc"></img>
-    <img class="creditsLogo" src="nsf.jpg" alt="Logo for NSF"></img>
-    <img class="creditsLogo" src="simtk.png" alt="Logo for SimTK"></img>
 
     <h1 id="gallery">Gallery</h1>
     <h2 class="boxybox">picture gallery</h2>
@@ -88,6 +118,13 @@
       <h2 class="boxybox">the bio notes don't work :/</h2>
     <h1 id="contact">Contact Us</h1>
     <h2>We want your feedback *beady eyes*</h2>
+    <!-- <div class="row">
+      <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+        <p>
+          HIII
+        </p>
+      </div>
+    </div> -->
     <div>
       <h2>news mailing list</h2>
       <ul>
@@ -110,5 +147,14 @@
       </ul>
     </div>
     <h1>COPYRIGHT © SIMVASCULAR DEVELOPMENT TEAM - 2017</h1>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.21/jquery.csv.min.js"></script>
+    
   </body>
 </html>
