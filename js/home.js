@@ -1,13 +1,27 @@
 $("#iconForSkip").click(function() {
     var element = document.getElementById("contentOfSkip");
+    var smallScreen = false;
 
+    if (screen.width <= 767 && (document.documentElement.clientWidth <= 767)) {
+        smallScreen = true;
+    }
     if(element.classList.contains("visible"))
     {
         element.classList.remove("visible")
+
+        if (smallScreen) {
+            $('.html').css({"height": "auto", "overflow": "hidden"})
+            $('.body').css({"height": "auto", "overflow": "hidden"})
+        }
     }
     else
     {
-        element.classList.add("visible") 
+        element.classList.add("visible");
+        
+        if (smallScreen) {
+            $('.html').css({"height": "auto", "overflow": "auto"})
+            $('.body').css({"height": "auto", "overflow": "auto"})
+        }
     }
 });
 
