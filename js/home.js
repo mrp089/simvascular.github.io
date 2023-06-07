@@ -1,3 +1,17 @@
+$("#iconForSkip").click(function() {
+    var element = document.getElementById("contentOfSkip");
+
+    if(element.classList.contains("visible"))
+    {
+        element.classList.remove("visible")
+    }
+    else
+    {
+        element.classList.add("visible") 
+    }
+});
+
+
 // function checkWidth();
 
 // function checkWidth() {
