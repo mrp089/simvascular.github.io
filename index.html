@@ -27,185 +27,185 @@
     <title>SimVascular</title>
   </head>
   <body>
-<section class="navigationSection">
-  <nav>
-    <div class="row">
-      <div class="colContainsIcon">
-        <i class="fa-solid fa-bars" id="iconForSkip"></i>
-      </div>
-      <div class="colContainsContent">
-        <table id="contentOfSkip">
-            <tr>
-              <th>
-                <a class="skipItem" href="#home">Skip to Top</a>
-              </th>
-            </tr>
-            <tr>
-              <th>
-                <a class="skipItem" href="#gallery">Gallery</a>
-              </th>
-            </tr>
-            <tr>
-              <th>
-                <a class="skipItem" href="#download">Download</a>
-              </th>
-            </tr>
-            <tr>
-              <th>
-                <a class="skipItem" href="#documentation">Documentation</a>
-              </th>
-            </tr>
-            <tr>
-              <th>
-                <a class="skipItem" href="#tutor">Online Tutorials</a>
-              </th>
-            </tr>
-            <tr>
-              <th>
-                <a class="skipItem" href="#repository">Repository</a>
-              </th>
-            </tr>
-            <tr>
-              <th>
-                <a class="skipItem" href="#workshops">Workshops</a>
-              </th>
-            </tr>
-            <tr>
-              <th>
-                <a class="skipItem" href="#team">Team</a>
-              </th>
-            </tr>
-            <tr>
-              <th>
-                <a class="skipItem" href="#contact">Contact</a>
-              </th>
-            </tr>
-        </table>
-      </div>
-    
-    </div>
-  </nav>
-</section>
-    <section class="topLeftLogo">      
-      <div class="headerLogoContainer">
-        <img class="headerLogoImage" src="svLogoTitle.png" alt="SimVascular Logo"></img>
-      </div>
-    </section>
-    <section class="notHeader">
-      <div class="homeLogoContainingDiv">
-        <img class="homeLogo" src="svLogoTitle.png" alt="SimVascular Logo"></img>
-      </div>
-      <div class="twitterContainer col-lg-4">
-        <a class="twitter-timeline" data-lang="en" data-theme="dark" href="https://twitter.com/simvascular?ref_src=twsrc%5Etfw">Tweets by simvascular</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>      <!-- opening logo -->
-      </div>
-      <div class="introDescription col-lg-8">
-        <p>The only fully opensource software package providing a complete pipeline from medical image data segmentation to patient specific blood flow simulation and analysis.</p>
-        <p>The <a href="https://gateway.simvascular.org/">SimVascular Supercomputing Gateway</a> provides access to High-Performance Computing (HPC) clusters for running simulations using SimVascular CFD solvers. Simulations benefit from the performance levels that only large-scale HPC systems can offer and typically run an order of magnitude faster than on most workstations.</p>
-      
-        <div class="row creditsRow">
-          <div class="threeTopImages col-sm-4 col-12 creditContainer">
-            <img class="creditImage" src="stanfordmedicine.png" alt="Logo for Stanford Medicine"></img>
-          </div>
-          <div class="threeTopImages col-sm-4 col-12 creditContainer">
-            <img class="creditImage" src="ucberkeley.png" alt="Logo for UC Berkeley"></img>
-          </div>
-          <div class="threeTopImages col-sm-4 col-12 creditContainer">
-            <img class="creditImage" src="osmsc.png" alt="Logo for osmsc"></img>
-          </div>
-          <div class="threeTopImages col-sm-4 col-12 creditContainer">
-            <img class="creditImage" src="nsf.jpg" alt="Logo for NSF"></img>
-          </div>
-          <div class="threeTopImages col-sm-4 col-12 creditContainer">
-            <img class="creditImage" src="simtk.png" alt="Logo for SimTK"></img>
-          </div>
-        </div>
-      </div>      
-      
-
-      <h1 id="gallery">Gallery</h1>
-      <h2 class="boxybox">picture gallery</h2>
-      <h2 class="boxybox">animation gallery</h2>
-      <h1 id="download">Download</h1>
-      <h2 class="boxybox">USERS: DOWNLOAD INSTALLER PACKAGES</h2>
-      <h2 class="boxybox">DEVELOPERS: VISIT OUR SOURCE CODE REPOSITORY</h2>
-      <h1 id="documentation">Documentation</h1>
-      <div class="columnForGuides">
-        <div>
-          <h2>user guides</h2>
-          <ul>
-            <li>listy list</li>
-            <li>listy list</li>
-          </ul>
-        </div>
-        <div>
-          <h2>clinical case studies</h2>
-          <ul>
-            <li>listy list</li>
-            <li>listy list</li>
-          </ul>
-        </div>
-        <div>
-          <h2>developer guides</h2>
-          <ul>
-            <li>listy list</li>
-            <li>listy list</li>
-          </ul>
-        </div>
-      </div>
-      <h1 id="tutor">Online Tutorials</h1>
-      <p>The <a href="https://www.youtube.com/channel/UCT61XgTRqpfb39Hyio9IqGQ">SimVascular YouTube Channel</a> has a collection of videos on a variety of topics related to the use of the SimVascular suite of software applications.</p>
-      <p>The <a href="https://www.youtube.com/playlist?list=PL1CBZ8Wh-xvSKUsuBA4MM4Jba-psVdxXT">SimVascular Tutorial series</a> consists of recent videos demonstrating the complete pipeline from medical image data segmentation to patient specific blood flow simulation and analysis.</p>
-      <h1 id="repository">Repository</h1>
+  <section class="navigationSection" id="navigationSection">
+    <nav id="navElement">
       <div class="row">
-        <div class="columnImg">
-          <img src="repbanner3.png" alt="a head">
+        <div class="colContainsIcon">
+          <i class="fa-solid fa-bars" id="iconForSkip"></i>
         </div>
-        <div class="columnDesc">
-          <h2>WHAT IS IT</h2>
-          <p>The vascular model repository, a sister project of SimVascular, is a library of computational models of normal and diseased human cardiovascular and pulmonary anatomy and input and output boundary conditions for various physiologic states. These models can be used to simulate cardiovascular and pulmonary solid and fluid mechanics and will provide spatially and temporally-resolved benchmark solutions that can be used by academic, government and industry researchers to verify their computational methods. Most models in the repository were created with SimVascular. The SimVascular project provides an open source package for simulation to accompany the data provided in the model repository.</p>
-          <img class="imgVMR" src="image1.png" alt="">
-          <img class="imgVMR" src="model1.png" alt="">
-          <img class="imgVMR" src="result1.png" alt="">
+        <div class="colContainsContent">
+          <table id="contentOfSkip">
+              <tr id="skipToHome">
+                <th>
+                  <p class="skipItem">Skip to Top</p>
+                </th>
+              </tr>
+              <tr id="skipToGallery">
+                <th>
+                  <p class="skipItem">Gallery</p>
+                </th>
+              </tr>
+              <tr id="skipToDownload">
+                <th>
+                  <p class="skipItem">Download</p>
+                </th>
+              </tr>
+              <tr id="skipToDocumentation">
+                <th>
+                  <p class="skipItem">Documentation</p>
+                </th>
+              </tr>
+              <tr id="skipToOnline_Tutorials">
+                <th>
+                  <p class="skipItem">Online Tutorials</p>
+                </th>
+              </tr>
+              <tr id="skipToRepository">
+                <th>
+                  <p class="skipItem">Repository</p>
+                </th>
+              </tr>
+              <tr id="skipToWorkshops">
+                <th>
+                  <p class="skipItem">Workshops</p>
+                </th>
+              </tr>
+              <tr id="skipToTeam">
+                <th>
+                  <p class="skipItem">Team</p>
+                </th>
+              </tr>
+              <tr id="skipToContact">
+                <th>
+                  <p class="skipItem">Contact</p>
+                </th>
+              </tr>
+          </table>
+        </div>
+      
+      </div>
+    </nav>
+  </section>
+  <section class="topLeftLogo">      
+    <div class="headerLogoContainer">
+      <img class="headerLogoImage" src="svLogoTitle.png" alt="SimVascular Logo"></img>
+    </div>
+  </section>
+  <section class="notHeader">
+    <div class="homeLogoContainingDiv">
+      <img class="homeLogo" src="svLogoTitle.png" alt="SimVascular Logo"></img>
+    </div>
+    <div class="twitterContainer col-lg-4">
+      <a class="twitter-timeline" data-lang="en" data-theme="dark" href="https://twitter.com/simvascular?ref_src=twsrc%5Etfw">Tweets by simvascular</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>      <!-- opening logo -->
+    </div>
+    <div class="introDescription col-lg-8">
+      <p>The only fully opensource software package providing a complete pipeline from medical image data segmentation to patient specific blood flow simulation and analysis.</p>
+      <p>The <a href="https://gateway.simvascular.org/">SimVascular Supercomputing Gateway</a> provides access to High-Performance Computing (HPC) clusters for running simulations using SimVascular CFD solvers. Simulations benefit from the performance levels that only large-scale HPC systems can offer and typically run an order of magnitude faster than on most workstations.</p>
+    
+      <div class="row creditsRow">
+        <div class="threeTopImages col-sm-4 col-12 creditContainer">
+          <img class="creditImage" src="stanfordmedicine.png" alt="Logo for Stanford Medicine"></img>
+        </div>
+        <div class="threeTopImages col-sm-4 col-12 creditContainer">
+          <img class="creditImage" src="ucberkeley.png" alt="Logo for UC Berkeley"></img>
+        </div>
+        <div class="threeTopImages col-sm-4 col-12 creditContainer">
+          <img class="creditImage" src="osmsc.png" alt="Logo for osmsc"></img>
+        </div>
+        <div class="threeTopImages col-sm-4 col-12 creditContainer">
+          <img class="creditImage" src="nsf.jpg" alt="Logo for NSF"></img>
+        </div>
+        <div class="threeTopImages col-sm-4 col-12 creditContainer">
+          <img class="creditImage" src="simtk.png" alt="Logo for SimTK"></img>
         </div>
       </div>
-      <h1 id="workshops">Workshops</h1>
-        <p>UPCOMING WORKSHOPS</p>
-        <p>LEARN ABOUT SIMVASCULAR BY ATTENDING ONE OF OUR WORKSHOPS</p>
-        <p>SB3C POST-CONFERENCE COMPUTATIONAL WORKSHOP, JUNE 23, 2022</p>
-      <h1 id="team">Team</h1>
-        <h2 class="boxybox">the bio notes don't work :/</h2>
-      <h1 id="contact">Contact Us</h1>
-      <h2>We want your feedback *beady eyes*</h2>
-      <!-- <div class="row">
-        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-          <p>
-            HIII
-          </p>
-        </div>
-      </div> -->
+    </div>      
+    
+
+    <h1 id="gallery">Gallery</h1>
+    <h2 class="boxybox">picture gallery</h2>
+    <h2 class="boxybox">animation gallery</h2>
+    <h1 id="download">Download</h1>
+    <h2 class="boxybox">USERS: DOWNLOAD INSTALLER PACKAGES</h2>
+    <h2 class="boxybox">DEVELOPERS: VISIT OUR SOURCE CODE REPOSITORY</h2>
+    <h1 id="documentation">Documentation</h1>
+    <div class="columnForGuides">
       <div>
-        <h2>news mailing list</h2>
+        <h2>user guides</h2>
         <ul>
-          <li>sign up pretty please</li>
-          <li>did you hear the news??? you could have if you had signed up</li>
-        </ul>
-      </div>
-      <div>
-        <h2>public forum</h2>
-        <ul>
-          <li>community building</li>
+          <li>listy list</li>
           <li>listy list</li>
         </ul>
       </div>
       <div>
-        <h2>suggestions!</h2>
+        <h2>clinical case studies</h2>
         <ul>
-          <li>what ideas do you have</li>
+          <li>listy list</li>
           <li>listy list</li>
         </ul>
       </div>
-      <h1>COPYRIGHT © SIMVASCULAR DEVELOPMENT TEAM - 2017</h1>
-    </section>
+      <div>
+        <h2>developer guides</h2>
+        <ul>
+          <li>listy list</li>
+          <li>listy list</li>
+        </ul>
+      </div>
+    </div>
+    <h1 id="tutor">Online Tutorials</h1>
+    <p>The <a href="https://www.youtube.com/channel/UCT61XgTRqpfb39Hyio9IqGQ">SimVascular YouTube Channel</a> has a collection of videos on a variety of topics related to the use of the SimVascular suite of software applications.</p>
+    <p>The <a href="https://www.youtube.com/playlist?list=PL1CBZ8Wh-xvSKUsuBA4MM4Jba-psVdxXT">SimVascular Tutorial series</a> consists of recent videos demonstrating the complete pipeline from medical image data segmentation to patient specific blood flow simulation and analysis.</p>
+    <h1 id="repository">Repository</h1>
+    <div class="row">
+      <div class="columnImg">
+        <img src="repbanner3.png" alt="a head">
+      </div>
+      <div class="columnDesc">
+        <h2>WHAT IS IT</h2>
+        <p>The vascular model repository, a sister project of SimVascular, is a library of computational models of normal and diseased human cardiovascular and pulmonary anatomy and input and output boundary conditions for various physiologic states. These models can be used to simulate cardiovascular and pulmonary solid and fluid mechanics and will provide spatially and temporally-resolved benchmark solutions that can be used by academic, government and industry researchers to verify their computational methods. Most models in the repository were created with SimVascular. The SimVascular project provides an open source package for simulation to accompany the data provided in the model repository.</p>
+        <img class="imgVMR" src="image1.png" alt="">
+        <img class="imgVMR" src="model1.png" alt="">
+        <img class="imgVMR" src="result1.png" alt="">
+      </div>
+    </div>
+    <h1 id="workshops">Workshops</h1>
+      <p>UPCOMING WORKSHOPS</p>
+      <p>LEARN ABOUT SIMVASCULAR BY ATTENDING ONE OF OUR WORKSHOPS</p>
+      <p>SB3C POST-CONFERENCE COMPUTATIONAL WORKSHOP, JUNE 23, 2022</p>
+    <h1 id="team">Team</h1>
+      <h2 class="boxybox">the bio notes don't work :/</h2>
+    <h1 id="contact">Contact Us</h1>
+    <h2>We want your feedback *beady eyes*</h2>
+    <!-- <div class="row">
+      <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+        <p>
+          HIII
+        </p>
+      </div>
+    </div> -->
+    <div>
+      <h2>news mailing list</h2>
+      <ul>
+        <li>sign up pretty please</li>
+        <li>did you hear the news??? you could have if you had signed up</li>
+      </ul>
+    </div>
+    <div>
+      <h2>public forum</h2>
+      <ul>
+        <li>community building</li>
+        <li>listy list</li>
+      </ul>
+    </div>
+    <div>
+      <h2>suggestions!</h2>
+      <ul>
+        <li>what ideas do you have</li>
+        <li>listy list</li>
+      </ul>
+    </div>
+    <h1>COPYRIGHT © SIMVASCULAR DEVELOPMENT TEAM - 2017</h1>
+  </section>
     
     
     <!-- Optional JavaScript -->
