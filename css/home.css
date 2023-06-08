@@ -241,7 +241,6 @@ a:hover {
 }
 
 .columnForGuides {
-    column-count: 3;
     padding: 15px;
 }
 
@@ -334,39 +333,18 @@ h2 {
     color: var(--black);
 }
 
-.box1, .box2, .box3, .box4 {
+.subHeader {
     display: block;
     float: left;
     margin-top: 15px;
-    padding: 15px;
     width: 100%;
     height: 100%;
-    text-align: center;
 }
 
-.box1 {
-    margin-top: 20px;
-}
 
-.box3 {
-    margin-top: 20px;
+.box2, .box4 {
+    text-align: left;
 }
-/* 
-.box1 {
-    background-color: var(--blue);
-}
-
-.box2 {
-    background-color: var(--lightbluegrey);
-}
-
-.box3 {
-    background-color: var(--lightpink);
-}
-
-.box4 {
-    background-color: var(--red);
-} */
 
 .downloadLinks {
     padding: 15px;
@@ -398,4 +376,58 @@ h2 {
 .animationContainer {
     display: block;
     float: left;
+}
+
+.show {
+    display: block;
+}
+
+#licenseTerms {
+    cursor: pointer;
+}
+
+.media-body {
+    width: 50%;
+    display: block;
+    margin: auto;
+}
+
+.containingDocsSection {
+    padding: 15px;
+}
+
+.docHeader {
+    background-color: var(--lighterverydarkblue);
+    padding: 15px;
+}
+
+.docSection {
+    background-color: var(--verydarkblue);
+    padding: 15px;
+}
+
+.embedYTVideo {
+    height: 450px;
+    width: 75%;
+    margin: auto;
+    display: block;
+    border: 5px solid var(--verydarkblue)
+}
+
+.embedVMR {
+    height: 450px;
+    margin: auto;
+    margin-top: 15px;
+    display: block;
+}
+
+
+.paddingIntro {
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
+.paddingTutor {
+    padding-right: 6%;
+    padding-left: 6%;
 }

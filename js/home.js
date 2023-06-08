@@ -77,6 +77,20 @@ function smoothScrollingToTag(id)
     window.scrollTo({top: (position + scrollY - 65), behavior: 'smooth'});
 }
 
+function toggleLicense()
+{
+    var element = document.getElementById("toggleLicense");
+    
+    if(element.classList.contains("show"))
+    {
+        element.classList.remove("show");
+    }
+    else
+    {
+        element.classList.add("show");    
+    }
+}
+
 $("#iconForSkip").click(function() {
     toggleMenu();
 });
@@ -126,3 +140,6 @@ $("#skipToContact").click(function() {
     toggleMenu(true);
 });
 
+$("#licenseTerms").click(function() {
+    toggleLicense();
+});
