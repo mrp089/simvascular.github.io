@@ -1,11 +1,14 @@
 body {
     width: 100%;
     height: auto;
+    overflow-x: hidden;
 }
 
 html {
     width: 100%;
     height: auto;
+    overflow-x: hidden;
+    /* scroll-padding-top: 65px; */
 }
 
 .twitter-timeline {
@@ -17,8 +20,8 @@ html {
     overflow: auto;
     float: left;
 }
+
 .introDescription {
-    height: 400px;
     float: right;
 }
 
@@ -223,6 +226,10 @@ a:hover {
     color: var(--darkblue);
 }
 
+.clearFormatting {
+    all: revert;
+}
+
 .navy {
     padding: 10px;
     color: var(--grey);
@@ -277,25 +284,77 @@ a:hover {
     border: 15px solid var(--lightgrey);
     padding: 50px;
     margin: 20px;
+    display: block;
+    float: left;
 }
 
-.newSection {
+h1 {
+    margin: 25px 25px;
+    font-size: 40px;
+    color: var(--white);
+}
+
+h2 {
+    margin: 15px 15px;
+    font-size: 25px;
+    color: var(--white);
+}
+
+.firstHeader {
+    display: block;
+    float: left;
+}
+
+.newSectionHeader {
+    display: block;
+    float: left;
+    /* margin-right: 2.5%;
+    margin-left: 2.5%; */
     margin-top: 30px;
+    margin-bottom: 15px;
+    /* width: 95%; */
     width: 100%;
     height: 100px;
     background-color: var(--verydarkblue);
+    border: 5px solid var(--lighterverydarkblue);
     text-align: center;
     color: var(--black);
 }
 
-@media only screen and (min-width: 960px) {
-    .firstHeader {
-        height: 400px;
-    }
+.headerForGallery {
+    display: block;
+    float: left;
+    margin-top: 15px;
+    padding: 15px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--verydarkblue);
+    border: 5px solid var(--lighterverydarkblue);
+    text-align: center;
+    color: var(--black);
 }
 
-@media only screen and (max-width: 960px) {
-    .firstHeader {
-        height: 800px;
-    }
+.newSectionContent {
+    display: block;
+    float: left;
+}
+
+.copyright {
+    display: block;
+    float: left;
+}
+
+.img_Gallery {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.img_GalleryContainer {
+    padding: 15px;
+}
+
+.animationContainer {
+    display: block;
+    float: left;
 }

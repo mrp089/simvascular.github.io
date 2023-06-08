@@ -1,6 +1,7 @@
 :root {
     --black: #16161D;
     --verydarkblue: #033651;
+    --lighterverydarkblue: #1c4a62;
     --darkblue: #0d75ac;
     --blue: #4fb4e4;
     --lightbluegrey: #bac8de;
@@ -9,7 +10,7 @@
     --red: #a62224;
     --peachy: #f37977;
     --lightpink: #ec939c;
-    --white: white;
+    --white: #e6ebee;
     --grey: grey;
     --lightgrey: lightgrey;
     --lightblue: lightblue;
