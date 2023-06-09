@@ -38,7 +38,7 @@ html {
     z-index: 10;
 }
 
-.row:after {
+.rowFormat:after {
     content: "";
     display: table;
     clear: both;
@@ -65,7 +65,8 @@ th {
     width: 9999px;
     float: center;
 }
-.row {
+
+.navBarRow {
     display: block;
 }
 
@@ -415,12 +416,17 @@ h2 {
 }
 
 .embedVMR {
-    height: 450px;
-    margin: auto;
-    margin-top: 15px;
+    height: 550px;
+    float: right;
     display: block;
+    padding: 15px;
 }
-
+/* 
+@media (min-width: 576px) {
+    .col-sm-6 {
+        width: 50%;
+    }
+} */
 
 .paddingIntro {
     padding-right: 25px;
