@@ -16,21 +16,16 @@ html {
 }
 
 .twitterContainer {
-    height: 400px;
+    height: 450px;
     overflow: auto;
     float: left;
+    margin-bottom: 15px;
+    border-radius: 25px;
 }
 
 .introDescription {
     float: right;
 }
-
-.creditImage {
-    width: 100%;
-    height: 100%;
-    object-fit: scale-down;
-}
-
 .navigationSection {
     top: 0px;
     right: 0px;
@@ -70,12 +65,12 @@ th {
     display: block;
 }
 
-.colContainsIcon 
+/* .colContainsIcon 
 {
     float: right;
-}
+} */
 .colContainsContent {
-    float: left;
+    /* float: left; */
     padding-top: 125px;
 }
 .containsTable {
@@ -149,6 +144,13 @@ th:hover {
     height: 100%;
 }
 
+@media only screen and (max-width: 300px) {
+    .headerLogoImage {
+        padding-top: 5px;
+        height: 45px;
+    }  
+}
+
 .notHeader {
     padding-top: 55px;
 }
@@ -170,14 +172,16 @@ th:hover {
     }
     #contentOfSkip{
         left: 15px;
-        width: 70%;
+        /* width: 70%; */
     }
     #iconForSkip {
-        padding-top: 0px;
+        padding-top: 0;
+        margin-top: 15px;
+        margin-right: 15px;
     }
     #iconForSkip.menuOn {
-        margin-top: 0px;
-        margin-right: 50px;
+        margin-top: 15px;
+        margin-right: 15px;
     }
     th {
         text-align: center!important;
@@ -188,21 +192,32 @@ th:hover {
     }
   }
 
-/* @media only screen and (min-width: 960px) {
-    .creditContainer {
-        padding: 0px;
-    }
-  } */
-
 .creditContainer {
     margin: auto;
-    height: 90px;
+    /* height: 90px; */
     width: 90px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+
 }
 
 .creditsRow {
-    width: 90%;
-    margin: auto;
+    padding: 15px;
+}
+
+.creditImage {
+    height: 100%;
+    max-height: 120px;
+    width: 100%;
+
+    object-fit: contain;
+}
+
+@media only screen and (max-width: 576px) {
+    .creditImage {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
 }
 
 .homeLogoContainingDiv {
@@ -303,6 +318,7 @@ h2 {
 .firstHeader {
     display: block;
     float: left;
+    width: 100%;
 }
 
 .newSectionHeader {
@@ -321,17 +337,19 @@ h2 {
     color: var(--black);
 }
 
-.headerForGallery {
+.headerForGalleryContainer {
     display: block;
     /* float: left; */
     margin-top: 15px;
-    padding: 15px;
-    width: 100%;
+    /* width: fit-content; */
     height: 100%;
-    background-color: var(--verydarkblue);
-    border: 5px solid var(--lighterverydarkblue);
     text-align: center;
     color: var(--black);
+}
+
+.headerForGallery {
+    background-color: var(--verydarkblue);
+    border: 5px solid var(--lighterverydarkblue);
 }
 
 .subHeader {
@@ -357,11 +375,6 @@ h2 {
     display: block;
     float: left;
     width: 100%;
-}
-
-.copyright {
-    display: block;
-    float: left;
 }
 
 .img_Gallery {
@@ -395,16 +408,21 @@ h2 {
 
 .containingDocsSection {
     padding: 15px;
+    width: fit-content;
 }
 
 .docHeader {
-    background-color: var(--lighterverydarkblue);
+    background-color: var(--verydarkblue);
     padding: 15px;
+    border: 5px solid var(--lighterverydarkblue)
+
 }
 
 .docSection {
     background-color: var(--verydarkblue);
     padding: 15px;
+    border: 5px solid var(--lighterverydarkblue)
+
 }
 
 .embedYTVideo {
@@ -412,7 +430,9 @@ h2 {
     width: 75%;
     margin: auto;
     display: block;
-    border: 5px solid var(--verydarkblue)
+    border: 7px solid var(--verydarkblue);
+    border-radius: 25px;
+    padding: 15px;
 }
 
 .embedVMR {
@@ -603,5 +623,53 @@ h2 {
       position: relative;
       margin-top: 65px;
       font-weight: 400;
+    }
+}
+
+.contactHeaders {
+    text-transform: none; 
+    text-align: center;
+}
+
+.contactLinks, .contactDescription{
+    margin: 0px;
+    padding: 5px;
+    text-align: center;
+    text-transform: none;
+    font-weight: normal;
+}
+
+.contactLinks {
+    margin-bottom: 15px;
+}
+
+.contactDescription {
+    font-style: italic;
+}
+
+.copyright {
+    display:block; 
+    float: left; 
+    width:100%; 
+    margin-top: 50px;
+    height:fit-content;
+    text-align: center; 
+    background-color: var(--verydarkblue);
+    border: 5px solid var(--lighterverydarkblue);
+}
+
+.innerCopyright {
+    margin: 0;
+    padding: 8px;
+}
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 30px;
+    }
+    .contactLinks, .contactDescription{
+        text-align: left;
+        font-size: 20px;
+        padding: 15px;
     }
 }

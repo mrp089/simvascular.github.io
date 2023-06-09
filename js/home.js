@@ -14,8 +14,8 @@ function checkWidth()
 }
 
 //hooks that check width
-$(window).ready(checkWidth);
-$(window).resize(checkWidth);
+$(window).ready(checkWidth());
+$(window).resize(checkWidth());
 
 // function clickLink(hrefTag)
 // {
@@ -25,6 +25,8 @@ $(window).resize(checkWidth);
 // }
 function toggleMenu(closeMenu = false)
 {
+    checkWidth();
+    
     var element = document.getElementById("contentOfSkip");
 
     var navigationSection = document.getElementById("navigationSection")

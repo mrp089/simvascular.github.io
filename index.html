@@ -29,11 +29,11 @@
   </head>
   <body>
   <section class="navigationSection" id="navigationSection">
+    <div class="colContainsIcon">
+      <i class="fa-solid fa-bars" id="iconForSkip"></i>
+    </div>
     <nav id="navElement">
-      <div class="navBarRow rowFormat">
-        <div class="colContainsIcon">
-          <i class="fa-solid fa-bars" id="iconForSkip"></i>
-        </div>
+      <!-- <div class="navBarRow rowFormat"> -->
         <div class="colContainsContent">
           <table id="contentOfSkip">
               <tr id="skipToHome">
@@ -82,7 +82,7 @@
                 </th>
               </tr>
           </table>
-        </div>
+        <!-- </div> -->
       
       </div>
     </nav>
@@ -96,7 +96,7 @@
       <div class="homeLogoContainingDiv">
         <img class="homeLogo" src="img/svLogoTitle.png" alt="SimVascular Logo"></img>
         </div>
-      <div class="firstHeader">
+      <div class="firstHeader row">
         <div class="twitterContainer col-lg-4">
           <a target="_blank" class="twitter-timeline" data-lang="en" data-theme="dark" href="https://twitter.com/simvascular?ref_src=twsrc%5Etfw">Tweets by simvascular</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>      <!-- opening logo -->
         </div>
@@ -104,21 +104,21 @@
           <p class="paddingIntro">The only fully opensource software package providing a complete pipeline from medical image data segmentation to patient specific blood flow simulation and analysis.</p>
           <p class="paddingIntro">The <a target="_blank" href="https://gateway.simvascular.org/">SimVascular Supercomputing Gateway</a> provides access to High-Performance Computing (HPC) clusters for running simulations using SimVascular CFD solvers. Simulations benefit from the performance levels that only large-scale HPC systems can offer and typically run an order of magnitude faster than on most workstations.</p>
         
-          <div class="rowFormat creditsRow">
-            <div class="threeTopImages col-sm-4 creditContainer">
+          <div class="row creditsRow">
+            <div class="threeTopImages col-sm-6 col-12 creditContainer">
               <img class="creditImage" src="img/stanfordmedicine.png" alt="Logo for Stanford Medicine"></img>
             </div>
-            <div class="threeTopImages col-sm-4 creditContainer">
+            <div class="threeTopImages col-sm-6 col-12 creditContainer">
               <img class="creditImage" src="img/ucberkeley.png" alt="Logo for UC Berkeley"></img>
             </div>
-            <div class="threeTopImages col-sm-4 creditContainer">
+            <div class="threeTopImages col-sm-4 col-12 creditContainer">
               <img class="creditImage" src="img/osmsc.png" alt="Logo for osmsc"></img>
             </div>
-            <div class="threeTopImages col-sm-4 creditContainer">
-              <img class="creditImage" src="img/nsf.jpg" alt="Logo for NSF"></img>
-            </div>
-            <div class="threeTopImages col-sm-4 creditContainer">
+            <div class="threeTopImages col-sm-4 col-12 creditContainer">
               <img class="creditImage" src="img/simtk.png" alt="Logo for SimTK"></img>
+            </div>
+            <div class="threeTopImages col-sm-4 col-12 creditContainer">
+              <img class="creditImage" src="img/nsf.jpg" alt="Logo for NSF"></img>
             </div>
           </div>
         </div>  
@@ -127,8 +127,9 @@
       <h1 id="gallery">Gallery</h1>
     </div>
     <div class="newSectionContent">
-      <div class="col-sm-6 col-12 headerForGallery">
-        <h2>Pictures</h2>
+      <div class="col-sm-6 col-12 headerForGalleryContainer">
+        <div class="headerForGallery"><h2>Pictures</h2></div>
+        
       </div>
       <div class="col-sm-6 col-12 img_GalleryContainer">
         <img class="img_Gallery" src="img/Img_Gallery_01.png" alt="BLOOD FLOW IN CABG SIMULATION">
@@ -142,8 +143,8 @@
       <div class="col-sm-6 col-12 img_GalleryContainer">
         <img class="img_Gallery" src="img/Img_Gallery_04.png" alt="HEMI-FONTAN CAVOPULMONARY CONNECTION">
       </div>
-      <div class="col-sm-6 col-12 headerForGallery">
-        <h2>Animations</h2>
+      <div class="col-sm-6 col-12 headerForGalleryContainer">
+        <div class="headerForGallery"><h2>Animations</h2></div>
       </div>
 
     </div>
@@ -154,7 +155,7 @@
     <div class="newSectionContent">
       <div>
         <div style="width: 100%">
-          <h4 class="media-heading centerTitleText" id="licenseTerms">License Terms</h4>
+          <h4 class="media-heading centerTitleText" id="licenseTerms">License Terms</h4><br>
         </div>
         <div class="media-body" id="toggleLicense" style="display: none">
           <div class="BioPar justifiedText">
@@ -211,28 +212,32 @@
         </div>
       </div>
       <div style="width: 100%; height: 100%; display:block; float: left;">
-        <div class="box1 col-sm-6 col-12">
-          <h2>Users</h2>
+        <div class="box1 col-sm-6 col-12">  
+          <h2><i style="padding-right: 20px" class="fa-regular fa-user"></i>Users</h2>
         </div>
         <div class="box2 col-sm-6 col-12">
           <a class="downloadLinks" target="_blank" href="https://simtk.org/frs/index.php?group_id=188">Download Installation Package</a>
           <a class="downloadLinks" target="_blank" href="https://simtk.org/frs/index.php?group_id=188">Download Example Projects</a>
         </div>
         <div class="box3 col-sm-6 col-12">
-          <h2>Developers</h2>
+          <h2><i style="padding-right: 20px" class="fa-solid fa-laptop-code"></i>Developers</h2>
         </div>
         <div class="box4 col-sm-6 col-12">
           <a class="downloadLinks" target="_blank" href="https://github.com/SimVascular/SimVascular">Source Code Repository</a>
     </div>
     </div>
 </div>
+
     <div class="newSectionHeader">
       <h1 id="documentation">Documentation</h1>
     </div>
     <div class="newSectionContent">
       <details class="containingDocsSection">
         <summary class="docHeader">
-          <h4 class="media-heading">User Guides</h4>
+          <h4 class="media-heading">
+            <i style="padding-right: 20px" class="fa-regular fa-user"></i>
+            User Guides
+          </h4>
         </summary>
         <div class="docSection">
           <h6 class="media-heading">
@@ -275,7 +280,19 @@
       </details>
       <details class="containingDocsSection">
         <summary class="docHeader">
-          <h4 class="media-heading">Clinical Case Studies</h4> 
+          <h4 class="media-heading"><i style="padding-right: 20px" class="fa-solid fa-laptop-code">
+          </i>Developer Guides</h4>
+        </summary>
+        <div class="docSection">
+          <h6 class="media-heading">
+            <a target="_blank" href="https://github.com/SimVascular/SimVascular/wiki/wiki_for_developers">Building SimVascular from Source</a>
+          </h6></div>
+      </details>
+      <details class="containingDocsSection">
+        <summary class="docHeader">
+          <h4 class="media-heading">
+            <i style="padding-right: 20px" class="fa-solid fa-stethoscope"></i>
+            Clinical Case Studies</h4> 
         </summary>
         <div class="docSection">
           <h6 class="media-heading">
@@ -291,15 +308,6 @@
             <a target="_blank" href="clinicalCase4.html">Healthy Pulmonary</a>
           </h6>
         </div>
-      </details>
-      <details class="containingDocsSection">
-        <summary class="docHeader">
-          <h4 class="media-heading">Developer Guides</h4>
-        </summary>
-        <div class="docSection">
-          <h6 class="media-heading">
-            <a target="_blank" href="https://github.com/SimVascular/SimVascular/wiki/wiki_for_developers">Building SimVascular from Source</a>
-          </h6></div>
       </details>
     </div> 
 
@@ -463,63 +471,35 @@
     </div>
     </div>
     
-    <!-- <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-      <img class="teamImages" src="img/sshadden.jpg" alt="Image of Shawn Shadden">
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-      <img class="teamImages" src="img/nwilson.png" alt="Image of Nathan Wilson">
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-      <img class="teamImages" src="img/dparker.jpg" alt="Image of Dave Parker">
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-      <img class="teamImages" src="img/vvedula.jpg" alt="Image of Vijay Vedula">
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-      <img class="teamImages" src="img/Martin.Pfaller.jpg" alt="Image of Martin Pfaller">
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-      <img class="teamImages" src="img/fkong.png" alt="Image of Fanwei Kong">
-    </div> -->
-    
-
-    <div class="newSectionContent">
-      <h2 class="boxybox">the bio notes don't work :/</h2>
-    </div>
-
-    
     <div class="newSectionHeader">
       <h1 id="contact">Contact Us</h1>
       </div>
 
       <div class="newSectionContent">
-        <h2>We want your feedback *beady eyes*</h2>
-      <div>
-        <h2>news mailing list</h2>
-        <ul>
-          <li>sign up pretty please</li>
-          <li>did you hear the news??? you could have if you had signed up</li>
-        </ul>
-      </div>
-      <div>
-        <h2>public forum</h2>
-        <ul>
-          <li>community building</li>
-          <li>listy list</li>
-        </ul>
-      </div>
-      <div>
-        <h2>suggestions!</h2>
-        <ul>
-          <li>what ideas do you have</li>
-          <li>listy list</li>
-        </ul>
-      </div>
+        <h2 class="contactHeaders">Join the news mailing list.</h2>
+        
+          <h3 style="padding-bottom: 5px;" class="contactDescription">For announcements and latest news about SimVascular:</h3>
+          <h3 style="margin-bottom: 5px;" class="contactLinks">
+            <a href="https://simtk.org/mailman/listinfo/simvascular-news" target="_blank">Sign up for updates</a>
+          </h3>
+          <h3 style="margin-bottom: 5px;" class="contactLinks">
+            <a href="https://simtk.org/pipermail/simvascular-news/" target="_blank">View the Simvascular News Archive</a>
+          </h3>
+        </h2>
+        <h2 style="margin-top: 45px;" class= "contactHeaders">We are very interested in your feedback and comments.</h2>
+        <h3 class="contactDescription">Interact with other SimVascular users:</h3>
+        <h3 class="contactLinks">
+          <a href="https://simtk.org/forums/viewforum.php?f=188" target="_blank">SimVascular Public Forum</a>
+        </h3>
+        <h3 class="contactDescription">Help us to improve SimVascular:</h3>
+        <h3 class="contactLinks">
+          <a href="https://github.com/SimVascular/SimVascular/issues" target="_blank">Suggest new features or report bugs</a>
+        </h6>
     </div>
 
     <div class="copyright">
-      <h1>COPYRIGHT © SIMVASCULAR DEVELOPMENT TEAM - 2017</h1>
-    </div>
+      <h5 class="innerCopyright">Copyright © SimVascular Development Team - 2017</h5>
+  </div>
   </section>
     
     
