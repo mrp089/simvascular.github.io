@@ -506,3 +506,102 @@ h2 {
 .listingOfWorkshops a:hover {
     color: var(--lightbluegrey)
 }
+
+.team-section {
+    padding-top: 50px;
+    text-align: center;
+    background-color: var(--dark2);
+    /* color: var(--white); */
+    padding: 50px 0 50px;
+    color: var(--white);
+  }
+  
+  .team-item {
+    height: 200px;
+  }
+  .team-item .team-triangle {
+    width: 200px;
+    height: 200px;
+    background: transparent;
+    margin: 0 auto;
+    position: relative;
+    margin-top:20px;
+    margin-bottom:20px;
+  }
+  .team-item img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 50% !important;
+  }
+  
+  .team-triangle .team-content {
+    height: 100%;
+    border-radius: 50%;
+  }
+  
+  .team-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--black);
+    opacity: 0;
+    -webkit-transition: opacity 0.4s ease-in;
+      transition: opacity 0.4s ease-in;
+    border-radius: 50% !important;
+  }
+
+  .team-item .team-triangle:hover .team-hover {
+    opacity: 0.6;
+  }
+  
+  .team-hover p {
+    color: var(--white);
+    font-weight: 300;
+    font-size: 16px;
+    position: relative;
+    margin-top: 90px;
+    font-weight: 400;
+  }
+  
+  .row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.team-content{
+    display: block;
+    float: left;
+}
+
+.team-container {
+    width: 100%;
+    padding-right: 25px;
+    padding-left: 25px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media only screen and (max-width : 576px) {
+
+    .team-item {
+      height: 150px;
+    }
+    .team-item .team-triangle {
+      width: 150px;
+      height: 150px;
+    }
+  
+    .team-hover p {
+      color: var(--white);
+      font-size: 16px;
+      position: relative;
+      margin-top: 65px;
+      font-weight: 400;
+    }
+}

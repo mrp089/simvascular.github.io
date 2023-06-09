@@ -143,3 +143,24 @@ $("#skipToContact").click(function() {
 $("#licenseTerms").click(function() {
     toggleLicense();
 });
+
+// var bios = ["amarsden", "sshadden", "nwilson", "dparker", "vvedula", "mpfaller", "fkong"]
+
+// setUpBioHooks();
+
+
+// function setUpBioHooks()
+// {
+//     for(var i = 0; i < bios.length; i++)
+//     {
+//        $("#" + bio[i]).click(function() {
+//             toggleBiographies(bio[i]);
+//        }); 
+//     }
+// }
+
+// function toggleBiographies(bioID)
+// {
+//     var biograhy = document.getElementById("")
+//     if(bioID = )
+// }
