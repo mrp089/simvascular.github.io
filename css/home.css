@@ -323,7 +323,7 @@ h2 {
 
 .headerForGallery {
     display: block;
-    float: left;
+    /* float: left; */
     margin-top: 15px;
     padding: 15px;
     width: 100%;
@@ -419,14 +419,28 @@ h2 {
     height: 550px;
     float: right;
     display: block;
-    padding: 15px;
+    padding: 25px;
 }
-/* 
-@media (min-width: 576px) {
-    .col-sm-6 {
-        width: 50%;
+
+.describeVMR {
+    display: block;
+    padding: 25px;
+}
+
+@media (min-width: 768px){
+    .col-md-6 {
+        max-width: 100%;
     }
-} */
+    /* .embedVMR {
+        padding-left: 0px;
+    } */
+}
+
+@media (min-width: 992px){
+    .embedVMR {
+        padding-left: 0px;
+    }
+}
 
 .paddingIntro {
     padding-right: 25px;
@@ -436,4 +450,59 @@ h2 {
 .paddingTutor {
     padding-right: 6%;
     padding-left: 6%;
+}
+
+@media (min-width: 768px){
+    .col-md-6 {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 576px){
+    .col-sm-6 {
+        max-width: 100%;
+    }
+}
+
+.subText {
+    font-style: italic;
+    margin: 15px;
+    text-align: center;
+}
+
+.listingOfWorkshops {
+    width: fit-content;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.date, .workshopName {
+    width: fit-content;
+    background-color: var(--verydarkblue);
+    margin: 0 0 10px;
+    border: 5px solid var(--lighterverydarkblue)
+}
+
+.date{
+    text-align: left;
+    padding: 7.5px 15px;
+}
+
+.workshopName {
+    text-align: center;
+    padding: 15px 30px;
+    margin:auto;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    max-width: 80%;
+    border-radius: 15px;
+}
+
+.listingOfWorkshops a{
+    color: var(--white)
+}
+
+.listingOfWorkshops a:hover {
+    color: var(--lightbluegrey)
 }
