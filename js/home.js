@@ -17,12 +17,63 @@ function checkWidth()
 $(window).ready(checkWidth());
 $(window).resize(checkWidth());
 
-// function clickLink(hrefTag)
-// {
-//     var a = document.createElement("a");
-//     a.href = hrefTag;
-//     a.click();
-// }
+// CAROUSEL
+    var slidePosition = 0;
+    SlideShow(slidePosition);
+
+    // forward/Back controls
+    function plusSlides(n) {
+        SlideShow(slidePosition += n);
+    }
+
+    //  images controls
+    function currentSlide(n) {
+        SlideShow(slidePosition = n);
+    }
+
+    // if(there hasn't ever been a click)
+    // {
+        // setTimeout(SlideShow, 2000);
+    // }
+
+    function SlideShow(n) {
+        console.log(slidePosition)
+
+        var slides = document.getElementsByClassName("slides");
+        var circles = document.getElementsByClassName("dots");
+
+        //so the n is continuous
+        if (n > slides.length-1) {slidePosition = 0}
+        if (n < 0) {slidePosition = slides.length-1}
+        
+        //resets all slides
+        for (var i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        //displays selected slide
+        slides[slidePosition].style.display = "block";
+
+        //resets all circles
+        for (var i = 0; i < circles.length; i++) {
+            if(circles[i].classList.contains("enable"))
+            {
+               circles[i].classList.remove("enable"); 
+            }   
+        }
+        //displays selected circle
+        circles[slidePosition].classList.add("enable");
+    }
+
+// END CAROUSEL
+
+function clickLink(hrefTag)
+{
+    var a = document.createElement("a");
+    a.href = hrefTag;
+    a.target = "_blank";
+    a.click();
+}
+
 function toggleMenu(closeMenu = false)
 {
     checkWidth();
@@ -76,7 +127,7 @@ function smoothScrollingToTag(id)
 
     console.log(element.getBoundingClientRect())
     var position = element.getBoundingClientRect().top;
-    window.scrollTo({top: (position + scrollY - 65), behavior: 'smooth'});
+    window.scrollTo({top: (position + scrollY - 115), behavior: 'smooth'});
 }
 
 function toggleLicense()
@@ -99,6 +150,11 @@ $("#iconForSkip").click(function() {
 
 $("#skipToHome").click(function() {
     scrollToTop();
+    toggleMenu(true);
+});
+
+$("#skipToInstitutions").click(function() {
+    smoothScrollingToTag("institutions");
     toggleMenu(true);
 });
 
@@ -146,23 +202,29 @@ $("#licenseTerms").click(function() {
     toggleLicense();
 });
 
-// var bios = ["amarsden", "sshadden", "nwilson", "dparker", "vvedula", "mpfaller", "fkong"]
+$("#amarsden").click(function() {
+    clickLink("https://profiles.stanford.edu/alison-marsden");
+});
 
-// setUpBioHooks();
+$("#sshadden").click(function() {
+    clickLink("https://me.berkeley.edu/people/shawn-shadden/");
+});
 
+$("#nwilson").click(function() {
+    clickLink("https://www.anderson.ucla.edu/faculty-and-research/global-economics-and-management/faculty/wilson");
+});
 
-// function setUpBioHooks()
-// {
-//     for(var i = 0; i < bios.length; i++)
-//     {
-//        $("#" + bio[i]).click(function() {
-//             toggleBiographies(bio[i]);
-//        }); 
-//     }
-// }
+$("#dparker").click(function() {
+    clickLink("https://profiles.stanford.edu/david-parker?releaseVersion=10.5.2");
+});
 
-// function toggleBiographies(bioID)
-// {
-//     var biograhy = document.getElementById("")
-//     if(bioID = )
-// }
+$("#vvedula").click(function() {
+    clickLink("https://www.me.columbia.edu/faculty/vijay-vedula");
+});
+
+$("#mpfaller").click(function() {
+    clickLink("https://profiles.stanford.edu/martin-pfaller");
+});
+$("#fkong").click(function() {
+    clickLink("https://profiles.stanford.edu/fanwei-kong");
+});
