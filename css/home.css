@@ -1,3 +1,9 @@
+/*------------------------------------------ 
+
+            THE ENTIRE PAGE
+
+---------------------------------------------*/
+
 body {
     width: 100%;
     height: auto;
@@ -11,17 +17,103 @@ html {
     /* scroll-padding-top: 65px; */
 }
 
-.twitter-timeline {
-    width: 100%;
+/*------------------------------------------ 
+
+            FONT AND STYLES FORMATTING
+
+---------------------------------------------*/
+
+a {
+    color: var(--blue);
 }
 
-.twitterContainer {
-    height: 450px;
-    overflow: auto;
-    float: left;
-    margin-bottom: 15px;
-    border-radius: 25px;
+a:hover {
+    color: var(--darkblue);
 }
+
+.clearFormatting {
+    all: revert;
+}
+
+h1 {
+    margin: 25px 25px;
+    font-size: 40px;
+    color: var(--white);
+}
+
+h2 {
+    margin: 15px 15px;
+    font-size: 25px;
+    color: var(--white);
+}
+
+.subText {
+    font-style: italic;
+    margin: 15px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 768px){
+    .col-md-6 {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 576px){
+    .col-sm-6 {
+        max-width: 100%;
+    }
+}
+
+/*------------------------------------------ 
+
+            HEADER
+
+---------------------------------------------*/
+
+.topLeftLogo {
+    height: 55px;
+    top: 10px;
+    left: 10px;
+    position: fixed;
+    z-index: 10;
+}
+
+.header {
+    z-index: 20;
+    position: fixed;
+    height: 75px;
+    width: 100%;
+    background-color: var(--black);
+}
+
+.headerLogoContainer {
+    float: left;
+    height: 100%;
+}
+
+.headerLogoImage {
+    height: 100%;
+}
+
+@media only screen and (max-width: 300px) {
+    .headerLogoImage {
+        padding-top: 5px;
+        height: 45px;
+    }  
+}
+
+/*------------------------------------------ 
+
+            NAVIGATION BAR
+
+---------------------------------------------*/
 
 .introDescription {
     float: right;
@@ -127,52 +219,7 @@ th:hover {
     background-color: var(--lightbluegrey);
 }
 
-
-.topLeftLogo {
-    height: 55px;
-    top: 10px;
-    left: 10px;
-    position: fixed;
-    z-index: 10;
-}
-
-.skippyskip {
-    float: right;
-}
-
-.header {
-    z-index: 20;
-    position: fixed;
-    height: 75px;
-    width: 100%;
-    background-color: var(--black);
-}
-
-.headerLogoContainer {
-    float: left;
-    height: 100%;
-}
-
-.headerLogoImage {
-    height: 100%;
-}
-
-@media only screen and (max-width: 300px) {
-    .headerLogoImage {
-        padding-top: 5px;
-        height: 45px;
-    }  
-}
-
-.notHeader {
-    padding-top: 90px;
-}
-
 @media only screen and (max-width: 767px){
-    .twitterContainer {
-        /* width: 95%; */
-        /* margin: auto; */
-    }
     .navigationSection.menuOn {
         left: 0px;
         width: 100%;
@@ -206,32 +253,21 @@ th:hover {
     }
   }
 
-.creditContainer {
-    margin: auto;
-    /* height: 90px; */
-    width: 90px;
-    padding-left: 20px;
-    padding-bottom: 10px;
+/*------------------------------------------ 
 
+            BODY OF WEBSITE
+
+---------------------------------------------*/
+
+.notHeader {
+    padding-top: 90px;
 }
 
-.creditsRow {
-    padding: 15px;
-}
+/*------------------------------------------ 
 
-.creditImage {
-    height: 100%;
-    max-height: 120px;
-    width: 100%;
-    object-fit: contain;
-}
+            HERO IMAGE
 
-@media only screen and (max-width: 576px) {
-    .creditImage {
-        padding-top: 15px;
-        padding-bottom: 15px;
-    }
-}
+---------------------------------------------*/
 
 .homeLogoContainingDiv {
     width: 75%;
@@ -259,60 +295,11 @@ th:hover {
     }
 }
 
-a {
-    color: var(--blue);
-}
+/*------------------------------------------ 
 
-a:hover {
-    color: var(--darkblue);
-}
+            EMBEDDED TWITTER
 
-.clearFormatting {
-    all: revert;
-}
-
-.navy {
-    padding: 10px;
-    color: var(--grey);
-    text-decoration: none;
-}
-
-.navy:hover {
-    color: var(--lightgrey);
-}
-
-.columnForGuides {
-    padding: 15px;
-}
-
-.columnImg {
-    float: left;
-    width: 20%;
-}
-
-.columnDesc {
-    float: right;
-    width: 80%;
-}
-
-.imgVMR {
-    height: 150px;
-    padding-right: 10%;
-}
-
-.column {
-    float: left;
-    width: 50%;
-}
-  
-.left {
-    width: 65%;
-}
-  
-.right {
-    width: 35%;
-}
-
+---------------------------------------------*/
 .twitterBox {
     border: 15px solid var(--lightblue);
     padding: 50px;
@@ -320,25 +307,61 @@ a:hover {
     height: 150px;
 }
 
-.boxybox {
-    border: 15px solid var(--lightgrey);
-    padding: 50px;
-    margin: 20px;
-    display: block;
+.twitter-timeline {
+    width: 100%;
+}
+
+.twitterContainer {
+    height: 450px;
+    overflow: auto;
     float: left;
+    margin-bottom: 15px;
+    border-radius: 25px;
 }
 
-h1 {
-    margin: 25px 25px;
-    font-size: 40px;
-    color: var(--white);
+/*------------------------------------------ 
+
+        SECTION AND LOGOS/CREDITS
+
+---------------------------------------------*/
+
+.creditContainer {
+    margin: auto;
+    /* height: 90px; */
+    width: 90px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+
 }
 
-h2 {
-    margin: 15px 15px;
-    font-size: 25px;
-    color: var(--white);
+.creditsRow {
+    padding: 15px;
 }
+
+.creditImage {
+    height: 100%;
+    max-height: 120px;
+    width: 100%;
+    object-fit: contain;
+}
+
+@media only screen and (max-width: 576px) {
+    .creditImage {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}
+
+.paddingIntro {
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
+/*------------------------------------------ 
+
+            HEADERS AND SECTIONS
+
+---------------------------------------------*/
 
 .firstHeader {
     display: block;
@@ -373,6 +396,26 @@ h2 {
     color: var(--black);
 }
 
+.subHeader {
+    display: block;
+    float: left;
+    margin-top: 15px;
+    width: 100%;
+    height: 100%;
+}
+
+.newSectionContent {
+    display: block;
+    float: left;
+    width: 100%;
+}
+
+/*------------------------------------------ 
+
+                GALLERY
+
+---------------------------------------------*/
+
 .headerForGalleryContainer {
     display: block;
     width: 100%;
@@ -383,36 +426,6 @@ h2 {
     height: 100%;
     text-align: center;
     color: var(--black);
-}
-
-/* .headerForGallery {
-    background-color: var(--verydarkblue);
-    border: 5px solid var(--lighterverydarkblue);
-} */
-
-.subHeader {
-    display: block;
-    float: left;
-    margin-top: 15px;
-    width: 100%;
-    height: 100%;
-}
-
-
-.box2, .box4 {
-    text-align: left;
-}
-
-.downloadLinks {
-    padding: 15px;
-    display: block;
-    font-size: 25px;
-}
-
-.newSectionContent {
-    display: block;
-    float: left;
-    width: 100%;
 }
 
 .img_Gallery {
@@ -434,305 +447,22 @@ h2 {
     display: block;
 }
 
-#licenseTerms {
-    cursor: pointer;
-}
-
 .media-body {
     width: 50%;
     display: block;
     margin: auto;
 }
 
-.containingDocsSection {
-    /* padding: 15px; */
-    text-align: center;
-
+#licenseTerms {
+    cursor: pointer;
 }
 
-.docLinks {
-    display: block;
-    margin-top: 0;
-    margin-bottom: 13px;
-    font-size: 17px;
-    letter-spacing: 0.75px;
-}
+/*------------------------------------------ 
 
-.docHeader {
-    /* background-color: var(--verydarkblue); */
-    padding: 15px;
-    
-    /* border: 5px solid var(--lighterverydarkblue) */
-}
+            CAROUSEL
 
-.docSection {
-    /* background-color: var(--verydarkblue); */
-    padding: 15px;
-    /* border: 5px solid var(--lighterverydarkblue); */
+---------------------------------------------*/
 
-}
-
-.embedYTVideo {
-    height: 450px;
-    /* width: 75%; */
-    margin: auto;
-    display: block;
-    /* border: 7px solid var(--verydarkblue); */
-    border-radius: 25px;
-    padding: 25px;
-    padding-lefT: 0;
-}
-
-.embedVMR {
-    height: 550px;
-    float: right;
-    display: block;
-    padding: 25px;
-}
-
-.describeVMR {
-    display: block;
-    padding: 25px;
-}
-
-@media (min-width: 768px){
-    .col-md-6 {
-        max-width: 100%;
-    }
-    /* .embedVMR {
-        padding-left: 0px;
-    } */
-}
-
-@media (min-width: 992px){
-    .embedVMR {
-        padding-left: 0px;
-    }
-}
-
-.paddingIntro {
-    padding-right: 25px;
-    padding-left: 25px;
-}
-
-.paddingTutor {
-    padding: 15px;
-    /* padding-right: 6%;
-    padding-left: 6%; */
-}
-
-@media (min-width: 768px){
-    .col-md-6 {
-        max-width: 100%;
-    }
-}
-
-@media (min-width: 576px){
-    .col-sm-6 {
-        max-width: 100%;
-    }
-}
-
-.subText {
-    font-style: italic;
-    margin: 15px;
-    text-align: center;
-}
-
-.listingOfWorkshops {
-    width: fit-content;
-    margin: auto;
-    margin-top: 15px;
-    margin-bottom: 30px;
-}
-
-.date, .workshopName {
-    width: fit-content;
-    background-color: var(--verydarkblue);
-    margin: 0 0 10px;
-    border: 5px solid var(--lighterverydarkblue)
-}
-
-.date{
-    text-align: left;
-    padding: 7.5px 15px;
-}
-
-.workshopName {
-    text-align: center;
-    padding: 15px 30px;
-    margin:auto;
-    margin-top: 15px;
-    margin-bottom: 25px;
-    max-width: 80%;
-    border-radius: 15px;
-}
-
-.listingOfWorkshops a{
-    color: var(--white)
-}
-
-.listingOfWorkshops a:hover {
-    color: var(--lightbluegrey)
-}
-
-.team-section {
-    padding-top: 50px;
-    text-align: center;
-    background-color: var(--dark2);
-    /* color: var(--white); */
-    padding: 50px 0 50px;
-    color: var(--white);
-  }
-  
-  .team-item {
-    height: 200px;
-  }
-  .team-item .team-triangle {
-    width: 200px;
-    height: 200px;
-    background: transparent;
-    margin: 0 auto;
-    position: relative;
-    margin-top:20px;
-    margin-bottom:20px;
-  }
-  .team-item img {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 50% !important;
-  }
-  
-  .team-triangle .team-content {
-    height: 100%;
-    border-radius: 50%;
-  }
-  
-  .team-hover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--black);
-    opacity: 0;
-    -webkit-transition: opacity 0.4s ease-in;
-      transition: opacity 0.4s ease-in;
-    border-radius: 50% !important;
-  }
-
-  .team-item .team-triangle:hover .team-hover {
-    opacity: 0.6;
-  }
-  
-  .team-hover p {
-    color: var(--white);
-    font-weight: 300;
-    font-size: 16px;
-    position: relative;
-    margin-top: 90px;
-    font-weight: 400;
-  }
-  
-  .row {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
-}
-
-.team-content{
-    display: block;
-    float: left;
-}
-
-.team-container {
-    width: 100%;
-    padding-right: 25px;
-    padding-left: 25px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-@media only screen and (max-width : 576px) {
-
-    .team-item {
-      height: 150px;
-    }
-    .team-item .team-triangle {
-      width: 150px;
-      height: 150px;
-    }
-  
-    .team-hover p {
-      color: var(--white);
-      font-size: 16px;
-      position: relative;
-      margin-top: 65px;
-      font-weight: 400;
-    }
-}
-
-.contactHeaders {
-    text-transform: none; 
-    text-align: center;
-}
-
-.contactLinks, .contactDescription{
-    margin: 0px;
-    padding: 5px;
-    text-align: center;
-    text-transform: none;
-    font-weight: normal;
-}
-
-.contactLinks {
-    margin-bottom: 15px;
-}
-
-.contactDescription {
-    font-style: italic;
-}
-
-.copyright {
-    display:block; 
-    float: left; 
-    width:100%; 
-    margin-top: 50px;
-    height:fit-content;
-    text-align: center; 
-    /* background-color: var(--verydarkblue);
-    border: 5px solid var(--lighterverydarkblue); */
-}
-
-.innerCopyright {
-    margin: 0;
-    padding: 8px;
-}
-
-@media only screen and (max-width: 768px) {
-    h1 {
-        font-size: 30px;
-    }
-    .contactLinks, .contactDescription{
-        text-align: left;
-        font-size: 20px;
-        padding: 15px;
-    }
-}
-
-.box3 {
-    padding-top: 30px;
-}
-@media only screen and (min-width: 768px) {
-    .box4 {
-        padding-top: 25px;
-    }
-}
-
-/* Slideshow container */
 .slideshow-container {
     display: block;
     float: left;
@@ -834,3 +564,313 @@ h2 {
     from {opacity: .5}
     to {opacity: 2}
   }
+
+/*------------------------------------------ 
+
+                DOWNLOAD
+
+---------------------------------------------*/
+
+.downloadLinks {
+    padding: 15px;
+    display: block;
+    font-size: 25px;
+}
+
+/*------------------------------------------ 
+
+                DOCUMENTATION
+
+---------------------------------------------*/
+
+.columnForGuides {
+    padding: 15px;
+}
+
+.columnImg {
+    float: left;
+    width: 20%;
+}
+
+.columnDesc {
+    float: right;
+    width: 80%;
+}
+
+.containingDocsSection {
+    /* padding: 15px; */
+    text-align: center;
+}
+
+.docLinks {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 13px;
+    font-size: 17px;
+    letter-spacing: 0.75px;
+}
+
+.docHeader, .docSection {
+    padding: 15px;
+}
+
+/*------------------------------------------ 
+
+            TUTORIAL SECTION
+
+---------------------------------------------*/
+
+.embedYTVideo {
+    height: 450px;
+    /* width: 75%; */
+    margin: auto;
+    display: block;
+    /* border: 7px solid var(--verydarkblue); */
+    border-radius: 25px;
+    padding: 25px;
+    padding-lefT: 0;
+}
+
+.paddingTutor {
+    padding: 15px;
+    /* padding-right: 6%;
+    padding-left: 6%; */
+}
+
+/*------------------------------------------ 
+
+            REPOSITORY SECTION
+
+---------------------------------------------*/
+
+.embedVMR {
+    height: 550px;
+    float: right;
+    display: block;
+    padding: 25px;
+}
+
+.describeVMR {
+    display: block;
+    padding: 25px;
+}
+
+@media (min-width: 768px){
+    .col-md-6 {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 992px){
+    .embedVMR {
+        padding-left: 0px;
+    }
+}
+
+/*------------------------------------------ 
+
+            WORKSHOPS
+
+---------------------------------------------*/
+
+.listingOfWorkshops {
+    width: fit-content;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.date, .workshopName {
+    width: fit-content;
+    background-color: var(--verydarkblue);
+    margin: 0 0 10px;
+    border: 5px solid var(--lighterverydarkblue)
+}
+
+.date{
+    text-align: left;
+    padding: 7.5px 15px;
+}
+
+.workshopName {
+    text-align: center;
+    padding: 15px 30px;
+    margin:auto;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    max-width: 80%;
+    border-radius: 15px;
+}
+
+.listingOfWorkshops a{
+    color: var(--white)
+}
+
+.listingOfWorkshops a:hover {
+    color: var(--lightbluegrey)
+}
+
+/*------------------------------------------ 
+
+                TEAM
+
+---------------------------------------------*/
+
+.team-section {
+    padding-top: 50px;
+    text-align: center;
+    background-color: var(--dark2);
+    /* color: var(--white); */
+    padding: 50px 0 50px;
+    color: var(--white);
+  }
+  
+  .team-item {
+    height: 200px;
+  }
+  .team-item .team-triangle {
+    width: 200px;
+    height: 200px;
+    background: transparent;
+    margin: 0 auto;
+    position: relative;
+    margin-top:20px;
+    margin-bottom:20px;
+  }
+  .team-item img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 50% !important;
+  }
+  
+  .team-triangle .team-content {
+    height: 100%;
+    border-radius: 50%;
+  }
+  
+  .team-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--black);
+    opacity: 0;
+    -webkit-transition: opacity 0.4s ease-in;
+      transition: opacity 0.4s ease-in;
+    border-radius: 50% !important;
+  }
+
+  .team-item .team-triangle:hover .team-hover {
+    opacity: 0.6;
+  }
+  
+  .team-hover p {
+    color: var(--white);
+    font-weight: 300;
+    font-size: 16px;
+    position: relative;
+    margin-top: 90px;
+    font-weight: 400;
+  }
+  
+  .row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.team-content{
+    display: block;
+    float: left;
+}
+
+.team-container {
+    width: 100%;
+    padding-right: 25px;
+    padding-left: 25px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media only screen and (max-width : 576px) {
+
+    .team-item {
+      height: 150px;
+    }
+    .team-item .team-triangle {
+      width: 150px;
+      height: 150px;
+    }
+  
+    .team-hover p {
+      color: var(--white);
+      font-size: 16px;
+      position: relative;
+      margin-top: 65px;
+      font-weight: 400;
+    }
+}
+
+/*------------------------------------------ 
+
+            CONTACT SECTION
+
+---------------------------------------------*/
+
+.contactHeaders {
+    text-transform: none; 
+    text-align: center;
+}
+
+.contactLinks, .contactDescription{
+    margin: 0px;
+    padding: 5px;
+    text-align: center;
+    text-transform: none;
+    font-weight: normal;
+}
+
+.contactLinks {
+    margin-bottom: 15px;
+}
+
+.contactDescription {
+    font-style: italic;
+}
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 30px;
+    }
+    .contactLinks, .contactDescription{
+        text-align: left;
+        font-size: 20px;
+        padding: 15px;
+    }
+}
+
+/*------------------------------------------ 
+
+            COPYRIGHT
+
+---------------------------------------------*/
+
+.copyright {
+    display:block; 
+    float: left; 
+    width:100%; 
+    margin-top: 50px;
+    height:fit-content;
+    text-align: center; 
+    /* background-color: var(--verydarkblue);
+    border: 5px solid var(--lighterverydarkblue); */
+}
+
+.innerCopyright {
+    margin: 0;
+    padding: 8px;
+}
