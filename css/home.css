@@ -53,10 +53,22 @@ h2 {
     text-align: center;
 }
 
+.innerHeader
+{
+    width: 100%;
+    display: block;
+    float: left;
+    text-align: center;
+}
+
+.iconInHeader {
+    padding-right: 20px;
+}
+
 @media only screen and (max-width: 768px) {
     h1 {
         font-size: 30px;
-    }
+     }
 }
 
 @media (min-width: 768px){
@@ -566,11 +578,21 @@ th:hover {
 
 /*------------------------------------------ 
 
-                DOWNLOAD
+            FEATURES and DOWNLOAD
 
 ---------------------------------------------*/
 
-.downloadLinks {
+.featuresText {
+    text-align: justify;
+    /* width: 75%; */
+    padding-left: 10%;
+    padding-right: 10%;
+    letter-spacing: 0.5px;
+    display: block;
+    float: left;
+}
+
+.downloadLinks, .featuresLinks, .docLinks {
     padding: 15px;
     display: block;
     font-size: 25px;
@@ -600,14 +622,14 @@ th:hover {
     /* padding: 15px; */
     text-align: center;
 }
-
+/* 
 .docLinks {
     display: block;
     margin-top: 0;
     margin-bottom: 13px;
     font-size: 17px;
     letter-spacing: 0.75px;
-}
+} */
 
 .docHeader, .docSection {
     padding: 15px;

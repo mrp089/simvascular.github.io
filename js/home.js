@@ -171,6 +171,11 @@ $("#skipToGallery").click(function() {
     toggleMenu(true);
 });
 
+$("#skipToFeatures").click(function() {
+    smoothScrollingToTag("features");
+    toggleMenu(true);
+});
+
 $("#skipToDownload").click(function() {
     smoothScrollingToTag("download");
     toggleMenu(true);
