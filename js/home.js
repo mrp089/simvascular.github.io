@@ -50,6 +50,7 @@ $(window).resize(checkWidth());
         for (var i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
         }
+
         //displays selected slide
         slides[slidePosition].style.display = "block";
 
@@ -62,6 +63,13 @@ $(window).resize(checkWidth());
         }
         //displays selected circle
         circles[slidePosition].classList.add("enable");
+
+        var fadingElement = document.getElementById("slideshow-container");
+        fadingElement.classList.add("fade");
+        setTimeout(() => {
+            fadingElement.classList.remove("fade");
+        }, 750);
+
     }
 
 // END CAROUSEL
