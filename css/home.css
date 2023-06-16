@@ -8,6 +8,7 @@ body {
     width: 100%;
     height: auto;
     overflow-x: hidden;
+    background-color: var(--white);
 }
 
 html {
@@ -24,11 +25,11 @@ html {
 ---------------------------------------------*/
 
 a {
-    color: var(--blue);
+    color: var(--darkblue);
 }
 
 a:hover {
-    color: var(--darkblue);
+    color: var(--blue);
 }
 
 .clearFormatting {
@@ -38,13 +39,19 @@ a:hover {
 h1 {
     margin: 25px 25px;
     font-size: 40px;
-    color: var(--white);
 }
 
 h2 {
     margin: 15px 15px;
     font-size: 25px;
-    color: var(--white);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--black)
+}
+
+p {
+    color: var(--black)
 }
 
 .subText {
@@ -108,7 +115,7 @@ h2 {
     position: fixed;
     height: 75px;
     width: 100%;
-    background-color: var(--black);
+    background-color: var(--white);
 }
 
 .headerLogoContainer {
@@ -388,7 +395,7 @@ th:hover {
 }
 
 .everyOtherSection {
-    background-color: var(--otherBackground);
+    background-color: var(--lightbluegrey);
     height: fit-content;
     width: 100%;
     display: block;
@@ -473,6 +480,11 @@ th:hover {
 
 #licenseTerms {
     cursor: pointer;
+    color: var(--black)
+}
+
+.BioPar p {
+    font-size: small;
 }
 
 /*------------------------------------------ 
@@ -703,9 +715,9 @@ th:hover {
 
 .date, .workshopName {
     width: fit-content;
-    background-color: var(--verydarkblue);
+    /* background-color: var(--verydarkblue); */
     margin: 0 0 10px;
-    border: 5px solid var(--lighterverydarkblue)
+    /* border: 5px solid var(--lightbluegrey) */
 }
 
 .date{
@@ -724,11 +736,11 @@ th:hover {
 }
 
 .listingOfWorkshops a{
-    color: var(--white)
+    color: var(--black)
 }
 
 .listingOfWorkshops a:hover {
-    color: var(--lightbluegrey)
+    color: var(--darkblue)
 }
 
 /*------------------------------------------ 
@@ -892,4 +904,5 @@ th:hover {
 .innerCopyright {
     margin: 0;
     padding: 8px;
+    color: var(--black)
 }
