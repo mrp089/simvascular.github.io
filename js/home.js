@@ -177,8 +177,8 @@ $("#skipToDocumentation").click(function() {
     toggleMenu(true);
 });
 
-$("#skipToOnline_Tutorials").click(function() {
-    smoothScrollingToTag("tutor");
+$("#skipToSocials").click(function() {
+    smoothScrollingToTag("socials");
     toggleMenu(true);
 });
 

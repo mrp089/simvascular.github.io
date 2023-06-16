@@ -115,7 +115,7 @@ p {
     position: fixed;
     height: 75px;
     width: 100%;
-    background-color: var(--otherBackground);
+    background-color: var(--white);
 }
 
 .headerLogoContainer {
@@ -124,7 +124,7 @@ p {
 }
 
 .headerLogoImage {
-    height: 100%;
+    height: 90%;
 }
 
 @media only screen and (max-width: 300px) {
@@ -143,6 +143,7 @@ p {
 .introDescription {
     float: right;
     margin: auto;
+    width: 75%;
 }
 .navigationSection {
     top: 0px;
@@ -161,6 +162,8 @@ table {
     z-index: 20;
     /* margin-right: 55px; */
     top: 75px;
+    /* padding-top: 75px;
+    border: 3px solid lightgrey; */
     display: block;
     overflow: auto;
     margin-bottom: 65px;
@@ -222,12 +225,12 @@ th {
 
 .skipItem {
     font-size: 22px;
-    color: var(--lightbluegrey);
+    color: var(--darkblue);
     margin: 0px;
 }
 
 th:hover .skipItem, .skipItem:hover {
-    color: var(--darkblue);
+    color: var(--black);
 }
 
 tr {
@@ -237,7 +240,7 @@ tr {
 th {
     text-align: right;
     padding: 15px;
-    background-color: var(--otherBackground);
+    background-color: var(--white);
 }
 
 th:hover {
@@ -254,8 +257,8 @@ th:hover {
         padding: 70px 20px;
         width: 100%;
         height: 100%;
-        color: var(--otherBackground);
-        background-color: var(--otherBackground);
+        color: var(--white);
+        background-color: var(--white);
     }
     .colContainsContent {
         padding-top: 0px;
@@ -325,7 +328,7 @@ th:hover {
             EMBEDDED TWITTER
 
 ---------------------------------------------*/
-.twitterBox {
+/* .twitterBox {
     border: 15px solid var(--lightblue);
     padding: 50px;
     margin: 20px;
@@ -343,7 +346,7 @@ th:hover {
     float: left;
     padding-bottom: 15px;
     border-radius: 25px;
-}
+} */
 
 /*------------------------------------------ 
 
@@ -732,7 +735,7 @@ th:hover {
     margin:auto;
     margin-top: 15px;
     margin-bottom: 25px;
-    max-width: 80%;
+    max-width: 90%;
     border-radius: 15px;
 }
 
