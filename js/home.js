@@ -37,8 +37,6 @@ $(window).resize(checkWidth());
     // }
 
     function SlideShow(n) {
-        console.log(slidePosition)
-
         var slides = document.getElementsByClassName("slides");
         var circles = document.getElementsByClassName("dots");
 
@@ -63,13 +61,6 @@ $(window).resize(checkWidth());
         }
         //displays selected circle
         circles[slidePosition].classList.add("enable");
-
-        var fadingElement = document.getElementById("slideshow-container");
-        fadingElement.classList.add("fade");
-        setTimeout(() => {
-            fadingElement.classList.remove("fade");
-        }, 750);
-
     }
 
 // END CAROUSEL

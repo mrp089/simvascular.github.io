@@ -115,7 +115,7 @@ p {
     position: fixed;
     height: 75px;
     width: 100%;
-    background-color: var(--white);
+    background-color: var(--otherBackground);
 }
 
 .headerLogoContainer {
@@ -237,7 +237,7 @@ tr {
 th {
     text-align: right;
     padding: 15px;
-    background-color: var(--black);
+    background-color: var(--otherBackground);
 }
 
 th:hover {
@@ -254,8 +254,8 @@ th:hover {
         padding: 70px 20px;
         width: 100%;
         height: 100%;
-        color: var(--black);
-        background-color: var(--black);
+        color: var(--otherBackground);
+        background-color: var(--otherBackground);
     }
     .colContainsContent {
         padding-top: 0px;
@@ -337,10 +337,11 @@ th:hover {
 }
 
 .twitterContainer {
-    height: 450px;
+    height: 420px;
+    width: 100%;
     overflow: auto;
     float: left;
-    margin-bottom: 15px;
+    padding-bottom: 15px;
     border-radius: 25px;
 }
 
@@ -511,7 +512,7 @@ th:hover {
   }
   
   /* forward & Back buttons */
-  .Back, .forward {
+  .back, .forward {
     cursor: pointer;
     position: absolute;
     top: 48%;
@@ -532,13 +533,13 @@ th:hover {
   }
   
   /*when the user hovers,add a black background with some little opacity */
-  .Back:hover, .forward:hover {
+  .back:hover, .forward:hover {
     background-color: var(--verydarkblue);
   }
   
   /* Caption Info */
   .Info {
-    color: #e3e3e3;
+    color: var(--white);
     font-size: 16px;
     padding: 10px 14px;
     position: absolute;
@@ -566,7 +567,7 @@ th:hover {
     height: 16px;
     width: 16px;
     margin: 0 3px;
-    background-color: var(--lightblue);
+    background-color: var(--darkblue);
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.5s ease;
@@ -579,9 +580,9 @@ th:hover {
   /* Faint animation */
   .fade {
     -webkit-animation-name: fade;
-    -webkit-animation-duration: 0.75s;
+    -webkit-animation-duration: 1s;
     animation-name: fade;
-    animation-duration: 0.75s;
+    animation-duration: 1s;
   }
   
   @-webkit-keyframes fade {
@@ -603,8 +604,8 @@ th:hover {
 .featuresText {
     text-align: justify;
     /* width: 75%; */
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
     letter-spacing: 0.5px;
     display: block;
     float: left;
@@ -655,7 +656,7 @@ th:hover {
 
 .embedYTVideo {
     height: 450px;
-    /* width: 75%; */
+    width: 50%;
     margin: auto;
     display: block;
     /* border: 7px solid var(--verydarkblue); */
@@ -735,13 +736,13 @@ th:hover {
     border-radius: 15px;
 }
 
-.listingOfWorkshops a{
-    color: var(--black)
+/* .listingOfWorkshops a{
+    color: var(--darkblue)
 }
 
 .listingOfWorkshops a:hover {
-    color: var(--darkblue)
-}
+    color: var(--blue)
+} */
 
 /*------------------------------------------ 
 
@@ -787,7 +788,7 @@ th:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--black);
+    background: var(--white);
     opacity: 0;
     -webkit-transition: opacity 0.4s ease-in;
       transition: opacity 0.4s ease-in;
@@ -799,12 +800,12 @@ th:hover {
   }
   
   .team-hover p {
-    color: var(--white);
-    font-weight: 300;
+    color: var(--black);
     font-size: 16px;
     position: relative;
     margin-top: 90px;
-    font-weight: 400;
+    font-weight: 500;
+    opacity: 1;
   }
   
   .row {
