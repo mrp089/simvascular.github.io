@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" class="html">
+<head>
+  <!-- This corresponds to a fontawesome kit but can be customized -->
+  <script src="https://kit.fontawesome.com/48644805cd.js" crossorigin="anonymous"></script>
+  
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Custom Fonts -->
+  <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="//vjs.zencdn.net/4.8/video-js.css" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/grayscale.css">
+    <link rel="stylesheet" href="css/standards.css">
+    <!-- <link rel="stylesheet" href="css/home.css"> -->
+    <link rel="stylesheet" href="css/documentation.css">
+
+
+    <!-- browser tab labels -->
+    <link rel="shortcut icon" type="image/jpg" href="img/svIcon.png"></link>
+    <title>SimVascular</title>
+  </head>
+  <body>
+  <section class="header">
+    <div class="topLeftLogo">      
+        <div class="headerLogoContainer">
+          <img class="headerLogoImage" src="img/svLogoTitle.png" alt="SimVascular Logo"></img>
+        </div>
+      </div>
+    </section>
+  <section class="mainSection">
+    <form class="mainBody">
+        <h1>Getting Started</h1>
+        <p>This document provides beginning users with the basic knowledge needed to get started using the SimVascular suite of software applications. The SimVascular software suite comprises the following applications:</p>
+        <ul>
+            <li> <b> SimVascular </b> - Interactive image-based modeling pipeline application </li>
+            <li> <b> svZeroDSolver </b> - 0D (lumped parameter) solver </li>
+            <li> <b> svOneDSolver </b> - 1D fluids solver </li>
+            <li> <b> svSolver </b> - Computational fluid dynamics (CFD) solver </li>
+            <li> <b> svFSI </b> - Coupled fluid-solid solver </li>
+        </ul>
+        <p>Throughout this document the interactive image-based modeling pipeline application is referred to as just SimVascular. Input files for all of the solver applications can be created and optionally executed from the SimVascular GUI.</p>
+            <p>The <a href="#introduction"> Introduction </a> section describes important SimVascular concepts. 
+                The following <a href="#gui"> GUI </a> section then describes the SimVascular graphical user interface (GUI) and its basic functionality. 
+                The <a href="#tutorial"> Tutorial</a> section demonstrates the steps in the SimVascular image-based modeling pipeline, 
+                from medical image data segmentation to patient-specific blood flow simulation. A model of an aorta and two iliac 
+                arteries is created from medical imaging data.  A finite element mesh is then generated from the model and used in a 
+                CFD simulation of blood flow in the aorta and iliac arteries. </p>
+        <h1>Introduction</h1>
+        <h1>Modeling Pipeline</h1>
+        <p>The SimVascular image-based modeling pipeline comprises the following steps </p>        <ol>
+            <li> <b>Image visualization</b> - Identify anatomic features in the imaging data </li>
+            <li> <b>Path planning</b> - Vessel centerlines geometry is created using 2D image slices to identify vessel lumens </li>
+            <li> <b>Segmentation</b> - Vessel lumens are segmented from 2D slice probes of 3D image data oriented perpendicular to positions along paths</li>
+            <li> <b>Modeling</b> - A geometric model of a vessel is created by generating a surface fitted to groups of 2D segmentations. Individual
+                 vessels are then joined together to form a complete 3D solid model of vascular anatomy. </li>
+            <li> <b>Meshing</b> - A finite element mesh is generated from the 3D solid model </li>
+            <li> <b>Simulation</b> - Perform a finite element computational fluid dynamics (CFD) simulation of blood flow in the vascular anatomy</li> 
+          </ol>
+    </form>
+</section>
+
+    
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.21/jquery.csv.min.js"></script>
+  
+    <!-- <script src="js/jquery-2.1.1.js"></script> -->
+    <script src="js/jquery.mixitup.min.js"></script>
+
+    <script src="js/documentation.js"></script>
+
+
+    <!--  -->
+  </body>
+</html>
