@@ -1,9 +1,8 @@
-
 ### Format of COR boundary condition file
 
 Coronary boundary conditions are defined through the **cort.dat** file using the following format
 
-~~~
+```
 nptsCORmax
 numDataCOR_1
 q0_1
@@ -16,8 +15,8 @@ b0_1(=0)
 b1_1
 b2_1(=0)
 time_1_1 Plv_1_1 (/Prv_1_1)
-... 
-... 
+...
+...
 time_1_numDataCOR Plv_1_numDataCOR
 ...
 ...
@@ -33,10 +32,10 @@ b0_i(=0)
 b1_i
 b2_i(=0)
 time_i_1 Plv_i_1 (/Prv_i_1)
-... 
-... 
+...
+...
 time_i_numDataCOR Plv_i_numDataCOR
-~~~
+```
 
 The first quantity **nptsCORmax** defines the maximum number of time points for the curves defined at each outlet defining the ventricular pressures.
 This quantity is followed by one block for each outlet, containing **numDataCOR_i**, i.e., the number of time point for Coronary outlet i.
@@ -44,7 +43,7 @@ Nine constants need also to be defined for each coronary outlet, i.e., $q\_0$, $
 The physical meaning of these constants is related to the resistances and capacitances used to simulated each coronary outlet, as shown in the picture below:
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/flowsolver/imgs/CorBC.png">
+  <img class="svImg svImgMd" src="/documentation/flowsolver/imgs/CorBC.png">
   <figcaption class="svCaption" >Circuit visualization for coronary boundary condition</figcaption>
 </figure>
 
@@ -70,5 +69,3 @@ $$
 
 <br>
 <br>
-
-

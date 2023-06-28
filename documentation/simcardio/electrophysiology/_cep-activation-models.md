@@ -30,7 +30,7 @@ For the TTP model in <strong>svFSI</strong>, the following units have to be used
 
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/simcardio/electrophysiology/images/Calcium.png">
+  <img class="svImg svImgMd" src="/documentation/simcardio/electrophysiology/images/Calcium.png">
   <figcaption class="svCaption" >Structures involved in $Ca^{2+}$ cycling<a href="#ref-6">[6]</a>.</figcaption>
 </figure>
 
@@ -50,7 +50,7 @@ $$  f^V = c[V(V-\alpha)(1-V)-r] $$
 $$  f^r = V-br+a $$
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/simcardio/electrophysiology/images/FN_model.png">
+  <img class="svImg svImgMd" src="/documentation/simcardio/electrophysiology/images/FN_model.png">
   <figcaption class="svCaption" >Action potential calculated from FitzHugh-Nagumo model.</figcaption>
 </figure>
 
@@ -61,7 +61,7 @@ $$  f^V = cV(V-\alpha)(1-V)-Vr $$
 $$  f^r = \left( \gamma+\frac{\mu\_1r}{\mu\_2+V}\right)[-r-cV(V-b-1)] $$
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/simcardio/electrophysiology/images/AP_model.png">
+  <img class="svImg svImgMd" src="/documentation/simcardio/electrophysiology/images/AP_model.png">
   <figcaption class="svCaption" >Action potential calculated from Aliev-Panfilov model.</figcaption>
 </figure>
 

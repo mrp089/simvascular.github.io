@@ -1,18 +1,18 @@
 <h2 id="display"> Display </h2>
 
 The GUI main window <i>Display</i> area uses a four-window view to display 2D and 3D views of image and geometry data as
-the standard layout. The four-window view provides an interactive environment to view geometry data created by <i>Tools</i> in 
+the standard layout. The four-window view provides an interactive environment to view geometry data created by <i>Tools</i> in
 context with medical image data. This enables matching geometric data (e.g. models) to anatomical features present in the imaging data.
 
 The layout of the <i>Display</i> windows and its GUI components are shown in Fig. 5.
 
 <figure>
-  <img class="svImg svImgMd"  src="documentation/quickguide/imgs/display.png"> 
+  <img class="svImg svImgMd"  src="/documentation/quickguide/imgs/display.png"> 
   <figcaption class="svCaption"> Fig. 5 &nbsp The standard four-window view comprising three 2D and one 3D views.
 </figure>
 
-The three 2D views represent the principal planes used in medical imaging to describe the location of anatomical 
-structures defined as 
+The three 2D views represent the principal planes used in medical imaging to describe the location of anatomical
+structures defined as
 
 <ul style="list-style-type:none;">
 
@@ -27,9 +27,9 @@ structures defined as
 
 <h3 id="navigation"> Navigation </h3>
 
-The principal planes slice is represented by a pair of crosshairs the 2D view windows. Selecting a point with the left 
-mouse button in a 2D view centers the crosshair on that point. Pressing the right mouse button and moving the mouse zooms 
-in and out. Scrolling the mouse wheel changes the principal plane slice for which the mouse cursor is in. 
+The principal planes slice is represented by a pair of crosshairs the 2D view windows. Selecting a point with the left
+mouse button in a 2D view centers the crosshair on that point. Pressing the right mouse button and moving the mouse zooms
+in and out. Scrolling the mouse wheel changes the principal plane slice for which the mouse cursor is in.
 
 Changing the principal planes slice changes the values displayed in the <a href="#image_navigator"> Image Navigator </a>
 and vice versa.
@@ -88,13 +88,12 @@ Pressing the <b>F</b> key in the 3D view changes the center of rotation and zoom
 the mouse cursor. 
 </div>
 
-
 <br>
 <h3 id="window_menus"> Window Menus</h3>
 
-The three icons 
-<img src="documentation/quickguide/gui/images/display_icon_menu.png" width="70" height="30"> </td> displayed in the upper right 
-corner each window provides options to customize the view and crosshair behavior when selected using the left mouse button. 
+The three icons
+<img src="/documentation/quickguide/gui/images/display_icon_menu.png" width="70" height="30"> </td> displayed in the upper right
+corner each window provides options to customize the view and crosshair behavior when selected using the left mouse button.
 
 <table class="table table-bordered" style="width:100%">
   <tr>
@@ -104,9 +103,9 @@ corner each window provides options to customize the view and crosshair behavior
   </tr>
 
   <tr>
-    <td><img src="documentation/quickguide/gui/images/window-icon-1.png" width="28" height="24"> </td>
+    <td><img src="/documentation/quickguide/gui/images/window-icon-1.png" width="28" height="24"> </td>
     <td>
-       <img src="documentation/quickguide/gui/images/window-menu-1.png" width="180" height="180"> 
+       <img src="/documentation/quickguide/gui/images/window-menu-1.png" width="180" height="180"> 
     </td>
     <td> 
       <ul style="list-style-type:none;"> 
@@ -116,31 +115,32 @@ corner each window provides options to customize the view and crosshair behavior
         <li> <b> Crosshair rotation </b> - Select to toggle using crosshairs to rotate two planes </li>
         <li> <b> Coupled crosshair rotation </b> - Select to toggle using crosshairs to rotate planes both planes </li>
         <li> <b> Swivel mode </b> - Select to toggle using crosshairs to rotate planes in about all three axes </li>
-        <li> <img src="documentation/quickguide/gui/images/window-ts-slider.png" width="140" height="30"> 
+        <li> <img src="/documentation/quickguide/gui/images/window-ts-slider.png" width="140" height="30"> 
              - The <b>T</b>thicker <b>S</b>slices slider controls how many slices around the current one are used for a maximum intensity projection </li>
 
-      </ul> 
+      </ul>
     </td>
+
   </tr>
 
   <tr>
-    <td><img src="documentation/quickguide/gui/images/window-icon-2.png" width="28" height="24"> </td>
+    <td><img src="/documentation/quickguide/gui/images/window-icon-2.png" width="28" height="24"> </td>
     <td> Changes the view layout </td>
     <td> The view is changed to a full-screen layout for the window and plane the mouse cursor is in
-         When selected it changes to <img src="documentation/quickguide/gui/images/window-icon-4.png" width="28" height="24">
+         When selected it changes to <img src="/documentation/quickguide/gui/images/window-icon-4.png" width="28" height="24">
      </td>
   </tr>
 
   <tr>
-    <td><img src="documentation/quickguide/gui/images/window-icon-4.png" width="28" height="24"> </td>
+    <td><img src="/documentation/quickguide/gui/images/window-icon-4.png" width="28" height="24"> </td>
     <td> Changes the view layout </td>
     <td> Expands the corresponding window to full screen within the four window view </td>
   </tr>
 
   <tr>
-    <td><img src="documentation/quickguide/gui/images/window-icon-3.png" width="28" height="24"> </td>
+    <td><img src="/documentation/quickguide/gui/images/window-icon-3.png" width="28" height="24"> </td>
     <td>
-       <img src="documentation/quickguide/gui/images/window-menu-2.png" width="180" height="180"> 
+       <img src="/documentation/quickguide/gui/images/window-menu-2.png" width="180" height="180"> 
     </td>
     <td> 
       <ul style="list-style-type:none;"> 
@@ -160,5 +160,3 @@ corner each window provides options to customize the view and crosshair behavior
   </tr>
 
 </table>
-
-

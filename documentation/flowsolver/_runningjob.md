@@ -4,21 +4,21 @@ Before running simulation, you may need to click the button "Import Extra Files 
 
 **To run a simulation job:**
 
-	Number of Processes: 8 (select the maximum number in your case)
-	Starting Step Number: (be default, use 0 or the last time step from previous simulation)
-	Click the button  "Run Job"
+    Number of Processes: 8 (select the maximum number in your case)
+    Starting Step Number: (be default, use 0 or the last time step from previous simulation)
+    Click the button  "Run Job"
 
-This will launch a eight-processor job in your computer. Therefore, the input file are split as follows: 
+This will launch a eight-processor job in your computer. Therefore, the input file are split as follows:
 
-~~~
+```
 geombc.dat.1 => geombc.dat.1, geombc.dat.2, ..., geombc.dat.8
 restart.0.1 => restart.0.1, restart.0.2, ..., restart.0.8
-~~~
+```
 
 During the job running, the progress of simulation is shown at "Job Status" and the status bar at the the bottom of the main window:
 
 <figure>
-  <img class="svImg scImgMd" src="documentation/flowsolver/imgs/simulationstatus.png">
+  <img class="svImg scImgMd" src="/documentation/flowsolver/imgs/simulationstatus.png">
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -26,8 +26,8 @@ It shows the name of the running job, the percentage completed, and more info: [
 
 During the job running, you can terminate it before it finishes. To stop the simulation:
 
-	Right click the job data node "steady" at Data Manager
-	Click "Stop Simulation" in the popup menu	
+    Right click the job data node "steady" at Data Manager
+    Click "Stop Simulation" in the popup menu
 
 After the simulation is finished. A dialog pops up to inform that the job is done. You can click the button "Show Details..." to get more info about the simulation progress. You can also check the simulation progress by open the file "histor.dat" in the folder "steady". It contains containing details that allows to evaluate how well your numerical simulation is doing. Here’s a brief description of what each of those columns means.
 
@@ -309,31 +309,32 @@ After the simulation is finished. A dialog pops up to inform that the job is don
 </tr>
 </table>
 
-- **a: Time step number** - We see that each time step number appears twice: this is because we are considering two non-linear iterations. This column will go from 1 to the total number of time steps in our problem (in this case, 100). 
+- **a: Time step number** - We see that each time step number appears twice: this is because we are considering two non-linear iterations. This column will go from 1 to the total number of time steps in our problem (in this case, 100).
 
 - **b: CPU time in seconds** - This is counted since you launched the analysis.
 
 - **c: Measure of the nonlinear residual** - This gives you and idea of how accurate your solution is. Note that for each time step, the second entry is smaller than the first entry. This is a good sign that shows that the nonlinear iteration loop of the solver is doing a good job in improving the solution. You should always aim to a nonlinear residual at the end of the time step of at most $1\times10^{-3}$.
 
-- **d: Logarithm of the residual change** - This provides you a very good way of quickly evaluating how well the solution is doing. If this number is very small and negative, then it is a good sign. An entry with the value "-10" means that you have reduced the residual by an order of magnitude from the beginning of the analysis, a -20, by **2 orders of magnitude**, and so on. 
+- **d: Logarithm of the residual change** - This provides you a very good way of quickly evaluating how well the solution is doing. If this number is very small and negative, then it is a good sign. An entry with the value "-10" means that you have reduced the residual by an order of magnitude from the beginning of the analysis, a -20, by **2 orders of magnitude**, and so on.
 
 - **e: Entropy norm of the residual for the velocity field (max $\Delta u/ u$)**
 
 - **f: entropy norm of the residual for the pressure field (max $\Delta p/ p$)**
 
 - **g: &gt; a – b | c&gt;**
-+ a: block where the maximum residual happens (each block has 255 elements by default).
-+ b: node in the block with the maximum error.
-+ c: logarithmic measure of the ratio between the maximum residual and the average residual: want this number to be as small as possible: it will be an
-indicator of the spatial uniformity of the residual.
 
-- **h: [a-b]** 
-- a: number of Krylov vectors used in the pre-conditioner solver. 
+* a: block where the maximum residual happens (each block has 255 elements by default).
+* b: node in the block with the maximum error.
+* c: logarithmic measure of the ratio between the maximum residual and the average residual: want this number to be as small as possible: it will be an
+  indicator of the spatial uniformity of the residual.
+
+- **h: [a-b]**
+- a: number of Krylov vectors used in the pre-conditioner solver.
 - b: number of Krylov vectors used in the GMRES solver.
 
 **NOTE** - these numbers are zero when using the default **svLS**.
 
-Once the analysis is done, you will see the collection of restart files corresponding to the different points in the time you decided to save. 
+Once the analysis is done, you will see the collection of restart files corresponding to the different points in the time you decided to save.
 
 Sometimes you want to continue the finished simulation job. Make use the same number of processes as the previous one and just click the button "Run Job". Now the solver starts another 200-step simulation from time step 200.
 
@@ -344,20 +345,20 @@ As the simulation is completed, we are now ready to look at the restart files co
 You can also export the required data files and upload to a computer cluster to run the simulation. Make sure SimVascular flow solver is available in the cluster.
 
 To export the files:
-  
-	Make sure you have created data files for this job.	
-	Right click the job node "steady" in Data Manager
-	Click "Export Data Files"
-	Select a directory for exporting.
+
+    Make sure you have created data files for this job.
+    Right click the job node "steady" in Data Manager
+    Click "Export Data Files"
+    Select a directory for exporting.
 
 A new folder "steady-sim-files" is created, which includes the required files by flowsolver
 
 To run the simulation at the cluster:
 
-	Make sure SimVascular flow solver is available on the cluster.
-	Upload the folder "steady-sim-files" to the cluster
-	Login the cluster
-	Go to the folder "steady-sim-files"
-	Run "mpiexec -n [number of processes] [solver path]/svsolver" or you need create/submit a job file as required by the cluster to run the simulation
+    Make sure SimVascular flow solver is available on the cluster.
+    Upload the folder "steady-sim-files" to the cluster
+    Login the cluster
+    Go to the folder "steady-sim-files"
+    Run "mpiexec -n [number of processes] [solver path]/svsolver" or you need create/submit a job file as required by the cluster to run the simulation
 
 During the simulation, result files are saved at the folder "steady-sim-files/[number of processes]]-procs_case/". You can download the files back to your computer and convert them to vtp/vtu files.

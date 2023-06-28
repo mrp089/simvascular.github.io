@@ -5,7 +5,7 @@ waveform at an inlet surface. The pressure boundary condition is implemented in 
 at the cylinder inlet is obtained by interpolating a pressure waveform defined in the GenBC Fortan code.
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/genbc/imgs/waveform.png">
+  <img class="svImg svImgMd" src="/documentation/genbc/imgs/waveform.png">
   <figcaption class="svCaption" >Pressure waveform used for the inlet Neumann boundary condition.</figcaption>
 </figure>
 
@@ -27,7 +27,7 @@ a value of 0. These settings are used to create the appropriate entries in the *
 Outlet BCs** tab should now look like this
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/genbc/imgs/pres_inlet_and_outlet_bcs.png">
+  <img class="svImg svImgMd" src="/documentation/genbc/imgs/pres_inlet_and_outlet_bcs.png">
 </figure>
 
 

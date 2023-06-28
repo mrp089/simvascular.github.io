@@ -1,9 +1,9 @@
-## Activation of a Myocardial Block ##
+## Activation of a Myocardial Block
 
 The computational domain is a rectangular block, with dimensions of $3\times 7\times 20 mm$. A small cluster of cells located at one corner of the block (marked as S) will recive an initial stimulus, and the TTP model is used to model the activation of the rest of the domain. The entire simulation set-up along with results can be found on <a href="https://github.com/SimVascular/svFSI-Tests/tree/master/08-cep/03-benchmark_tTP">GitHub</a>.
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/simcardio/electrophysiology/images/cuboid.png">
+  <img class="svImg svImgMd" src="/documentation/simcardio/electrophysiology/images/cuboid.png">
   <figcaption class="svCaption" >Computational domain of example 1.[reference]</figcaption>
 </figure>
 
@@ -111,8 +111,6 @@ Here is the breakdown of the input file for this study.
 </code></pre>
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/simcardio/electrophysiology/images/ttp_cuboid.gif">
+  <img class="svImg svImgMd" src="/documentation/simcardio/electrophysiology/images/ttp_cuboid.gif">
   <figcaption class="svCaption" >Activation of the cuboid.</figcaption>
 </figure>
-
-

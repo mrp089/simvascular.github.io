@@ -11,19 +11,19 @@ This exercise will use 2D segmentations and assume that you have created segment
 	Click "OK"
 
 <figure>
-  <img class="svImg svImgSm"  src="documentation/modeling/imgs/polydata/createemptymodel.png"> 
+  <img class="svImg svImgSm"  src="/documentation/modeling/imgs/polydata/createemptymodel.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
 <figure>
-  <img class="svImg svImgSm"  src="documentation/modeling/imgs/polydata/createmodeldialog.png"> 
+  <img class="svImg svImgSm"  src="/documentation/modeling/imgs/polydata/createmodeldialog.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
 Now a new data node “demo” for the model is created under the data node "Models" in Data Manager. Double click the data node “demo" and the tool "SV Modeling” automatically shows up. The new model is empty and has no data so far. 
 
 <figure>
-  <img class="svImg svImgXl"  src="documentation/modeling/imgs/polydata/emptymodel.png"> 
+  <img class="svImg svImgXl"  src="/documentation/modeling/imgs/polydata/emptymodel.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -38,7 +38,7 @@ Now a new data node “demo” for the model is created under the data node "Mod
 	Click "OK"
 
 <figure>
-  <img class="svImg svImgSm"  src="documentation/modeling/imgs/polydata/uniondialog.png"> 
+  <img class="svImg svImgSm"  src="/documentation/modeling/imgs/polydata/uniondialog.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -47,7 +47,7 @@ At the end of the Boolean operation, the model is created. The status bar will d
 
 
 <figure>
-  <img class="svImg svImgLg"  src="documentation/modeling/imgs/polydata/polydatamodel.png"> 
+  <img class="svImg svImgLg"  src="/documentation/modeling/imgs/polydata/polydatamodel.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -78,7 +78,7 @@ Right click the model "demo" in Data Manager, the menu pops up with more options
 	Surface Representation: show the model surface with points, wireframe or surface
 
 <figure>
-  <img class="svImg svImgSm"  src="documentation/modeling/imgs/polydata/datamenuformodel.png"> 
+  <img class="svImg svImgSm"  src="/documentation/modeling/imgs/polydata/datamenuformodel.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 

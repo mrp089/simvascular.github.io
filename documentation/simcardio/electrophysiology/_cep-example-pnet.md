@@ -1,9 +1,9 @@
-## Activation of a Purkinje Network ##
+## Activation of a Purkinje Network
 
 Here we perform electrophysiology simulation on a human biventricular Purkinje network. The initial stimulus is provided at the atrio-ventricular junction, and the TTP model is used to model for the activation of the individual Purkinje cells. The entire simulation set-up along with results can be found on <a href="https://github.com/SimVascular/svFSI-Tests/tree/master/08-cep/05-Purkinje">GitHub</a>.
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/simcardio/electrophysiology/images/PAT003_Purkinje.png">
+  <img class="svImg svImgMd" src="/documentation/simcardio/electrophysiology/images/PAT003_Purkinje.png">
   <figcaption class="svCaption" >A biventricular Purkinje network</figcaption>
 </figure>
 
@@ -90,8 +90,6 @@ Here is the breakdown of the input file for this study.
 </code></pre>
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/simcardio/electrophysiology/images/ttp_pnet.gif">
+  <img class="svImg svImgMd" src="/documentation/simcardio/electrophysiology/images/ttp_pnet.gif">
   <figcaption class="svCaption" >Activation of the Purkinje network simulated using svFSI.</figcaption>
 </figure>
-
-

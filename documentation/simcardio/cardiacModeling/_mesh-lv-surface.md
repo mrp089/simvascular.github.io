@@ -1,11 +1,11 @@
-## Constructing LV Surface Meshes ##
+## Constructing LV Surface Meshes
 
 ### Using SimVascular Python Shell
 
 The SimVascular
 <a href='http://simvascular.github.io/docsPythonInterface.html#python_shell'> Python Shell </a>
-can be used to run the 
-<a href="https://github.com/SimVascular/SimVascular/tree/master/Python/site-packages/sv_auto_lv_modeling/modeling/surface_main.py"> 
+can be used to run the
+<a href="https://github.com/SimVascular/SimVascular/tree/master/Python/site-packages/sv_auto_lv_modeling/modeling/surface_main.py">
 surface_main.py </a> Python surface generation script using the following commands
 
 <pre><code class='language-shell' lang='shell'>
@@ -27,11 +27,10 @@ surface_main.py </a> Python surface generation script using the following comman
       --edge_size 3.5 # maximum edge size for the mesh
 </code></pre>
 
-
 ###Using SimVascular Python Console
 
 The SimVascular GUI <a href='http://simvascular.github.io/docsPythonInterface.html#console'> Python Console </a>
-can be used for surface generation. Use the Python console <strong>Text Editor</strong> mode to enter the following Python commands 
+can be used for surface generation. Use the Python console <strong>Text Editor</strong> mode to enter the following Python commands
 
 <pre><code class='language-python' lang='python'>from sv_auto_lv_modeling.auto_lv import Modeling
     data_path='/path/to/data'
@@ -43,7 +42,6 @@ can be used for surface generation. Use the Python console <strong>Text Editor</
 </code></pre>
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/simcardio/cardiacModeling/images/surface.png">
+  <img class="svImg svImgMd" src="/documentation/simcardio/cardiacModeling/images/surface.png">
   <figcaption class="svCaption" >Automatically created LV meshes at diastole and systole.</figcaption>
 </figure>
-

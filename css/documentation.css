@@ -61,11 +61,21 @@ p {
     padding-right: 20px;
 }
 
+.navigationSection {
+    display: block;
+    height: 500px;
+    float: left;
+    position: fixed;
+    padding-top: 90px;
+    background-color: black;
+}
+
 .mainSection {
+    float: right;
     display: block;
     height: fit-content;
     position: relative;
-    margin: 25px;
+    padding: 25px;
     padding-top: 90px;
     background-color: var(--white);
 }
@@ -73,7 +83,6 @@ p {
 h1, h2, h3, h4, h5, h6, p {
     margin: 0;
     padding: 15px;
-    color: red;
 }
 
 .topLeftLogo {

@@ -13,56 +13,55 @@ We are interested in solving the DAE system for the solutions, $\textbf{y}\_{n+1
 
 1. $\textbf{Predictor step}$: First, we make an initial guess for $\textbf{y}\_{n+1}$ and $\dot{\textbf{y}}\_{n+1}$,
 
-    $$\textbf{y}\_{n+1} = \textbf{y}\_{n},$$
+   $$\textbf{y}\_{n+1} = \textbf{y}\_{n},$$
 
-    $$\dot{\textbf{y}}\_{n+1} = \frac{\gamma - 1}{\gamma}\dot{\textbf{y}}\_{n},$$
+   $$\dot{\textbf{y}}\_{n+1} = \frac{\gamma - 1}{\gamma}\dot{\textbf{y}}\_{n},$$
 
-    where $\gamma = 0.5 + \alpha\_{m} - \alpha\_{f}$.
+   where $\gamma = 0.5 + \alpha\_{m} - \alpha\_{f}$.
 
 2. $\textbf{Initiator step}$: Then, we initialize the values of $\dot{\textbf{y}}\_{n+\alpha\_{m}}$ and $\textbf{y}\_{n+\alpha\_{f}}$,
 
-    $$\dot{\textbf{y}}\_{n+\alpha\_{m}}^{k=0} = \dot{\textbf{y}}\_{n} + \alpha\_{m}\left(\dot{\textbf{y}}\_{n+1} - \dot{\textbf{y}}\_{n}\right),$$
+   $$\dot{\textbf{y}}\_{n+\alpha\_{m}}^{k=0} = \dot{\textbf{y}}\_{n} + \alpha\_{m}\left(\dot{\textbf{y}}\_{n+1} - \dot{\textbf{y}}\_{n}\right),$$
 
-    $$\textbf{y}\_{n+\alpha\_{f}}^{k=0} = \textbf{y}\_{n} + \alpha\_{f}\left(\textbf{y}\_{n+1} - \textbf{y}\_{n}\right).$$
+   $$\textbf{y}\_{n+\alpha\_{f}}^{k=0} = \textbf{y}\_{n} + \alpha\_{f}\left(\textbf{y}\_{n+1} - \textbf{y}\_{n}\right).$$
 
 3. $\textbf{Multi-corrector step}$: Then, for $k \in \left[0, N\_{int} - 1\right]$, we iteratively update our guess of $\dot{\textbf{y}}\_{n+\alpha\_{m}}^{k}$ and $\textbf{y}\_{n+\alpha\_{f}}^{k}$.
 
-    We desire the residual, $\textbf{r}\left(\dot{\textbf{y}}\_{n+\alpha\_{m}}^{k + 1}, \textbf{y}\_{n+\alpha\_{f}}^{k + 1}, t\_{n+\alpha\_{f}}\right)$, to be $\textbf{0}$, where
+   We desire the residual, $\textbf{r}\left(\dot{\textbf{y}}\_{n+\alpha\_{m}}^{k + 1}, \textbf{y}\_{n+\alpha\_{f}}^{k + 1}, t\_{n+\alpha\_{f}}\right)$, to be $\textbf{0}$, where
 
-    $$\textbf{r}\left(\dot{\textbf{y}}\_{n+\alpha\_{m}}^{k+1}, \textbf{y}\_{n+\alpha\_{f}}^{k+1}, t\_{n+\alpha\_{f}}\right) = \textbf{E}\left(\textbf{y}\_{n+\alpha\_{f}}^{k+1}, t\_{n+\alpha\_{f}}\right)\cdot\dot{\textbf{y}}\_{n+\alpha\_{m}}^{k+1} + \textbf{F}\left(\textbf{y}\_{n+\alpha\_{f}}^{k+1}, t\_{n+\alpha\_{f}}\right)\cdot\textbf{y}\_{n+\alpha\_{f}}^{k+1} + \textbf{c}\left(\textbf{y}\_{n+\alpha\_{f}}^{k+1}, t\_{n+\alpha\_{f}}\right).$$
+   $$\textbf{r}\left(\dot{\textbf{y}}\_{n+\alpha\_{m}}^{k+1}, \textbf{y}\_{n+\alpha\_{f}}^{k+1}, t\_{n+\alpha\_{f}}\right) = \textbf{E}\left(\textbf{y}\_{n+\alpha\_{f}}^{k+1}, t\_{n+\alpha\_{f}}\right)\cdot\dot{\textbf{y}}\_{n+\alpha\_{m}}^{k+1} + \textbf{F}\left(\textbf{y}\_{n+\alpha\_{f}}^{k+1}, t\_{n+\alpha\_{f}}\right)\cdot\textbf{y}\_{n+\alpha\_{f}}^{k+1} + \textbf{c}\left(\textbf{y}\_{n+\alpha\_{f}}^{k+1}, t\_{n+\alpha\_{f}}\right).$$
 
-    Using Newton's method, we linearize this equation about $\textbf{y}\_{n+\alpha\_{f}}^{k}$ to obtain
+   Using Newton's method, we linearize this equation about $\textbf{y}\_{n+\alpha\_{f}}^{k}$ to obtain
 
-    $$\textbf{K}\left(\dot{\textbf{y}}\_{n+\alpha\_{m}}^{k}, \textbf{y}\_{n+\alpha\_{f}}^{k}, t\_{n+\alpha\_{f}}\right)\cdot\Delta \textbf{y}\_{n+\alpha\_{f}}^{k} = -\textbf{r}\left(\dot{\textbf{y}}\_{n+\alpha\_{m}}^{k}, \textbf{y}\_{n+\alpha\_{f}}^{k}, t\_{n+\alpha\_{f}}\right),$$
+   $$\textbf{K}\left(\dot{\textbf{y}}\_{n+\alpha\_{m}}^{k}, \textbf{y}\_{n+\alpha\_{f}}^{k}, t\_{n+\alpha\_{f}}\right)\cdot\Delta \textbf{y}\_{n+\alpha\_{f}}^{k} = -\textbf{r}\left(\dot{\textbf{y}}\_{n+\alpha\_{m}}^{k}, \textbf{y}\_{n+\alpha\_{f}}^{k}, t\_{n+\alpha\_{f}}\right),$$
 
-    where $\textbf{K}\left(\dot{\textbf{y}}\_{n+\alpha\_{m}}, \textbf{y}\_{n+\alpha\_{f}}, t\_{n+\alpha\_{f}}\right) = \frac{\partial \textbf{r}\left(\dot{\textbf{y}}\_{n+\alpha\_{m}}, \textbf{y}\_{n+\alpha\_{f}}, t\_{n+\alpha\_{f}}\right)}{\partial \textbf{y}\_{n+\alpha\_{f}}}$ is the consistent tangent matrix.
+   where $\textbf{K}\left(\dot{\textbf{y}}\_{n+\alpha\_{m}}, \textbf{y}\_{n+\alpha\_{f}}, t\_{n+\alpha\_{f}}\right) = \frac{\partial \textbf{r}\left(\dot{\textbf{y}}\_{n+\alpha\_{m}}, \textbf{y}\_{n+\alpha\_{f}}, t\_{n+\alpha\_{f}}\right)}{\partial \textbf{y}\_{n+\alpha\_{f}}}$ is the consistent tangent matrix.
 
-    We solve this equation to find $\Delta \textbf{y}\_{n+\alpha\_{f}}^{k}$ and update our guess of $\dot{\textbf{y}}\_{n+\alpha\_{m}}$ and $\textbf{y}\_{n+\alpha\_{f}}$,
+   We solve this equation to find $\Delta \textbf{y}\_{n+\alpha\_{f}}^{k}$ and update our guess of $\dot{\textbf{y}}\_{n+\alpha\_{m}}$ and $\textbf{y}\_{n+\alpha\_{f}}$,
 
-    <!-- where $\textbf{r}\left(\dot{\textbf{y}}\_{n+\alpha\_{m}}^{k}, \textbf{y}\_{n+\alpha\_{f}}^{k}, t\_{n+\alpha\_{f}}\right) = \textbf{E}\left(\textbf{y}\_{n+\alpha\_{f}}^{k}, t\_{n+\alpha\_{f}}\right)\dot{\textbf{y}}\_{n+\alpha\_{m}}^{k} + \textbf{F}\left(\textbf{y}\_{n+\alpha\_{f}}^{k}, t\_{n+\alpha\_{f}}\right)\textbf{y}\_{n+\alpha\_{f}}^{k} + \textbf{c}\left(\textbf{y}\_{n+\alpha\_{f}}^{k}, t\_{n+\alpha\_{f}}\right)$ and $\textbf{K} = \frac{\partial \textbf{r}\left(\textbf{y}, t\_{n+\alpha\_{f}}\right)}{\partial \textbf{y}}$ is the consistent tangent matrix. -->
+   <!-- where $\textbf{r}\left(\dot{\textbf{y}}\_{n+\alpha\_{m}}^{k}, \textbf{y}\_{n+\alpha\_{f}}^{k}, t\_{n+\alpha\_{f}}\right) = \textbf{E}\left(\textbf{y}\_{n+\alpha\_{f}}^{k}, t\_{n+\alpha\_{f}}\right)\dot{\textbf{y}}\_{n+\alpha\_{m}}^{k} + \textbf{F}\left(\textbf{y}\_{n+\alpha\_{f}}^{k}, t\_{n+\alpha\_{f}}\right)\textbf{y}\_{n+\alpha\_{f}}^{k} + \textbf{c}\left(\textbf{y}\_{n+\alpha\_{f}}^{k}, t\_{n+\alpha\_{f}}\right)$ and $\textbf{K} = \frac{\partial \textbf{r}\left(\textbf{y}, t\_{n+\alpha\_{f}}\right)}{\partial \textbf{y}}$ is the consistent tangent matrix. -->
 
-    $$\textbf{y}\_{n+\alpha\_{f}}^{k+1} = \textbf{y}\_{n+\alpha\_{f}}^{k} + \Delta \textbf{y}\_{n+\alpha\_{f}}^{k},$$
+   $$\textbf{y}\_{n+\alpha\_{f}}^{k+1} = \textbf{y}\_{n+\alpha\_{f}}^{k} + \Delta \textbf{y}\_{n+\alpha\_{f}}^{k},$$
 
-    $$\dot{\textbf{y}}\_{n+\alpha\_{m}}^{k+1} = \dot{\textbf{y}}\_{n+\alpha\_{m}}^{k} + \frac{\alpha\_{m}}{\Delta t\alpha\_{f}\gamma}\Delta \textbf{y}\_{n+\alpha\_{f}}^{k}.$$
+   $$\dot{\textbf{y}}\_{n+\alpha\_{m}}^{k+1} = \dot{\textbf{y}}\_{n+\alpha\_{m}}^{k} + \frac{\alpha\_{m}}{\Delta t\alpha\_{f}\gamma}\Delta \textbf{y}\_{n+\alpha\_{f}}^{k}.$$
 
+   The consistent tangent matrix is
 
-    The consistent tangent matrix is
+   $$\textbf{K}\left(\dot{\textbf{y}}\_{n+\alpha\_{m}}, \textbf{y}\_{n+\alpha\_{f}}, t\_{n+\alpha\_{f}}\right) = \underset{\text{Term 1}}{\underbrace{\frac{\partial \textbf{E}\left(\textbf{y}\_{n+\alpha\_{f}}, t\_{n+\alpha\_{f}}\right)}{\partial \textbf{y}\_{n+\alpha\_{f}}}\cdot\dot{\textbf{y}}\_{n+\alpha\_{m}}}} + \frac{\alpha\_{m}}{\Delta t\alpha\_{f}\gamma}\textbf{E}\left(\textbf{y}\_{n+\alpha\_{f}}, t\_{n+\alpha\_{f}}\right) + \underset{\text{Term 2}}{\underbrace{\frac{\partial \textbf{F}\left(\textbf{y}\_{n+\alpha\_{f}}, t\_{n+\alpha\_{f}}\right)}{\partial \textbf{y}\_{n+\alpha\_{f}}}\cdot\textbf{y}\_{n+\alpha\_{f}}}} + \textbf{F}\left(\textbf{y}\_{n+\alpha\_{f}}, t\_{n+\alpha\_{f}}\right) + \underset{\text{Term 3}}{\underbrace{\frac{\partial \textbf{c}\left(\textbf{y}\_{n+\alpha\_{f}}, t\_{n+\alpha\_{f}}\right)}{\partial \textbf{y}\_{n+\alpha\_{f}}}}}.$$
 
-    $$\textbf{K}\left(\dot{\textbf{y}}\_{n+\alpha\_{m}}, \textbf{y}\_{n+\alpha\_{f}}, t\_{n+\alpha\_{f}}\right) = \underset{\text{Term 1}}{\underbrace{\frac{\partial \textbf{E}\left(\textbf{y}\_{n+\alpha\_{f}}, t\_{n+\alpha\_{f}}\right)}{\partial \textbf{y}\_{n+\alpha\_{f}}}\cdot\dot{\textbf{y}}\_{n+\alpha\_{m}}}} + \frac{\alpha\_{m}}{\Delta t\alpha\_{f}\gamma}\textbf{E}\left(\textbf{y}\_{n+\alpha\_{f}}, t\_{n+\alpha\_{f}}\right) + \underset{\text{Term 2}}{\underbrace{\frac{\partial \textbf{F}\left(\textbf{y}\_{n+\alpha\_{f}}, t\_{n+\alpha\_{f}}\right)}{\partial \textbf{y}\_{n+\alpha\_{f}}}\cdot\textbf{y}\_{n+\alpha\_{f}}}} + \textbf{F}\left(\textbf{y}\_{n+\alpha\_{f}}, t\_{n+\alpha\_{f}}\right) + \underset{\text{Term 3}}{\underbrace{\frac{\partial \textbf{c}\left(\textbf{y}\_{n+\alpha\_{f}}, t\_{n+\alpha\_{f}}\right)}{\partial \textbf{y}\_{n+\alpha\_{f}}}}}.$$
+   For simplicity, denote terms 1, 2, and 3 as $\textbf{dE}$, $\textbf{dF}$, and $\textbf{dc}$ respectively. Furthermore, the notation used for $\textbf{dA} = \frac{\partial\textbf{A}}{\partial\textbf{y}}\cdot\textbf{y}$ is defined as $dA\_{ik} = \frac{\partial A\_{ij}}{\partial y\_{k}}y\_{j}$.
 
-    For simplicity, denote terms 1, 2, and 3 as $\textbf{dE}$, $\textbf{dF}$, and $\textbf{dc}$ respectively. Furthermore, the notation used for $\textbf{dA} = \frac{\partial\textbf{A}}{\partial\textbf{y}}\cdot\textbf{y}$ is defined as $dA\_{ik} = \frac{\partial A\_{ij}}{\partial y\_{k}}y\_{j}$.
+   <!-- https://docs.mathjax.org/en/latest/input/tex/macros/index.html -->
 
-    <!-- https://docs.mathjax.org/en/latest/input/tex/macros/index.html -->
+   <!-- https://math.meta.stackexchange.com/questions/23244/how-to-do-a-underbracket-with-mathjax -->
 
-    <!-- https://math.meta.stackexchange.com/questions/23244/how-to-do-a-underbracket-with-mathjax -->
-
-    <!-- 4. Repeat Step 3 until convergence to tolerance or until hit maximum number of iterations -->
+   <!-- 4. Repeat Step 3 until convergence to tolerance or until hit maximum number of iterations -->
 
 4. $\textbf{Update step}$: Finally, we update $\textbf{y}\_{n+1}$ and $\dot{\textbf{y}}\_{n+1}$ using our final value of $\dot{\textbf{y}}\_{n+\alpha\_{m}}$ and $\textbf{y}\_{n+\alpha\_{f}}$.
 
-    $$\textbf{y}\_{n+1} = \textbf{y}\_{n} + \frac{\textbf{y}\_{n+\alpha\_{f}}^{N\_{int}} - \textbf{y}\_{n}}{\alpha\_{f}}$$
+   $$\textbf{y}\_{n+1} = \textbf{y}\_{n} + \frac{\textbf{y}\_{n+\alpha\_{f}}^{N\_{int}} - \textbf{y}\_{n}}{\alpha\_{f}}$$
 
-    $$\dot{\textbf{y}}\_{n+1} = \dot{\textbf{y}}\_{n} + \frac{\dot{\textbf{y}}\_{n+\alpha\_{m}}^{N\_{int}} - \dot{\textbf{y}}\_{n}}{\alpha\_{m}}$$
+   $$\dot{\textbf{y}}\_{n+1} = \dot{\textbf{y}}\_{n} + \frac{\dot{\textbf{y}}\_{n+\alpha\_{m}}^{N\_{int}} - \dot{\textbf{y}}\_{n}}{\alpha\_{m}}$$
 
 <h3> Assembly </h3>
 
@@ -72,17 +71,13 @@ Similar to a finite element solver, the 0D solver defines local element contribu
 
 $$\textbf{E} = \underset{e = 1}{\overset{N\_{elem}}{\mathbb{A}}}\textbf{E}^{e},$$
 
-
 $$\textbf{F} = \underset{e = 1}{\overset{N\_{elem}}{\mathbb{A}}}\textbf{F}^{e},$$
-
 
 $$\textbf{c} = \underset{e = 1}{\overset{N\_{elem}}{\mathbb{A}}}\textbf{c}^{e},$$
 
 $$\textbf{dE} = \underset{e = 1}{\overset{N\_{elem}}{\mathbb{A}}}\textbf{dE}^{e},$$
 
-
 $$\textbf{dF} = \underset{e = 1}{\overset{N\_{elem}}{\mathbb{A}}}\textbf{dF}^{e},$$
-
 
 $$\textbf{dc} = \underset{e = 1}{\overset{N\_{elem}}{\mathbb{A}}}\textbf{dc}^{e}.$$
 
@@ -102,7 +97,7 @@ $$\textbf{E}^{e}\left(\textbf{y}^{e}, t\right)\cdot\dot{\textbf{y}}^{e} + \textb
 
 <br>
 <figure>
-  <img class="svImg svImgMd" src="documentation/rom_simulation/0d-solver/images/resistor.png">
+  <img class="svImg svImgMd" src="/documentation/rom_simulation/0d-solver/images/resistor.png">
   <figcaption class="svCaption"> Resistor element.
   </figcaption>
 </figure>
@@ -110,6 +105,7 @@ $$\textbf{E}^{e}\left(\textbf{y}^{e}, t\right)\cdot\dot{\textbf{y}}^{e} + \textb
 The governing equations for the local resistor element are
 
 <!-- https://github.com/mathjax/MathJax/issues/329 -- need to add a backslash before all underscore in an equation -->
+
 $$P\_{in}^{e} - P\_{out}^{e} - RQ\_{in}^{e} = 0$$
 
 $$Q\_{in}^{e} - Q\_{out}^{e} = 0.$$
@@ -117,25 +113,25 @@ $$Q\_{in}^{e} - Q\_{out}^{e} = 0.$$
 The local contributions to the global arrays are
 
 \begin{gather}
-    \textbf{y}^{e} =
-        \begin{bmatrix}
-            P\_{in}^{e} & Q\_{in}^{e} & P\_{out}^{e} & Q\_{out}^{e}
-        \end{bmatrix}^T,
+\textbf{y}^{e} =
+\begin{bmatrix}
+P\_{in}^{e} & Q\_{in}^{e} & P\_{out}^{e} & Q\_{out}^{e}
+\end{bmatrix}^T,
 \end{gather}
 
 \begin{gather}
-    \textbf{F}^{e} =
-        \begin{bmatrix}
-            1 & -R & -1 &  0 \ \cr
-            0 &  1 &  0 & -1
-        \end{bmatrix}.
+\textbf{F}^{e} =
+\begin{bmatrix}
+1 & -R & -1 & 0 \ \cr
+0 & 1 & 0 & -1
+\end{bmatrix}.
 \end{gather}
 
 <h5> Capacitor </h5>
 
 <br>
 <figure>
-  <img class="svImg svImgMd" src="documentation/rom_simulation/0d-solver/images/capacitor.png">
+  <img class="svImg svImgMd" src="/documentation/rom_simulation/0d-solver/images/capacitor.png">
   <figcaption class="svCaption"> Capacitor element.
   </figcaption>
 </figure>
@@ -149,33 +145,33 @@ $$Q\_{in}^{e} - Q\_{out}^{e} = 0.$$
 The local contributions to the global arrays are
 
 \begin{gather}
-    \textbf{y}^{e} =
-        \begin{bmatrix}
-            P\_{in}^{e} & Q\_{in}^{e} & P\_{out}^{e} & Q\_{out}^{e}
-        \end{bmatrix}^T,
+\textbf{y}^{e} =
+\begin{bmatrix}
+P\_{in}^{e} & Q\_{in}^{e} & P\_{out}^{e} & Q\_{out}^{e}
+\end{bmatrix}^T,
 \end{gather}
 
 \begin{gather}
-    \textbf{E}^{e} =
-        \begin{bmatrix}
-            C &  0 & -C &  0 \ \cr
-            0 &  0 &  0 &  0
-        \end{bmatrix},
+\textbf{E}^{e} =
+\begin{bmatrix}
+C & 0 & -C & 0 \ \cr
+0 & 0 & 0 & 0
+\end{bmatrix},
 \end{gather}
 
 \begin{gather}
-    \textbf{F}^{e} =
-        \begin{bmatrix}
-            0 & -1 &  0 &  0 \ \cr
-            0 &  1 &  0 & -1
-        \end{bmatrix}.
+\textbf{F}^{e} =
+\begin{bmatrix}
+0 & -1 & 0 & 0 \ \cr
+0 & 1 & 0 & -1
+\end{bmatrix}.
 \end{gather}
 
 <h5> Inductor </h5>
 
 <br>
 <figure>
-  <img class="svImg svImgMd" src="documentation/rom_simulation/0d-solver/images/inductor.png">
+  <img class="svImg svImgMd" src="/documentation/rom_simulation/0d-solver/images/inductor.png">
   <figcaption class="svCaption"> Inductor element.
   </figcaption>
 </figure>
@@ -189,33 +185,33 @@ $$Q\_{in}^{e} - Q\_{out}^{e} = 0.$$
 The local contributions to the global arrays are
 
 \begin{gather}
-    \textbf{y}^{e} =
-        \begin{bmatrix}
-            P\_{in}^{e} & Q\_{in}^{e} & P\_{out}^{e} & Q\_{out}^{e}
-        \end{bmatrix}^T,
+\textbf{y}^{e} =
+\begin{bmatrix}
+P\_{in}^{e} & Q\_{in}^{e} & P\_{out}^{e} & Q\_{out}^{e}
+\end{bmatrix}^T,
 \end{gather}
 
 \begin{gather}
-    \textbf{E}^{e} =
-        \begin{bmatrix}
-            0 & -L &  0 &  0 \ \cr
-            0 &  0 &  0 &  0
-        \end{bmatrix},
+\textbf{E}^{e} =
+\begin{bmatrix}
+0 & -L & 0 & 0 \ \cr
+0 & 0 & 0 & 0
+\end{bmatrix},
 \end{gather}
 
 \begin{gather}
-    \textbf{F}^{e} =
-        \begin{bmatrix}
-            1 &  0 & -1 &  0 \ \cr
-            0 &  1 &  0 & -1
-        \end{bmatrix}.
+\textbf{F}^{e} =
+\begin{bmatrix}
+1 & 0 & -1 & 0 \ \cr
+0 & 1 & 0 & -1
+\end{bmatrix}.
 \end{gather}
 
 <h5> Resistor-Capacitor </h5>
 
 <br>
 <figure>
-  <img class="svImg svImgMd" src="documentation/rom_simulation/0d-solver/images/RC.png">
+  <img class="svImg svImgMd" src="/documentation/rom_simulation/0d-solver/images/RC.png">
   <figcaption class="svCaption"> Resistor-Capacitor element.
   </figcaption>
 </figure>
@@ -229,33 +225,33 @@ $$Q\_{in}^{e} - Q\_{out}^{e} - C\frac{dP\_{out}^{e}}{dt} = 0.$$
 The local contributions to the global arrays are
 
 \begin{gather}
-    \textbf{y}^{e} =
-        \begin{bmatrix}
-            P\_{in}^{e} & Q\_{in}^{e} & P\_{out}^{e} & Q\_{out}^{e}
-        \end{bmatrix}^T,
+\textbf{y}^{e} =
+\begin{bmatrix}
+P\_{in}^{e} & Q\_{in}^{e} & P\_{out}^{e} & Q\_{out}^{e}
+\end{bmatrix}^T,
 \end{gather}
 
 \begin{gather}
-    \textbf{E}^{e} =
-        \begin{bmatrix}
-            0 &  0 &  0 &  0 \ \cr
-            0 &  0 & -C &  0
-        \end{bmatrix},
+\textbf{E}^{e} =
+\begin{bmatrix}
+0 & 0 & 0 & 0 \ \cr
+0 & 0 & -C & 0
+\end{bmatrix},
 \end{gather}
 
 \begin{gather}
-    \textbf{F}^{e} =
-        \begin{bmatrix}
-            1 & -R & -1 &  0 \ \cr
-            0 &  1 &  0 & -1
-        \end{bmatrix}.
+\textbf{F}^{e} =
+\begin{bmatrix}
+1 & -R & -1 & 0 \ \cr
+0 & 1 & 0 & -1
+\end{bmatrix}.
 \end{gather}
 
 <h5> Resistor-Inductor </h5>
 
 <br>
 <figure>
-  <img class="svImg svImgMd" src="documentation/rom_simulation/0d-solver/images/RL.png">
+  <img class="svImg svImgMd" src="/documentation/rom_simulation/0d-solver/images/RL.png">
   <figcaption class="svCaption"> Resistor-Inductor element.
   </figcaption>
 </figure>
@@ -269,33 +265,33 @@ $$Q\_{in}^{e} - Q\_{out}^{e} = 0.$$
 The local contributions to the global arrays are
 
 \begin{gather}
-    \textbf{y}^{e} =
-        \begin{bmatrix}
-            P\_{in}^{e} & Q\_{in}^{e} & P\_{out}^{e} & Q\_{out}^{e}
-        \end{bmatrix}^T,
+\textbf{y}^{e} =
+\begin{bmatrix}
+P\_{in}^{e} & Q\_{in}^{e} & P\_{out}^{e} & Q\_{out}^{e}
+\end{bmatrix}^T,
 \end{gather}
 
 \begin{gather}
-    \textbf{E}^{e} =
-        \begin{bmatrix}
-            0 &  0 &  0 & -L \ \cr
-            0 &  0 &  0 &  0
-        \end{bmatrix},
+\textbf{E}^{e} =
+\begin{bmatrix}
+0 & 0 & 0 & -L \ \cr
+0 & 0 & 0 & 0
+\end{bmatrix},
 \end{gather}
 
 \begin{gather}
-    \textbf{F}^{e} =
-        \begin{bmatrix}
-            1 & -R & -1 &  0 \ \cr
-            0 &  1 &  0 & -1
-        \end{bmatrix}.
+\textbf{F}^{e} =
+\begin{bmatrix}
+1 & -R & -1 & 0 \ \cr
+0 & 1 & 0 & -1
+\end{bmatrix}.
 \end{gather}
 
 <h5> Resistor-Capacitor-Inductor </h5>
 
 <br>
 <figure>
-  <img class="svImg svImgMd" src="documentation/rom_simulation/0d-solver/images/RCL.png">
+  <img class="svImg svImgMd" src="/documentation/rom_simulation/0d-solver/images/RCL.png">
   <figcaption class="svCaption"> Resistor-Capacitor-Inductor element.
   </figcaption>
 </figure>
@@ -311,35 +307,35 @@ $$P\_{in}^{e} - RQ\_{in}^{e} - P\_{c} = 0$$
 The local contributions to the global arrays are
 
 \begin{gather}
-    \textbf{y}^{e} =
-        \begin{bmatrix}
-            P\_{in}^{e} & Q\_{in}^{e} & P\_{out}^{e} & Q\_{out}^{e} & P\_{c}
-        \end{bmatrix}^T,
+\textbf{y}^{e} =
+\begin{bmatrix}
+P\_{in}^{e} & Q\_{in}^{e} & P\_{out}^{e} & Q\_{out}^{e} & P\_{c}
+\end{bmatrix}^T,
 \end{gather}
 
 \begin{gather}
-    \textbf{E}^{e} =
-        \begin{bmatrix}
-            0 &  0 &  0 & -L &  0 \ \cr
-            0 &  0 &  0 &  0 & -C \ \cr
-            0 &  0 &  0 &  0 &  0
-        \end{bmatrix},
+\textbf{E}^{e} =
+\begin{bmatrix}
+0 & 0 & 0 & -L & 0 \ \cr
+0 & 0 & 0 & 0 & -C \ \cr
+0 & 0 & 0 & 0 & 0
+\end{bmatrix},
 \end{gather}
 
 \begin{gather}
-    \textbf{F}^{e} =
-        \begin{bmatrix}
-            1 & -R & -1 &  0 &  0 \ \cr
-            0 &  1 &  0 & -1 &  0 \ \cr
-            1 & -R &  0 &  0 & -1
-        \end{bmatrix}.
+\textbf{F}^{e} =
+\begin{bmatrix}
+1 & -R & -1 & 0 & 0 \ \cr
+0 & 1 & 0 & -1 & 0 \ \cr
+1 & -R & 0 & 0 & -1
+\end{bmatrix}.
 \end{gather}
 
 <h5> Stenosis </h5>
 
 <br>
 <figure>
-  <img class="svImg svImgMd" src="documentation/rom_simulation/0d-solver/images/stenosis.png">
+  <img class="svImg svImgMd" src="/documentation/rom_simulation/0d-solver/images/stenosis.png">
   <figcaption class="svCaption"> Stenosis element.
   </figcaption>
 </figure>
@@ -355,33 +351,33 @@ where $R\_{pre}\left(Q\right) = K\_{t}\frac{\rho}{2A\_{o}^{2}}\left(\frac{A\_{o}
 The local contributions to the global arrays are
 
 \begin{gather}
-    \textbf{y}^{e} =
-        \begin{bmatrix}
-            P\_{in}^{e} & Q\_{in}^{e} & P\_{out}^{e} & Q\_{out}^{e}
-        \end{bmatrix}^T,
+\textbf{y}^{e} =
+\begin{bmatrix}
+P\_{in}^{e} & Q\_{in}^{e} & P\_{out}^{e} & Q\_{out}^{e}
+\end{bmatrix}^T,
 \end{gather}
 
 \begin{gather}
-    \textbf{F}^{e} =
-        \begin{bmatrix}
-            1 & -R\_{pre}|Q\_{in}^{e}| - R\_{p} & -1 &  0 \ \cr
-            0 &  1 &  0 & -1
-        \end{bmatrix}.
+\textbf{F}^{e} =
+\begin{bmatrix}
+1 & -R\_{pre}|Q\_{in}^{e}| - R\_{p} & -1 & 0 \ \cr
+0 & 1 & 0 & -1
+\end{bmatrix}.
 \end{gather}
 
 \begin{gather}
-    \textbf{dF}^{e} =
-        \begin{bmatrix}
-            1 & -R\_{pre}|Q\_{in}^{e}| & -1 &  0 \ \cr
-            0 &  0 &  0 & 0
-        \end{bmatrix}.
+\textbf{dF}^{e} =
+\begin{bmatrix}
+1 & -R\_{pre}|Q\_{in}^{e}| & -1 & 0 \ \cr
+0 & 0 & 0 & 0
+\end{bmatrix}.
 \end{gather}
 
 <h5> Junction </h5>
 
 <br>
 <figure>
-  <img class="svImg svImgMd" src="documentation/rom_simulation/0d-solver/images/junction.png">
+  <img class="svImg svImgMd" src="/documentation/rom_simulation/0d-solver/images/junction.png">
   <figcaption class="svCaption"> An example junction element with one inlet and two outlets.
   </figcaption>
 </figure>
@@ -398,7 +394,7 @@ $$ P\_{i}^{e} = P\_{j}^{e}, \forall i \in \text{inlets}, j \in \text{outlets}$$
 
 <br>
 <figure>
-  <img class="svImg svImgMd" src="documentation/rom_simulation/0d-solver/images/rcr_bc.png">
+  <img class="svImg svImgMd" src="/documentation/rom_simulation/0d-solver/images/rcr_bc.png">
   <figcaption class="svCaption"> RCR boundary condition element.
   </figcaption>
 </figure>
@@ -412,41 +408,41 @@ $$P^{e} - P\_{c}^{e} - R\_{p}Q^{e} = 0.$$
 The local contributions to the global arrays are
 
 \begin{gather}
-    \textbf{y}^{e} =
-        \begin{bmatrix}
-            P^{e} & Q^{e} & P\_{c}^{e}
-        \end{bmatrix}^T,
+\textbf{y}^{e} =
+\begin{bmatrix}
+P^{e} & Q^{e} & P\_{c}^{e}
+\end{bmatrix}^T,
 \end{gather}
 
 \begin{gather}
-    \textbf{E}^{e} =
-        \begin{bmatrix}
-            0 & 0 & -R\_{d}C \ \cr
-            0 & 0 & 0
-        \end{bmatrix},
+\textbf{E}^{e} =
+\begin{bmatrix}
+0 & 0 & -R\_{d}C \ \cr
+0 & 0 & 0
+\end{bmatrix},
 \end{gather}
 
 \begin{gather}
-    \textbf{F}^{e} =
-        \begin{bmatrix}
-            0 & R\_{d} & -1 \ \cr
-            1 & -R\_{p} & -1
-        \end{bmatrix},
+\textbf{F}^{e} =
+\begin{bmatrix}
+0 & R\_{d} & -1 \ \cr
+1 & -R\_{p} & -1
+\end{bmatrix},
 \end{gather}
 
 \begin{gather}
-    \textbf{c}^{e} =
-        \begin{bmatrix}
-            P\_{ref} \ \cr
-            0
-        \end{bmatrix}.
+\textbf{c}^{e} =
+\begin{bmatrix}
+P\_{ref} \ \cr
+0
+\end{bmatrix}.
 \end{gather}
 
 <h5> Coronary </h5>
 
 <br>
 <figure>
-  <img class="svImg svImgMd" src="documentation/rom_simulation/0d-solver/images/coronary_bc.png">
+  <img class="svImg svImgMd" src="/documentation/rom_simulation/0d-solver/images/coronary_bc.png">
   <figcaption class="svCaption"> Coronary boundary condition element.
   </figcaption>
 </figure>
@@ -460,34 +456,34 @@ $$C\_{im}R{v}P^{e} - C\_{im}R\_{v}R\_{a}Q^{e} - R\_{v}V\_{im}^{e} - C\_{im}R\_{v
 The local contributions to the global arrays are
 
 \begin{gather}
-    \textbf{y}^{e} =
-        \begin{bmatrix}
-            P^{e} & Q^{e} & V\_{im}^{e}
-        \end{bmatrix}^T,
+\textbf{y}^{e} =
+\begin{bmatrix}
+P^{e} & Q^{e} & V\_{im}^{e}
+\end{bmatrix}^T,
 \end{gather}
 
 \begin{gather}
-    \textbf{E}^{e} =
-        \begin{bmatrix}
-            -C\_{a}C\_{im}R\_{v} & R\_{a}C\_{a}C\_{im}R\_{v} & -C\_{im}R\_{v} \ \cr
-            0 &  0 &  -C\_{im}R\_{v}R\_{am}
-        \end{bmatrix},
+\textbf{E}^{e} =
+\begin{bmatrix}
+-C\_{a}C\_{im}R\_{v} & R\_{a}C\_{a}C\_{im}R\_{v} & -C\_{im}R\_{v} \ \cr
+0 & 0 & -C\_{im}R\_{v}R\_{am}
+\end{bmatrix},
 \end{gather}
 
 \begin{gather}
-    \textbf{F}^{e} =
-        \begin{bmatrix}
-            0 &  C\_{im}R\_{v} & -1 \ \cr
-            C\_{im}R\_{v} & -C\_{im}R\_{v}R\_{a} &  -\left(R\_{v} + R\_{am}\right)
-        \end{bmatrix},
+\textbf{F}^{e} =
+\begin{bmatrix}
+0 & C\_{im}R\_{v} & -1 \ \cr
+C\_{im}R\_{v} & -C\_{im}R\_{v}R\_{a} & -\left(R\_{v} + R\_{am}\right)
+\end{bmatrix},
 \end{gather}
 
 \begin{gather}
-    \textbf{c}^{e} =
-        \begin{bmatrix}
-            C\_{im} \left(-P\_{im} + P\_{v} \right) + C\_{a}C\_{im}R\_{v}\frac{dP\_{a}}{dt} \ \cr
-            -C\_{im}\left( R\_{v} + R\_{am}\right)P\_{im} + R\_{am}C\_{im}P\_{v}
-        \end{bmatrix}.
+\textbf{c}^{e} =
+\begin{bmatrix}
+C\_{im} \left(-P\_{im} + P\_{v} \right) + C\_{a}C\_{im}R\_{v}\frac{dP\_{a}}{dt} \ \cr
+-C\_{im}\left( R\_{v} + R\_{am}\right)P\_{im} + R\_{am}C\_{im}P\_{v}
+\end{bmatrix}.
 \end{gather}
 
 Assume $P\_{a} = 0$.

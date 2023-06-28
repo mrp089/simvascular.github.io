@@ -1,9 +1,9 @@
-## Dmg Module ##
+## Dmg Module
 
-The <b>dmg</b> (data manager) module provides an interface for accessing the <b>SV Data Manager</b>, 
-the panel located on the left side of the main window that organizes the data defined for a SimVascular 
-project as a hierarchical tree of data nodes. The Data Manager organizes data nodes into predefined primary data 
-node types according to the tools that create them create them  
+The <b>dmg</b> (data manager) module provides an interface for accessing the <b>SV Data Manager</b>,
+the panel located on the left side of the main window that organizes the data defined for a SimVascular
+project as a hierarchical tree of data nodes. The Data Manager organizes data nodes into predefined primary data
+node types according to the tools that create them create them
 
 <ul style="list-style-type:none;">
   <li> Images </li> 
@@ -36,6 +36,5 @@ function accessed directly from the <b>dmg</b> module
 <br>
 <div id="DmgFunctions" class="PythonClassDiv" >
 <legend style="font-size:20px; text-align:left"> <b> Dmg Module Functions </b> </legend>
-<iframe src="documentation/python_interface/modules/docs/dmg_functions.html" style="background-color: #FFFFFF" frameborder="0" height="400" width="95%"> </iframe>
+<iframe src="/documentation/python_interface/modules/docs/dmg_functions.html" style="background-color: #FFFFFF" frameborder="0" height="400" width="95%"> </iframe>
 </div>
-

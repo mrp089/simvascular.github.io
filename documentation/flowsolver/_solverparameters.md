@@ -2,14 +2,13 @@
 
 There are many parameters for flow solver, but you are only required to set explicitly a few of them. Advanced parameters are optional. To check out the meaning of all the parameters, refer to [appendix](docsFlowSolver.html#solverinp).
 
-	Number of Timesteps: 200
-	Time Step Size: 0.03
-	Number of Timesteps between Restarts: 10
-	Step Construction : 2 # standard two iterations, enough for constant  problems.
+    Number of Timesteps: 200
+    Time Step Size: 0.03
+    Number of Timesteps between Restarts: 10
+    Step Construction : 2 # standard two iterations, enough for constant  problems.
 
-	
 <figure>
-  <img class="svImg svImgMd" src="documentation/flowsolver/imgs/solverparameters.png">
+  <img class="svImg svImgMd" src="/documentation/flowsolver/imgs/solverparameters.png">
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -23,7 +22,7 @@ $$
 
 Note that this doesn't match the **period** options we specified before. In this case, like we mentioned before, it does not really make sense to talk about a _cardiac cycle_ (this is a steady flow), but if we wanted to run this analysis for _six_ cardiac cycles, we would have to run the problem for $6.0$ seconds of physical time. If we kept our choice of time step size the same ( $\Delta t = 0.03$ sec), we will need a total number of time steps of $N = 200$.
 
-**WARNING**: Note that this $N$ is the total number of time steps you need in your numerical simulation to model a certain physical time, given a prescribed $\Delta t$. 
+**WARNING**: Note that this $N$ is the total number of time steps you need in your numerical simulation to model a certain physical time, given a prescribed $\Delta t$.
 
 **WARNING**: Now the question is: how do you come up with a reasonable value for $\Delta t$? There is not a straightforward answer for this. $\Delta t$ is the parameter that controls your **temporal discretization**, which is something that works in a similar fashion to the **spatial discretization** given by your mesh: the finer, the more accurate the results, but also the bigger the size of the problem and the time to solve it! We don’t want to get into a lot of theoretical details now, so we will just provide you with a reasonable **recipe** to evaluate this parameter. The **recipe** to estimate a reasonable $\Delta t$ is based on a dimensionless parameter called the **CFL** number. The CFL number relates the velocities happening in the fluid domain ($v$), a temporal discretization parameter ($\Delta t$), and a mesh discretization parameter (i.e. mesh size) ($h$) as follows:
 
@@ -47,7 +46,7 @@ Of course, you can imagine that in a real-world problem things are way more comp
 <br>
 ### Step Construction Block
 
-This line controls the non-linear iteration loop within the time step. The syntax of the line represents a two nonlinear iteration process for each time step. Each iteration tells the solver to make a solve and an update of the solution. 
+This line controls the non-linear iteration loop within the time step. The syntax of the line represents a two nonlinear iteration process for each time step. Each iteration tells the solver to make a solve and an update of the solution.
 
 **WARNING**: Deciding on the adequate number of non-linear iterations for a problem is also a non-trivial problem. In principle, we need to iterate until the residual (i.e., the _error_) of our numerical solution is small enough. But doing many non-linear iterations on each time step is very costly. In general, for steady flow problems, 1 or 2 non-linear iterations are enough. For pulsatile problems, at least three non-linear iterations are needed. For deformable wall problems, 4 or more non-linear iterations are required. This parameter, together with the time step size $\Delta t$ and the quality of the spatial discretization given by the finite element mesh, will completely determine the performance of the linear solver of equations. The better chosen these parameters are, the faster and more accurately our simulation will run. We will talk more about this later.
 

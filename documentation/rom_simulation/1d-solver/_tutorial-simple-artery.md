@@ -1,5 +1,5 @@
 <h1> Tutorial - Simple Artery </h1>
-This tutorial demonstrates how to create a 1D Solver input file for a model of a single vessel with different outflow boundary conditions. 
+This tutorial demonstrates how to create a 1D Solver input file for a model of a single vessel with different outflow boundary conditions.
 
 In the following sections the contents of the 1D Solver input file are shown as shaded blocks. Text preceding each block
 describe its contents.
@@ -8,7 +8,7 @@ describe its contents.
 Create a 1D Simulation input file for a FLOW outlet boundary condition. 
 Since the model contains a single vessel there is only one segment and thus no **JOINTS** need be defined.
 
-The complete 1D Simulation input file listing is 
+The complete 1D Simulation input file listing is
 <a href="documentation/rom_simulation/1d-solver/files/01_simpleArtery_Flow.in"> here </a>.
 
 <h3> 1D Solver input file </h3>
@@ -309,7 +309,7 @@ stabilization = 1 (use stabilization)
 </p>
 
 ```
-SOLVEROPTIONS 0.01 1 400 2 INLETDATA FLOW 1.0e-4 1 1 
+SOLVEROPTIONS 0.01 1 400 2 INLETDATA FLOW 1.0e-4 1 1
 ```
 
 <br>
@@ -325,20 +325,19 @@ The results of the simulation are shown using the following graphs.
 
 <br>
 <figure>
-  <img src="documentation/rom_simulation/1d-solver/images/Ex01-plottingExample_01.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
-  <img src="documentation/rom_simulation/1d-solver/images/Ex01-plottingExample_03.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
+  <img src="/documentation/rom_simulation/1d-solver/images/Ex01-plottingExample_01.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
+  <img src="/documentation/rom_simulation/1d-solver/images/Ex01-plottingExample_03.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
   <p style="clear: both;">
 </figure>
 <br>
-
 
 <!--  Outlet Resistance  -->
 
 <br>
 <h2> Outlet Resistance </h2>
-Create a 1D Simulation input file for a constant resistance outlet boundary condition. 
+Create a 1D Simulation input file for a constant resistance outlet boundary condition.
 
-The complete 1D Simulation input file listing is 
+The complete 1D Simulation input file listing is
 <a href="documentation/rom_simulation/1d-solver/files/02_simpleArtery_Resistance.in"> here </a>.
 
 <h3> 1D Solver input file </h3>
@@ -353,7 +352,7 @@ Set the model name to be **simpleArtery\_Res\_**.
 ```
 
 <br>
-Create a segment using a RESISTANCE boundary condition 
+Create a segment using a RESISTANCE boundary condition
 
 ```
 SEGMENT ARTERY 0 20.0 50 0 1 2.0 2.0 14.0 MAT1 NONE 0.0 0 0 RESISTANCE OUTLETDATA
@@ -374,20 +373,19 @@ The results of the simulation are shown using the following graphs.
 
 <br>
 <figure>
-  <img src="documentation/rom_simulation/1d-solver/images/Ex02-plottingExample_01.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
-  <img src="documentation/rom_simulation/1d-solver/images/Ex02-plottingExample_03.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
+  <img src="/documentation/rom_simulation/1d-solver/images/Ex02-plottingExample_01.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
+  <img src="/documentation/rom_simulation/1d-solver/images/Ex02-plottingExample_03.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
   <p style="clear: both;">
 </figure>
 <br>
-
 
 <!--  Outlet Pressure -->
 
 <br>
 <h2> Outlet Pressure </h2>
-Create a 1D Simulation input file for a constant pressure outlet boundary condition. 
+Create a 1D Simulation input file for a constant pressure outlet boundary condition.
 
-The complete 1D Simulation input file listing is 
+The complete 1D Simulation input file listing is
 <a href="documentation/rom_simulation/1d-solver/files/04_simpleArtery_Pressure.in"> here </a>.
 
 <h3> 1D Solver input file </h3>
@@ -423,11 +421,8 @@ The results of the simulation are shown using the following graph.
 
 <br>
 <figure>
-  <img src="documentation/rom_simulation/1d-solver/images/Ex04-plottingExample_01.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
-  <img src="documentation/rom_simulation/1d-solver/images/Ex04-plottingExample_03.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
+  <img src="/documentation/rom_simulation/1d-solver/images/Ex04-plottingExample_01.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
+  <img src="/documentation/rom_simulation/1d-solver/images/Ex04-plottingExample_03.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
   <p style="clear: both;">
 </figure>
 <br>
-
-
-

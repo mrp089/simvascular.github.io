@@ -1,13 +1,13 @@
 <h2 id="tutorial_create_simulation">Create CFD Simulation</h2>
 
-Computational fluid dynamics (CFD) simulations permit detailed analyses of blood flow and pressure in patient-specific 
-models of the human vasculature. CFD solvers used for such simulations must accommodate the sophisticated boundary 
+Computational fluid dynamics (CFD) simulations permit detailed analyses of blood flow and pressure in patient-specific
+models of the human vasculature. CFD solvers used for such simulations must accommodate the sophisticated boundary
 conditions, physiologic models and physics specific to cardiovascular modeling.
 
-The <i>Simulations Tool</i> has functionality to assign boundary conditions, material properties, and set parameters for the 
-SimVascular <i>svSolver</i> CFD solver. <i>svSolver</i> can be run through the GUI for testing a simulation setup. However, 
-for simulating physiological relevant time scales the simulation files are generated on a desktop, copied to a high performance 
-computing (HPC) cluster, and run in parallel there. 
+The <i>Simulations Tool</i> has functionality to assign boundary conditions, material properties, and set parameters for the
+SimVascular <i>svSolver</i> CFD solver. <i>svSolver</i> can be run through the GUI for testing a simulation setup. However,
+for simulating physiological relevant time scales the simulation files are generated on a desktop, copied to a high performance
+computing (HPC) cluster, and run in parallel there.
 
 <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #e6e600; border-left: 6px solid #e6e600">
 The computational cost of the numerical solution of the governing fluid equations used in CFD is quite large. 
@@ -29,8 +29,8 @@ and finite element mesh. A detailed discussion about CFD simulations can be foun
 
 <h3 id="tutorial_create_simulation_1"> Create an instance of a <i>Simulations Tool</i> for the <b>aorta-iliacs</b> model.  </h3>
 
-Create an instance of a <i>Simulations Tool</i> named <b>aorta-iliacs</b> used to create a CFD simulation of blood flow 
-in the main aorta and iliac vessels. 
+Create an instance of a <i>Simulations Tool</i> named <b>aorta-iliacs</b> used to create a CFD simulation of blood flow
+in the main aorta and iliac vessels.
 
 <table class="table table-bordered" style="width:100%">
   <caption> Create a <i>Simulations Tool</i> instance named <b>aorta-iliacs</b> </caption>
@@ -40,7 +40,7 @@ in the main aorta and iliac vessels.
   </tr>
 
   <tr>
-    <td><img src="documentation/quickguide/tutorial/images/create-simulation-1.png" width="512" height="360"> </td>
+    <td><img src="/documentation/quickguide/tutorial/images/create-simulation-1.png" width="512" height="360"> </td>
     <td> Select the <i>Simulations</i> <i>Tool</i> in the <i>Data Manager</i> with the right mouse button. 
          <br><br>
          Select the <b>Create Simulation job</b> menu option.
@@ -48,7 +48,7 @@ in the main aorta and iliac vessels.
   </tr>
 
   <tr>
-    <td><img src="documentation/quickguide/tutorial/images/create-simulation-2.png" width="512" height="360"> <br><br>
+    <td><img src="/documentation/quickguide/tutorial/images/create-simulation-2.png" width="512" height="360"> <br><br>
     </td>
     <td> A <b>Create Simulation Job</b> <i>DiaglogBox</i> appears. 
          <br><br>
@@ -67,7 +67,7 @@ in the main aorta and iliac vessels.
   </tr>
 
   <tr>
-    <td> <img src="documentation/quickguide/tutorial/images/create-simulation-3.png" width="512" height="360"> </td>
+    <td> <img src="/documentation/quickguide/tutorial/images/create-simulation-3.png" width="512" height="360"> </td>
     <td> A <i>Data Node</i> named <b>aorta-iliacs</b> (an instance of a <i>Simulations Tool</i>) is created under the
          <i>Data Manager</i> <i>Simulations Tool</i> type.
          <br><br>
@@ -79,7 +79,7 @@ in the main aorta and iliac vessels.
   </tr>
 
   <tr>
-    <td><img src="documentation/quickguide/tutorial/images/create-simulation-4.png" width="512" height="360"> </td>
+    <td><img src="/documentation/quickguide/tutorial/images/create-simulation-4.png" width="512" height="360"> </td>
     <td> <i>SV Simulation Panel</i> is a <i>ToolBox</i> containing multiple pages of GUI widgets identified by a section of 
          rectangles with text at the <i>Toolbox</i> bottom. Selecting a rectangle shows another page of GUI widgets.
          <br><br>
@@ -94,9 +94,9 @@ in the main aorta and iliac vessels.
 <br>
 <h3 id="tutorial_create_simulation_2"> Set inlet and outlet boundary conditions.  </h3>
 This section demonstrates how to set the simulation inlet and outlet boundary conditions. The centimeter–gram–second (CGS) system of 
-units is used. 
+units is used.
 
-The inlet boundary condition is a steady velocity profile with values given in the <b>steady.flow</b> file. 
+The inlet boundary condition is a steady velocity profile with values given in the <b>steady.flow</b> file.
 
 <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #d0d0d0; border-left: 6px solid #d0d0d0">
 0.0 -100<br>
@@ -115,7 +115,7 @@ The left and right iliac outlets are set to a resistance boundary condition with
   </tr>
 
  <tr>
-    <td><img src="documentation/quickguide/tutorial/images/create-simulation-5.png" width="512" height="360"> </td>
+    <td><img src="/documentation/quickguide/tutorial/images/create-simulation-5.png" width="512" height="360"> </td>
     <td> The <i>ToolBox</i> <b>Inlet and Outlet BCs</b> page is used to set boundary conditions for the mesh inlet and outlet faces.
          <br><br>
          The <b>Name / BC Type / Values</b> <i>Table</i> contains the name of all <i>Model</i> <i>Faces</i> that have a <b>cap</b> 
@@ -126,10 +126,10 @@ The left and right iliac outlets are set to a resistance boundary condition with
   </tr>
 
   <tr>
-    <td><img src="documentation/quickguide/tutorial/images/create-simulation-6.png" width="512" height="360"> </td>
+    <td><img src="/documentation/quickguide/tutorial/images/create-simulation-6.png" width="512" height="360"> </td>
     <td> A <b>Set Inlet/Outlet BCs</b> <i>DialogBox</i> appears.
          <br><br>
-         Select the <b>Flow rate (from File) </b> <img src="documentation/quickguide/tutorial/images/simulation-gui-flow-file.png" width="22" height="20"> icon to bring up a <i>FileBrowser</i>.
+         Select the <b>Flow rate (from File) </b> <img src="/documentation/quickguide/tutorial/images/simulation-gui-flow-file.png" width="22" height="20"> icon to bring up a <i>FileBrowser</i>.
          <br><br>
          Select the <b>steady.flow</b> file from the <b>Tutorial/flow-files</b> directory. 
          <br><br>
@@ -138,7 +138,7 @@ The left and right iliac outlets are set to a resistance boundary condition with
   </tr>
 
   <tr>
-    <td><img src="documentation/quickguide/tutorial/images/create-simulation-7.png" width="512" height="360"> </td>
+    <td><img src="/documentation/quickguide/tutorial/images/create-simulation-7.png" width="512" height="360"> </td>
     <td> The <b>cap_aorta</b> boundary condition <b>BC Type</b> is now set to <b>Proscribed Velocities</b>. 
          <br><br>
          To set the outlet boundary condition for the left iliac double click with the left mouse button on <b>cap_left-iliac</b> in 
@@ -147,7 +147,7 @@ The left and right iliac outlets are set to a resistance boundary condition with
   </tr>
 
   <tr>
-    <td><img src="documentation/quickguide/tutorial/images/create-simulation-8.png" width="512" height="360"> </td>
+    <td><img src="/documentation/quickguide/tutorial/images/create-simulation-8.png" width="512" height="360"> </td>
     <td> A <b>Set Inlet/Outlet BCs</b> <i>DialogBox</i> appears.
         <br><br>
         From the <b>BC Type:</b> <i>ComboBox</i> select <b>Resistance</b>.
@@ -159,7 +159,7 @@ The left and right iliac outlets are set to a resistance boundary condition with
   </tr>
 
   <tr>
-    <td><img src="documentation/quickguide/tutorial/images/create-simulation-9.png" width="512" height="360"> </td>
+    <td><img src="/documentation/quickguide/tutorial/images/create-simulation-9.png" width="512" height="360"> </td>
     <td> The <b>cap_left-iliac</b> boundary condition <b>BC Type</b> is now set to <b>Resistance</b>.
          <br><br>
          To set the outlet boundary condition for the right iliac double click with the left mouse button on <b>cap_aorta_2</b> in
@@ -168,7 +168,7 @@ The left and right iliac outlets are set to a resistance boundary condition with
   </tr>
 
   <tr>
-    <td><img src="documentation/quickguide/tutorial/images/create-simulation-10.png" width="512" height="360"> </td>
+    <td><img src="/documentation/quickguide/tutorial/images/create-simulation-10.png" width="512" height="360"> </td>
     <td> A <b>Set Inlet/Outlet BCs</b> <i>DialogBox</i> appears.
         <br><br>
         From the <b>BC Type:</b> <i>ComboBox</i> select <b>Resistance</b>.
@@ -180,10 +180,10 @@ The left and right iliac outlets are set to a resistance boundary condition with
   </tr>
 
   <tr>
-    <td><img src="documentation/quickguide/tutorial/images/create-simulation-11.png" width="512" height="360"> </td>
+    <td><img src="/documentation/quickguide/tutorial/images/create-simulation-11.png" width="512" height="360"> </td>
     <td> The <b>cap_aorta_2</b> boundary condition <b>BC Type</b> is now set to <b>Resistance</b>.
          <br><br>
-         Press the <img src="documentation/quickguide/gui/images/gui-save-icon.png" width="40" height="35">
+         Press the <img src="/documentation/quickguide/gui/images/gui-save-icon.png" width="40" height="35">
          icon in the  <i>ToolBar</i> to save the <i>Project</i>.
          <br><br>
          Select the <i>ToolBox</i> <b>Solver Parameters</b> page.
@@ -193,9 +193,9 @@ The left and right iliac outlets are set to a resistance boundary condition with
 
 <br>
 <h3 id="tutorial_create_simulation_3"> Set solver parameters.  </h3>
-This section demonstrates how to set the simulation solver parameters. 
+This section demonstrates how to set the simulation solver parameters.
 
-The number of simulation time steps and time step size determines the simulation physical time. A simulation for 500 time steps 
+The number of simulation time steps and time step size determines the simulation physical time. A simulation for 500 time steps
 using a time step size of 0.001 simulates a physical time = (500 time steps) x (0.001 time step size) = 0.5 seconds.
 
 The value of the time step size is an important factor contributing to the stability, convergence, and reliability of a simulation.
@@ -203,7 +203,6 @@ The value of the time step size depends on the size of the finite element mesh a
 
 A detailed discussion about solver parameters can be found in the SimVascular
 <a href="http://simvascular.github.io/docsFlowSolver.html#solverparameters">Simulation Guide / Solver Parameters</a> documentation.
-
 
 <table class="table table-bordered" style="width:100%">
   <caption> Set solver parameters </caption>
@@ -213,7 +212,7 @@ A detailed discussion about solver parameters can be found in the SimVascular
   </tr>
 
  <tr>
-    <td><img src="documentation/quickguide/tutorial/images/create-simulation-12.png" width="512" height="360"> </td>
+    <td><img src="/documentation/quickguide/tutorial/images/create-simulation-12.png" width="512" height="360"> </td>
     <td> The <i>ToolBox</i> <b>Solver Parameters</b> page is used to set the parameters controlling <i>svSolver</i>
          solution and output. Parameter values are entered by clicking with the left mouse button on the appropriate
          <i>TextBox</i>. 
@@ -240,7 +239,7 @@ This section demonstrates how run the simulation.
 
 The <i>svSolver</i> program can be run as a single process using one processor (core) or in parallel using two or more processors.
 <i>svSolver</i> uses the <i>Open MPI</i> implementation of the Message Passing Interface (MPI) to run in parallel. The <i>Open MPI</i>
-libraries must be installed in order to run <i>svSolver</i> in parallel. In this demonstration the <i>svSolver</i> program is run 
+libraries must be installed in order to run <i>svSolver</i> in parallel. In this demonstration the <i>svSolver</i> program is run
 on a single processor.
 
 <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #d0d0d0; border-left: 6px solid #d0d0d0">
@@ -258,7 +257,7 @@ platforms it must be installed using a separate <i>svSolver</i> installer downlo
   </tr>
 
   <tr>
-    <td><img src="documentation/quickguide/tutorial/images/create-simulation-13.png" width="512" height="360"> </td>
+    <td><img src="/documentation/quickguide/tutorial/images/create-simulation-13.png" width="512" height="360"> </td>
     <td> The <i>ToolBox</i> <b>Create Files and Run Simulation</b> page is used to run <i>svSolver</i>.
          <br><br>
          Select the <b>aorta-iliacs</b> from the <b>Choose Mesh:</b> <i>ComboBox</i>. 
@@ -268,7 +267,7 @@ platforms it must be installed using a separate <i>svSolver</i> installer downlo
   </tr>
 
   <tr>
-    <td><img src="documentation/quickguide/tutorial/images/create-simulation-14.png" width="512" height="360"> </td>
+    <td><img src="/documentation/quickguide/tutorial/images/create-simulation-14.png" width="512" height="360"> </td>
     <td> An <i>InformationPopup</i> appears showing that the simulation files have been created.
          <br><br>
          Press the <i>InformationPopup</i> <b>OK</b> <i>Button</i>. 
@@ -285,7 +284,7 @@ platforms it must be installed using a separate <i>svSolver</i> installer downlo
   </tr>
 
   <tr>
-    <td><img src="documentation/quickguide/tutorial/images/create-simulation-15.png" width="512" height="360"> </td>
+    <td><img src="/documentation/quickguide/tutorial/images/create-simulation-15.png" width="512" height="360"> </td>
     <td> An <i>InformationPopup</i> appears showing that the simulation has successfully finished.
          <br><br>
          Press the <i>InformationPopup</i> <b>Show Details</b> <i>Button</i>.                             
@@ -293,7 +292,7 @@ platforms it must be installed using a separate <i>svSolver</i> installer downlo
   </tr>
 
   <tr>
-    <td><img src="documentation/quickguide/tutorial/images/create-simulation-16.png" width="512" height="360"> </td>
+    <td><img src="/documentation/quickguide/tutorial/images/create-simulation-16.png" width="512" height="360"> </td>
     <td> A <i>ScrollingTextBox</i> appears showing the simulation history: time step, CPU time in seconds, 
          measure of the nonlinear residual, etc.
          <br><br>
@@ -308,7 +307,7 @@ platforms it must be installed using a separate <i>svSolver</i> installer downlo
 
 <br>
 <h3 id="tutorial_create_simulation_5"> Convert simulation results.  </h3>
-This section demonstrates how to convert the simulation results into VTK format files for visualization. 
+This section demonstrates how to convert the simulation results into VTK format files for visualization.
 
 <table class="table table-bordered" style="width:100%">
   <caption> Convert simulation results </caption>
@@ -318,17 +317,17 @@ This section demonstrates how to convert the simulation results into VTK format 
   </tr>
 
   <tr>
-    <td><img src="documentation/quickguide/tutorial/images/create-simulation-17.png" width="512" height="360"> </td>
+    <td><img src="/documentation/quickguide/tutorial/images/create-simulation-17.png" width="512" height="360"> </td>
     <td> The <i>ToolBox</i> <b>Convert Results</b> page is used to convert <i>svSolver</i> results files into VTK format files.
          <br><br>
          GUI controls:
          <br><br>
          <ul style="list-style-type:none;">
-           <li> <img src="documentation/quickguide/tutorial/images/simulation-gui-results-dir.png" width="245" height="32"> - Displays
+           <li> <img src="/documentation/quickguide/tutorial/images/simulation-gui-results-dir.png" width="245" height="32"> - Displays
                 the simulation results directory. Use the 
-                <img src="documentation/quickguide/tutorial/images/simulation-gui-flow-file.png" width="22" height="20"> icon to bring up
+                <img src="/documentation/quickguide/tutorial/images/simulation-gui-flow-file.png" width="22" height="20"> icon to bring up
                 a <i>FileBrowser</i> to change the directory.</li><br>
-            <li> <img src="documentation/quickguide/tutorial/images/simulation-gui-start-stop.png" width="245" height="20"> - <i>TextBoxes</i> 
+            <li> <img src="/documentation/quickguide/tutorial/images/simulation-gui-start-stop.png" width="245" height="20"> - <i>TextBoxes</i> 
             to enter the start, stop and increment time step range used to convert simulation results files. Enter <b>0</b>, <b>500</b> 
             and <b>100</b>.</li>
          </ul>
@@ -338,7 +337,7 @@ This section demonstrates how to convert the simulation results into VTK format 
   </tr>
 
   <tr>
-    <td><img src="documentation/quickguide/tutorial/images/create-simulation-18.png" width="512" height="360"> </td>
+    <td><img src="/documentation/quickguide/tutorial/images/create-simulation-18.png" width="512" height="360"> </td>
     <td> A <i>FileBrowser</i> appears. 
          <br><br>
          Navigate to the <b>Tutorial/Simulations/aorta-iliacs</b> directory.
@@ -348,7 +347,7 @@ This section demonstrates how to convert the simulation results into VTK format 
   </tr>
 
   <tr>
-    <td><img src="documentation/quickguide/tutorial/images/create-simulation-19.png" width="512" height="360"> </td>
+    <td><img src="/documentation/quickguide/tutorial/images/create-simulation-19.png" width="512" height="360"> </td>
     <td> An <i>InformationPopup</i> appears showing that the simulation results files have been converted.
          <br><br>
          Select the <i>InformationPopup</i> <b>OK</b> <i>Button</i>. 

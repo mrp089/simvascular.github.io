@@ -10,7 +10,7 @@ Between cardiac myocytes, the propagation of the electrical signal is enabled by
 
 In the TTP model, the ionic current is expressed as
 
-$$  I\_{ion} = I\_{Na} + I\_{Kl} + I\_{to} + I\_{Kr} + I\_{Ks} + I\_{CaL} + I\_{NaCa} + I\_{NaK} + I\_{pCa} + I\_{pK} + I\_{bCa} + I\_{bNa} $$
+$$ I\_{ion} = I\_{Na} + I\_{Kl} + I\_{to} + I\_{Kr} + I\_{Ks} + I\_{CaL} + I\_{NaCa} + I\_{NaK} + I\_{pCa} + I\_{pK} + I\_{bCa} + I\_{bNa} $$
 
 The governing equations for each current can be found in <a href="#ref-3">[3]</a>.
 
@@ -29,9 +29,8 @@ Sarcoplasmic reticulum (SR) is a membrane structure within the muscle cell, whos
 
 For the TTP model in <strong>svFSI</strong>, the following units have to be used: time in [ms], length [mm], amount of substance [mmol], voltage [mV]. Mass can be in [g].
 
-
 <figure>
-  <img class="svImg svImgMd" src="documentation/svfsi/cep/imgs/Calcium.png">
+  <img class="svImg svImgMd" src="/documentation/svfsi/cep/imgs/Calcium.png">
   <figcaption class="svCaption" >Structures involved in $Ca^{2+}$ cycling<a href="#ref-6">[6]</a>.</figcaption>
 </figure>
 
@@ -41,37 +40,37 @@ For the TTP model in <strong>svFSI</strong>, the following units have to be used
 
 Phenomenological models are derived based on some observations of the full ion model <a href="#ref-4">[4]</a>. Instead of following the transmembrane ionic currents, they use an oscillation system with a fast ($V$) and a slow ($r$) variable to mimic the behaviors of the action potentials. The oscillators, without considering the diffusion term, are modeled as
 
-$$ \frac{\mathrm{d}V}{\mathrm{d}t}=f^{V}(V,r)  $$
-$$ \frac{\mathrm{d}r}{\mathrm{d}t}=f^{r}(V,r)  $$
+$$ \frac{\mathrm{d}V}{\mathrm{d}t}=f^{V}(V,r) $$
+$$ \frac{\mathrm{d}r}{\mathrm{d}t}=f^{r}(V,r) $$
 
 Note that this set of equations describes the electrophysiology in a single cardiac myocyte, and the choice of $f^V$ and $f^r$ will determine if this is a pacemaker cell or a non-pacemaker cell.
 
 The FitzHugh-Nagumo (FN) model describes the pacemaker cells with
 
-$$  f^V = c[V(V-\alpha)(1-V)-r] $$
-$$  f^r = V-br+a $$
+$$ f^V = c[V(V-\alpha)(1-V)-r] $$
+$$ f^r = V-br+a $$
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/svfsi/cep/imgs/FN_model.png">
+  <img class="svImg svImgMd" src="/documentation/svfsi/cep/imgs/FN_model.png">
   <figcaption class="svCaption" >Action potential calculated from FitzHugh-Nagumo model.</figcaption>
 </figure>
 
 The Aliev-Panfilov (AP) model describes the non-pacemaker cells with
 
-$$  f^V = cV(V-\alpha)(1-V)-Vr $$
+$$ f^V = cV(V-\alpha)(1-V)-Vr $$
 
-$$  f^r = \left( \gamma+\frac{\mu\_1r}{\mu\_2+V}\right)[-r-cV(V-b-1)] $$
+$$ f^r = \left( \gamma+\frac{\mu_1r}{\mu_2+V}\right)[-r-cV(V-b-1)] $$
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/svfsi/cep/imgs/AP_model.png">
+  <img class="svImg svImgMd" src="/documentation/svfsi/cep/imgs/AP_model.png">
   <figcaption class="svCaption" >Action potential calculated from Aliev-Panfilov model.</figcaption>
 </figure>
 
 Note that $V$ and $t$ are non-dimensional values here. The following equations are used to recover the physiological action potential and time:
 
-$$  \mathrm{FitzHugh-Nagumo model}: V^{fhn}=(65V-35)mV; ~~ t^{fhn} = (220t) ms $$
+$$ \mathrm{FitzHugh-Nagumo model}: V^{fhn}=(65V-35)mV; ~~ t^{fhn} = (220t) ms $$
 
-$$  \mathrm{Aliev-Panfilov model}: V^{ap}=(100V-80)mV; ~~ t^{ap} = (12.9t) ms  $$
+$$ \mathrm{Aliev-Panfilov model}: V^{ap}=(100V-80)mV; ~~ t^{ap} = (12.9t) ms $$
 
 Another class of phenomenological models exists that include additional variables to account for intra-cellular calcium kinetics. One such model is the Bueno-Orovio (BO) model <a href="#ref-5">[5]</a> that can serve as a trade-off between the complex TTP model and the simplified phenomenological AP model.
 
@@ -106,6 +105,3 @@ The following table provides a summary of all the available electrophysiology mo
       <td>"ttp", "tentusscher-panfilov"</td>
     </tr>
   </table>
-
-
-

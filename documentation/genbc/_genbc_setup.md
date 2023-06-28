@@ -6,7 +6,7 @@ three Fortran source files (GenBC.f, Modules.f and USER.f) and a Makefile.
 All of the implementation will be done in USER.f. Open this file with a text editor. We will proceed down this code and explain it in blocks. The first block that the user can change is the “unit conversion” block:
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/genbc/imgs/unit_conversion_block.png">
+  <img class="svImg svImgMd" src="/documentation/genbc/imgs/unit_conversion_block.png">
   <figcaption class="svCaption" >Unit conversion block of GenBC.</figcaption>
 </figure>
 
@@ -16,7 +16,7 @@ The pCorr and qCorr variables are seldom used and can be left as .FALSE.
 The next block is the inputs block:
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/genbc/imgs/inputs_block.png">
+  <img class="svImg svImgMd" src="/documentation/genbc/imgs/inputs_block.png">
   <figcaption class="svCaption" >Inputs block of GenBC.</figcaption>
 </figure>
 
@@ -29,7 +29,7 @@ Nxprint specifies the number of extra information you would like to output. This
 The next block is the initial conditions block:
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/genbc/imgs/IC_block.png">
+  <img class="svImg svImgMd" src="/documentation/genbc/imgs/IC_block.png">
   <figcaption class="svCaption" >Initial conditions block of GenBC.</figcaption>
 </figure>
 
@@ -38,7 +38,7 @@ Because the boundary condition model is comprised of a system of ordinary differ
 The next block is the surface mapping block.
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/genbc/imgs/srftox_block.png">
+  <img class="svImg svImgMd" src="/documentation/genbc/imgs/srftox_block.png">
   <figcaption class="svCaption" >Surface mapping block of GenBC.</figcaption>
 </figure>
 
@@ -57,7 +57,7 @@ A good safety check at this point is the make sure the vectors in this block hav
 The final block in USER.f is the equations block:
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/genbc/imgs/equations_block.png">
+  <img class="svImg svImgMd" src="/documentation/genbc/imgs/equations_block.png">
   <figcaption class="svCaption" >Equations block of GenBC.</figcaption>
 </figure>
 
@@ -72,7 +72,7 @@ Next, we specify the governing differential equations for our LPN model. These a
 For the RCR circuit, we apply the differential equation governing the pressure evolution on the capacitor. Assuming an inflow of Q into the capacitor, P is the current pressure on the capacitor, and applying Kirchoff’s laws of current and voltage conservation, the time derivative of the pressure is:
 
 <figure>
-  <img class="svImg svImgSm" src="documentation/genbc/imgs/dpdt.jpg">
+  <img class="svImg svImgSm" src="/documentation/genbc/imgs/dpdt.jpg">
   <figcaption class="svCaption" >RCR equation for pressure.</figcaption>
 </figure>
 

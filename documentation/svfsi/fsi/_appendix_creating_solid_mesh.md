@@ -7,17 +7,17 @@ Similar to the way we create the mesh for the fluid domain in SimVascular (see: 
     Right-click on the "Models" button and choose "Import solid Model", then select the .stl model you just exported from Meshmixer:
 
     <figure>
-      <img class="svImg svImgLg" src="documentation/svfsi/fsi/imgs/importing_solid_into_SV.png" style="width:100%;height:auto;max-width: 30vw;">
+      <img class="svImg svImgLg" src="/documentation/svfsi/fsi/imgs/importing_solid_into_SV.png" style="width:100%;height:auto;max-width: 30vw;">
       <figcaption class="svCaption" >Importing .stl model into SimVascular.</figcaption>
     </figure>
 
-2. Extract faces, rename them if wanted
+2.  Extract faces, rename them if wanted
 
     Extracting faces allows users to reference specific parts of the exterior of the model for applying boundary conditions. It is important to have separate faces that represent each of the inlet and outlet faces, the inner wall, and the outer wall.
 
     To extract faces from your .stl, double-click on your newly imported model in the “Models” section of the left-hand menu to bring up the SV Modeling window. Then, click “Face Ops” and “Extract”. This should reveal a dialogue box asking for a “Sep. Angle”, which is a parameter that determines how aggressively to search for faces. SimVascular will check the direction of the outward facing normals in each element of the surface, and if it finds the difference in the angle between two normals to be greater than the threshold, it will assign them different faces. We recommend a value of 70 for the Sep. Angle., but this depends on the geometry of your model. After extracting faces, you should see a list of “noname” faces appear on the “Face List”. Ideally, you should have a face for each of the inlets and outlets and the inner wall and outer wall, for a total of (number of inlets and outlet) + 2. If you click a noname face from the list, it will highlight in yellow on your 3D model, and the surface area of the face will be displayed in the bottom left corner of the SimVascular Window.
 
-    Now is a good time to click each face on the list so you can confirm its location on the model, then rename it appropriately for your convenience. An example naming convention could be to call the inner wall “wall\_inner”, the outer wall “wall\_outer”, and all of the inlets and outlets as “perimeter\_X”, where X is the name of the particular vessel.
+    Now is a good time to click each face on the list so you can confirm its location on the model, then rename it appropriately for your convenience. An example naming convention could be to call the inner wall “wall_inner”, the outer wall “wall_outer”, and all of the inlets and outlets as “perimeter_X”, where X is the name of the particular vessel.
 
     This step can be difficult as Meshmixer often produces poor quality triangles that do not extract correctly in SimVascular. You will sometimes see many more faces in the Face List than you expected. If some or all faces are not correctly detected (number of faces is not correct or not correctly distinguished between faces) you can try to use a different separation angle and/or use the merge tool in SimVascular, or improve the affected areas in meshmixer, e.g. by smoothing, sculpting or remeshing them.
 
@@ -26,7 +26,7 @@ Similar to the way we create the mesh for the fluid domain in SimVascular (see: 
     You will want separate faces for each of the inlets and outlet perimeters, as well as a separate face for the inner wall and a separate face for the outer wall. This is so that we can apply boundary conditions on all of these faces. Clicking on each face in your Face List should highlight their locations in your structural model in yellow. Do this for each face to confirm their location and to confirm that all faces are accounted for.
 
     <figure>
-      <img class="svImg svImgLg" src="documentation/svfsi/fsi/imgs/extracting_faces.png" style="width:100%;height:auto;max-width: 30vw;">
+      <img class="svImg svImgLg" src="/documentation/svfsi/fsi/imgs/extracting_faces.png" style="width:100%;height:auto;max-width: 30vw;">
       <figcaption class="svCaption" >Extracting faces in SimVascular.</figcaption>
     </figure>
 
@@ -35,7 +35,7 @@ Similar to the way we create the mesh for the fluid domain in SimVascular (see: 
     Right-click on “Meshes” in the Data Manager Window and select “Create mesh”, then choose the structural domain model. If you double click on the newly created mesh item, the “mesh interactor” should open up. If the surface mesh of your structural model from Meshmixer was of a good spatial resolution, and quality, you may want to toggle off the option “Surface remeshing” (this will also speed up the meshing step, especially for larger models).
 
     <figure>
-      <img class="svImg svImgLg" src="documentation/svfsi/fsi/imgs/creating_structural_mesh.png" style="width:100%;height:auto;max-width: 30vw;">
+      <img class="svImg svImgLg" src="/documentation/svfsi/fsi/imgs/creating_structural_mesh.png" style="width:100%;height:auto;max-width: 30vw;">
       <figcaption class="svCaption" >Creating volumetric solid mesh.</figcaption>
     </figure>
 

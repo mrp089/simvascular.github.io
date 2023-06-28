@@ -1,21 +1,20 @@
 <h1> Tutorial - Aorta and Femoral Arteries </h1>
 This tutorial demonstrates how to create a 1D Solver input file for a model comprising the abdominal aorta, renal, celiac and
-femoral arteries. 
+femoral arteries.
 
 <br>
 <figure>
-  <img class="svImg svImgMd" src="documentation/rom_simulation/1d-solver/images/aorta-femoral.png">
+  <img class="svImg svImgMd" src="/documentation/rom_simulation/1d-solver/images/aorta-femoral.png">
   <figcaption class="svCaption"> Model geometry showing abdominal aorta, renal, celiac and femoral arteries. </figcaption>
 </figure>
-
 
 In the following sections the contents of the 1D Solver input file are shown as shaded blocks. Text preceding each block
 describe its contents.
 
 <h2> Outlet RESISTANCE </h2>
-Create a 1D Simulation input file for a constant resistance outlet boundary condition. 
+Create a 1D Simulation input file for a constant resistance outlet boundary condition.
 
-The complete 1D Simulation input file listing is 
+The complete 1D Simulation input file listing is
 <a href="documentation/rom_simulation/1d-solver/files/12_AortoFem_Pulse_R.in"> here </a>.
 
 <h3> 1D Solver input file </h3>
@@ -863,47 +862,47 @@ ENDDATATABLE
 Create a data table for the RESISTANCE boundary condition.
 
 ```
-DATATABLE R_TRUNK LIST 
-0.0 15911.40456 
-10.0 15911.40456 
+DATATABLE R_TRUNK LIST
+0.0 15911.40456
+10.0 15911.40456
 ENDDATATABLE
 
-DATATABLE R_BRANCH LIST 
-0.0 24933.83724    
-10.0 24933.83724    
+DATATABLE R_BRANCH LIST
+0.0 24933.83724
+10.0 24933.83724
 ENDDATATABLE
 
-DATATABLE R_SMA LIST 
+DATATABLE R_SMA LIST
 0.0 11797.32087
 10.0 11797.32087
 ENDDATATABLE
 
-DATATABLE R_RR LIST 
+DATATABLE R_RR LIST
 0.0 24933.94874
 10.0 24933.94874
 ENDDATATABLE
 
-DATATABLE R_RL LIST 
+DATATABLE R_RL LIST
 0.0 20582.482622
 10.0 20582.48262
 ENDDATATABLE
 
-DATATABLE R_RII LIST 
+DATATABLE R_RII LIST
 0.0 20581.48207
 10.0 20581.48207
 ENDDATATABLE
 
-DATATABLE R_LII LIST 
+DATATABLE R_LII LIST
 0.0 15911.14600
 10.0 15911.14600
 ENDDATATABLE
 
-DATATABLE R_REI LIST 
+DATATABLE R_REI LIST
 0.0 7036.31991
 10.0 7036.31991
 ENDDATATABLE
 
-DATATABLE R_LEI LIST 
+DATATABLE R_LEI LIST
 0.0 6058.52570
 10.0 6058.52570
 ENDDATATABLE
@@ -946,7 +945,7 @@ stabilization = 1 (use stabilization)
 </p>
 
 ```
-SOLVEROPTIONS 0.01 1 480 2 INLETDATA FLOW 1.0e-6 1 1 
+SOLVEROPTIONS 0.01 1 480 2 INLETDATA FLOW 1.0e-6 1 1
 ```
 
 <br>
@@ -962,19 +961,16 @@ The results of the simulation are shown using the following graphs.
 
 <br>
 <figure>
-  <img src="documentation/rom_simulation/1d-solver/images/Ex12-plottingExample_01.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
-  <img src="documentation/rom_simulation/1d-solver/images/Ex12-plottingExample_12.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
+  <img src="/documentation/rom_simulation/1d-solver/images/Ex12-plottingExample_01.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
+  <img src="/documentation/rom_simulation/1d-solver/images/Ex12-plottingExample_12.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
   <p style="clear: both;">
 </figure>
 <br>
 
 <br>
 <figure>
-  <img src="documentation/rom_simulation/1d-solver/images/Ex12-plottingExample_13.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
-  <img src="documentation/rom_simulation/1d-solver/images/Ex12-plottingExample_24.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
+  <img src="/documentation/rom_simulation/1d-solver/images/Ex12-plottingExample_13.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
+  <img src="/documentation/rom_simulation/1d-solver/images/Ex12-plottingExample_24.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
   <p style="clear: both;">
 </figure>
 <br>
-
-
-

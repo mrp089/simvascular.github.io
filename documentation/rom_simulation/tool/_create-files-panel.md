@@ -1,4 +1,3 @@
-
 ##Create Files and Run Simulation Panel
 The Create Files and Run Simulation panel is used to create a 1D solver input file and run the 1D solver.
 
@@ -6,14 +5,13 @@ The Create Files and Run Simulation panel is used to create a 1D solver input fi
 
 <br>
 <figure>
-  <img src="documentation/rom_simulation/tool/images/create-files-panel.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
+  <img src="/documentation/rom_simulation/tool/images/create-files-panel.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
   <p style="clear: both;">
 </figure>
 <br>
 
-###Usage 
+###Usage
 
-**Create Files for Simulation** - Create a 1D solver input file. 
+**Create Files for Simulation** - Create a 1D solver input file.
 
-**Run Simulation** - Run the 1D solver. 
-
+**Run Simulation** - Run the 1D solver.

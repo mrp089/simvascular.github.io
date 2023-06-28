@@ -1,96 +1,96 @@
 ## Preparing SimVascular solver files for GenBC
 
-We will assume at this point that you will have already built the geometry of your model and meshed it using the model construction 
-pipeline in SimVascular. This tutorial will start right at the **Simulations** module. Create a new Simulation job by right-clicking 
-the **Simulations** item in the **Data Manager**, then click **Create New Simulation Job**. Select the appropriate Model from the 
-drop down menu and give it the name **cyl_sim**. Navigate through the various tabs to set simulation parameters discussed 
-in <a href="http://simvascular.github.io/docsQuickGuide.html#simulation"> Quick Guide / Simulations</a>. In particular, the values for 
-**Number of Time Steps**, **Time Step Size** and **Number of Timesteps between Restarts** parameters under the **Solver Parameters** 
+We will assume at this point that you will have already built the geometry of your model and meshed it using the model construction
+pipeline in SimVascular. This tutorial will start right at the **Simulations** module. Create a new Simulation job by right-clicking
+the **Simulations** item in the **Data Manager**, then click **Create New Simulation Job**. Select the appropriate Model from the
+drop down menu and give it the name **cyl_sim**. Navigate through the various tabs to set simulation parameters discussed
+in <a href="http://simvascular.github.io/docsQuickGuide.html#simulation"> Quick Guide / Simulations</a>. In particular, the values for
+**Number of Time Steps**, **Time Step Size** and **Number of Timesteps between Restarts** parameters under the **Solver Parameters**
 tab must be set.
 
-During execution the solver will normalize the velocity profile of the Dirichlet inlets to have a flow of 1.0 and then multiply 
-the velocity profile by the flow that is computed in GenBC. Caps with Dirichlet boundary conditions are typically connected to 
-an inductor or have a specified flow waveform (e.g. measured or adapted from literature). For the cylinder example we want to specify the 
-**inlet** face to have a Dirichlet boundary condition. To set a Dirichlet boundary condition for the **inlet** cap double-click the 
-box in the row of the cap **Name** and the column of the **BC Type** and select **Prescribed Velocities** from the drop-down menu. 
-Double-click the cap name under **Name** to open up a window with additional parameters. Set **BC Type** to 
-**Prescribed Velocities** and set **Analytic Shape** to **parabolic**. For the flow rate select the **inlet.flow** file from the 
-project's **simulation-files** directory. 
+During execution the solver will normalize the velocity profile of the Dirichlet inlets to have a flow of 1.0 and then multiply
+the velocity profile by the flow that is computed in GenBC. Caps with Dirichlet boundary conditions are typically connected to
+an inductor or have a specified flow waveform (e.g. measured or adapted from literature). For the cylinder example we want to specify the
+**inlet** face to have a Dirichlet boundary condition. To set a Dirichlet boundary condition for the **inlet** cap double-click the
+box in the row of the cap **Name** and the column of the **BC Type** and select **Prescribed Velocities** from the drop-down menu.
+Double-click the cap name under **Name** to open up a window with additional parameters. Set **BC Type** to
+**Prescribed Velocities** and set **Analytic Shape** to **parabolic**. For the flow rate select the **inlet.flow** file from the
+project's **simulation-files** directory.
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/genbc/imgs/velocities_window.png">
+  <img class="svImg svImgMd" src="/documentation/genbc/imgs/velocities_window.png">
   <figcaption class="svCaption" >Prescribed inflow settings window.</figcaption>
 </figure>
 
-A Neumann boundary condition is typically used for caps that interface directly with either a capacitor or a resistor. 
-For the **outlet** cap we specify a Neumann boundary condition by selecting **Resistance** for the **BC Type** and assigning it 
-a value of 0. These settings are used to create the appropriate entries in the **solver.inp** file we will later modify. 
+A Neumann boundary condition is typically used for caps that interface directly with either a capacitor or a resistor.
+For the **outlet** cap we specify a Neumann boundary condition by selecting **Resistance** for the **BC Type** and assigning it
+a value of 0. These settings are used to create the appropriate entries in the **solver.inp** file we will later modify.
 The **Inlet and Outlet BCs** tab should now look like this
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/genbc/imgs/inlet_and_outlet_bcs.png">
+  <img class="svImg svImgMd" src="/documentation/genbc/imgs/inlet_and_outlet_bcs.png">
   <figcaption class="svCaption" >Inlet and outlet conditions.</figcaption>
 </figure>
 
-To create the data files for the simulation go to the **Create Files and Run Simulation** tab, select the appropriate mesh from 
-the drop down menu and click **Create Data Files for Simulation**. The simulation files are written to the project directory inside 
-the **Simulations** folder. In this folder you will see a folder for the simulation job you created named **cyl_sim**. Inside this 
+To create the data files for the simulation go to the **Create Files and Run Simulation** tab, select the appropriate mesh from
+the drop down menu and click **Create Data Files for Simulation**. The simulation files are written to the project directory inside
+the **Simulations** folder. In this folder you will see a folder for the simulation job you created named **cyl_sim**. Inside this
 folder are the following files and folders:
 
-	1. mesh-complete – Contains mesh information and discretization in VTK format files
-	2. bct.dat and bct.vtp – Contains velocity profile information on your Dirichlet caps
-	3. cyl_sim.svpre file – Pre-solver script which instructs SimVascular how to prepare the simulation files
+    1. mesh-complete – Contains mesh information and discretization in VTK format files
+    2. bct.dat and bct.vtp – Contains velocity profile information on your Dirichlet caps
+    3. cyl_sim.svpre file – Pre-solver script which instructs SimVascular how to prepare the simulation files
                from your mesh. Contains the ID numbers for mesh surfaces (used later)
-	4. geombc.dat.1 – Simulation file that contains geometry information
-	5. inlet.flow - .flow file which has the template flow information at your inlet face(s)
-	6. numstart.dat – Dummy file which tells the solver on which timestep to start on
-	7. restart.0.1 – Contains initial conditions for pressure and velocity in your simulations
-	8. solver.inp – Solver settings file
+    4. geombc.dat.1 – Simulation file that contains geometry information
+    5. inlet.flow - .flow file which has the template flow information at your inlet face(s)
+    6. numstart.dat – Dummy file which tells the solver on which timestep to start on
+    7. restart.0.1 – Contains initial conditions for pressure and velocity in your simulations
+    8. solver.inp – Solver settings file
 
-Surfaces are identified using integer IDs automatically generated by SimVascular and assigned to surfaces in 
-the **.svpre** file using the **set\_surface\_id\_vtp** command  
+Surfaces are identified using integer IDs automatically generated by SimVascular and assigned to surfaces in
+the **.svpre** file using the **set_surface_id_vtp** command
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/genbc/imgs/surface_ids.png">
+  <img class="svImg svImgMd" src="/documentation/genbc/imgs/surface_ids.png">
   <figcaption class="svCaption" >Surface IDs in .svpre file.</figcaption>
 </figure>
 
-We need to manually modify the **solver.inp** file to use GenBC. Edit the **solver.inp** file with a text editor and scroll down to 
+We need to manually modify the **solver.inp** file to use GenBC. Edit the **solver.inp** file with a text editor and scroll down to
 the section right below **Step Construction**. You will see following three commands for Resistance boundary conditions
 
-	Number of Resistance Surfaces: 1
-	List of Resistance Surfaces: 3
-	Resistance Values: 0
+    Number of Resistance Surfaces: 1
+    List of Resistance Surfaces: 3
+    Resistance Values: 0
 
 These commands were created for the **outlet** cap Neumann boundary condition but are not needed and so we delete them.
 
-We next need to add commands to instruct the solver to look for GenBC and all the inlet/outlet surfaces. Below the **Step Construction** 
-command add 
+We next need to add commands to instruct the solver to look for GenBC and all the inlet/outlet surfaces. Below the **Step Construction**
+command add
 
-	Find the GenBC Inside the Running Directory: True
-	Number of Timesteps for GenBC Initialization: 0
+    Find the GenBC Inside the Running Directory: True
+    Number of Timesteps for GenBC Initialization: 0
 
 We next add commands identifying the inlet Dirichlet surfaces
 
-	Number of Dirichlet Surfaces: 1
-	List of Dirichlet Surfaces: 2
+    Number of Dirichlet Surfaces: 1
+    List of Dirichlet Surfaces: 2
 
-The **Number of Dirichlet Surfaces** command specifies the total number of caps in your model where Dirichlet boundary condition are 
+The **Number of Dirichlet Surfaces** command specifies the total number of caps in your model where Dirichlet boundary condition are
 defined for GenBC. The **List of Dirichlet Surfaces** is a space-delimited list surface IDs for the Dirichlet boundary conditions.
-For the cylinder model the **inlet** is assigned ID 2. 
+For the cylinder model the **inlet** is assigned ID 2.
 
-We now add a similar commands for surfaces with Neumann boundary conditions 
+We now add a similar commands for surfaces with Neumann boundary conditions
 
-	Number of Neumann Surfaces: 1    
-	List of Neumann Surfaces: 3 
+    Number of Neumann Surfaces: 1
+    List of Neumann Surfaces: 3
 
-We now change the value of **Number of Coupled Surfaces** to the total number of Dirichlet and Neumann surfaces in your model. 
-This is to indicate that these surfaces are coupled in the sense that the flow and pressure have the potential to be coupled in 
+We now change the value of **Number of Coupled Surfaces** to the total number of Dirichlet and Neumann surfaces in your model.
+This is to indicate that these surfaces are coupled in the sense that the flow and pressure have the potential to be coupled in
 the GenBC formulation. For this example the number of coupled surfaces is 2 because we have 1 Dirichlet surface and 1 Neumann surface.
 
 After making these changes the **solver.inp** file should look like
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/genbc/imgs/solver_lines.png">
+  <img class="svImg svImgMd" src="/documentation/genbc/imgs/solver_lines.png">
   <figcaption class="svCaption" >Configured solver.inp for GenBC simulation of an RCR cylinder.</figcaption>
 </figure>

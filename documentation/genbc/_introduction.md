@@ -28,7 +28,7 @@ steps needed to implement GenBC boundary conditions. A graphical representation 
 is shown in the figure below. 
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/genbc/imgs/rcr_cylinder.jpeg">
+  <img class="svImg svImgMd" src="/documentation/genbc/imgs/rcr_cylinder.jpeg">
   <figcaption class="svCaption" >Cylinder with sinusoidal inflow and RCR outflow.</figcaption>
 </figure>
 

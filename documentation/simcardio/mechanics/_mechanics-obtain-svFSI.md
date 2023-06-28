@@ -6,6 +6,6 @@ GitHub</a>, and many new features are introduced frequently. Users are encourage
 The **svFSI** executable (either built from source or downloaded from SimTK) is not packaged into each SimVascular release, so users have to manually add its path to **SimVascular** GUI. The location is under <code>Window</code> -> <code>Preference</code> -> <code>svFSI Simulation</code>.
 
 <figure>
-  <img class="svImg svImgMd" src="documentation/simcardio/mechanics/images/path_to_binary.png">
+  <img class="svImg svImgMd" src="/documentation/simcardio/mechanics/images/path_to_binary.png">
   <figcaption class="svCaption" >Set up path to **svFSI** solver in SimVascular.</figcaption>
 </figure>

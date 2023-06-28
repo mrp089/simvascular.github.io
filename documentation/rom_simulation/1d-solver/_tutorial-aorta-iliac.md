@@ -1,21 +1,21 @@
 <h1> Tutorial - Aorta and Iliac Arteries </h1>
 This tutorial demonstrates how to create a 1D Solver input file for a model of an abdominal aorta with branching 
-right and left iliac arteries. 
+right and left iliac arteries.
 
 In the following sections the contents of the 1D Solver input file are shown as shaded blocks. Text preceding each block
 describe its contents.
 
 <h2> Outlet RCR </h2>
-Create a 1D Simulation input file for a constant RCR resistance outlet boundary condition. 
+Create a 1D Simulation input file for a constant RCR resistance outlet boundary condition.
 
-The complete 1D Simulation input file listing is 
+The complete 1D Simulation input file listing is
 <a href="documentation/rom_simulation/1d-solver/files/05_bifurcation_RCR.in"> here </a>.
 
 <h3> 1D Solver input file </h3>
 Set the model name to be **Bifurcation\_RCR\_**.
 
 ```
- MODEL Bifurcation_RCR_ 
+ MODEL Bifurcation_RCR_
 ```
 
 <br>
@@ -27,8 +27,9 @@ NODE 1 0.0 0.0 -17.670671
 NODE 2 0.0 6.498730 -40.182934
 NODE 3 4.595296 4.595296 -40.182934
 ```
+
 <br>
-Create a single joint at the location of the branching right and left iliac arteries. 
+Create a single joint at the location of the branching right and left iliac arteries.
 
 ```
 JOINT AbdomBifurcJ 1 INSEGS OUTSEGS
@@ -37,7 +38,7 @@ JOINTOUTLET OUTSEGS 2 1 2
 ```
 
 <br>
-Create three segments representing the aorta, right iliac, and left iliac arteries. 
+Create three segments representing the aorta, right iliac, and left iliac arteries.
 
 ```
 SEGMENT Aorta  0 17.670671 50 0 1 5.027254990390394 1.6068894493599328 0.0 MAT1 NONE 0.0 0 0 NOBOUND NONE
@@ -195,10 +196,8 @@ The results of the simulation are shown using the following graphs.
 
 <br>
 <figure>
-  <img src="documentation/rom_simulation/1d-solver/images/Ex01-plottingExample_01.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
-  <img src="documentation/rom_simulation/1d-solver/images/Ex01-plottingExample_03.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
+  <img src="/documentation/rom_simulation/1d-solver/images/Ex01-plottingExample_01.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
+  <img src="/documentation/rom_simulation/1d-solver/images/Ex01-plottingExample_03.png" style="float: left; width: 40%; margin-right: 1%; margin-bottom: 0.5em;">
   <p style="clear: both;">
 </figure>
 <br>
-
-
