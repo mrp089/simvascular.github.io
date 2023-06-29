@@ -1,11 +1,6 @@
 html, body {
-    background-color: var(--white);
+    background-color: white;
     color: var(--black);
-}
-
-.svImg {
-    width: 100%;
-    max-width: 500px;
 }
 
 ul {
@@ -33,6 +28,7 @@ h1 {
     margin: 25px 25px;
     font-size: 40px;
     text-align: center;
+    word-wrap: break-word;
 }
 
 h2 {
@@ -74,7 +70,7 @@ p {
     position: relative;
     padding: 25px;
     padding-top: 90px;
-    background-color: var(--white);
+    background-color: white;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -133,6 +129,8 @@ h1, h2, h3, h4, h5, h6, p {
 .navigationSection {
     padding: 20px;
     position: fixed;
+    overflow: auto;
+    height: fit-content;
     background-color: var(--lightbluegrey);
     display: inline-block;
 }
@@ -186,4 +184,9 @@ span {
 .docsSection {
     padding: 20px;
     background-color: white;
+}
+
+zero-md {
+    width: 100%;
+    overflow: auto;
 }
