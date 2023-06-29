@@ -128,23 +128,27 @@ img.svImg {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 20px;
-  margin-bottom: 5px; }
+  /* margin-top: 20px; */
+  padding-bottom: 15px; 
+}
 
 /* CAPTION STYLE - SVGUIDE */
 /* line 136, /home/dave/software/ktbolt/simvascular.github.io/source/css/shop-item.css.scss */
 figcaption.svCaption {
   text-align: center;
-  font-family: times;
+  /* font-family: times; */
   font-style: italic;
-  font-size: smaller;
+  /* font-size: smaller; */
   text-indent: 0;
   margin-bottom: 20px; }
 
 /* IMAGE SIZE */
 /* line 146, /home/dave/software/ktbolt/simvascular.github.io/source/css/shop-item.css.scss */
 img.svImgXs {
-  width: 15%; }
+  max-height: 300px;
+  width: 100%;
+  object-fit: contain; 
+}
 
 /* line 149, /home/dave/software/ktbolt/simvascular.github.io/source/css/shop-item.css.scss */
 img.svImgSm {

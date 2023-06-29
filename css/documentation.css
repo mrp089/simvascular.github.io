@@ -68,14 +68,15 @@ p {
     display: block;
     height: fit-content;
     position: relative;
-    padding: 25px;
-    padding-top: 90px;
+    /* padding: 25px; */
+    padding-top: 75px;
     background-color: white;
 }
 
 h1, h2, h3, h4, h5, h6, p {
     margin: 0;
-    padding: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .topLeftLogo {
@@ -93,7 +94,7 @@ h1, h2, h3, h4, h5, h6, p {
     position: fixed;
     height: 75px;
     width: 100%;
-    background-color: var(--white);
+    background-color: var(--black);
 }
 
 .headerLogoContainer {
@@ -127,11 +128,14 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .navigationSection {
-    padding: 20px;
+    padding-top: 35px;
+    padding-right: 10px;
+    padding-left: 40px;
+    padding-bottom: 5px;
     position: fixed;
     overflow: auto;
-    height: fit-content;
-    background-color: var(--lightbluegrey);
+    height: calc(100% - 78px);
+    background-color: var(--white);
     display: inline-block;
 }
 
@@ -145,35 +149,31 @@ h1, h2, h3, h4, h5, h6, p {
 .navigationSection div h4 {
     font-weight: bold;
     text-transform: none;
-    font-size: 22px;
+    font-size: 20px;
     padding: 0;
+    padding-top: 7px;
+
     padding-bottom: 5px;
-}
-
-.navigationSection div {
-    padding-bottom: 7px;
-
 }
 
 .navigationSection div div {
     padding-left: 10px;
-    font-size: 17px;
 }
 
 .navigationSection div div p {
     padding: 0;
     margin: 0;
     display: block;
+    font-size: 17px;
 }
 
 .navigationSection div div p,  .navigationSection div h4{
     color: var(--black);
     cursor: pointer;
-
 }
 
 .navigationSection div div p:hover,  .navigationSection div h4:hover{
-    color: var(--darkblue);
+    color: var(--verydarkblue);
 }
 
 span {
@@ -182,11 +182,57 @@ span {
 }
 
 .docsSection {
-    padding: 20px;
+    padding: 35px;
     background-color: white;
+    width: 100%;
 }
 
 zero-md {
     width: 100%;
     overflow: auto;
+}
+
+.skipTo, #skipToTop {
+    padding: 5px;
+}
+
+.skipTo:hover{
+    background-color: var(--lightbluegrey);
+}
+
+h4.skipTo:hover, h4#skipToTop:hover {
+    font-size: 22px;
+    padding: 8px;
+}
+
+p.skipTo:hover {
+    font-size: 18px;
+    padding: 6px;
+}
+
+.skipToTopSection {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    height: 68px;
+    width: 68px;
+    background-color: var(--verydarkblue);
+    border-radius: 50px;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.skipToTopSection:hover {
+    opacity: 1;
+}
+
+#skipToTop {
+    margin: auto;
+    font-size: 38px;
+    color: white;
+}
+
+#logo {
+    cursor: pointer;
 }

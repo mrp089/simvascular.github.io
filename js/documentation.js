@@ -16,6 +16,20 @@ $("#skipToTop").click(function() {
     scrollToTop();
 });
 
+function clickLink(hrefTag)
+{
+    var a = document.createElement("a");
+    a.href = hrefTag;
+    a.target = "_blank";
+    a.click();
+}
+
+$("#logo").click(function() {
+    clickLink("/index.html");
+});
+
+// logo
+
 addHooks();
 
 function addHooks()

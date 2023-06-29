@@ -35,12 +35,12 @@
   <section class="header">
     <div class="topLeftLogo">      
         <div class="headerLogoContainer">
-          <img class="headerLogoImage" src="/img/svLogoTitle.png" alt="SimVascular Logo"></img>
+          <img id="logo" class="headerLogoImage" src="/img/svLogoTitle.png" alt="SimVascular Logo"></img>
         </div>
       </div>
     </section>
   <section class="mainSection row">
-    <section class="col-md-4 col-lg-3 navigationSection" style="float: left">
+    <section class="col-md-4 col-xl-3 navigationSection" style="float: left">
       <div>
         <h4 class="skipTo" id="skipTo_intro">Introduction</h4>
         <div>
@@ -76,12 +76,9 @@
           <p class="skipTo" id="skipTo_tutorial_summary">Summary</p>
         </div>
       </div>
-      <div>
-        <h4 id="skipToTop">Skip To Top</h4>
-      </div>
     </section>
 
-    <div class="col-md-8 col-lg-9 docsSection" style="float: right"> 
+    <section class="col-md-8 col-xl-9 docsSection" style="float: right"> 
       <span id="_getting_started">
         <zero-md src="/documentation/quickguide/_getting_started.md"></zero-md>
       </span>
@@ -154,7 +151,10 @@
       <span id="_tutorial_summary">
         <zero-md src="/documentation/quickguide/tutorial/_summary.md"></zero-md>
       </span>
-    </div>
+    </section>
+  </section>
+  <section class="skipToTopSection">
+    <p id="skipToTop"><i class="fa-solid fa-arrow-up"></i></p>
   </section>
 
   <!-- Style CSS -->

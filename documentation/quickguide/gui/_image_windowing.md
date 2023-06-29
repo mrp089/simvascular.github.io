@@ -10,7 +10,7 @@ The image contrast is adjusted by changing the <i>window width</i>.
 A blue region in the <i>Image Windowing</i> tool shows then <i>window center</i> and <i>window width</i>.
 
 <figure>
-  <img class="svImg svImgXs"  src="/documentation/quickguide/gui/images/image-window-level-tool.png" style="width:2%">
+  <img class="svImg svImgXs"  src="/documentation/quickguide/gui/images/image-window-level-tool.png">
   <figcaption class="svCaption"> The <b>Image Windowing</b> tool. The <b>window width</b> and <b>window center</b> is 
       represented using a blue region within the tool. The two text boxes at the bottom of the tool show the 
       <b>window center</b> (upper box) and the <b>window width</b> (lower box).
