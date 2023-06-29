@@ -7,7 +7,7 @@ context with medical image data. This enables matching geometric data (e.g. mode
 The layout of the <i>Display</i> windows and its GUI components are shown in Fig. 5.
 
 <figure>
-  <img class="svImg svImgMd"  src="/documentation/quickguide/imgs/display.png"> 
+  <img class="svImg svImgMd"  src="/documentation/quickguide/images/display.png"> 
   <figcaption class="svCaption"> Fig. 5 &nbsp The standard four-window view comprising three 2D and one 3D views.
 </figure>
 

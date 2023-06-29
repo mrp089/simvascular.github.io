@@ -3,6 +3,11 @@ html, body {
     color: var(--black);
 }
 
+.svImg {
+    width: 100%;
+    max-width: 500px;
+}
+
 ul {
     list-style-type: none;
 }
