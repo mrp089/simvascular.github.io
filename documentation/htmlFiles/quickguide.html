@@ -16,6 +16,17 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
+  <script>
+    window.ZeroMdConfig = {
+      cssUrls: ['/css/bootstrap.css', "/css/grayscale.css", "/css/standards.css", "/css/documentation.css"]
+    }
+  </script>
+
+  <script
+    type="module"
+    src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"
+  ></script>
+
     <!-- browser tab labels -->
     <link rel="shortcut icon" type="image/jpg" href="/img/svIcon.png"></link>
     <title>SimVascular</title>
@@ -28,59 +39,143 @@
         </div>
       </div>
     </section>
+  <section class="mainSection row">
+    <div class="col-md-3 navigationSection" style="float: left">
+      <div>
+        <h4 class="skipTo" id="skipTo_intro">Introduction</h4>
+        <div>
+          <p class="skipTo" id="skipTo_intro_pipeline">Modeling Pipeline</p>
+          <p class="skipTo" id="skipTo_intro_tools">Tools</p>
+          <p class="skipTo" id="skipTo_intro_projects">Projects</p>
+          <p class="skipTo" id="skipTo_intro_mitk">MITK Framework</p>
+        </div>
+      </div>
+      <div>
+        <h4 class="skipTo" id="skipTo_gui_intro">Graphical User Interface</h4>
+        <div>
+          <p class="skipTo" id="skipTo_gui_menubar">Menubar</p>
+          <p class="skipTo" id="skipTo_gui_toolbar">Toolbar</p>
+          <p class="skipTo" id="skipTo_gui_display">Display</a>
+          <p class="skipTo" id="skipTo_gui_image_windowing">Image Windowing</p>
+          <p class="skipTo" id="skipTo_gui_data_manager">Data Manager</p>
+          <p class="skipTo" id="skipTo_gui_tool_panel">Tool Panel</p>
+          <p class="skipTo" id="skipTo_gui_image_navigator">Image Navigator</p>
+        </div>
+      </div>
+      <div>
+        <h4 class="skipTo" id="skipTo_tutorial_intro">Tutorial</h4>
+        <div>
+          <p class="skipTo" id="skipTo_tutorial_starting_simvascular">Starting SimVascular</p>
+          <p class="skipTo" id="skipTo_tutorial_create_project">Create a Project</p>
+          <p class="skipTo" id="skipTo_tutorial_add_image_data">Add Image Data</p>
+          <p class="skipTo" id="skipTo_tutorial_create_paths">Create Vessel Paths</p>
+          <p class="skipTo" id="skipTo_tutorial_create_segmentations">Create Segmentations</p>
+          <p class="skipTo" id="skipTo_tutorial_create_solid_model">Create Solid Model</p>
+          <p class="skipTo" id="skipTo_tutorial_create_finite_element_mesh">Create Finite Element Mesh</p>
+          <p class="skipTo" id="skipTo_tutorial_create_simulation">Create CFD Simulation</p>
+          <p class="skipTo" id="skipTo_tutorial_summary">Summary</p>
+        </div>
+      </div>
+      <div>
+        <h4 id="skipToTop">Skip To Top</h4>
+      </div>
+    </div>
 
-  <section class="navigationSection col-md-4 col-lg-2">
-    <div>
-      <h1 style="padding: 0; color: white;">Navigation Bar</h1>
+    <div class="col-md-9 docsSection" style="float: right"> 
+      <span id="_getting_started">
+        <zero-md src="/documentation/quickguide/_getting_started.md"></zero-md>
+      </span>
+      <span id="_intro">
+        <zero-md src="/documentation/quickguide/_intro.md"></zero-md>
+      </span>
+      <span id="_intro_pipeline">
+        <zero-md src="/documentation/quickguide/_intro_pipeline.md"></zero-md>
+      </span>
+      <span id="_intro_tools">
+        <zero-md src="/documentation/quickguide/_intro_tools.md"></zero-md>
+      </span>
+      <span id="_intro_projects">
+        <zero-md src="/documentation/quickguide/_intro_projects.md"></zero-md>
+      </span>
+      <span id="_intro_mitk">
+        <zero-md src="/documentation/quickguide/_intro_mitk.md"></zero-md>
+      </span>
+      <span id="_gui_intro">
+        <zero-md src="/documentation/quickguide/gui/_intro.md"></zero-md>
+      </span>
+      <span id="_gui_menubar">
+        <zero-md src="/documentation/quickguide/gui/_menubar.md"></zero-md>
+      </span>
+      <span id="_gui_toolbar">
+        <zero-md src="/documentation/quickguide/gui/_toolbar.md"></zero-md>
+      </span>
+      <span id="_gui_display">
+        <zero-md src="/documentation/quickguide/gui/_display.md"></zero-md>
+      </span>
+      <span id="_gui_image_windowing">
+        <zero-md src="/documentation/quickguide/gui/_image_windowing.md"></zero-md>
+      </span>
+      <span id="_gui_data_manager">
+        <zero-md src="/documentation/quickguide/gui/_data_manager.md"></zero-md>
+      </span>
+      <span id="_gui_tool_panel">
+        <zero-md src="/documentation/quickguide/gui/_tool_panel.md"></zero-md>
+      </span>
+      <span id="_gui_image_navigator">
+        <zero-md src="/documentation/quickguide/gui/_image_navigator.md"></zero-md>
+      </span>
+      <span id="_tutorial_intro">
+        <zero-md src="/documentation/quickguide/tutorial/_intro.md"></zero-md>
+      </span>
+      <span id="_tutorial_starting_simvascular">
+        <zero-md src="/documentation/quickguide/tutorial/_starting_simvascular.md"></zero-md>
+      </span>
+      <span id="_tutorial_create_project">
+        <zero-md src="/documentation/quickguide/tutorial/_create_project.md"></zero-md>
+      </span>
+      <span id="_tutorial_add_image_data">
+        <zero-md src="/documentation/quickguide/tutorial/_add_image_data.md"></zero-md>
+      </span>
+      <span id="_tutorial_create_paths">
+        <zero-md src="/documentation/quickguide/tutorial/_create_paths.md"></zero-md>
+      </span>
+      <span id="_tutorial_create_segmentations">
+        <zero-md src="/documentation/quickguide/tutorial/_create_segmentations.md"></zero-md>
+      </span>
+      <span id="_tutorial_create_solid_model">
+        <zero-md src="/documentation/quickguide/tutorial/_create_solid_model.md"></zero-md>
+      </span>
+      <span id="_tutorial_create_finite_element_mesh">
+        <zero-md src="/documentation/quickguide/tutorial/_create_finite_element_mesh.md"></zero-md>
+      </span>
+      <span id="_tutorial_create_simulation">
+        <zero-md src="/documentation/quickguide/tutorial/_create_simulation.md"></zero-md>
+      </span>
+      <span id="_tutorial_summary">
+        <zero-md src="/documentation/quickguide/tutorial/_summary.md"></zero-md>
+      </span>
     </div>
   </section>
-  <section class="mainSection col-md-8 col-lg-10">
-    <form class="mainBody"> 
-      <zero-md src="/documentation/quickguide/_getting_started.md"></zero-md>
-      <zero-md src="/documentation/quickguide/_intro.md"></zero-md>
-      <zero-md src="/documentation/quickguide/_intro_pipeline.md">
-        <template>
-        <link rel="stylesheet" href="/mdStyle.css" />
-        </template>
-      </zero-md>
-      <zero-md src="/documentation/quickguide/_intro_tools.md"></zero-md>
-      <zero-md src="/documentation/quickguide/_intro_projects.md"></zero-md>
-      <zero-md src="/documentation/quickguide/_intro_mitk.md"></zero-md>
-      <zero-md src="/documentation/quickguide/gui/_intro.md"></zero-md>
-      <zero-md src="/documentation/quickguide/gui/_menubar.md"></zero-md>
-      <zero-md src="/documentation/quickguide/gui/_toolbar.md"></zero-md>
-      <zero-md src="/documentation/quickguide/gui/_display.md"></zero-md>
-      <zero-md src="/documentation/quickguide/gui/_image_windowing.md"></zero-md>
-      <zero-md src="/documentation/quickguide/gui/_data_manager.md"></zero-md>
-      <zero-md src="/documentation/quickguide/gui/_tool_panel.md"></zero-md>
-      <zero-md src="/documentation/quickguide/gui/_image_navigator.md"></zero-md>
-      <zero-md src="/documentation/quickguide/tutorial/_intro.md"></zero-md>
-      <zero-md src="/documentation/quickguide/tutorial/_starting_simvascular.md"></zero-md>
-      <zero-md src="/documentation/quickguide/tutorial/_create_project.md"></zero-md>
-      <zero-md src="/documentation/quickguide/tutorial/_add_image_data.md"></zero-md>
-      <zero-md src="/documentation/quickguide/tutorial/_create_paths.md"></zero-md>
-      <zero-md src="/documentation/quickguide/tutorial/_create_segmentations.md"></zero-md>
-      <zero-md src="/documentation/quickguide/tutorial/_create_solid_model.md"></zero-md>
-      <zero-md src="/documentation/quickguide/tutorial/_create_finite_element_mesh.md"></zero-md>
-      <zero-md src="/documentation/quickguide/tutorial/_create_simulation.md"></zero-md>
-      <zero-md src="/documentation/quickguide/tutorial/_summary.md"></zero-md>
-      <zero-md src="/documentation/quickguide/tutorial/_create_solid_model.md"></zero-md>
-      <zero-md src="/documentation/quickguide/tutorial/_create_solid_model.md"></zero-md>
-    </form>
-  </section>
 
-  <!-- Lightweight client-side loader that feature-detects and load polyfills only when necessary -->
-  <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
-
-  <!-- Load the element definition -->
-  <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
-  
   <!-- Style CSS -->
   <link rel="stylesheet" href="/css/bootstrap.css">
   <link rel="stylesheet" href="/css/grayscale.css">
   <link rel="stylesheet" href="/css/standards.css">
-  <!-- <link rel="stylesheet" href="css/home.css"> -->
   <link rel="stylesheet" href="/css/documentation.css">
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+  <script src="/js/jquery-2.1.1.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.21/jquery.csv.min.js"></script>
+
+  <!-- <script src="js/jquery-2.1.1.js"></script> -->
+  <script src="/js/jquery.mixitup.min.js"></script>
+
+  <script src="/js/documentation.js"></script>
+
 </body>
   
 </html>

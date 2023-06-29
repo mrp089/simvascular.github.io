@@ -66,17 +66,9 @@ p {
     padding-right: 20px;
 }
 
-.navigationSection {
-    display: block;
-    height: 500px;
-    float: left;
-    position: fixed;
-    padding-top: 90px;
-    background-color: black;
-}
-
 .mainSection {
-    float: right;
+    float: left;
+    width: 100%;
     display: block;
     height: fit-content;
     position: relative;
@@ -122,4 +114,76 @@ h1, h2, h3, h4, h5, h6, p {
         padding-top: 5px;
         height: 45px;
     }  
+}
+
+.everyOtherSection {
+    background-color: var(--lightbluegrey);
+    height: fit-content;
+    width: 100%;
+    display: block;
+    float: left;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+:host {
+    display: inline-block;
+}
+
+.navigationSection {
+    padding: 20px;
+    position: fixed;
+    background-color: var(--lightbluegrey);
+    display: inline-block;
+}
+
+@media only screen and (max-width: 768px) {
+    .navigationSection {
+       display: none;
+    }
+}
+
+
+.navigationSection div h4 {
+    font-weight: bold;
+    text-transform: none;
+    font-size: 22px;
+    padding: 0;
+    padding-bottom: 5px;
+}
+
+.navigationSection div {
+    padding-bottom: 7px;
+
+}
+
+.navigationSection div div {
+    padding-left: 10px;
+    font-size: 17px;
+}
+
+.navigationSection div div p {
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+
+.navigationSection div div p,  .navigationSection div h4{
+    color: var(--black);
+    cursor: pointer;
+
+}
+
+.navigationSection div div p:hover,  .navigationSection div h4:hover{
+    color: var(--darkblue);
+}
+
+span {
+    height: fit-content;
+    display: block;
+}
+
+.docsSection {
+    padding: 20px;
+    background-color: white;
 }
