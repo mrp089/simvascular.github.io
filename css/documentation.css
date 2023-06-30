@@ -265,8 +265,10 @@ p.skipTo:hover {
     top: 75px;
     right: 0;
     display: block;
-    width: 250px;
+    width: 275px;
     position: fixed;
+    overflow: auto;
+    height: calc(100% - 78px);
 
 }
 

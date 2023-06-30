@@ -28,8 +28,6 @@ $("#logo").click(function() {
     clickLink("/index.html");
 });
 
-// logo
-
 addHooks();
 
 function addHooks()
@@ -39,13 +37,16 @@ function addHooks()
     for(var i = 0; i < skipToElements.length; i++)
     {
         var id = skipToElements[i].id;
-        console.log(id);
 
         $("#" + id).click(function() {
             var id = $(this).attr("id").substring("skipTo".length)
             smoothScrollingToTag(id);
-            
         });
-        
     }
+
+    $(".navSubLink").click(function() {
+        var href = $(this).children()[0].getAttribute("href");
+        clickLink(href);
+    });
+
 }
