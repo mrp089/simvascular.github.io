@@ -104,14 +104,14 @@ The crosshairs are moved using the left mouse button or the <a href="#image_navi
   </tr>
 
   <tr>
-    <td><img src="/documentation/quickguide/tutorial/images/create-path-7.png" width="512" height="360"> </td>
-    <td> Create several more <i>Path</i> points using the left mouse button to move the crosshairs in the 2D views and 
+    <td><img src="/documentation/quickguide/tutorial/images/create-path-7.png" width="512" height="360"></td>
+    <td> 
+    Create several more <i>Path</i> points using the left mouse button to move the crosshairs in the 2D views and 
          pressing the <b>Add</b>  <i>Button</i>. <br><br>
          The coordinates of the <i>Path</i> points are shown in the <i>SV Path Planning Panel</i> <b>Control Point List</b> <i>Table</i>. <br><br>
          Switch the view to a single 3D view. <br><br>
          The <i>Path</i> points are shown as blue cubes. Move the mouse cursor over a <i>Path</i> point selects it: the <i>Path</i> point 
          marker turns red and the point is highlighted in <i>SV Path Planning Panel</i> <b>Control Point List</b> <i>Table</i>. <br><br>
-
          Press the <img src="/documentation/quickguide/gui/images/gui-save-icon.png" width="20" height="17"> icon in the
          <i>ToolBar</i> to save the <i>Project</i>. <br><br>
     </td>
@@ -218,7 +218,6 @@ when then left iliac is joined with the aorta.
          Switch the view to a single 3D view. <br><br>
          The <i>Path</i> points are shown as blue cubes. Move the mouse cursor over a <i>Path</i> point selects it: the <i>Path</i> point 
          marker turns red and the point is highlighted in <i>SV Path Planning Panel</i> <b>Control Point List</b> <i>Table</i>. <br><br>
-
          Press the <img src="/documentation/quickguide/gui/images/gui-save-icon.png" width="20" height="17"> icon in the
          <i>ToolBar</i> to save the <i>Project</i>. <br><br>
     </td>

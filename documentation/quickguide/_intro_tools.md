@@ -27,8 +27,11 @@ Each <i>Tool</i> has a panel containing GUI controls (i.e. widgets) used to spec
 A <i>Tool</i> panel is displayed using the <a href="#data_manager"> Data Manager </a>.
 
 <br>
-<h3 id="intro_tools_instances"> Creating Tool Instances</h3>
-An instance of a particular <i>Tool</i> type is created using options selected from <a href="#data_manager_menus">Data Manager Menus</a>. 
+<!-- <h3 id="intro_tools_instances"> Creating Tool Instances</h3> -->
+
+### Creating Tool Instances
+
+An instance of a particular <i>Tool</i> type is created using options selected from <a href="#data_manager_menus">Data Manager Menus</a>.
 Some <i>Tool</i> instances can be created in two ways based on the source of the data used by the <i>Tool</i>
 
 <ol>

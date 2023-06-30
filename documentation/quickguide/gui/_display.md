@@ -39,7 +39,7 @@ The function of the mouse buttons depends on the window the mouse cursor is in.
 <table class="table table-bordered" style="width:100%">
   <caption> <b> 2D View </b> </caption>
   <tr>
-    <th> Mouse Button </th>
+    <th>Mouse Button </th>
     <th> Function </th>
   </tr>
 
@@ -109,7 +109,7 @@ corner each window provides options to customize the view and crosshair behavior
     </td>
     <td> 
       <ul style="list-style-type:none;"> 
-        <li> <b> Reset view </b> - Resets 1) crosshairs to their default position and 2) viewing transformations (e.g. rotations) </li>
+        <li> <b> Reset view </b> - Resets 1 ) crosshairs to their default position and 2 ) viewing transformations (e.g. rotations) </li>
         <li> <b> Show crosshair </b> - Select to toggle showing crosshairs </li>
         <li> <b> No crosshair rotation </b> - Select to toggle using crosshairs to position planes orthogonal to image axes </li>
         <li> <b> Crosshair rotation </b> - Select to toggle using crosshairs to rotate two planes </li>
@@ -117,7 +117,6 @@ corner each window provides options to customize the view and crosshair behavior
         <li> <b> Swivel mode </b> - Select to toggle using crosshairs to rotate planes in about all three axes </li>
         <li> <img src="/documentation/quickguide/gui/images/window-ts-slider.png" width="140" height="30"> 
              - The <b>T</b>thicker <b>S</b>slices slider controls how many slices around the current one are used for a maximum intensity projection </li>
-
       </ul>
     </td>
 
@@ -126,8 +125,8 @@ corner each window provides options to customize the view and crosshair behavior
   <tr>
     <td><img src="/documentation/quickguide/gui/images/window-icon-2.png" width="28" height="24"> </td>
     <td> Changes the view layout </td>
-    <td> The view is changed to a full-screen layout for the window and plane the mouse cursor is in
-         When selected it changes to <img src="/documentation/quickguide/gui/images/window-icon-4.png" width="28" height="24">
+    <td> The view is changed to a full-screen layout for the window and plane the mouse cursor is in.
+         When selected, it changes to <img src="/documentation/quickguide/gui/images/window-icon-4.png" width="28" height="24">
      </td>
   </tr>
 

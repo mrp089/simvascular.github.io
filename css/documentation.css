@@ -1,6 +1,7 @@
 html, body {
     background-color: white;
     color: var(--black);
+    font-size: 17px;
 }
 
 html { 
@@ -13,7 +14,7 @@ ul {
 }
 
 li {
-    font-size: 18px;
+    /* font-size: 16px; */
     padding-bottom: 10px;
 }
 
@@ -51,7 +52,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-    color: var(--black)
+    color: var(--black);
+    font-size: 17px;
+}
+
+#text {
+    color: red;
 }
 
 .subText {
@@ -137,14 +143,21 @@ h1, h2, h3, h4, h5, h6, p {
     display: inline-block;
 }
 
+.docsSection {
+    padding: 35px;
+    background-color: white;
+    width: calc(100% - 300px);
+}
+
 .navigationSection {
-    padding-top: 35px;
+    padding-top: 30px;
     padding-right: 10px;
-    padding-left: 40px;
+    padding-left: 30px;
     padding-bottom: 5px;
     position: fixed;
     overflow: auto;
     height: calc(100% - 78px);
+    width: 300px;
     background-color: var(--white);
     display: inline-block;
 }
@@ -152,6 +165,9 @@ h1, h2, h3, h4, h5, h6, p {
 @media only screen and (max-width: 768px) {
     .navigationSection {
        display: none;
+    }
+    .docsSection{
+        width: 100%;
     }
 }
 
@@ -169,7 +185,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .navigationSection div div {
-    padding-left: 10px;
+    padding-left: 15px;
 }
 
 .navigationSection div div p {
@@ -191,12 +207,6 @@ h1, h2, h3, h4, h5, h6, p {
 span {
     height: fit-content;
     display: block;
-}
-
-.docsSection {
-    padding: 35px;
-    background-color: white;
-    width: 100%;
 }
 
 zero-md {
