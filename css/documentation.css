@@ -305,22 +305,23 @@ p.skipTo:hover {
 .navSubLink {
     padding-left: 30px;
 }
-/* 
+
 .navSubLink p {
     padding: 0;
     margin: 0;
-    color: var(--white)
-} */
+    color: var(--white);
+    font-size: 18px;
+}
 
 .navTitle:hover, .navSubLink:hover {
     background-color: var(--white);
     color: var(--black);
 }
 
-.navSubLink a {
+.navSubLink p {
     color: var(--white);
 }
 
-.navSubLink a:hover, .navSubLink:hover a{
+.navSubLink p:hover, .navSubLink:hover p {
     color: var(--black);
 }
