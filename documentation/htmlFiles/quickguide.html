@@ -18,7 +18,7 @@
 
   <script>
     window.ZeroMdConfig = {
-      cssUrls: ['/css/bootstrap.css', "/css/grayscale.css", "/css/standards.css", "/css/shop-item.css", "/css/documentation.css"]
+      cssUrls: ['/css/bootstrap.css',"/css/grayscale.css","/css/standards.css","/css/shop-item.css","/css/documentation.css"]
     }
   </script>
 
@@ -32,195 +32,198 @@
     <title>SimVascular</title>
   </head>
   <body>
-  <section class="header">
-    <div class="topLeftLogo">      
-        <div class="headerLogoContainer">
-          <img id="logo" class="headerLogoImage" src="/img/svLogoTitle.png" alt="SimVascular Logo"></img>
+    <section class="header">
+      <div class="topLeftLogo">  
+          <!-- logo top left -->
+          <div class="headerLogoContainer">
+            <img id="logo" class="headerLogoImage" src="/img/svLogoTitle.png" alt="SimVascular Logo"></img>
+          </div>
+          <!-- nav bar top right; same for all -->
+          <div class="headerNavBar">
+            <details>
+              <summary><i class="fa-solid fa-bars" id="iconForSkip"></i></summary>
+              <div class="navBarSection">
+                <details>
+                  <summary class="navTitle">User Guides</summary>
+                  <div>
+                    <div class="navSubLink">
+                      <a target="_blank" href="https://github.com/SimVascular/SimVascular/wiki//user_simvascular_software_suite_install">Installing SimVascular</a><br>
+                    </div>
+                    <div class="navSubLink">
+                      <a target="_blank" href="/documentation/htmlFiles/quickguide.html">Getting Started</a><br>
+                    </div>
+                    <div class="navSubLink">
+                      <a target="_blank" href="/documentation/htmlFiles/modeling.html">Modeling Guide</a><br>
+                    </div>
+                    <div class="navSubLink">
+                      <a target="_blank" href="/documentation/htmlFiles/meshing.html">Meshing Guide</a><br>
+                    </div>
+                    <div class="navSubLink">
+                      <a target="_blank" href="/documentation/htmlFiles/flowsolver.html">Simulation Guide</a><br>
+                    </div>
+                    <div class="navSubLink">
+                      <a target="_blank" href="/documentation/htmlFiles/svfsi.html">svFSI Guide</a><br>
+                    </div>
+                    <div class="navSubLink">
+                      <a target="_blank" href="/documentation/htmlFiles/simcardio.html">SimCardio Guide</a><br>
+                    </div>
+                    <div class="navSubLink">
+                      <a target="_blank" href="/documentation/htmlFiles/rom_simulation.html">ROM Simulation Guide</a><br>
+                    </div>
+                    <div class="navSubLink">
+                      <a target="_blank" href="/documentation/htmlFiles/genbc.html">General B.C. Guide</a><br>
+                    </div>
+                    <div class="navSubLink">
+                      <a target="_blank" href="/documentation/htmlFiles/python_interface.html">Python Interface</a><br>
+                    </div>
+                    <div class="navSubLink">
+                      <a target="_blank" href="/documentation/htmlFiles/references.html">References</a><br>
+                    </div>
+                    <div class="navSubLink">
+                      <a target="_blank" href="https://github.com/SimVascular/SimVascular/wiki/wiki_for_users">FAQ &amp; Wiki</a>
+                    </div>
+                  </div>
+                </details>
+                <details>
+                  <summary class="navTitle">Clinical Cases</summary>
+                  <div>
+                    <div class="navSubLink">
+                      <a target="_blank" href="clinicalCase3.html">Coronary Normal</a>                  
+                    </div>
+                    <div class="navSubLink">
+                      <a target="_blank" href="clinicalCase1.html">Aortofemoral Normal - 1</a>                  
+                    </div>
+                    <div class="navSubLink">
+                      <a target="_blank" href="clinicalCase2.html">Aortofemoral Normal - 2</a>                  
+                    </div>
+                    <div class="navSubLink">
+                      <a target="_blank" href="">Healthy Pulmonary</a>                  
+                    </div>
+                  </div>
+                </details>
+                <details>
+                  <summary class="navTitle">Developer Guides</summary>
+                  <div>
+                    <div class="navSubLink">
+                      <a target="_blank" href="https://github.com/SimVascular/SimVascular/wiki/wiki_for_developers">Compile Source Code</a>                  
+                    </div>
+                  </div>
+                </details>
+              </div>
+          </div>
         </div>
-        <div class="headerNavBar">
-          <details>
-            <summary><i class="fa-solid fa-bars" id="iconForSkip"></i></summary>
-            <div class="navBarSection">
-              <details>
-                <summary class="navTitle">User Guides</summary>
-                <div>
-                  <div class="navSubLink">
-                    <a target="_blank" href="https://github.com/SimVascular/SimVascular/wiki//user_simvascular_software_suite_install">Installing SimVascular</a><br>
-                  </div>
-                  <div class="navSubLink">
-                    <a target="_blank" href="/documentation/htmlFiles/quickguide.html">Getting Started</a><br>
-                  </div>
-                  <div class="navSubLink">
-                    <a target="_blank" href="/documentation/htmlFiles/modeling.html">Modeling Guide</a><br>
-                  </div>
-                  <div class="navSubLink">
-                    <a target="_blank" href="/documentation/htmlFiles/meshing.html">Meshing Guide</a><br>
-                  </div>
-                  <div class="navSubLink">
-                    <a target="_blank" href="/documentation/htmlFiles/flowsolver.html">Simulation Guide</a><br>
-                  </div>
-                  <div class="navSubLink">
-                    <a target="_blank" href="/documentation/htmlFiles/svfsi.html">svFSI Guide</a><br>
-                  </div>
-                  <div class="navSubLink">
-                    <a target="_blank" href="/documentation/htmlFiles/simcardio.html">SimCardio Guide</a><br>
-                  </div>
-                  <div class="navSubLink">
-                    <a target="_blank" href="/documentation/htmlFiles/rom_simulation.html">ROM Simulation Guide</a><br>
-                  </div>
-                  <div class="navSubLink">
-                    <a target="_blank" href="/documentation/htmlFiles/genbc.html">General B.C. Guide</a><br>
-                  </div>
-                  <div class="navSubLink">
-                    <a target="_blank" href="/documentation/htmlFiles/python_interface.html">Python Interface</a><br>
-                  </div>
-                  <div class="navSubLink">
-                    <a target="_blank" href="/documentation/htmlFiles/references.html">References</a><br>
-                  </div>
-                  <div class="navSubLink">
-                    <a target="_blank" href="https://github.com/SimVascular/SimVascular/wiki/wiki_for_users">FAQ &amp; Wiki</a>
-                  </div>
-                </div>
-              </details>
-              <details>
-                <summary class="navTitle">Clinical Cases</summary>
-                <div>
-                  <div class="navSubLink">
-                    <a target="_blank" href="clinicalCase3.html">Coronary Normal</a>                  
-                  </div>
-                  <div class="navSubLink">
-                    <a target="_blank" href="clinicalCase1.html">Aortofemoral Normal - 1</a>                  
-                  </div>
-                  <div class="navSubLink">
-                    <a target="_blank" href="clinicalCase2.html">Aortofemoral Normal - 2</a>                  
-                  </div>
-                  <div class="navSubLink">
-                    <a target="_blank" href="clinicalCase4.html">Healthy Pulmonary</a>                  
-                  </div>
-                </div>
-              </details>
-              <details>
-                <summary class="navTitle">Developer Guides</summary>
-                <div>
-                  <div class="navSubLink">
-                    <a target="_blank" href="https://github.com/SimVascular/SimVascular/wiki/wiki_for_developers">Compile Source Code</a>                  
-                  </div>
-                </div>
-              </details>
-            </div>
-        </div>
-      </div>
     </section>
+
   <section class="mainSection row">
     <section class="col-md-4 col-xl-3 navigationSection" style="float: left">
       <div>
-        <h4 class="skipTo" id="skipTo_intro">Introduction</h4>
+        <h4 class="skipTo introduction">Introduction</h4>
         <div>
-          <p class="skipTo" id="skipTo_intro_pipeline">Modeling Pipeline</p>
-          <p class="skipTo" id="skipTo_intro_tools">Tools</p>
-          <p class="skipTo" id="skipTo_intro_projects">Projects</p>
-          <p class="skipTo" id="skipTo_intro_mitk">MITK Framework</p>
+          <p class="skipTo intro_pipeline">Modeling Pipeline</p>
+          <p class="skipTo intro_tools">Tools</p>
+          <p class="skipTo intro_projects">Projects</p>
+          <p class="skipTo intro_mitk">MITK Framework</p>
         </div>
       </div>
       <div>
-        <h4 class="skipTo" id="skipTo_gui_intro">Graphical User Interface</h4>
+        <h4 class="skipTo gui">Graphical User Interface</h4>
         <div>
-          <p class="skipTo" id="skipTo_gui_menubar">Menubar</p>
-          <p class="skipTo" id="skipTo_gui_toolbar">Toolbar</p>
-          <p class="skipTo" id="skipTo_gui_display">Display</a>
-          <p class="skipTo" id="skipTo_gui_image_windowing">Image Windowing</p>
-          <p class="skipTo" id="skipTo_gui_data_manager">Data Manager</p>
-          <p class="skipTo" id="skipTo_gui_tool_panel">Tool Panel</p>
-          <p class="skipTo" id="skipTo_gui_image_navigator">Image Navigator</p>
+          <p class="skipTo menubar">Menubar</p>
+          <p class="skipTo toolbar">Toolbar</p>
+          <p class="skipTo gui_display">Display</a>
+          <p class="skipTo image_windowing">Image Windowing</p>
+          <p class="skipTo gui_data_manager">Data Manager</p>
+          <p class="skipTo gui_tool_panel">Tool Panel</p>
+          <p class="skipTo gui_image_navigator">Image Navigator</p>
         </div>
       </div>
       <div>
-        <h4 class="skipTo" id="skipTo_tutorial_intro">Tutorial</h4>
+        <h4 class="skipTo tutorial">Tutorial</h4>
         <div>
-          <p class="skipTo" id="skipTo_tutorial_starting_simvascular">Starting SimVascular</p>
-          <p class="skipTo" id="skipTo_tutorial_create_project">Create a Project</p>
-          <p class="skipTo" id="skipTo_tutorial_add_image_data">Add Image Data</p>
-          <p class="skipTo" id="skipTo_tutorial_create_paths">Create Vessel Paths</p>
-          <p class="skipTo" id="skipTo_tutorial_create_segmentations">Create Segmentations</p>
-          <p class="skipTo" id="skipTo_tutorial_create_solid_model">Create Solid Model</p>
-          <p class="skipTo" id="skipTo_tutorial_create_finite_element_mesh">Create Finite Element Mesh</p>
-          <p class="skipTo" id="skipTo_tutorial_create_simulation">Create CFD Simulation</p>
-          <p class="skipTo" id="skipTo_tutorial_summary">Summary</p>
+          <p class="skipTo tutorial_starting_simvascular">Starting SimVascular</p>
+          <p class="skipTo tutorial_create_project">Create a Project</p>
+          <p class="skipTo tutorial_add_image_data">Add Image Data</p>
+          <p class="skipTo tutorial_create_paths">Create Vessel Paths</p>
+          <p class="skipTo tutorial_create_segmentations">Create Segmentations</p>
+          <p class="skipTo tutorial_create_solid_model">Create Solid Model</p>
+          <p class="skipTo tutorial_create_finite_element_mesh">Create Finite Element Mesh</p>
+          <p class="skipTo tutorial_create_simulation">Create CFD Simulation</p>
+          <p class="skipTo tutorial_summary">Summary</p>
         </div>
       </div>
     </section>
 
     <section class="col-md-8 col-xl-9 docsSection" style="float: right"> 
-      <span id="_getting_started">
+      <span id="getting_started">
         <zero-md src="/documentation/quickguide/_getting_started.md"></zero-md>
       </span>
-      <span id="_intro">
+      <span id="introduction">
         <zero-md src="/documentation/quickguide/_intro.md"></zero-md>
       </span>
-      <span id="_intro_pipeline">
+      <span id="intro_pipeline">
         <zero-md src="/documentation/quickguide/_intro_pipeline.md"></zero-md>
       </span>
-      <span id="_intro_tools">
+      <span id="intro_tools">
         <zero-md src="/documentation/quickguide/_intro_tools.md"></zero-md>
       </span>
-      <span id="_intro_projects">
+      <span id="intro_projects">
         <zero-md src="/documentation/quickguide/_intro_projects.md"></zero-md>
       </span>
-      <span id="_intro_mitk">
+      <span id="intro_mitk">
         <zero-md src="/documentation/quickguide/_intro_mitk.md"></zero-md>
       </span>
-      <span id="_gui_intro">
+      <span id="gui">
         <zero-md src="/documentation/quickguide/gui/_intro.md"></zero-md>
       </span>
-      <span id="_gui_menubar">
+      <span id="menubar">
         <zero-md src="/documentation/quickguide/gui/_menubar.md"></zero-md>
       </span>
-      <span id="_gui_toolbar">
+      <span id="toolbar">
         <zero-md src="/documentation/quickguide/gui/_toolbar.md"></zero-md>
       </span>
-      <span id="_gui_display">
+      <span id="gui_display">
         <zero-md src="/documentation/quickguide/gui/_display.md"></zero-md>
       </span>
-      <span id="_gui_image_windowing">
+      <span id="image_windowing">
         <zero-md src="/documentation/quickguide/gui/_image_windowing.md"></zero-md>
       </span>
-      <span id="_gui_data_manager">
+      <span id="gui_data_manager">
         <zero-md src="/documentation/quickguide/gui/_data_manager.md"></zero-md>
       </span>
-      <span id="_gui_tool_panel">
+      <span id="gui_tool_panel">
         <zero-md src="/documentation/quickguide/gui/_tool_panel.md"></zero-md>
       </span>
-      <span id="_gui_image_navigator">
+      <span id="gui_image_navigator">
         <zero-md src="/documentation/quickguide/gui/_image_navigator.md"></zero-md>
       </span>
-      <span id="_tutorial_intro">
+      <span id="tutorial">
         <zero-md src="/documentation/quickguide/tutorial/_intro.md"></zero-md>
       </span>
-      <span id="_tutorial_starting_simvascular">
+      <span id="tutorial_starting_simvascular">
         <zero-md src="/documentation/quickguide/tutorial/_starting_simvascular.md"></zero-md>
       </span>
-      <span id="_tutorial_create_project">
+      <span id="tutorial_create_project">
         <zero-md src="/documentation/quickguide/tutorial/_create_project.md"></zero-md>
       </span>
-      <span id="_tutorial_add_image_data">
+      <span id="tutorial_add_image_data">
         <zero-md src="/documentation/quickguide/tutorial/_add_image_data.md"></zero-md>
       </span>
-      <span id="_tutorial_create_paths">
+      <span id="tutorial_create_paths">
         <zero-md src="/documentation/quickguide/tutorial/_create_paths.md"></zero-md>
       </span>
-      <span id="_tutorial_create_segmentations">
+      <span id="tutorial_create_segmentations">
         <zero-md src="/documentation/quickguide/tutorial/_create_segmentations.md"></zero-md>
       </span>
-      <span id="_tutorial_create_solid_model">
+      <span id="tutorial_create_solid_model">
         <zero-md src="/documentation/quickguide/tutorial/_create_solid_model.md"></zero-md>
       </span>
-      <span id="_tutorial_create_finite_element_mesh">
+      <span id="tutorial_create_finite_element_mesh">
         <zero-md src="/documentation/quickguide/tutorial/_create_finite_element_mesh.md"></zero-md>
       </span>
-      <span id="_tutorial_create_simulation">
+      <span id="tutorial_create_simulation">
         <zero-md src="/documentation/quickguide/tutorial/_create_simulation.md"></zero-md>
       </span>
-      <span id="_tutorial_summary">
+      <span id="tutorial_summary">
         <zero-md src="/documentation/quickguide/tutorial/_summary.md"></zero-md>
       </span>
     </section>

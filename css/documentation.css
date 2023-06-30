@@ -3,6 +3,11 @@ html, body {
     color: var(--black);
 }
 
+html { 
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+ }
+
 ul {
     list-style-type: none;
 }
@@ -33,7 +38,12 @@ h1 {
 
 h2 {
     margin: 15px 15px;
-    font-size: 25px;
+    font-size: 30px;
+}
+
+h3 {
+    margin: 15px 15px;
+    font-size: 24px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -84,16 +94,16 @@ h1, h2, h3, h4, h5, h6, p {
     top: 10px;
     left: 10px;
     position: fixed;
-    z-index: 10;
+    z-index: 20;
 }
 
 .header {
     top: 0;
     display: block;
-    z-index: 20;
     position: fixed;
     height: 75px;
     width: 100%;
+    z-index: 19;
     background-color: var(--black);
 }
 
@@ -173,10 +183,10 @@ h1, h2, h3, h4, h5, h6, p {
     color: var(--black);
     cursor: pointer;
 }
-
+/* 
 .navigationSection div div p:hover,  .navigationSection div h4:hover{
     color: var(--verydarkblue);
-}
+} */
 
 span {
     height: fit-content;
@@ -202,7 +212,7 @@ zero-md {
     background-color: var(--lightbluegrey);
 }
 
-h4.skipTo:hover, h4#skipToTop:hover {
+h4.skipTo:hover, h4#skipTo:hover {
     font-size: 22px;
     padding: 8px;
 }
@@ -233,6 +243,10 @@ p.skipTo:hover {
     margin: auto;
     font-size: 38px;
     color: white;
+}
+
+.skipTo {
+    cursor: pointer;
 }
 
 #logo {
@@ -291,6 +305,12 @@ p.skipTo:hover {
 .navSubLink {
     padding-left: 30px;
 }
+/* 
+.navSubLink p {
+    padding: 0;
+    margin: 0;
+    color: var(--white)
+} */
 
 .navTitle:hover, .navSubLink:hover {
     background-color: var(--white);

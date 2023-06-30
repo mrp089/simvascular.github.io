@@ -4,23 +4,28 @@ function scrollToTop() {
     
 }
 
-function smoothScrollingToTag(id)
-{
-    var element = document.getElementById(id);
+// function smoothScrollingToTag(id)
+// {
+//     var element = document.getElementById(id);
 
-    var position = element.getBoundingClientRect().top;
-    window.scrollTo({top: (position + scrollY - 90), behavior: 'smooth'});
-}
+//     var position = element.getBoundingClientRect().top;
+//     window.scrollTo({top: (position + scrollY - 90), behavior: 'smooth'});
+// }
 
 $("#skipToTop").click(function() {
     scrollToTop();
 });
 
-function clickLink(hrefTag)
+function clickLink(hrefTag, targetBlank = true)
 {
     var a = document.createElement("a");
     a.href = hrefTag;
-    a.target = "_blank";
+
+    if(targetBlank)
+    {
+        a.target = "_blank";
+    }
+    
     a.click();
 }
 
@@ -28,25 +33,13 @@ $("#logo").click(function() {
     clickLink("/index.html");
 });
 
-addHooks();
+$(".skipTo").click(function() {
+    var classes = $(this).attr("class");
+    var id = classes.split(/\s+/)[1];
+    clickLink("#" + id, false);
+});
 
-function addHooks()
-{
-    var skipToElements = document.getElementsByClassName("skipTo");
-
-    for(var i = 0; i < skipToElements.length; i++)
-    {
-        var id = skipToElements[i].id;
-
-        $("#" + id).click(function() {
-            var id = $(this).attr("id").substring("skipTo".length)
-            smoothScrollingToTag(id);
-        });
-    }
-
-    $(".navSubLink").click(function() {
-        var href = $(this).children()[0].getAttribute("href");
-        clickLink(href);
-    });
-
-}
+$(".navSubLink").click(function() {
+    var href = $(this).children()[0].getAttribute("href");
+    clickLink(href);
+});
