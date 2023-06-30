@@ -145,6 +145,9 @@ h1, h2, h3, h4, h5, h6, p {
     }
 }
 
+.navigationSection div {
+    padding-bottom: 15px;
+}
 
 .navigationSection div h4 {
     font-weight: bold;
@@ -152,7 +155,6 @@ h1, h2, h3, h4, h5, h6, p {
     font-size: 20px;
     padding: 0;
     padding-top: 7px;
-
     padding-bottom: 5px;
 }
 
@@ -235,4 +237,68 @@ p.skipTo:hover {
 
 #logo {
     cursor: pointer;
+}
+
+#iconForSkip {
+    padding-top: 0;
+    margin-top: 15px;
+    margin-right: 15px;
+ 
+    font-size: 50px;
+    color: var(--blue);
+    float: right;
+    cursor: pointer;
+}
+
+#iconForSkip:hover {
+    color: var(--white);
+}
+
+.headerNavBar {
+    top: 0px;
+    right: 0px;
+    position: fixed;
+    z-index: 10;
+}
+
+.navBarSection {
+    top: 75px;
+    right: 0;
+    display: block;
+    width: 250px;
+    position: fixed;
+
+}
+
+.navBarSection details {
+    height: fit-content;
+    font-size: 18px;
+    background-color: var(--black);
+    cursor: pointer;
+}
+
+.navTitle, .navSubLink {
+    padding: 15px;
+    color: var(--white);
+}
+
+.navTitle {
+    font-weight: bold;
+}
+
+.navSubLink {
+    padding-left: 30px;
+}
+
+.navTitle:hover, .navSubLink:hover {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.navSubLink a {
+    color: var(--white);
+}
+
+.navSubLink a:hover, .navSubLink:hover a{
+    color: var(--black);
 }
