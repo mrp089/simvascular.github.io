@@ -25,7 +25,7 @@ These boundaries have an absolutely critical impact on the numerical simulation 
 - **Impedance Boundary condition**. Here, the condition prescribed on the face is a relationship of the form:
 
 $$
-p(t)=p_0 + \frac{1}{T}\ \int_{t-T}^{t} Z(t−\tau) \ Q(\tau) \ d\tau
+p(t)=p_0 + \frac{1}{T}\\,\int_{t-T}^{t} Z(t−\tau)\\,Q(\tau)\\,d\tau
 $$
 
 where $Z$ is the Inverse Fourier Transform of an impedance function that characterizes the downstream vasculature, $p$ is the weakly prescribed pressure, $Q$ is the flow rate passing through the face, and $T$ is the cardiac cycle.
@@ -43,7 +43,7 @@ where $Z$ is the Inverse Fourier Transform of an impedance function that charact
 The mathematical definition of an impedance function is:
 
 $$
-Z(\omega)=P(\omega)\,Q(\omega),\,\omega=0,1,2,\dots
+Z(\omega)=P(\omega)\\,Q(\omega),\\,\omega=0,1,2,\dots
 $$
 
 That is, a relationship between pressure and flow modes for different frequencies. The figure above shows the typical shape of these impedances as a function of the frequency in the human iliac artery under rest and exercise conditions. Getting a good characterization of these impedance functions is once again critical to accurately represent the way blood flows in our computational domain.
