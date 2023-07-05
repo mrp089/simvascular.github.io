@@ -16,37 +16,223 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-  <!-- Style CSS -->
-  <link rel="stylesheet" href="/css/bootstrap.css">
-  <link rel="stylesheet" href="/css/grayscale.css">
-  <link rel="stylesheet" href="/css/standards.css">
-  <!-- <link rel="stylesheet" href="css/home.css"> -->
-  <link rel="stylesheet" href="/css/documentation.css">
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          ['$', '$'],
+          ['$$', '$$'],
+          ['\\(', '\\)'],
+        ],
+      },
+    };
+  </script>
+  
+  <script>
+    window.ZeroMdConfig = {
+      cssUrls: ['/css/bootstrap.css',"/css/grayscale.css","/css/standards.css","/css/shop-item.css","/css/documentation.css"]
+    }
+  </script>
+  
+  <script
+    type="module"
+    src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"
+  ></script>
 
     <!-- browser tab labels -->
     <link rel="shortcut icon" type="image/jpg" href="/img/svIcon.png"></link>
     <title>SimVascular</title>
   </head>
   <body>
-  <section class="header">
-    <div class="topLeftLogo">      
-        <div class="headerLogoContainer">
-          <img class="headerLogoImage" src="/img/svLogoTitle.png" alt="SimVascular Logo"></img>
+    <section class="header">
+      <div class="topLeftLogo">  
+          <!-- logo top left -->
+          <div class="headerLogoContainer">
+            <img id="logo" class="headerLogoImage" src="/img/svLogoTitle.png" alt="SimVascular Logo"></img>
+          </div>
+          <!-- nav bar top right; same for all -->
+          <div class="headerNavBar">
+            <details>
+              <summary><i class="fa-solid fa-bars" id="iconForSkip"></i></summary>
+              <div class="navBarSection">
+                <details>
+                  <summary class="navTitle">User Guides</summary>
+                  <div>
+                    <div class="navSubLink">
+                      <p href="https://github.com/SimVascular/SimVascular/wiki//user_simvascular_software_suite_install">Installing SimVascular</p>
+                    </div>
+                    <div class="navSubLink">
+                      <p href="/documentation/htmlFiles/quickguide.html">Getting Started</p>
+                    </div>
+                    <div class="navSubLink">
+                      <p href="/documentation/htmlFiles/modeling.html">Modeling Guide</p> 
+                    </div>
+                    <div class="navSubLink">
+                      <p href="/documentation/htmlFiles/meshing.html">Meshing Guide</p> 
+                    </div>
+                    <div class="navSubLink">
+                      <p href="/documentation/htmlFiles/flowsolver.html">Simulation Guide</p> 
+                    </div>
+                    <div class="navSubLink">
+                      <p href="/documentation/htmlFiles/svfsi.html">svFSI Guide</p> 
+                    </div>
+                    <div class="navSubLink">
+                      <p href="/documentation/htmlFiles/simcardio.html">SimCardio Guide</p> 
+                    </div>
+                    <div class="navSubLink">
+                      <p href="/documentation/htmlFiles/rom_simulation.html">ROM Simulation Guide</p> 
+                    </div>
+                    <div class="navSubLink">
+                      <p href="/documentation/htmlFiles/genbc.html">General B.C. Guide</p> 
+                    </div>
+                    <div class="navSubLink">
+                      <p href="/documentation/htmlFiles/python_interface.html">Python Interface</p> 
+                    </div>
+                    <div class="navSubLink">
+                      <p href="/documentation/htmlFiles/references.html">References</p> 
+                    </div>
+                    <div class="navSubLink">
+                      <p href="https://github.com/SimVascular/SimVascular/wiki/wiki_for_users">FAQ &amp; Wiki</a>
+                    </div>
+                  </div>
+                </details>
+                <details>
+                  <summary class="navTitle">Clinical Cases</summary>
+                  <div>
+                    <div class="navSubLink">
+                      <p href="clinicalCase3.html">Coronary Normal</a>                  
+                    </div>
+                    <div class="navSubLink">
+                      <p href="clinicalCase1.html">Aortofemoral Normal - 1</a>                  
+                    </div>
+                    <div class="navSubLink">
+                      <p href="clinicalCase2.html">Aortofemoral Normal - 2</a>                  
+                    </div>
+                    <div class="navSubLink">
+                      <p href="">Healthy Pulmonary</a>                  
+                    </div>
+                  </div>
+                </details>
+                <details>
+                  <summary class="navTitle">Developer Guides</summary>
+                  <div>
+                    <div class="navSubLink">
+                      <p href="https://github.com/SimVascular/SimVascular/wiki/wiki_for_developers">Compile Source Code</a>                  
+                    </div>
+                  </div>
+                </details>
+              </div>
+          </div>
+        </div>
+    </section>
+
+  <section class="mainSection">
+    <section class="navigationSection" style="float: left">
+      <div>
+        <h4 class="skipTo introduction">Introduction</h4>
+      </div>
+      <div>
+        <h4 class="skipTo tetgenoverview">TetGen Meshing</h4>
+        <div>
+          <p class="skipTo tetgencreatemesh">Create Mesh</p>
+          <p class="skipTo tetgeniso">Isotropic Meshing</p>
+          <p class="skipTo tetgenboundarylayer">Boundary Layer Meshing</p>
+          <p class="skipTo tetgetnradiusbased">Radius-Based Meshing</p>
+          <p class="skipTo tetgenlocalmeshing">Local Mesh Size Application</p>
+          <p class="skipTo tetgensphericalrefinement">Spherical Refinement</p>
+          <p class="skipTo tetgenflags">Advanced Flags</p>
+          <p class="skipTo tetgenadapt">Adaptive Meshing</p>
+          <p class="skipTo loadingmesh">Unloading/Loading Mesh Data</p>
+          <p class="skipTo exportingmesh">Exporting Mesh</p>
+          <p class="skipTo tetgenerrors">TetGen Errors</p>
         </div>
       </div>
     </section>
 
-  <section class="mainSection">
-    <form class="mainBody"> 
-      <zero-md src="/documentation/quickguide/_getting_started.md"></zero-md>
-    </form>
+    <section class="docsSection" style="float: right">
+      <span id="introduction">
+        <zero-md class="embedMath" src="/documentation/meshing/_intro.md" no-shadow></zero-md>
+      </span>
+      <span id="tetgenoverview">
+        <zero-md class="embedMath" src="/documentation/meshing/_tetgenOverview.md" no-shadow></zero-md>
+      </span>
+      <span id="tetgencreatemesh">
+        <zero-md class="embedMath" src="/documentation/meshing/_tetgenCreateMesh.md" no-shadow></zero-md>
+      </span>
+      <span id="tetgeniso">
+        <zero-md class="embedMath" src="/documentation/meshing/_tetgenIsotropicMeshing.md" no-shadow></zero-md>
+      </span>
+      <span id="tetgenboundarylayer">
+        <zero-md class="embedMath" src="/documentation/meshing/_tetgenBoundaryLayer.md" no-shadow></zero-md>
+      </span>
+      <span id="tetgetnradiusbased">
+        <zero-md class="embedMath" src="/documentation/meshing/_tetgenRadiusBasedMeshing.md" no-shadow></zero-md>
+      </span>
+      <span id="tetgenlocalmeshing">
+        <zero-md class="embedMath" src="/documentation/meshing/_tetgenLocalSize.md" no-shadow></zero-md>
+      </span>
+      <span id="tetgensphericalrefinement">
+        <zero-md class="embedMath" src="/documentation/meshing/_tetgenSphereRefinement.md" no-shadow></zero-md>
+      </span>
+      <span id="tetgenflags">
+        <zero-md class="embedMath" src="/documentation/meshing/_tetgenFlags.md" no-shadow></zero-md>
+      </span>
+      <span id="tetgenadapt">
+        <zero-md class="embedMath" src="/documentation/meshing/_tetgenAdapt.md" no-shadow></zero-md>
+      </span>
+      <span id="loadingmesh">
+        <zero-md class="embedMath" src="/documentation/meshing/_loadingmesh.md" no-shadow></zero-md>
+      </span>
+      <span id="exportingmesh">
+        <zero-md class="embedMath" src="/documentation/meshing/_exportingMesh.md" no-shadow></zero-md>
+      </span>
+      <span id="tetgenerrors">
+        <zero-md class="embedMath" src="/documentation/meshing/_tetgenErrors.md" no-shadow></zero-md>
+      </span>
+      <span id="inspectingmeshes">
+        <zero-md class="embedMath" src="/documentation/meshing/_inspectingMeshes.md" no-shadow></zero-md>
+      </span>
+    </section>
+  </section>
+  <section class="skipToTopSection">
+    <p id="skipToTop"><i class="fa-solid fa-arrow-up"></i></p>
   </section>
 
-  <!-- Lightweight client-side loader that feature-detects and load polyfills only when necessary -->
-  <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
 
-  <!-- Load the element definition -->
-  <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
-  </body>
+  <script>
+    var allZero_MD_File = document.getElementsByClassName("embedMath");
+    for(var i = 0; i < allZero_MD_File.length; i++)
+    {
+      allZero_MD_File[i].addEventListener('zero-md-rendered', () => {
+      var el = document.createElement('script');
+      el.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js';
+      document.head.appendChild(el);
+    });
+    }
+    
+  </script>
+
+  <!-- Style CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/grayscale.css">
+  <link rel="stylesheet" href="/css/standards.css">
+  <link rel="stylesheet" href="/css/documentation.css">
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+  <script src="/js/jquery-2.1.1.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.21/jquery.csv.min.js"></script>
+
+  <!-- <script src="js/jquery-2.1.1.js"></script> -->
+  <script src="/js/jquery.mixitup.min.js"></script>
+
+  
+
+  <script src="/js/documentation.js"></script>
+
+</body>
   
 </html>

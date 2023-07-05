@@ -1,8 +1,8 @@
-###Using Level Sets to Define a Contour
+### Using Level Sets to Define a Contour
 
 Thresholding is very dependent on the user-specified parameters and does not always result in a closed contour. An alternate method that’s been implemented within **SimVascular** is the level set method. **SimVascular** utilizes a specialized level set method built specifically for 2D vascular modeling. These level sets use to intensity image data and geometric constraints to produce a smooth contour of the vascular wall in 2D cross sections. **SimVascular**'s level set method is initialized with a seed and then performs segmentation in two stages. Details of these stages are outlined below.
 
-####Seed Parameters
+#### Seed Parameters
 
 These parameters modify the size of the starting seed. The size is standardized, and will be the same across all images. The location of the seed is fixed at the image center (path point)T
 
@@ -61,7 +61,7 @@ To create a contour using Levelset:
 
 Now a new contour is created and added to the group.
 
-####Batch Segmentation
+#### Batch Segmentation
 
 In general, you should go with the normal approach above: making more segmentations than you will need and then selecting a subset to define the vessel. However, in the following exercise, we will try to gain some intuition that makes batch level set segmentation possible and efficient.
 

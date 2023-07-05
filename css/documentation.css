@@ -180,6 +180,7 @@ h1, h2, h3, h4, h5, h6, p {
     text-transform: none;
     font-size: 20px;
     padding: 0;
+    padding-left: 5px;
     padding-top: 7px;
     padding-bottom: 5px;
 }
@@ -189,7 +190,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .navigationSection div div p {
-    padding: 0;
+    padding-left: 5px;
     margin: 0;
     display: block;
     font-size: 17px;
@@ -220,16 +221,6 @@ zero-md {
 
 .skipTo:hover{
     background-color: var(--lightbluegrey);
-}
-
-h4.skipTo:hover, h4#skipTo:hover {
-    font-size: 22px;
-    padding: 8px;
-}
-
-p.skipTo:hover {
-    font-size: 18px;
-    padding: 6px;
 }
 
 .skipToTopSection {

@@ -1,4 +1,4 @@
-##Segmentation
+## Segmentation
 
 Extensive research has been conducted in the field of image segmentation, and as a result, many different techniques have been proposed. The goal of all these techniques is to identify objects or structures within an image in an automated fashion. For our purposes, we want to find the vessel lumen.
 

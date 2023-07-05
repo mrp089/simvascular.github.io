@@ -1,4 +1,4 @@
-###Using Thresholding to Define a Contour
+### Using Thresholding to Define a Contour
 
 Now let's use the threshold method to create and add contours to the group.
 
@@ -108,7 +108,7 @@ We can also create a contour using a preset threshold value, without interaction
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-####Batch Segmentation
+#### Batch Segmentation
 
 Now let's try create contours in batch model using a preset threshold value.This approach involves pre-selecting the locations for the segmentations, so that only a handful of locations get segmented. This will be faster than generating all of the segmented contours at once. However, it requires user knowledge about which locations are important for the modeling, and it can be especially tedious for vessels with large curvature and/or radius changes. It may also require going back and segmenting other locations later in the process.
 

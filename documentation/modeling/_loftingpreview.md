@@ -1,4 +1,4 @@
-###Lofting Preview
+### Lofting Preview
 
 To check the quality of the contour group, which later will be lofted to create a 3D model, we can preview the lofted surface based on the group of contours. **This step is critical to get a good solid model later in solid modeling.**
 

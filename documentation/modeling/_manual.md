@@ -1,8 +1,8 @@
-###Segmenting an Image Manually
+### Segmenting an Image Manually
 
 Sometimes it is not possible to use automated techniques to segment an image. Other times, automatic techniques work, but yield poor contours. In these situations, you may need to segment the image manually. SimVascular provide several options: circle, ellipse, spline polygon, polygon.
 
-####Circle
+#### Circle
 
 To create a circle (interactively):
 
@@ -27,7 +27,7 @@ To create a circle (manually):
 
 The circular contour has only two control points, one is for shifting and the other is for changing radius.
 
-####Ellipse
+#### Ellipse
 
 To create an ellipse (interactively):
 
@@ -52,7 +52,7 @@ To create an ellipse (manually):
 
 The elliptical contour has four control points. The two points on the contour line are for adjusting the orientation and size of the major and minor axes.
 
-####Spline Polygon
+#### Spline Polygon
 
 A spline polygon is composed of multiple points and the adjacent points are connected by a closed spline.
 

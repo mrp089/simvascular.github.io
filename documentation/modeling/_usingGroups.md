@@ -1,4 +1,4 @@
-###Using Groups
+### Using Groups
 
 Groups are used to organize the 2D segmentations or contours that you create. You want to have a different group for each vessel that you are creating. In addition, you might only use a subset of the 2D contours for producing the solid model of the vessel, so for future reference, it’s helpful to save that subset of contours to a new group.
 

@@ -1,8 +1,9 @@
-###Automatic Machine Learning Segmentation
+### Automatic Machine Learning Segmentation
 
 SimVascular has recently added the capability to automatically generate segmentations using pretrained convolutional neural networks.
 
-####Multi path segmentation
+#### Multi path segmentation
+
 With SimVascular's machine learning segmentation it is possible to compute segmentations at multiple path points for multiple paths simultaneously.
 
 To use multi path segmentation:
@@ -18,7 +19,7 @@ To use multi path segmentation:
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-####Single path segmentation
+#### Single path segmentation
 
 To create a segmentation using machine learning for a single path point (interactively):
 

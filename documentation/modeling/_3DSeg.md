@@ -1,6 +1,6 @@
-##3D Level Set Segmentation
+## 3D Level Set Segmentation
 
-###Introduction
+### Introduction
 
 SimVascular provides a 3D level set method <a href="#ref-1">[1]</a> that can be used to generate segmentation surfaces for anatomical structures
 difficult to segment using the lofted 2D segmentation approach discussed above. The level set method is a mathematical framework
@@ -49,7 +49,7 @@ to trim the surface at its ends. Caps can then be created for the trimmed model 
 
 <!-- ====================================== Level Set Tool ================================= -->
 
-###Level Set Tool
+### Level Set Tool
 
 The SimVascular **3D Level Set Tool** is used to interactively generate 3D segmentations from volumetric imaging data using the
 level set method with colliding fronts initialization. The tool uses the image data read in by SimVascular and stored under the
@@ -112,7 +112,8 @@ panels nor does it store seed positions. The capability to restore the tool's st
 <!-- ====================================== Seeds Panel  ================================= -->
 
 <br>
-####Seeds Panel
+
+#### Seeds Panel
 
 The Seeds panel is used to create groups of start and end seed points for initializing the level set function. Seed groups and
 image threshold values (set in the Level Set panel) determine which regions of the image are segmented. Each seed group consists
@@ -162,10 +163,10 @@ are performed using the keyboard keys.
 
 <p style="clear: both;">
 
-
 <!-- ====================================== Level Set Panel  ================================= -->
 <br>
-####Level Set Panel
+
+#### Level Set Panel
 
 The Level Set panel is used to set parameters for and execute the level set computation. Weights can be set that regulate the influence of
 each term in the level set equation. The higher the weight the more influence it will have on its property during the temporal evolution
@@ -199,7 +200,8 @@ The segmentation surface geometry is stored in a file named <i>surface.vtp</i> i
 
 <!-- ====================================== Surface Panel  ================================= -->
 <br>
-####Surface Panel
+
+#### Surface Panel
 
 The Surface Panel is used to extract centerlines from a segmentation surface using VMTK <a href="#ref-3">[3]</a>.
 Seed groups as the source and target points for the extract centerlines computation.
@@ -217,7 +219,8 @@ The centerline geometry is stored in a file named <i>centerlines.vtp</i> in the 
 
 <!-- ====================================== Paths Panel  ================================= -->
 <br>
-####Paths Panel
+
+#### Paths Panel
 
 The Paths Panel is used to extract SimVascular paths from centerlines geometry. Paths are created for the different branches
 identified in the centerlines geometry. The number of path points created for each centerline depends on
@@ -243,7 +246,8 @@ extract paths, creating a path for each ID in the the array.
 
 <!-- ====================================== Example 1 ================================= -->
 <br>
-###Example: Creating a Segmentation Surface
+
+### Example: Creating a Segmentation Surface
 
 This section demonstrates how to create a segmentation surface using the <b>3D Level Set Tool</b>.
 
@@ -335,7 +339,9 @@ branches and paths, contains two IDs.
 <!-- ====================================== References ================================= -->
 
 <br>
+
 ### References
+
 <a id="ref-1"> [1] Osher, S.J. and Fedkiw, R.P., **Level Set Methods and Dynamic Implicit Surfaces**, Springer-Verlag (2002) </a>
 
 <a id="ref-2"> [2] Antiga, L., Piccinelli, M., Botti, L. et al., **An image-based modeling framework for patient-specific computational hemodynamics**, Med Biol Eng Comput 46, 1097 (2008) </a>

@@ -1,4 +1,4 @@
-###Blending the Junction of Two Vessels
+### Blending the Junction of Two Vessels
 
 The idea behind blending two faces of a model together is similar to sweeping a clay sphere of a certain radius all along the seam to “fill in the cracks” and make it smoother. In order to blend your model, you will first have to know the names of the faces you will be blending. Also the faces' type should be "wall".
 

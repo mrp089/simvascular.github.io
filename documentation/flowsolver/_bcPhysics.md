@@ -20,7 +20,7 @@ From a conceptual standpoint, no matter how geometrically complex a vascular mod
 These boundaries have an absolutely critical impact on the numerical simulation results. The SimVascular package contains several options for boundary condition assignment. All of these use a weakly prescribed pressure formulation, with the purpose of accounting for effects of the downstream vasculature on the vascular model (see figure below). These boundary conditions include:
 
 - **Resistance Boundary condition**. Here, the condition prescribed on the face is a relationship between flow and pressure of the form
-  $p = p_0 + R\,Q$, where $R$ is the resistance parameter that characterizes the downstream vasculature, $p$ is the weakly prescribed pressure, $Q$ is the flow rate passing through the face and $p_0$ is a “flag” that sets the boundary as a “weakly-prescribed pressure boundary”. This flag has a “zero” numerical value, so the total value of the pressure on that face is simply given by $R\,Q$.
+  $p = p_0 + R\\,Q$, where $R$ is the resistance parameter that characterizes the downstream vasculature, $p$ is the weakly prescribed pressure, $Q$ is the flow rate passing through the face and $p_0$ is a “flag” that sets the boundary as a “weakly-prescribed pressure boundary”. This flag has a “zero” numerical value, so the total value of the pressure on that face is simply given by $R\\,Q$.
 
 - **Impedance Boundary condition**. Here, the condition prescribed on the face is a relationship of the form:
 
@@ -67,7 +67,7 @@ In this problem, we will consider a resistance of $R = 1333.0$ dynes·s/cm$^5$.
 This resistance will give a (weakly-applied) pressure at the outlet face of
 
 $$
-p=p\_0 + R\,Q = 0.0 + 1333.0 \cdot 100.0=133300.00 \approx 100\,\text{mmHg}
+p=p\_0 + R\\,Q = 0.0 + 1333.0 \cdot 100.0=133300.00 \approx 100\\,\text{mmHg}
 $$
 
 (recall that $1.0$ mmHg = $1333.2$ dyn/cm$^2$). For steady flow in a long tube with a circular cross section, the flow will develop a flow profile known as the _Poiseuille_ flow profile assuming the flow remains laminar. The flow will remain laminar in a circular tube assuming that the non-dimensional parameter given by the _Reynolds_ number $Re$ is $Re < 2100$.
@@ -75,7 +75,7 @@ $$
 The definition of the Reynolds number is given by:
 
 $$
-Re = \frac{\rho\,D\,V}{\mu}
+Re = \frac{\rho\\,D\\,V}{\mu}
 $$
 
 where $V$ is a representative velocity of the flow, $D$ is a characteristic dimension of the vessel where the flow is happening (in this case, the diameter), and $\mu$ and $\rho$ are the dynamic viscosity and density, respectively.
@@ -89,13 +89,13 @@ $$
 where $v_z^{max}$ is the maximum velocity at the center of the vessel, a is the radial coordinate from center of the vessel $0\le a \le r$ . The expression for maximum velocity is given by:
 
 $$
-v\_z^{max} = 2\frac{Q}{\pi\,r^2}
+v\_z^{max} = 2\frac{Q}{\pi\\,r^2}
 $$
 
 where $Q$ is the volumetric flow rate. The wall shear stress $\tau$, is given by
 
 $$
-\tau = \frac{2\,\mu\,v\_z^{max}}{r}
+\tau = \frac{2\\,\mu\\,v\_z^{max}}{r}
 $$
 
 For this example, the maximum velocity is $v\_z^{max} = 15.92$ cm/s and the wall shear stress is $\tau$ = $0.64$ dynes/cm$^2$.
