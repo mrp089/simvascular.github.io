@@ -20,12 +20,12 @@ From a conceptual standpoint, no matter how geometrically complex a vascular mod
 These boundaries have an absolutely critical impact on the numerical simulation results. The SimVascular package contains several options for boundary condition assignment. All of these use a weakly prescribed pressure formulation, with the purpose of accounting for effects of the downstream vasculature on the vascular model (see figure below). These boundary conditions include:
 
 - **Resistance Boundary condition**. Here, the condition prescribed on the face is a relationship between flow and pressure of the form
-  $p = p\_0 + R\,Q$, where $R$ is the resistance parameter that characterizes the downstream vasculature, $p$ is the weakly prescribed pressure, $Q$ is the flow rate passing through the face and $p_0$ is a “flag” that sets the boundary as a “weakly-prescribed pressure boundary”. This flag has a “zero” numerical value, so the total value of the pressure on that face is simply given by $R\,Q$.
+  $p = p_0 + R\,Q$, where $R$ is the resistance parameter that characterizes the downstream vasculature, $p$ is the weakly prescribed pressure, $Q$ is the flow rate passing through the face and $p_0$ is a “flag” that sets the boundary as a “weakly-prescribed pressure boundary”. This flag has a “zero” numerical value, so the total value of the pressure on that face is simply given by $R\,Q$.
 
 - **Impedance Boundary condition**. Here, the condition prescribed on the face is a relationship of the form:
 
 $$
-p(t)=p\_0 + \frac{1}{T}\,\int\_{t-T}^{t} Z(t−\tau) \, Q(\tau) \, d\tau
+p(t)=p_0 + \frac{1}{T}\ \int_{t-T}^{t} Z(t−\tau) \ Q(\tau) \ d\tau
 $$
 
 where $Z$ is the Inverse Fourier Transform of an impedance function that characterizes the downstream vasculature, $p$ is the weakly prescribed pressure, $Q$ is the flow rate passing through the face, and $T$ is the cardiac cycle.
