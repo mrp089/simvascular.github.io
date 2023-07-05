@@ -1,8 +1,8 @@
-### svPre Commands
+## svPre Commands
 
-This section lists the available **svPre** commands, the associated parameters and what they do. 
+This section lists the available **svPre** commands, the associated parameters and what they do.
 
-#### Read Mesh info
+### Read Mesh info
 
 <table class="table table-bordered">
 <thead>
@@ -19,7 +19,7 @@ This section lists the available **svPre** commands, the associated parameters a
 </tr>
 </table>
 
-#### Assign IDs to Surfaces
+### Assign IDs to Surfaces
 
 <table class="table table-bordered">
 <thead>
@@ -36,7 +36,7 @@ This section lists the available **svPre** commands, the associated parameters a
 </tr>
 </table>
 
-#### Set Boundary Conditions for Walls, Inlets, Outlets
+### Set Boundary Conditions for Walls, Inlets, Outlets
 
 <table class="table table-bordered">
 <thead>
@@ -68,7 +68,7 @@ This section lists the available **svPre** commands, the associated parameters a
 </tr>
 </table>
 
-#### Create BCT file for Inlet
+### Create BCT file for Inlet
 
 <table class="table table-bordered">
 <thead>
@@ -135,7 +135,7 @@ This section lists the available **svPre** commands, the associated parameters a
 </tr>
 </table>
 
-#### Initial Conditions
+### Initial Conditions
 
 <table class="table table-bordered">
 <thead>
@@ -157,7 +157,7 @@ This section lists the available **svPre** commands, the associated parameters a
 </tr>
 </table>
 
-#### Write simulation files
+### Write simulation files
 
 <table class="table table-bordered">
 <thead>
@@ -184,7 +184,7 @@ This section lists the available **svPre** commands, the associated parameters a
 </tr>
 </table>
 
-#### Read variable values from non-vtk files
+### Read variable values from non-vtk files
 
 <table class="table table-bordered">
 <thead>
@@ -221,7 +221,7 @@ This section lists the available **svPre** commands, the associated parameters a
 </tr>
 </table>
 
-#### Read variable values from vtk files
+### Read variable values from vtk files
 
 <table class="table table-bordered">
 <thead>
@@ -268,7 +268,7 @@ This section lists the available **svPre** commands, the associated parameters a
 </tr>
 </table>
 
-#### Deformable walls with uniform thickness and elastic modulus
+### Deformable walls with uniform thickness and elastic modulus
 
 <table class="table table-bordered">
 <thead>
@@ -346,7 +346,7 @@ blood</td>
 </tr>
 </table>
 
-#### Deformable walls with variable thickness and elastic modulus
+### Deformable walls with variable thickness and elastic modulus
 
 <table class="table table-bordered">
 <thead>
@@ -401,28 +401,3 @@ blood</td>
   <td>(file name)</td>
   <td>Append the variable wall thickness and elastic modulus to the specified file (geombc.dat.1 if a file name not provided)</td>
 </table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

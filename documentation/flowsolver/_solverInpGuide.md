@@ -1,8 +1,8 @@
-### Solver.inp File Guide
+## Solver.inp File Guide
 
-This section discusses the options available in the **solver.inp** file. 
+This section discusses the options available in the **solver.inp** file.
 
-#### Input Control
+### Input Control
 
 <table class="table table-bordered">
 <thead>
@@ -21,7 +21,7 @@ This section discusses the options available in the **solver.inp** file.
 </tr>
 </table>
 
-#### BCT Control
+### BCT Control
 
 <table class="table table-bordered">
 <thead>
@@ -64,7 +64,7 @@ This section discusses the options available in the **solver.inp** file.
 </tr>
 </table>
 
-#### Solution Control
+### Solution Control
 
 <table class="table table-bordered">
 <thead>
@@ -101,7 +101,7 @@ This section discusses the options available in the **solver.inp** file.
 </tr>
 </table>
 
-#### Material Properties
+### Material Properties
 
 <table class="table table-bordered">
 <thead>
@@ -126,7 +126,7 @@ This section discusses the options available in the **solver.inp** file.
 </tr>
 </table>
 
-#### Body Forces
+### Body Forces
 
 <table class="table table-bordered">
 <thead>
@@ -151,7 +151,7 @@ This section discusses the options available in the **solver.inp** file.
 </tr>
 </table>
 
-#### Output Control
+### Output Control
 
 <table class="table table-bordered">
 <thead>
@@ -218,7 +218,7 @@ This section discusses the options available in the **solver.inp** file.
 </tr>
 </table>
 
-#### Linear Solver Options
+### Linear Solver Options
 
 <table class="table table-bordered">
 <thead>
@@ -266,9 +266,9 @@ This section discusses the options available in the **solver.inp** file.
 </tr>
 </table>
 
-**WARNING:** For simulations of deformable vessels these defaults may need to be changed to 10,20,400, respectively. 
+**WARNING:** For simulations of deformable vessels these defaults may need to be changed to 10,20,400, respectively.
 
-#### Discretization Control
+### Discretization Control
 
 <table class="table table-bordered">
 <thead>
@@ -317,7 +317,7 @@ This section discusses the options available in the **solver.inp** file.
 </tr>
 </table>
 
-#### Cardiovascular Modeling Parameters
+### Cardiovascular Modeling Parameters
 
 <table class="table table-bordered">
 <thead>
@@ -414,7 +414,7 @@ This section discusses the options available in the **solver.inp** file.
 </tr>
 </table>
 
-#### Backflow Control
+### Backflow Control
 
 <table class="table table-bordered">
 <thead>
@@ -469,7 +469,7 @@ This section discusses the options available in the **solver.inp** file.
 </tr>
 </table>
 
-#### Closed Loop Boundary Conditions
+### Closed Loop Boundary Conditions
 
 <table class="table table-bordered">
 <thead>
@@ -518,7 +518,7 @@ This section discusses the options available in the **solver.inp** file.
 </tr>
 </table>
 
-#### Non-linear Iteration Control
+### Non-linear Iteration Control
 
 <table class="table table-bordered">
 <thead>
@@ -555,7 +555,7 @@ This section discusses the options available in the **solver.inp** file.
 </tr>
 </table>
 
-#### Deformable Wall Simulations
+### Deformable Wall Simulations
 
 <table class="table table-bordered">
 <thead>
@@ -628,7 +628,7 @@ This section discusses the options available in the **solver.inp** file.
 </tr>
 </table>
 
-#### Task Control
+### Task Control
 
 <table class="table table-bordered">
 <thead>
@@ -648,5 +648,3 @@ This section discusses the options available in the **solver.inp** file.
 </table>
 <br>
 <br>
-
-

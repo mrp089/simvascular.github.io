@@ -1,4 +1,4 @@
-### Format of COR boundary condition file
+## Format of COR boundary condition file
 
 Coronary boundary conditions are defined through the **cort.dat** file using the following format
 

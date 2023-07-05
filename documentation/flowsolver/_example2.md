@@ -1,4 +1,4 @@
-### Example 2
+## Example 2
 
 This example shows how to simulate a cylinder with plug steady flow at the inlet and RCR at the outlet.
 

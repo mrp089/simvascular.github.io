@@ -1,4 +1,4 @@
-### Configuring Solvers (Optional)
+## Configuring Solvers (Optional)
 
 SimVascular solvers(presolver, flowsolver, postsolver) are used as individual executable programs. They are called by SV Simulation tool to create data files, run simulation, and convert results to files in VTK formats. Normally those solvers are installed separately. However, SimVascular can automatically find those solvers. In case your SimVascular can't find them, or you want to use different solvers, you need to explicitly tell SimVascular where to find or how to use them.
 
@@ -16,7 +16,7 @@ SimVascular solvers(presolver, flowsolver, postsolver) are used as individual ex
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-#### Locations of Installed Solvers####
+### Locations of Installed Solvers
 
 **Linux:**
 

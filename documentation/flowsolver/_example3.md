@@ -1,4 +1,4 @@
-### Example 3
+## Example 3
 
 This example shows how to simulate a cylinder with plug steady flow at the inlet, RCR at the outlet and deformable wall with uniform wall properties. The most robust way to simulate a deformable wall case is to first simulate a rigid wall case with the same boundary conditions. For this example, Example 2 is the rigid case we need to run. After the simulation of Example 2 is complete and exported, the restart files for the last step is reduced to a single file, which would be restart.500.0.
 

@@ -1,6 +1,6 @@
-## Overview
+# Overview
 
-### Process Flow of SimVascular Simulation
+## Process Flow of SimVascular Simulation
 
 The following figure contains a schematic representation of the processes involved in running a simulation using SimVascular.
 
@@ -36,7 +36,7 @@ SimVascular runs **Presolver(svPre)** using the \*.svpre\_ file. The \*.svpre fi
 
 Once the analysis is finished, the solver outputs files that characterize the finite element solution over a defined time period, typically several cardiac cycles. These files are taken by **svPost** to generate visualization files (typically _.vtu and _.vtp files) that are used to post-process and analyze the desired hemodynamic results.
 
-### Units in Simulation
+## Units in Simulation
 
 **svSolver**, just like many other Finite Element Programs, does not enforce a consistent set of physical units in the analysis, but it is up to the analyst to make sure that input data are dimensionally consistent.
 
@@ -71,7 +71,7 @@ To have a consistent set of units, users are advised to either work in CGS, MGS,
 </tr>
 </table>
 
-### Useful constants in Simulation
+## Useful constants in Simulation
 
 The following table gathers several important physical constants of blood given in different unit
 systems.

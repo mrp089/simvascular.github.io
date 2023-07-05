@@ -1,6 +1,6 @@
-## Post-processing
+# Post-processing
 
-### Generating the _.vip and _.vtu files in SimVascular
+## Generating the _.vip and _.vtu files in SimVascular
 
 In order to generate the visualization files (_.vip) and (_.vtu) files:
 
@@ -36,7 +36,7 @@ Other options are also provided:
 - **As Single File**, this options combines all the results at different time steps into a single \*.vtp or \*.vtu file.
 - **Last Step to restart.x.0**, this options combines all the restart files of the last step (200) to a single restart file restart.200.0. which can be used to start a new simulation after renamed as restart.0.1.
 
-### Visualizing the results in ParaView
+## Visualizing the results in ParaView
 
 To visualize the time dependent results we use **ParaView**.
 
@@ -58,7 +58,7 @@ To visualize the time dependent results we use **ParaView**.
   <figcaption class="svCaption" >Visualizing the cylinder mesh in Paraview</figcaption>
 </figure>
 
-### Visualizing Pressure Results
+## Visualizing Pressure Results
 
 - First you should increase your current result time from **0** to **20** (the last available time step).
 

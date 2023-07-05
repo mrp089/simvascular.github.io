@@ -1,4 +1,4 @@
-### Example 4
+## Example 4
 
 This example shows how to simulate a cylinder with plug steady flow at the inlet, RCR at the outlet and deformable wall with variable wall properties. Similar to Example 3, we use the simulation result of Example 2 as the initial point.
 
