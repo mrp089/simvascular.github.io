@@ -286,7 +286,7 @@ th:hover {
     nav.menuOn {
         padding: 70px 20px;
         width: 100%;
-        height: 100%;
+        height: 9999px;
         color: var(--white);
         background-color: var(--black);
     }
@@ -294,7 +294,7 @@ th:hover {
         padding-top: 0px;
     }
     #contentOfSkip{
-        left: 15px;
+        /* padding-left: 15px; */
         /* width: 70%; */
     }
     
@@ -306,7 +306,7 @@ th:hover {
         text-align: center!important;
     }
     table {
-        padding-right: 50px;
+        /* padding-right: 50px; */
         width: 100%;
     }
   }
