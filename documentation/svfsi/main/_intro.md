@@ -1,4 +1,4 @@
-##**svFSI** Guide
+## **svFSI** Guide
 
 <strong>svFSI</strong> is an open-source multi-physics finite element solver. It provides rich features for general computational studies of diffusion, heat transfer, incompressible viscous fluid, nonlinear elastodynamics, fluid-structure interaction and electrophysiology. It also specializes in computational modeling of the whole heart dynamics. As part of the [**SimCardio**](http://simvascular.github.io/docsSimCardio.html) project, <strong>svFSI</strong> is capable of simulating myocardial electrical activity using state-of-the-art cellular activation models, employing nonlinear hyperelastic material models to simulate tissue mechanics and activation coupling strategies, and performing large deformation fluid-structure interaction to simulate the dynamics between the heart tissue and blood flow. <strong>svFSI</strong> could also be used to perform blood flow simulations by imposing the ventricular wall motion extracted from medical image data.
 

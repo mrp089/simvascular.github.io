@@ -1,7 +1,6 @@
-##Main features
+## Main features
 
 **svFSI** provides many functionalities not only for cardiac modeling but for general-purpose computational studies as well. It can model heat transfer, diffusion, linear elasticity, nonlinear elastodynamics, Newtonian/Non-Newtonian flow, fluid-structure interaction, electrophysiology and so on. For an exhaustive list of functionalities provided by **svFSI** along with the examples, please refer to our [example repository](https://github.com/SimVascular/svFSI-Tests). Here we provide documentation for the main features of **svFSI**.
-
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-color:#9ABAD9;border-spacing:0;margin:0px auto;}
