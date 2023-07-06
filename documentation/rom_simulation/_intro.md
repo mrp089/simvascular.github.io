@@ -1,4 +1,4 @@
-#Introduction
+# Introduction
 
 The SimVascular **ROM Simulation Tool** is used to interactively create the geometry, boundary conditions and solver
 parameters needed to execute a reduced-order model (ROM) simulation of 3D vascular networks. The reduced-order models

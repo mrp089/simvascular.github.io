@@ -20,33 +20,198 @@
   <link rel="stylesheet" href="/css/bootstrap.css">
   <link rel="stylesheet" href="/css/grayscale.css">
   <link rel="stylesheet" href="/css/standards.css">
-  <!-- <link rel="stylesheet" href="css/home.css"> -->
   <link rel="stylesheet" href="/css/documentation.css">
+
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          ['$', '$'],
+          ['$$', '$$'],
+          ['\\(', '\\)'],
+        ],
+      },
+    };
+  </script>
+  
+  <script>
+    window.ZeroMdConfig = {
+      cssUrls: ['/css/bootstrap.css',"/css/grayscale.css","/css/standards.css","/css/shop-item.css","/css/documentation.css"]
+    }
+  </script>
+  
+  <script
+    type="module"
+    src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"
+  ></script>
 
     <!-- browser tab labels -->
     <link rel="shortcut icon" type="image/jpg" href="/img/svIcon.png"></link>
     <title>SimVascular</title>
   </head>
   <body>
-  <section class="header">
-    <div class="topLeftLogo">      
-        <div class="headerLogoContainer">
-          <img class="headerLogoImage" src="/img/svLogoTitle.png" alt="SimVascular Logo"></img>
+    <section class="header">
+      <div class="topLeftLogo">  
+          <!-- logo top left -->
+          <div class="headerLogoContainer">
+            <img id="logo" class="headerLogoImage" src="/img/svLogoTitle.png" alt="SimVascular Logo"></img>
+          </div>
+          <!-- nav bar top right; same for all -->
+          <div class="headerNavBar">
+            <details>
+              <summary><i class="fa-solid fa-bars" id="iconForSkip"></i></summary>
+              <div class="navBarSection">
+                <details>
+                  <summary class="navTitle">User Guides</summary>
+                  <div>
+                    <div class="navSubLink">
+                      <p href="https://github.com/SimVascular/SimVascular/wiki//user_simvascular_software_suite_install">Installing SimVascular</p>
+                    </div>
+                    <div class="navSubLink">
+                      <p href="/documentation/htmlFiles/quickguide.html">Getting Started</p>
+                    </div>
+                    <div class="navSubLink">
+                      <p href="/documentation/htmlFiles/modeling.html">Modeling Guide</p> 
+                    </div>
+                    <div class="navSubLink">
+                      <p href="/documentation/htmlFiles/meshing.html">Meshing Guide</p> 
+                    </div>
+                    <div class="navSubLink">
+                      <p href="/documentation/htmlFiles/flowsolver.html">Simulation Guide</p> 
+                    </div>
+                    <div class="navSubLink">
+                      <p href="/documentation/htmlFiles/svfsi.html">svFSI Guide</p> 
+                    </div>
+                    <div class="navSubLink">
+                      <p href="/documentation/htmlFiles/simcardio.html">SimCardio Guide</p> 
+                    </div>
+                    <div class="navSubLink">
+                      <p href="/documentation/htmlFiles/rom_simulation.html">ROM Simulation Guide</p> 
+                    </div>
+                    <div class="navSubLink">
+                      <p href="/documentation/htmlFiles/genbc.html">General B.C. Guide</p> 
+                    </div>
+                    <div class="navSubLink">
+                      <p href="/documentation/htmlFiles/python_interface.html">Python Interface</p> 
+                    </div>
+                    <div class="navSubLink">
+                      <p href="/documentation/htmlFiles/references.html">References</p> 
+                    </div>
+                    <div class="navSubLink">
+                      <p href="https://github.com/SimVascular/SimVascular/wiki/wiki_for_users">FAQ &amp; Wiki</a>
+                    </div>
+                  </div>
+                </details>
+                <details>
+                  <summary class="navTitle">Clinical Cases</summary>
+                  <div>
+                    <div class="navSubLink">
+                      <p href="clinicalCase3.html">Coronary Normal</a>                  
+                    </div>
+                    <div class="navSubLink">
+                      <p href="clinicalCase1.html">Aortofemoral Normal - 1</a>                  
+                    </div>
+                    <div class="navSubLink">
+                      <p href="clinicalCase2.html">Aortofemoral Normal - 2</a>                  
+                    </div>
+                    <div class="navSubLink">
+                      <p href="">Healthy Pulmonary</a>                  
+                    </div>
+                  </div>
+                </details>
+                <details>
+                  <summary class="navTitle">Developer Guides</summary>
+                  <div>
+                    <div class="navSubLink">
+                      <p href="https://github.com/SimVascular/SimVascular/wiki/wiki_for_developers">Compile Source Code</a>                  
+                    </div>
+                  </div>
+                </details>
+              </div>
+          </div>
         </div>
-      </div>
     </section>
 
   <section class="mainSection">
-    <form class="mainBody"> 
-      <zero-md src="/documentation/quickguide/_getting_started.md"></zero-md>
-    </form>
+    <section class="navigationSection" style="float: left">
+      <div>
+        <h5 class="skipTo refSec1">Overview</h5><br>
+        <h5 class="skipTo refSec2">Boundary Conditions</h5><br>
+        <h5 class="skipTo refSec3">Linear Solver</h5><br>
+        <h5 class="skipTo FSI">Fluid Structure Interaction</h5><br>
+        <h5 class="skipTo refSec4">Modeling</h5><br>
+        <h5 class="skipTo refSec5">Meshing</h5><br>
+        <h5 class="skipTo refSec6">Validation</h5><br>
+        <h5 class="skipTo refSec7">Clinical Applications</h5><br>
+        <h5 class="skipTo UQ">Optimization and Uncertainty Quantification</h5><br>
+        <h5 class="skipTo refSec8">Other Contributors</h5><br>
+      </div>
+    </section>
+
+    <section class="docsSection" style="float: right">
+      <span id="refSec1">
+        <zero-md class="embedMath" src="/documentation/references/_flowsolver.md" no-shadow></zero-md>
+      </span>
+      <span id="refSec2">
+        <zero-md class="embedMath" src="/documentation/references/_bc.md" no-shadow></zero-md>
+      </span>
+      <span id="refSec3">
+        <zero-md class="embedMath" src="/documentation/references/_linsolver.md" no-shadow></zero-md>
+      </span>
+      <span id="FSI">
+        <zero-md class="embedMath" src="/documentation/references/_fsi.md" no-shadow></zero-md>
+      </span>
+      <span id="refSec4">
+        <zero-md class="embedMath" src="/documentation/references/_modeling.md" no-shadow></zero-md>
+      </span>
+      <span id="refSec5">
+        <zero-md class="embedMath" src="/documentation/references/_meshing.md" no-shadow></zero-md>
+      </span>
+      <span id="refSec6">
+        <zero-md class="embedMath" src="/documentation/references/_validation.md" no-shadow></zero-md>
+      </span>
+      <span id="refSec7">
+        <zero-md class="embedMath" src="/documentation/references/_clinicalapps.md" no-shadow></zero-md>
+      </span>
+      <span id="UQ">
+        <zero-md class="embedMath" src="/documentation/references/_uq.md" no-shadow></zero-md>
+      </span>
+      <span id="refSec8">
+        <zero-md class="embedMath" src="/documentation/references/_othercontributors.md" no-shadow></zero-md>
+      </span>      
+    </section>
+  </section>
+  <section class="skipToTopSection">
+    <p id="skipToTop"><i class="fa-solid fa-arrow-up"></i></p>
   </section>
 
-  <!-- Lightweight client-side loader that feature-detects and load polyfills only when necessary -->
-  <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
 
-  <!-- Load the element definition -->
-  <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
-  </body>
+  <script>
+    var allZero_MD_File = document.getElementsByClassName("embedMath");
+    for(var i = 0; i < allZero_MD_File.length; i++)
+    {
+      allZero_MD_File[i].addEventListener('zero-md-rendered', () => {
+      var el = document.createElement('script');
+      el.src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML";
+      document.head.appendChild(el);
+    });
+    }
+    
+  </script>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+  <script src="/js/jquery-2.1.1.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.21/jquery.csv.min.js"></script>
+
+  <!-- <script src="js/jquery-2.1.1.js"></script> -->
+  <script src="/js/jquery.mixitup.min.js"></script>
+
+  <script src="/js/documentation.js"></script>
+
+</body>
   
 </html>
