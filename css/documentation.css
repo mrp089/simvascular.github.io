@@ -171,6 +171,10 @@ h1, h2, h3, h4, h5, h6, p {
     }
 }
 
+.skipTo, #skipToTop {
+    padding: 5px;
+}
+
 .navigationSection div {
     padding-bottom: 15px;
 }
@@ -185,6 +189,12 @@ h1, h2, h3, h4, h5, h6, p {
     padding-bottom: 5px;
 }
 
+.navigationSection div div h5 {
+    font-weight: 800;
+    text-transform: none;
+    font-size: 17px;
+}
+
 .navigationSection div div {
     padding-left: 15px;
 }
@@ -194,16 +204,13 @@ h1, h2, h3, h4, h5, h6, p {
     margin: 0;
     display: block;
     font-size: 17px;
+    font-weight: 150;
 }
 
-.navigationSection div div p,  .navigationSection div h4{
+.navigationSection div div p,  .navigationSection div h4, .navigationSection div div h5{
     color: var(--black);
     cursor: pointer;
 }
-/* 
-.navigationSection div div p:hover,  .navigationSection div h4:hover{
-    color: var(--verydarkblue);
-} */
 
 span:has(zero-md) {
     height: fit-content;
@@ -213,10 +220,6 @@ span:has(zero-md) {
 zero-md {
     width: 100%;
     overflow: auto;
-}
-
-.skipTo, #skipToTop {
-    padding: 5px;
 }
 
 .skipTo:hover{

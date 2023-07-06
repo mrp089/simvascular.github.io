@@ -16,6 +16,12 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
+  <!-- Style CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/grayscale.css">
+  <link rel="stylesheet" href="/css/standards.css">
+  <link rel="stylesheet" href="/css/documentation.css">
+
   <script>
     MathJax = {
       tex: {
@@ -134,52 +140,64 @@
       <div>
         <h4 class="skipTo automatic-cardiac-modeling">Cardiac Geometric Modeling Tool</h4>
         <div>
-          <p class="skipTo seg-intro">Automated Image Segmentation</p>
-          <p class="skipTo seg-inputs">Introduction</p>
-          <p class="skipTo seg-pre-trained-models">Input Requirements</p>
-          <p class="skipTo seg-predict">Pre-Trained Models</p>
-          <p class="skipTo seg-visualize">Segmenting Image Data</p>
-          <p class="skipTo mesh-intro">Mesh Generation</p>
-          <p class="skipTo mesh-lv-surface">Constructing Surface Meshes</p>
-          <p class="skipTo mesh-volume">Volumetric Meshing</p>
-          <p class="skipTo mesh-register">Mesh Registration</p>
-          <p class="skipTo mesh-motion">Mesh Motion</p>
-          <p class="skipTo refs">References</p>
+          <h5 class="skipTo seg-intro">Automated Image Segmentation</h5>
+          <div>
+            <p class="skipTo seg-inputs">Introduction</p>
+            <p class="skipTo seg-pre-trained-models">Input Requirements</p>
+            <p class="skipTo seg-predict">Pre-Trained Models</p>
+            <p class="skipTo seg-visualize">Segmenting Image Data</p>
+          </div>
+          <h5 class="skipTo mesh-intro">Mesh Generation</h5>
+          <div>
+            <p class="skipTo mesh-lv-surface">Constructing Surface Meshes</p>
+            <p class="skipTo mesh-volume">Volumetric Meshing</p>
+            <p class="skipTo mesh-register">Mesh Registration</p>
+            <p class="skipTo mesh-motion">Mesh Motion</p>
+          </div>
+          <h5 class="skipTo refs">References</h5>
         </div>
       </div>
       <div>
         <h4 class="skipTo cep-modeling">Cardiac Electro-physiology Modeling</h4>
         <div>
-          <p class="skipTo cep-intro">Introduction</p>
-          <p class="skipTo cep-theory">Mathematical Formulation</p>
-          <p class="skipTo cep-activation-models">Cellular Activation Models</p>
-          <p class="skipTo purkinje">Purkinje Network</p>
-          <p class="skipTo pnet-intro">Introduction</p>
-          <p class="skipTo pnet-install">Plugin Installation</p>
-          <p class="skipTo pnet-workflow">Plugin Workflow & Usage</p>
-          <p class="skipTo pnet-parameters">Plugin Parameters</p>
-          <p class="skipTo pnet-issues">Plugin Issues</p>
-          <p class="skipTo cep-examples">Examples</p>          
-          <p class="skipTo cep-example-block">Activation of Cardiac Tissue</p>
-          <p class="skipTo cep-example-pnet">Activation of Purkinje Network</p>
-          <p class="skipTo cep-refs">References</p>
+          <h5 class="skipTo cep-intro">Introduction</h5>
+          <h5 class="skipTo cep-theory">Mathematical Formulation</h5>
+          <h5 class="skipTo cep-activation-models">Cellular Activation Models</h5>
+          <h5 class="skipTo purkinje">Purkinje Network</h5>
+          <div>
+            <p class="skipTo pnet-intro">Introduction</p>
+            <p class="skipTo pnet-install">Plugin Installation</p>
+            <p class="skipTo pnet-workflow">Plugin Workflow & Usage</p>
+            <p class="skipTo pnet-parameters">Plugin Parameters</p>
+            <p class="skipTo pnet-issues">Plugin Issues</p>
+          </div>
+          <h5 class="skipTo cep-examples">Examples</h5>
+          <div>
+            <p class="skipTo cep-example-block">Activation of Cardiac Tissue</p>
+            <p class="skipTo cep-example-pnet">Activation of Purkinje Network</p>
+          </div>
+          <h5 class="skipTo cep-refs">References</h5>
         </div>
       </div>
       <div>
         <h4 class="skipTo mechanics-modeling">Cardiac Mechanics Modeling</h4>
         <div>
-          <p class="skipTo mechanics-solve">Solve Cardiac Mechanics with svFSI</p>
-          <p class="skipTo mechanics-obtain-svFSI">Obtain svFSI</p>
-          <p class="skipTo mechanics-mesh-gen">Model Construction & Mesh Generation</p>
-          <p class="skipTo mechanics-fiber-gen">Fiber Generation</p>
-          <p class="skipTo mechanics-solver-input">Input File</p>
-          <p class="skipTo mechanics-simulation">Run Simulation</p>
-          <p class="skipTo mechanics-theory">Structure Solver</p>
-          <p class="skipTo mechanics-kinematics">Kinematics</p>
-          <p class="skipTo mechanics-struct">STRUCT: displacement-based elastodynamics</p>
-          <p class="skipTo mechanics-ustruct">uSTRUCT: mixed formulation elastodynamics</p>          
-          <p class="skipTo mechanics-material-models">Material Models</p>
-          <p class="skipTo mechanics-refs">References</p>
+          <h5 class="skipTo mechanics-solve">Solve Cardiac Mechanics with svFSI</h5>
+          <div>
+            <p class="skipTo mechanics-obtain-svFSI">Obtain svFSI</p>
+            <p class="skipTo mechanics-mesh-gen">Model Construction & Mesh Generation</p>
+            <p class="skipTo mechanics-fiber-gen">Fiber Generation</p>
+            <p class="skipTo mechanics-solver-input">Input File</p>
+            <p class="skipTo mechanics-simulation">Run Simulation</p>
+          </div>
+          <h5 class="skipTo mechanics-theory">Structure Solver</h5>
+          <div>
+            <p class="skipTo mechanics-kinematics">Kinematics</p>
+            <p class="skipTo mechanics-struct">STRUCT: displacement-based elastodynamics</p>
+            <p class="skipTo mechanics-ustruct">uSTRUCT: mixed formulation elastodynamics</p>          
+            <p class="skipTo mechanics-material-models">Material Models</p>
+          </div>
+          <h5 class="skipTo mechanics-refs">References</h5>
         </div>
       </div>
     </section>
@@ -318,18 +336,12 @@
     {
       allZero_MD_File[i].addEventListener('zero-md-rendered', () => {
       var el = document.createElement('script');
-      el.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js';
+      el.src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML";
       document.head.appendChild(el);
     });
     }
     
   </script>
-
-  <!-- Style CSS -->
-  <link rel="stylesheet" href="/css/bootstrap.css">
-  <link rel="stylesheet" href="/css/grayscale.css">
-  <link rel="stylesheet" href="/css/standards.css">
-  <link rel="stylesheet" href="/css/documentation.css">
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
