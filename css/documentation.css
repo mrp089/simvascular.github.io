@@ -180,19 +180,19 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .navigationSection div h4 {
-    font-weight: bold;
     text-transform: none;
     font-size: 20px;
     padding: 0;
     padding-left: 5px;
     padding-top: 7px;
     padding-bottom: 5px;
+    line-height: 25px;
 }
 
 .navigationSection div div h5 {
-    font-weight: 800;
     text-transform: none;
     font-size: 17px;
+    line-height: 23px;
 }
 
 .navigationSection div div {
@@ -204,12 +204,15 @@ h1, h2, h3, h4, h5, h6, p {
     margin: 0;
     display: block;
     font-size: 17px;
-    font-weight: 150;
+    line-height: 20px;
 }
 
 .navigationSection div div p,  .navigationSection div h4, .navigationSection div div h5{
     color: var(--black);
+    font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
     cursor: pointer;
+    font-weight: normal;
+    letter-spacing: 0.2px;
 }
 
 span:has(zero-md) {
