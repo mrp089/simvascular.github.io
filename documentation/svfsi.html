@@ -161,34 +161,34 @@
 
     <section class="docsSection" style="float: right">
       <span id="introduction">
-        <zero-md class="embedMath" src="svfsi/main/_intro.md" no-shadow></zero-md>
+        <zero-md id="intro" src="svfsi/main/_intro.md" no-shadow></zero-md>
       </span>
       <span id="feature">
-        <zero-md class="embedMath" src="svfsi/main/_feature.md" no-shadow></zero-md>
+        <zero-md src="svfsi/main/_feature.md" no-shadow></zero-md>
       </span>
       <span id="input">
-        <zero-md class="embedMath" src="svfsi/main/_input.md" no-shadow></zero-md>
+        <zero-md src="svfsi/main/_input.md" no-shadow></zero-md>
       </span>
       <span id="mesh">
-        <zero-md class="embedMath" src="svfsi/main/_mesh.md" no-shadow></zero-md>
+        <zero-md src="svfsi/main/_mesh.md" no-shadow></zero-md>
       </span>
       <span id="run">
-        <zero-md class="embedMath" src="svfsi/main/_run_simulation.md" no-shadow></zero-md>
+        <zero-md src="svfsi/main/_run_simulation.md" no-shadow></zero-md>
       </span>
       <span id="resource">
-        <zero-md class="embedMath" src="svfsi/main/_resource.md" no-shadow></zero-md>
+        <zero-md src="svfsi/main/_resource.md" no-shadow></zero-md>
       </span>
       <span id="install">
-        <zero-md class="embedMath" src="svfsi/main/_install.md" no-shadow></zero-md>
+        <zero-md src="svfsi/main/_install.md" no-shadow></zero-md>
       </span>
       <span id="installer">
-        <zero-md class="embedMath" src="svfsi/main/_install_installer.md" no-shadow></zero-md>
+        <zero-md src="svfsi/main/_install_installer.md" no-shadow></zero-md>
       </span>
       <span id="container">
-        <zero-md class="embedMath" src="svfsi/main/_install_container.md" no-shadow></zero-md>
+        <zero-md src="svfsi/main/_install_container.md" no-shadow></zero-md>
       </span>
       <span id="source">
-        <zero-md class="embedMath" src="svfsi/main/_install_source.md" no-shadow></zero-md>
+        <zero-md src="svfsi/main/_install_source.md" no-shadow></zero-md>
       </span>
     
     </section>
@@ -199,10 +199,8 @@
 
 
   <script>
-    var allZero_MD_File = document.getElementsByClassName("embedMath");
-    for(var i = 0; i < allZero_MD_File.length; i++)
-    {
-      allZero_MD_File[i].addEventListener('zero-md-rendered', () => {
+    var a_zero_md_element = document.getElementById("intro");
+    a_zero_md_element.addEventListener('zero-md-rendered', () => {
         let el = document.createElement('script');
         el.type = "text/javascript";
         el.async = true;
@@ -210,8 +208,6 @@
         el.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js";
         document.head.appendChild(el)
     });
-    }
-    
   </script>
 
   <!-- Optional JavaScript -->

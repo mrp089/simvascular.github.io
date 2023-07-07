@@ -183,76 +183,76 @@
 
     <section class="docsSection" style="float: right">
       <span id="modelingIntro">
-        <zero-md class="embedMath" src="modeling/_intro.md" no-shadow></zero-md>
+        <zero-md id="intro" src="modeling/_intro.md" no-shadow></zero-md>
       </span>
       <span id="modelingPathPlanning">
-        <zero-md class="embedMath" src="modeling/_pathPlanning.md" no-shadow></zero-md>
+        <zero-md src="modeling/_pathPlanning.md" no-shadow></zero-md>
       </span>
       <span id="modelingCreatingPath">
-        <zero-md class="embedMath" src="modeling/_creatingPath.md" no-shadow></zero-md>
+        <zero-md src="modeling/_creatingPath.md" no-shadow></zero-md>
       </span>
       <span id="modelingSmoothingPath">
-        <zero-md class="embedMath" src="modeling/_smoothingPath.md" no-shadow></zero-md>
+        <zero-md src="modeling/_smoothingPath.md" no-shadow></zero-md>
       </span>
       <span id="modelingImportingExportingPaths">
-        <zero-md class="embedMath" src="modeling/_importingExportingPaths.md" no-shadow></zero-md>
+        <zero-md src="modeling/_importingExportingPaths.md" no-shadow></zero-md>
       </span>
       <span id="modelingSegmentation">
-        <zero-md class="embedMath" src="modeling/_segmentation.md" no-shadow></zero-md>
+        <zero-md src="modeling/_segmentation.md" no-shadow></zero-md>
       </span>
       <span id="modelingUsingGroups">
-        <zero-md class="embedMath" src="modeling/_usingGroups.md" no-shadow></zero-md>
+        <zero-md src="modeling/_usingGroups.md" no-shadow></zero-md>
       </span>
       <span id="modelingThresholding">
-        <zero-md class="embedMath" src="modeling/_thresholding.md" no-shadow></zero-md>
+        <zero-md src="modeling/_thresholding.md" no-shadow></zero-md>
       </span>
       <span id="modelingLevelSet">
-        <zero-md class="embedMath" src="modeling/_levelSet.md" no-shadow></zero-md>
+        <zero-md src="modeling/_levelSet.md" no-shadow></zero-md>
       </span>
       <span id="modelingMachineLearning">
-        <zero-md class="embedMath" src="modeling/_machinelearning.md" no-shadow></zero-md>
+        <zero-md src="modeling/_machinelearning.md" no-shadow></zero-md>
       </span>
       <span id="modelingManual">
-        <zero-md class="embedMath" src="modeling/_manual.md" no-shadow></zero-md>
+        <zero-md src="modeling/_manual.md" no-shadow></zero-md>
       </span>
       <span id="modeling3DSeg">
-        <zero-md class="embedMath" src="modeling/_3DSeg.md" no-shadow></zero-md>
+        <zero-md src="modeling/_3DSeg.md" no-shadow></zero-md>
       </span>
       <span id="modelingCopyingPastingContours">
-        <zero-md class="embedMath" src="modeling/_copyingPastingContours.md" no-shadow></zero-md>
+        <zero-md src="modeling/_copyingPastingContours.md" no-shadow></zero-md>
       </span>
       <span id="modelingLoftingPreview">
-        <zero-md class="embedMath" src="modeling/_loftingpreview.md" no-shadow></zero-md>
+        <zero-md src="modeling/_loftingpreview.md" no-shadow></zero-md>
       </span>
       <span id="modelingImportingExportingGroups">
-        <zero-md class="embedMath" src="modeling/_importingExportingGroups.md" no-shadow></zero-md>
+        <zero-md src="modeling/_importingExportingGroups.md" no-shadow></zero-md>
       </span>
       <span id="modelingSolidModelingPolyData">
-        <zero-md class="embedMath" src="modeling/_solidModelingPolyData.md" no-shadow></zero-md>
+        <zero-md src="modeling/_solidModelingPolyData.md" no-shadow></zero-md>
       </span>
       <span id="modelingCreatingModelsPolyData">
-        <zero-md class="embedMath" src="modeling/_creatingModelsPolyData.md" no-shadow></zero-md>
+        <zero-md src="modeling/_creatingModelsPolyData.md" no-shadow></zero-md>
       </span>
       <span id="modelingPolyDataFaces">
-        <zero-md class="embedMath" src="modeling/_polyDataFaces.md" no-shadow></zero-md>
+        <zero-md src="modeling/_polyDataFaces.md" no-shadow></zero-md>
       </span>
       <span id="modelingEditingPolyData">
-        <zero-md class="embedMath" src="modeling/_editingPolyData.md" no-shadow></zero-md>
+        <zero-md src="modeling/_editingPolyData.md" no-shadow></zero-md>
       </span>
       <span id="modelingCenterlinesPolyData">
-        <zero-md class="embedMath" src="modeling/_centerlinesPolyData.md" no-shadow></zero-md>
+        <zero-md src="modeling/_centerlinesPolyData.md" no-shadow></zero-md>
       </span>
       <span id="modelingImportingExportingModels">
-        <zero-md class="embedMath" src="modeling/_importingExportingModels.md" no-shadow></zero-md>
+        <zero-md src="modeling/_importingExportingModels.md" no-shadow></zero-md>
       </span>
       <span id="modelingSolidModelingAnalytic">
-        <zero-md class="embedMath" src="modeling/_solidModelingAnalytic.md" no-shadow></zero-md>
+        <zero-md src="modeling/_solidModelingAnalytic.md" no-shadow></zero-md>
       </span>
       <span id="modelingCreatingModelsAnalytic">
-        <zero-md class="embedMath" src="modeling/_creatingModelsAnalytic.md" no-shadow></zero-md>
+        <zero-md src="modeling/_creatingModelsAnalytic.md" no-shadow></zero-md>
       </span>
       <span id="modelingBlendingAnalytic">
-        <zero-md class="embedMath" src="modeling/_blendingAnalytic.md" no-shadow></zero-md>
+        <zero-md src="modeling/_blendingAnalytic.md" no-shadow></zero-md>
       </span>
     </section>
   </section>
@@ -262,10 +262,8 @@
 
 
   <script>
-    var allZero_MD_File = document.getElementsByClassName("embedMath");
-    for(var i = 0; i < allZero_MD_File.length; i++)
-    {
-      allZero_MD_File[i].addEventListener('zero-md-rendered', () => {
+    var a_zero_md_element = document.getElementById("intro");
+    a_zero_md_element.addEventListener('zero-md-rendered', () => {
         let el = document.createElement('script');
         el.type = "text/javascript";
         el.async = true;
@@ -273,8 +271,6 @@
         el.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js";
         document.head.appendChild(el)
     });
-    }
-    
   </script>
 
   <!-- Optional JavaScript -->

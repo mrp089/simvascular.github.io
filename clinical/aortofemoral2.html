@@ -157,19 +157,19 @@
 
     <section class="docsSection" style="float: right">
       <span id="sec1">
-        <zero-md class="embedMath" src="aortofemoral2/_significance.md" no-shadow></zero-md>
+        <zero-md id="intro" src="aortofemoral2/_significance.md" no-shadow></zero-md>
       </span>
       <span id="sec2">
-        <zero-md class="embedMath" src="aortofemoral2/_data.md" no-shadow></zero-md>
+        <zero-md src="aortofemoral2/_data.md" no-shadow></zero-md>
       </span>
       <span id="sec3">
-        <zero-md class="embedMath" src="aortofemoral2/_description.md" no-shadow></zero-md>
+        <zero-md src="aortofemoral2/_description.md" no-shadow></zero-md>
       </span>
       <span id="sec4">
-        <zero-md class="embedMath" src="aortofemoral2/_boundary.md" no-shadow></zero-md>
+        <zero-md src="aortofemoral2/_boundary.md" no-shadow></zero-md>
       </span>
       <span id="sec5">
-        <zero-md class="embedMath" src="aortofemoral2/_results.md" no-shadow></zero-md>
+        <zero-md src="aortofemoral2/_results.md" no-shadow></zero-md>
       </span>
     </section>
   </section>
@@ -179,10 +179,8 @@
 
 
   <script>
-    var allZero_MD_File = document.getElementsByClassName("embedMath");
-    for(var i = 0; i < allZero_MD_File.length; i++)
-    {
-      allZero_MD_File[i].addEventListener('zero-md-rendered', () => {
+    var a_zero_md_element = document.getElementById("intro");
+    a_zero_md_element.addEventListener('zero-md-rendered', () => {
         let el = document.createElement('script');
         el.type = "text/javascript";
         el.async = true;
@@ -190,9 +188,8 @@
         el.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js";
         document.head.appendChild(el)
     });
-    }
-    
   </script>
+
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->

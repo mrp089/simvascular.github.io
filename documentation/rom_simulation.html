@@ -169,67 +169,67 @@
 
     <section class="docsSection" style="float: right">
       <span id="introduction">
-        <zero-md class="embedMath" src="rom_simulation/_intro.md" no-shadow></zero-md>
+        <zero-md id="intro" src="rom_simulation/_intro.md" no-shadow></zero-md>
       </span>
       <span id="tool">
-        <zero-md class="embedMath" src="rom_simulation/tool/_tool.md" no-shadow></zero-md>
+        <zero-md src="rom_simulation/tool/_tool.md" no-shadow></zero-md>
       </span>
       <span id="mesh-panel">
-        <zero-md class="embedMath" src="rom_simulation/tool/_mesh-panel.md" no-shadow></zero-md>
+        <zero-md src="rom_simulation/tool/_mesh-panel.md" no-shadow></zero-md>
       </span>
       <span id="basic-panel">
-        <zero-md class="embedMath" src="rom_simulation/tool/_basic-panel.md" no-shadow></zero-md>
+        <zero-md src="rom_simulation/tool/_basic-panel.md" no-shadow></zero-md>
       </span>
       <span id="bcs-panel">
-        <zero-md class="embedMath" src="rom_simulation/tool/_bcs-panel.md" no-shadow></zero-md>
+        <zero-md src="rom_simulation/tool/_bcs-panel.md" no-shadow></zero-md>
       </span>
       <span id="wall-props-panel">
-        <zero-md class="embedMath" src="rom_simulation/tool/_wall-props-panel.md" no-shadow></zero-md>
+        <zero-md src="rom_simulation/tool/_wall-props-panel.md" no-shadow></zero-md>
       </span>
       <span id="solver-params-panel">
-        <zero-md class="embedMath" src="rom_simulation/tool/_solver-params-panel.md" no-shadow></zero-md>
+        <zero-md src="rom_simulation/tool/_solver-params-panel.md" no-shadow></zero-md>
       </span>
       <span id="create-files-panel">
-        <zero-md class="embedMath" src="rom_simulation/tool/_create-files-panel.md" no-shadow></zero-md>
+        <zero-md src="rom_simulation/tool/_create-files-panel.md" no-shadow></zero-md>
       </span>
       <span id="convert-results-panel">
-        <zero-md class="embedMath" src="rom_simulation/tool/_convert-results-panel.md" no-shadow></zero-md>
+        <zero-md src="rom_simulation/tool/_convert-results-panel.md" no-shadow></zero-md>
       </span>
       <span id="tool-tutorial">
-        <zero-md class="embedMath" src="rom_simulation/tool/_tutorial.md" no-shadow></zero-md>
+        <zero-md src="rom_simulation/tool/_tutorial.md" no-shadow></zero-md>
       </span>
       <span id="tool-refs">
-        <zero-md class="embedMath" src="rom_simulation/tool/_refs.md" no-shadow></zero-md>
+        <zero-md src="rom_simulation/tool/_refs.md" no-shadow></zero-md>
       </span>
       <span id="1d-solver">
-        <zero-md class="embedMath" src="rom_simulation/1d-solver/_solver.md" no-shadow></zero-md>
+        <zero-md src="rom_simulation/1d-solver/_solver.md" no-shadow></zero-md>
       </span>
       <span id="1d-solver-theory">
-        <zero-md class="embedMath" src="rom_simulation/1d-solver/_theory.md" no-shadow></zero-md>
+        <zero-md src="rom_simulation/1d-solver/_theory.md" no-shadow></zero-md>
       </span>
       <span id="1d-solver-user-guide">
-        <zero-md class="embedMath" src="rom_simulation/1d-solver/_user-guide.md" no-shadow></zero-md>
+        <zero-md src="rom_simulation/1d-solver/_user-guide.md" no-shadow></zero-md>
       </span>
       <span id="1d-solver-input-file">
-        <zero-md class="embedMath" src="rom_simulation/1d-solver/_input-file.md" no-shadow></zero-md>
+        <zero-md src="rom_simulation/1d-solver/_input-file.md" no-shadow></zero-md>
       </span>
       <span id="1d-solver-example-bifurcation-rcr">
-        <zero-md class="embedMath" src="rom_simulation/1d-solver/_example-bifurcation-rcr.md" no-shadow></zero-md>
+        <zero-md src="rom_simulation/1d-solver/_example-bifurcation-rcr.md" no-shadow></zero-md>
       </span>
       <span id="1d-solver-example-tube-resistance">
-        <zero-md class="embedMath" src="rom_simulation/1d-solver/_example-tube-resistance.md" no-shadow></zero-md>
+        <zero-md src="rom_simulation/1d-solver/_example-tube-resistance.md" no-shadow></zero-md>
       </span>
       <span id="1d-solver-refs">
-        <zero-md class="embedMath" src="rom_simulation/1d-solver/_refs.md" no-shadow></zero-md>
+        <zero-md src="rom_simulation/1d-solver/_refs.md" no-shadow></zero-md>
       </span>
       <span id="0d-solver">
-        <zero-md class="embedMath" src="rom_simulation/0d-solver/_solver.md" no-shadow></zero-md>
+        <zero-md src="rom_simulation/0d-solver/_solver.md" no-shadow></zero-md>
       </span>
       <span id="0d-solver-theory">
-        <zero-md class="embedMath" src="rom_simulation/0d-solver/_theory.md" no-shadow></zero-md>
+        <zero-md src="rom_simulation/0d-solver/_theory.md" no-shadow></zero-md>
       </span>
       <span id="0d-solver-refs">
-        <zero-md class="embedMath" src="rom_simulation/0d-solver/_refs.md" no-shadow></zero-md>
+        <zero-md src="rom_simulation/0d-solver/_refs.md" no-shadow></zero-md>
       </span>
     </section>
   </section>
@@ -238,11 +238,9 @@
   </section>
 
 
- <script>
-    var allZero_MD_File = document.getElementsByClassName("embedMath");
-    for(var i = 0; i < allZero_MD_File.length; i++)
-    {
-      allZero_MD_File[i].addEventListener('zero-md-rendered', () => {
+  <script>
+    var a_zero_md_element = document.getElementById("intro");
+    a_zero_md_element.addEventListener('zero-md-rendered', () => {
         let el = document.createElement('script');
         el.type = "text/javascript";
         el.async = true;
@@ -250,8 +248,6 @@
         el.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js";
         document.head.appendChild(el)
     });
-    }
-    
   </script>
 
   <!-- Optional JavaScript -->

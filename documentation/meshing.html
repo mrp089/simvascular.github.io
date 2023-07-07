@@ -163,46 +163,46 @@
 
     <section class="docsSection" style="float: right">
       <span id="introduction">
-        <zero-md class="embedMath" src="../meshing/_intro.md" no-shadow></zero-md>
+        <zero-md id="intro" src="meshing/_intro.md" no-shadow></zero-md>
       </span>
       <span id="tetgenoverview">
-        <zero-md class="embedMath" src="../meshing/_tetgenOverview.md" no-shadow></zero-md>
+        <zero-md src="meshing/_tetgenOverview.md" no-shadow></zero-md>
       </span>
       <span id="tetgencreatemesh">
-        <zero-md class="embedMath" src="../meshing/_tetgenCreateMesh.md" no-shadow></zero-md>
+        <zero-md src="meshing/_tetgenCreateMesh.md" no-shadow></zero-md>
       </span>
       <span id="tetgeniso">
-        <zero-md class="embedMath" src="../meshing/_tetgenIsotropicMeshing.md" no-shadow></zero-md>
+        <zero-md src="meshing/_tetgenIsotropicMeshing.md" no-shadow></zero-md>
       </span>
       <span id="tetgenboundarylayer">
-        <zero-md class="embedMath" src="../meshing/_tetgenBoundaryLayer.md" no-shadow></zero-md>
+        <zero-md src="meshing/_tetgenBoundaryLayer.md" no-shadow></zero-md>
       </span>
       <span id="tetgetnradiusbased">
-        <zero-md class="embedMath" src="../meshing/_tetgenRadiusBasedMeshing.md" no-shadow></zero-md>
+        <zero-md src="meshing/_tetgenRadiusBasedMeshing.md" no-shadow></zero-md>
       </span>
       <span id="tetgenlocalmeshing">
-        <zero-md class="embedMath" src="../meshing/_tetgenLocalSize.md" no-shadow></zero-md>
+        <zero-md src="meshing/_tetgenLocalSize.md" no-shadow></zero-md>
       </span>
       <span id="tetgensphericalrefinement">
-        <zero-md class="embedMath" src="../meshing/_tetgenSphereRefinement.md" no-shadow></zero-md>
+        <zero-md src="meshing/_tetgenSphereRefinement.md" no-shadow></zero-md>
       </span>
       <span id="tetgenflags">
-        <zero-md class="embedMath" src="../meshing/_tetgenFlags.md" no-shadow></zero-md>
+        <zero-md src="meshing/_tetgenFlags.md" no-shadow></zero-md>
       </span>
       <span id="tetgenadapt">
-        <zero-md class="embedMath" src="../meshing/_tetgenAdapt.md" no-shadow></zero-md>
+        <zero-md src="meshing/_tetgenAdapt.md" no-shadow></zero-md>
       </span>
       <span id="loadingmesh">
-        <zero-md class="embedMath" src="../meshing/_loadingmesh.md" no-shadow></zero-md>
+        <zero-md src="meshing/_loadingmesh.md" no-shadow></zero-md>
       </span>
       <span id="exportingmesh">
-        <zero-md class="embedMath" src="../meshing/_exportingMesh.md" no-shadow></zero-md>
+        <zero-md src="meshing/_exportingMesh.md" no-shadow></zero-md>
       </span>
       <span id="tetgenerrors">
-        <zero-md class="embedMath" src="../meshing/_tetgenErrors.md" no-shadow></zero-md>
+        <zero-md src="meshing/_tetgenErrors.md" no-shadow></zero-md>
       </span>
       <span id="inspectingmeshes">
-        <zero-md class="embedMath" src="../meshing/_inspectingMeshes.md" no-shadow></zero-md>
+        <zero-md src="meshing/_inspectingMeshes.md" no-shadow></zero-md>
       </span>
     </section>
   </section>
@@ -212,10 +212,8 @@
 
 
   <script>
-    var allZero_MD_File = document.getElementsByClassName("embedMath");
-    for(var i = 0; i < allZero_MD_File.length; i++)
-    {
-      allZero_MD_File[i].addEventListener('zero-md-rendered', () => {
+    var a_zero_md_element = document.getElementById("intro");
+    a_zero_md_element.addEventListener('zero-md-rendered', () => {
         let el = document.createElement('script');
         el.type = "text/javascript";
         el.async = true;
@@ -223,8 +221,6 @@
         el.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js";
         document.head.appendChild(el)
     });
-    }
-    
   </script>
 
   <!-- Optional JavaScript -->
