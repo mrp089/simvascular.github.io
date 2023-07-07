@@ -140,6 +140,35 @@ p {
 
 ---------------------------------------------*/
 
+#logo {
+    cursor: pointer;
+}
+
+.skipToTopSection {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    height: 68px;
+    width: 68px;
+    background-color: var(--verydarkblue);
+    border-radius: 50px;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.skipToTopSection:hover {
+    opacity: 1;
+}
+
+#skipToTop {
+    padding: 5px;
+    margin: auto;
+    font-size: 38px;
+    color: white;
+}
+
+
 .firstHeader {
     display: block;
     float: left;
