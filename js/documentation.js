@@ -39,6 +39,13 @@ $(".skipTo").click(function() {
     clickLink("#" + id, false);
 });
 
+$(".clickLink").click(function() {
+    var classes = $(this).attr("class");
+    var href = classes.split(/\s+/)[1];
+    clickLink(href);
+});
+
+
 $(".navSubLink").click(function() {
     var href = $(this).children()[0].getAttribute("href");
     clickLink(href);
