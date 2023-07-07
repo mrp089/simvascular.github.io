@@ -65,11 +65,16 @@ $(window).resize(checkWidth());
 
 // END CAROUSEL
 
-function clickLink(hrefTag)
+function clickLink(hrefTag, target_Blank = true)
 {
     var a = document.createElement("a");
     a.href = hrefTag;
-    a.target = "_blank";
+
+    if(target_Blank)
+    {
+        a.target = "_blank";
+    }
+    
     a.click();
 }
 
@@ -143,13 +148,16 @@ function toggleLicense()
     }
 }
 
-$("#iconForSkip").click(function() {
-    toggleMenu();
+$("#skipToTop").click(function() {
+    scrollToTop();
 });
 
-$("#skipToHome").click(function() {
-    scrollToTop();
-    toggleMenu(true);
+$("#logo").click(function() {
+    clickLink("/index.html", false);
+});
+
+$("#iconForSkip").click(function() {
+    toggleMenu();
 });
 
 $("#skipToInstitutions").click(function() {

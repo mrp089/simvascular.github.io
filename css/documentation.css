@@ -171,12 +171,18 @@ h1, h2, h3, h4, h5, h6, p {
     }
 }
 
-.skipTo, #skipToTop {
+.skipTo, #skipToTop, .clickLink {
     padding: 5px;
 }
 
 .navigationSection div {
     padding-bottom: 15px;
+}
+
+.navigationSection div h3 {
+    text-transform: none;
+    font-size: 22px;
+    text-align: center;
 }
 
 .navigationSection div h4 {
@@ -225,7 +231,7 @@ zero-md {
     overflow: auto;
 }
 
-.skipTo:hover{
+.skipTo:hover, .clickLink:hover{
     background-color: var(--lightbluegrey);
 }
 
@@ -252,7 +258,7 @@ zero-md {
     color: white;
 }
 
-.skipTo {
+.skipTo, .clickLink {
     cursor: pointer;
 }
 
