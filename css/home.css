@@ -373,7 +373,7 @@ th:hover {
     max-height: 500px;
     padding-top: 30px;
     padding-bottom: 30px;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 @media only screen and (max-width: 576px) {
@@ -459,21 +459,14 @@ th:hover {
     float: left;
     padding: 15px;
     margin-top: 15px;
+    padding-bottom: 30px;
     margin-bottom: 15px;
 }
 
 .newSectionHeader {
     display: block;
     float: left;
-    /* margin-right: 2.5%;
-    margin-left: 2.5%; */
-    /* margin-top: 30px; */
-    /* margin-bottom: 15px; */
-    /* width: 95%; */
     width: 100%;
-    /* height: 100px; */
-    /* background-color: var(--grey); */
-    /* border: 5px solid var(--lighterverydarkblue); */
     text-align: center;
     color: var(--black);
 }
