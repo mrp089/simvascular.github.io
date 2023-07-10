@@ -1,8 +1,9 @@
-##Basic Parameters Panel
+## Basic Parameters Panel
 
 The Basic Parameters panel is used to set the fluid physical parameters.
 
-###Panel Layout
+### Panel Layout
+
 The panel GUI contains a single table.
 
 <br>
@@ -12,7 +13,8 @@ The panel GUI contains a single table.
 </figure>
 <br>
 
-###Usage
+### Usage
+
 Values may be entered in the table by double clicking in the **Value** column.
 
 **Fluid Density** - The value of the fluid density used for simulations.

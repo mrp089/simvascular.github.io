@@ -1,7 +1,8 @@
-##Create Files and Run Simulation Panel
+## Create Files and Run Simulation Panel
+
 The Create Files and Run Simulation panel is used to create a 1D solver input file and run the 1D solver.
 
-###Panel Layout
+### Panel Layout
 
 <br>
 <figure>
@@ -10,7 +11,7 @@ The Create Files and Run Simulation panel is used to create a 1D solver input fi
 </figure>
 <br>
 
-###Usage
+### Usage
 
 **Create Files for Simulation** - Create a 1D solver input file.
 

@@ -1,4 +1,4 @@
-## Input File ##
+## Input File
 
 **svFSI** requires a plain-text input file to specify simulation parameters. An overview of the syntax could be found <a href=https://sites.google.com/site/memt63/tools/MUPFES/mupfes-scripting>here</a>. The **SimVascular** GUI currently supports limited input configurations. To access more advanced functions of **svFSI**, users are recommended to create their own input file by modifying existing <a href="https://github.com/SimVascular/svFSI-Tests">templates</a>. Below is a template of the input file for modeling passive inflation of a left ventricle,
 
@@ -142,4 +142,3 @@ The applied load on the endocardial surface is provided in a file, load.dat, def
 1.0  1.0e4
 # content of load.dat
 </code></pre>
-

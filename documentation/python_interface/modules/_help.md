@@ -28,9 +28,11 @@ The <b>help()</b> function can be used for any component (e.g. class and methods
 </div>
 
 <br>
-### Documentation Format ###
-The help documentation describes the **sv** package using Python <b>docstrings</b> format, a string literal that occurs as the first 
-statement in a module, function, class, or method definition. A docstring is stored in the the <b>\_\_doc\_\_</b> special attribute 
+
+### Documentation Format
+
+The help documentation describes the **sv** package using Python <b>docstrings</b> format, a string literal that occurs as the first
+statement in a module, function, class, or method definition. A docstring is stored in the the <b>\_\_doc\_\_</b> special attribute
 of an object. The docstring for a function or method summarizes its behavior and documents its arguments and return value(s).
 
 Constructor, method and function arguments are listed under the <b>Args:</b> heading. Each argument is described with its name, type

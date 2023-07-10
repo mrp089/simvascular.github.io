@@ -1,4 +1,4 @@
-# Cardiac Mechanics Modeling #
+# Cardiac Mechanics Modeling
 
 Human heart is an intrinsic multiphysics system. It's normal function requires synchronization and coupling of cardiac electrophysiology, tissue (myocardium) mechanics, and hemodynamics. Among the three physics, cardiac mechanics plays a central role, as it serves as the bridge between electrophysiology and blood flow. In a physiological setting, the myocardial cells (myocytes) in the heart tissue initiate and propagate an electrical impulse (action potential) that travels through the heart and drives the contraction of the cardiac muscle, which, in turn, propels the blood to sustain whole body circulation.
 

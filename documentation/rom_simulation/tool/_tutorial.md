@@ -1,4 +1,4 @@
-<h2> Tutorial </h2>
+## Tutorial
 
 This section demonstrates how to use the **1D Simulation Tool** to interactively create the geometry,
 boundary conditions and solver parameters needed to execute a **sv1DSolver** simulation. The geometry of

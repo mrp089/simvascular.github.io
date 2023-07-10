@@ -7,7 +7,8 @@ The Wall Properites panel is used to set the material properties for vessel wall
   <li>Olufsen</li>
 </ol>
 
-###Panel Layout
+### Panel Layout
+
 The panel GUI contains parameters that vary with the material model selected by the **Material Model** combination box.
 
 <br>
@@ -19,26 +20,29 @@ The panel GUI contains parameters that vary with the material model selected by 
 </figure>
 <br>
 
-###Usage
+### Usage
+
 The boundary condition type and associated parameter values are changed by double clicking on a face name in the **Name** column.
 This displays a **Set Inlet/Outlet BCs** popup window. The parameters displayed in the window depend on the boundary condition
 type
 <br>
 
-####Linear
+#### Linear
+
 The **Linear** material model.
 
-#####<u>Usage</u>
+<h5><u>Usage</u></h5> 
 Eh/r - The product of elastic modulus and thickness divided by the radius.
 <br>
 Pressure - The material reference pressure.
 <br>
 <br>
 
-####Olufsen
+#### Olufsen
+
 The **Olufsen** material model.
 
-#####<u>Usage</u>
+<h5><u>Usage</u></h5> 
 K1, K2, K3 - The empirically-derived constants used to best fit the equation $Eh/r_0(z) = k_1 \exp(k_2 r_0(z)) \+ k_3 $.
 <br>
 Exponent - The material exponent.

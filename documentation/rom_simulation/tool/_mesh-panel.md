@@ -1,6 +1,6 @@
-##Mesh Panel
+## Mesh Panel
 
-The Mesh panel is primarily used to create centerlines from the surface of a 3D geometric model. A source for the centerline 
+The Mesh panel is primarily used to create centerlines from the surface of a 3D geometric model. A source for the centerline
 computation must first be selected from the inlet/outlet faces (model caps) defined by the **Modeling Tool**. The number of
 elements used to discretize a segment may be controled by setting the element size.
 
@@ -11,7 +11,8 @@ then the centerline computation may fail.
 </div>
 <br>
 
-###Panel Layout
+### Panel Layout
+
 <br>
 <figure>
   <img src="/documentation/rom_simulation/tool/images/panel.png" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
@@ -19,20 +20,18 @@ then the centerline computation may fail.
 </figure>
 <br>
 
-###Usage 
+### Usage
 
 **Model** - The name of the model used to create centerlines. The model is selected when creating the simulation job. This text box is for display only, a model name cannot be entered.
 
-**Select Inlet Face** - Select the source for the centerline computation. Clicking on this button causes a multi-element 
+**Select Inlet Face** - Select the source for the centerline computation. Clicking on this button causes a multi-element
 check box to appear with entries for each model inlet/outlet face. A (single) face is selected, typically vessel inlet.
 
   <img class="svImg svImgSm" src="/documentation/rom_simulation/tool/images/source-face.png">
 
 **Inlet Face** - The model face name used as a source for the centerline computation. This text box is for display only,
-                 a face name cannot be entered.
+a face name cannot be entered.
 
-**Calculate Centerlines** - Start the centerline computation. 
+**Calculate Centerlines** - Start the centerline computation.
 
-**Element size** - Set the size of elements used to discretize a segment. 
-
-
+**Element size** - Set the size of elements used to discretize a segment.

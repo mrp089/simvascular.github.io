@@ -1,6 +1,6 @@
-## Function Arguments ##
+## Function Arguments
 
-The methods and functions used in the Python API are able to use Python keyword (named) arguments. This allows functions to 
+The methods and functions used in the Python API are able to use Python keyword (named) arguments. This allows functions to
 know the names of the arguments they accept. Keyword arguments are used to clarify which values are used by what arguments.
 For example, creating a **Circle** segmentation with a given <i>radius</i>, <i>center</i>and <i>normal</i> using keyword arguments makes clear
 the meaning of the data passed to the **Circle** class constructor
@@ -30,5 +30,4 @@ segmentation.Error: CircleSegmentation() The 'normal' argument is not a 3D point
 </pre>
 
 <br>
-All API errors are handled using exceptions. See the <a href="#modules_error_handling"> Error Handling </a> section.. 
-
+All API errors are handled using exceptions. See the <a href="#modules_error_handling"> Error Handling </a> section..

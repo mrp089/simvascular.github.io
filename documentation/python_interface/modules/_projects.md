@@ -1,9 +1,9 @@
-## SimVascular Projects ##
+## SimVascular Projects
 
-The SimVascular GUI requires an active project to access the image-based modeling pipeline. A project organizes and saves data to 
-predefined subdirectories located under the main project directory. There is a separate folder for each tool in the image-based 
+The SimVascular GUI requires an active project to access the image-based modeling pipeline. A project organizes and saves data to
+predefined subdirectories located under the main project directory. There is a separate folder for each tool in the image-based
 modeling pipeline. Each tool has an XML format file with a specific extension associated with it that stores data used by the tool
-to represent geometry and parameters. The parameters store the tool's state and are typically displayed in the GUI and can be modified 
+to represent geometry and parameters. The parameters store the tool's state and are typically displayed in the GUI and can be modified
 by the user. The predefined subdirectories and XML file extension for each tool are
 
 <ul style="list-style-type:none;">
@@ -17,7 +17,6 @@ by the user. The predefined subdirectories and XML file extension for each tool 
    <li> <b> svFSI </b> - FSI Simulation tool <b>.fsijob</b> </li>
 </ul>
 
-
 <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #d0d0d0; border-left: 6px solid #d0d0d0">
 The SimVascular Python API cannot create SimVascular projects. Projects must be created interactively using the GUI.
 </div>
@@ -26,5 +25,3 @@ The SimVascular Python API cannot create SimVascular projects. Projects must be 
 Tool XML files were designed to store data derived from time-varying imaging data (e.g. 4D MRI). For this reason each file 
 has a <b>timestep</b> element used to identify data with a discrete integer time step. Each <b>sv</b> module defines a 
 <b>Series</b> class used to read in XML files and extract data for each time step.
-
-

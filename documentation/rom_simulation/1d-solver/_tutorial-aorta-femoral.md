@@ -1,4 +1,5 @@
-<h1> Tutorial - Aorta and Femoral Arteries </h1>
+# Tutorial - Aorta and Femoral Arteries
+
 This tutorial demonstrates how to create a 1D Solver input file for a model comprising the abdominal aorta, renal, celiac and
 femoral arteries.
 
@@ -11,14 +12,16 @@ femoral arteries.
 In the following sections the contents of the 1D Solver input file are shown as shaded blocks. Text preceding each block
 describe its contents.
 
-<h2> Outlet RESISTANCE </h2>
+## Outlet RESISTANCE
+
 Create a 1D Simulation input file for a constant resistance outlet boundary condition.
 
 The complete 1D Simulation input file listing is
 <a href="documentation/rom_simulation/1d-solver/files/12_AortoFem_Pulse_R.in"> here </a>.
 
-<h3> 1D Solver input file </h3>
-Set the model name to be **OSMSC0006\_Pulse\_R\_**.
+### 1D Solver input file
+
+Set the model name to be **OSMSC0006_Pulse_R\_**.
 
 ```
 MODEL OSMSC0006_Pulse_R_

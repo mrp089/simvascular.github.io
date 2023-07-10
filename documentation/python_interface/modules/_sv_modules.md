@@ -1,9 +1,9 @@
-# SimVascular Python Modules #
+# SimVascular Python Modules
 
 The SimVascular **sv** Python package extends Python to include modules and classes used to access, manipulate and create
 data for each of the path planning, segmentation, modeling, mesh generation and simulation steps in the SimVascular
-image-based modeling pipeline. The <b>sv</b> package is imported into Python using the <b>import sv</b> statement. 
-The **sv** package defines the following modules 
+image-based modeling pipeline. The <b>sv</b> package is imported into Python using the <b>import sv</b> statement.
+The **sv** package defines the following modules
 
 <ul style="list-style-type:none;">
   <li> <b> dmg </b> - Access to SV Data Manager nodes </li>
@@ -41,11 +41,11 @@ $ simvascular --python
 ['__builtins__', '__doc__', '__loader__', '__name__', '__package__', '__spec__', 'segmentation']
 </div>
 </pre>
-Both of these statements show the modules defined from importing <b>sv</b>; <b>dmg</b>, <b>meshing</b>, etc. 
+
+Both of these statements show the modules defined from importing <b>sv</b>; <b>dmg</b>, <b>meshing</b>, etc.
 <br>
+
 <div style="background-color: #F0F0F0; padding: 10px; border: 1px solid #0000e6; border-left: 6px solid #0000e6">
 The <b>import sv</b> or <b>from sv import <i>MODULENAME</i></b> statements are the preferred ways to import modules because they don't pull 
 everything into the global namespace, which may cause naming conflicts with custom programs. 
 </div>
-
-

@@ -1,4 +1,5 @@
-##Convert Results
+## Convert Results
+
 The Convert Results panel is used to convert 1D simulation results to a CSV file format.
 
 The simulation results directory must contain a 1D solver input file named **solver.in** and results (.dat) files.
@@ -12,7 +13,7 @@ are determined by the parameter values specified in the **Solver Parameters** pa
 The 1D solver writes results for cross-section area, flow, pressure, Reynolds number (Re), and wall shear stress (wss).
 Results can be selectively converted for one or more of these data.
 
-###Panel Layout
+### Panel Layout
 
 <br>
 <figure>
@@ -21,7 +22,7 @@ Results can be selectively converted for one or more of these data.
 </figure>
 <br>
 
-###Usage
+### Usage
 
 **Results Directory** - Set the directory containing the 1D simulation results to convert. The directory path can be entered in
 the text box. Selecting **...** brings up a file browser.

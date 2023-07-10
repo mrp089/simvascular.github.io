@@ -1,11 +1,11 @@
-## Error Handling ##
+## Error Handling
 
-A Python program terminates when it encounters an error. An error can be a syntax error or an exception. 
-A syntax error occurs when the Python parser is unable to understand a line of code. An exception is an 
+A Python program terminates when it encounters an error. An error can be a syntax error or an exception.
+A syntax error occurs when the Python parser is unable to understand a line of code. An exception is an
 error detected during the execution of a Python program. Both syntax errors and exceptions are fatal and
 cause a program to terminate.
 
-Exceptions come in different types. The exception type is included as part of the a message printed by Python when 
+Exceptions come in different types. The exception type is included as part of the a message printed by Python when
 an exception is encountered. For example, a divide by zero generates a <b>ZeroDivisionError</b> exception type
 
 <pre>
@@ -15,8 +15,8 @@ Traceback (most recent call last):
 ZeroDivisionError: division by zero
 </pre>
 
-Python has many standard exception names that are built-in identifiers (not reserved keywords). The <b>TypeError</b> exception 
-is generated when an inappropriate type is passed to an API function. For example, using a string for the <i>radius</i> argument 
+Python has many standard exception names that are built-in identifiers (not reserved keywords). The <b>TypeError</b> exception
+is generated when an inappropriate type is passed to an API function. For example, using a string for the <i>radius</i> argument
 for the <b>Circle</b> constructor generates a Python **TypeError**
 
 <pre>
@@ -25,12 +25,14 @@ TypeError: CircleSegmentation() argument 1 must be float, not str
 </pre>
 
 <br>
-### Try / Except Block ###
-Exceptions cause program termination unless they are explicitly caught and handled by a try/except block. Python executes code 
-following the try statement as it would normally do. If an exception is generated in this code section then the code following the 
-except statement is executed and the program continues. 
 
-The **TypeError** exception generated from using a string for the <i>radius</i> argument when creating a <b>Circle</b> segmentation 
+### Try / Except Block
+
+Exceptions cause program termination unless they are explicitly caught and handled by a try/except block. Python executes code
+following the try statement as it would normally do. If an exception is generated in this code section then the code following the
+except statement is executed and the program continues.
+
+The **TypeError** exception generated from using a string for the <i>radius</i> argument when creating a <b>Circle</b> segmentation
 is caught using a try/except block like this
 
 <pre>
@@ -42,8 +44,8 @@ is caught using a try/except block like this
 TypeError:  CircleSegmentation() argument 1 must be float, not str
 </pre>
 
-Errors associated with the C++ functions called by the SimVascular API can use exception names defined by the API in the <b>except</b> statement. 
-For example, passing in a list of two elements for the <i>normal</i> argument generates a **segmentation** module error is caught using 
+Errors associated with the C++ functions called by the SimVascular API can use exception names defined by the API in the <b>except</b> statement.
+For example, passing in a list of two elements for the <i>normal</i> argument generates a **segmentation** module error is caught using
 the <b>segmentation.Error</b> exception name and a try/except block like this
 
 <pre>
@@ -76,7 +78,3 @@ The try/except block is used to recover from errors and continue program executi
 processing lots of data sets; if the programs fails for one data set then it can still continue processing others. For some 
 applications it might be acceptable to not handle exceptions and just let the program terminate. 
 </div>
-
-
-
-

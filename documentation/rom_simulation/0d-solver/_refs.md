@@ -1,5 +1,4 @@
-
-# References #
+# References
 
 <a id="ref-1">
 Seo J, Fleeter C, Kahn A, Marsden A, Schiavazzi D. **Multi-fidelity estimators for coronary artery models under clinically-informed data uncertainty**. Int J Uncertain Quantif. 2020.

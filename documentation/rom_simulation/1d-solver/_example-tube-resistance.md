@@ -1,4 +1,5 @@
-<h1> Example - Tube with resistance boundary condition </h1>
+# Example - Tube with resistance boundary condition
+
 This example demonstrates a 1D Solver simulation for a model of a rigid tube with resistance boundary conditions.
 The tube has a length <i>L=10</i> and constant cross-sectionional area <i> A=1.0</i>.
 

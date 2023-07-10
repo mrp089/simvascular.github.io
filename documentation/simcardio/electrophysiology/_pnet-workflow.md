@@ -4,7 +4,8 @@ The Purkinje plugin can be applied only on a SimVascular generated mesh and not 
 
 <!--             Modeling & Meshing               -->
 
-###Create SV mesh
+### Create SV mesh
+
 After creating an SV project, right-click on the Models tab to import a left ventricular solid model (.vtp) and run the Global Reinit command. During the import, extract faces on the model using the default settings.
 
 <figure>
@@ -48,7 +49,8 @@ We now mesh the model before adding the Purkinje network tool. Create a new mesh
     <figcaption class="svCaption" >Once the mesh is successfully generated, the mesh stats window pops up.</figcaption>
 </figure>
 
-###Plugin workflow
+### Plugin workflow
+
 Here we provide a brief overview of the workflow to generate Purkinje network. Once the mesh is created, activate the Purkinje plugin so that it displays the triangular surfaces of the mesh. Purkinje network can then be created using the following steps:
 
 <ol>
@@ -103,7 +105,8 @@ The network is saved in .vtu format under the Purkinje-Network sub-folder of the
     <figcaption class="svCaption" >The Purkinje network visualized in Paraview .</figcaption>
 </figure>
 
-###Output Description
+### Output Description
+
 The Purkinje Network tool writes a set of files in the Purkinje-Network sub-folder within the SimVascular project directory. The files are prefixed with the name of the selected face. The files and their contents are described below:
 
 <ul>

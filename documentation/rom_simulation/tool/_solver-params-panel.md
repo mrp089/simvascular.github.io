@@ -5,7 +5,8 @@ The Solver Parameters panel is used to set the parameters needed to execute the 
 Simulation results are computed for times **Time Step Size**\*i, i = 0,1,2,...,**Number of Time Steps** but are  
 only written with the frequency given by **Number of Timesteps between Saving Data**.
 
-###Panel Layout
+### Panel Layout
+
 The panel GUI contains a single table listing **Time Step** and **Output Control** solver parameters.
 
 <br>
@@ -15,7 +16,8 @@ The panel GUI contains a single table listing **Time Step** and **Output Control
 </figure>
 <br>
 
-###Usage
+### Usage
+
 Values may be entered in the table by double clicking in the **Value** column.
 
 **Number of Time Steps** - The number of time steps to use for the 1D simulation.

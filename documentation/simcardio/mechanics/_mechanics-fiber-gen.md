@@ -1,4 +1,4 @@
-## Generation of Fiber Distribution ##
+## Generation of Fiber Distribution
 
 The heart wall is a composite of layers (or sheets) of parallel myocytes, which are the predominant fiber types. These fiber and sheet directions enable defining a local orthonormal coordinate system inside the cardiac muscle. This local coordinate system is crucial for using a structurally-based constitutive relation for the cardiac muscle <a href="#ref-9">[9]</a>. For 3D problems, the users are required to prescribe fiber and sheet directions in the computational domain for certain constitutive relations. Users are provided an option to define a constant fiber direction through the following input directives,
 

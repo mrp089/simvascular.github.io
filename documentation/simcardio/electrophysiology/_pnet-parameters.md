@@ -1,4 +1,4 @@
-## Network Control Parameters ##
+## Network Control Parameters
 
 The Purkinje network is generated using a Python script. The inputs to the script include a triangular surface, the network starting point, a second point defining the direction of the first network branch, and the parameters used to control the shape, density and spread of the network <a href="#ref-2">[2]</a>. These parameters are described below:
 
@@ -11,6 +11,3 @@ The Purkinje network is generated using a Python script. The inputs to the scrip
     <li>Repulsive parameter - regulates the branch curvature (higher value leads to greater repulsion between the branches).</li>
     <li>Branch segment length - an approximate length of the segments that compose one branch.</li>
 </ul>
-
-
-

@@ -1,4 +1,4 @@
-<h2> 0D Solver Theory </h2>
+## 0D Solver Theory
 
 Flow rate, pressure, and other hemodynamic quantities in 0D models of vascular anatomies are governed by a system of nonlinear differential-algebraic equations (DAEs),
 

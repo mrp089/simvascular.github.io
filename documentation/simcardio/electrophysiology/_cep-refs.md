@@ -1,4 +1,4 @@
-## References ##
+## References
 
 <p><a id="ref-1"> <a href="https://doi.org/10.1098/rsta.2011.0139">
 [1] Niederer, S. A., Kerfoot, E., Benson, A. P., Bernabeu, M. O., Bernus, O., Bradley, C., Cherry, E. M., Clayton, R., Fenton, F. H., Garny, A., Heidenreich, E., Land, S., Maleckar, M., Pathmanathan, P., Plank, G., Rodriguez, J. F., Roy, I., Sachse, F. B., Seemann, G., … Smith, N. P. (2011). <strong>Verification of cardiac tissue electrophysiology simulators using an N-version benchmark.</strong> Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences, 369(1954), 4331–4351.  </a></a></p>
@@ -26,4 +26,3 @@
 </p>
 
 <p><br/><br/><br/><br/><br/></p>
-

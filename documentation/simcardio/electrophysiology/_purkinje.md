@@ -1,3 +1,1 @@
-## Purkinje Network Plugin Tutorial ##
-
-
+## Purkinje Network Plugin Tutorial

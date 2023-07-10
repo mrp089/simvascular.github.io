@@ -15,7 +15,8 @@ a vascular network modeled as an electrical circuit. The resistive, elastic and 
 vessels are lumped into electrical elements. Although no spatial distribution of flow quantities is provided
 this ROM can be complex enough to provide a good approximatation of circulatory dynamics.
 
-##Centerlines Geometry
+## Centerlines Geometry
+
 The geometry of the one-dimensional networks used by the **sv1DSolver** is based on the centerlines computed from the surface
 of a 3D geometric model. The 3D geometric model is created from image data using the typical
 SimVascular <a href="docsModelGuide.html"> modeling workflow </a>.
@@ -34,7 +35,8 @@ The source and target points are selected from the model caps defined in the Sim
 </figure>
 <br>
 
-###Network Geometry and 1D Simulation Mesh
+### Network Geometry and 1D Simulation Mesh
+
 The centerlines geometry is used to define network **nodes** at vessel inlets, outlets and branching points. A number of cylindrical
 **segments** are defined representing the length and diameter between vessel **nodes**.
 
@@ -55,8 +57,10 @@ deformable vessels.
 </figure>
 <br>
 
-###Network Connectivity and 0D Simulation Circuit
+### Network Connectivity and 0D Simulation Circuit
+
 The centerlines geometry is also used to define the connectivty for a 0D electrical circuit.
 
-##Units
+## Units
+
 All model quantities and associated boundary conditions are specified in CGS units.

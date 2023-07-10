@@ -1,18 +1,21 @@
-<h1> Tutorial - Aorta and Iliac Arteries </h1>
-This tutorial demonstrates how to create a 1D Solver input file for a model of an abdominal aorta with branching 
+# Tutorial - Aorta and Iliac Arteries
+
+This tutorial demonstrates how to create a 1D Solver input file for a model of an abdominal aorta with branching
 right and left iliac arteries.
 
 In the following sections the contents of the 1D Solver input file are shown as shaded blocks. Text preceding each block
 describe its contents.
 
-<h2> Outlet RCR </h2>
+## Outlet RCR
+
 Create a 1D Simulation input file for a constant RCR resistance outlet boundary condition.
 
 The complete 1D Simulation input file listing is
 <a href="documentation/rom_simulation/1d-solver/files/05_bifurcation_RCR.in"> here </a>.
 
-<h3> 1D Solver input file </h3>
-Set the model name to be **Bifurcation\_RCR\_**.
+### 1D Solver input file
+
+Set the model name to be **Bifurcation_RCR\_**.
 
 ```
  MODEL Bifurcation_RCR_
@@ -191,7 +194,9 @@ OUTPUT TEXT
 ```
 
 <br>
-<h3> Results </h3>
+
+### Results
+
 The results of the simulation are shown using the following graphs.
 
 <br>

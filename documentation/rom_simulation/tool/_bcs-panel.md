@@ -1,4 +1,5 @@
-##Inlet and Outlet BCs Panel
+## Inlet and Outlet BCs Panel
+
 The Inlet and Outlet BCs panel is used to set the boundary condition type and parameter values for each inlet and outlet
 face defined for the model. The following types of boundary conditions are supported
 
@@ -8,7 +9,8 @@ face defined for the model. The following types of boundary conditions are suppo
   <li>RCR</li>
 </ol>
 
-###Panel Layout
+### Panel Layout
+
 The panel GUI contains a single table listing the inlet and outlet faces defined for the model. The panel shown below has
 three inlet and outlet faces defined.
 
@@ -19,7 +21,8 @@ three inlet and outlet faces defined.
 </figure>
 <br>
 
-###Usage
+### Usage
+
 The boundary condition type and associated parameter values are changed by double clicking on a face name in the **Name** column.
 This displays a **Set Inlet/Outlet BCs** popup window. The parameters displayed in the window depend on the boundary condition
 type
@@ -34,11 +37,12 @@ type
 </figure>
 <br>
 
-####Prescribed velocites
+#### Prescribed velocites
+
 The **Prescribed velocites** boundary condition defines a flow waveform for an inlet face. The inlet flow rates are provided by a text file
 with time and flow value colums.
 
-#####<u>Usage</u>
+<h5><u>Usage</u></h5> 
 Analytic Shape - Defines the shape of the velocity profile: parabolid, plug or wormersley.
 <br>
 Point Number - Defines ?
@@ -53,20 +57,22 @@ Flip normal -
 <br>
 <br>
 
-####Resistance
+#### Resistance
+
 The **Resistance** boundary condition defines the downstream resistance for an outlet face.
 
-#####<u>Usage</u>
+<h5><u>Usage</u></h5> 
 Resistance - The resistance parameter that characterizes the downstream vasculature.
 <br>
 Distal Pressure - Defines ?
 <br>
 <br>
 
-####RCR
+#### RCR
+
 The **RCR** boundary condition defines the downstream resistance for an outlet face.
 
-#####<u>Usage</u>
+<h5><u>Usage</u></h5> 
 Rp C Rd - The resistance parameter that characterizes the downstream vasculature.
 <br>
 Distal Pressure - Defines ?

@@ -1,4 +1,4 @@
-# References #
+# References
 
 <a id="ref-1"> <a href="https://www.wiley.com/en-us/Nonlinear+Solid+Mechanics%3A+A+Continuum+Approach+for+Engineering-p-9780471823193">
 [1] Holzapfel, G. A. (2002). **Nonlinear solid mechanics: a continuum approach for engineering science**. Wiley. </a></a>
@@ -29,6 +29,5 @@
 
 <a id="ref-10"> <a href="https://doi.org/10.1016/J.JMBBM.2014.06.016">
 [10] Nolan, D. R., Gower, A. L., Destrade, M., Ogden, R. W., & McGarry, J. P. (2014). **A robust anisotropic hyperelastic formulation for the modelling of soft tissue**. Journal of the Mechanical Behavior of Biomedical Materials, 39, 48–60. https://doi.org/10.1016/J.JMBBM.2014.06.016 </a></a>
-
 
 <p><br><br><br><br><br></p>

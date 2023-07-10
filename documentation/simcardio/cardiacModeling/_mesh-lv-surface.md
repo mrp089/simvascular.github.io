@@ -27,7 +27,7 @@ surface_main.py </a> Python surface generation script using the following comman
       --edge_size 3.5 # maximum edge size for the mesh
 </code></pre>
 
-###Using SimVascular Python Console
+### Using SimVascular Python Console
 
 The SimVascular GUI <a href='http://simvascular.github.io/docsPythonInterface.html#console'> Python Console </a>
 can be used for surface generation. Use the Python console <strong>Text Editor</strong> mode to enter the following Python commands

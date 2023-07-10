@@ -1,4 +1,4 @@
-## Obtain svFSI ##
+## Obtain svFSI
 
 The source code of **svFSI** is publicly released through <a href="https://github.com/SimVascular/svFSI">
 GitHub</a>, and many new features are introduced frequently. Users are encouraged to download the most recent version and test it on their problems. **svFSI** is built through a CMake system and a short build guide is provided <a href="https://github.com/SimVascular/svFSI/blob/master/README.md"> here</a>. In addition to the source code, pre-built binary files are also available through <a href="https://simtk.org/frs/?group_id=188#">SimTK</a>. Here users can download **svFSI** binary for Ubuntu or MacOS.

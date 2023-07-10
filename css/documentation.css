@@ -187,7 +187,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .navigationSection div h4 {
     text-transform: none;
-    font-size: 20px;
+    font-size: 19px;
     padding: 0;
     padding-left: 5px;
     padding-top: 7px;
@@ -220,6 +220,11 @@ h1, h2, h3, h4, h5, h6, p {
     font-weight: normal;
     letter-spacing: 0.2px;
 }
+
+.navigationSection div h4.clickLink {
+    color: var(--darkblue);
+}
+
 
 span:has(zero-md) {
     height: fit-content;

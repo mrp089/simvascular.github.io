@@ -1,12 +1,12 @@
-## Mesh Registration ##
+## Mesh Registration
 
-We can simulate the LV flow over time by tracking the deformation of the heart from time-resolved imaging and impose this motion 
-to the fluid domains inside the heart, which leads to a deforming-domain CFD problem. To be able to track the deformation of the 
-generated LV mesh over time, we need to building point-corresponded LV meshes from segmentations at all time frames. We generate a 
-surface mesh at one time frame and propagated to the others using the displacement field obtained from registering the corresponding 
+We can simulate the LV flow over time by tracking the deformation of the heart from time-resolved imaging and impose this motion
+to the fluid domains inside the heart, which leads to a deforming-domain CFD problem. To be able to track the deformation of the
+generated LV mesh over time, we need to building point-corresponded LV meshes from segmentations at all time frames. We generate a
+surface mesh at one time frame and propagated to the others using the displacement field obtained from registering the corresponding
 segmentations.
 
-The 
+The
 <a href="https://github.com/SimVascular/SimVascular/blob/master/Python/site-packages/sv_auto_lv_modeling/modeling/elastix_main.py">
 elastix_main.py </a> script is used to perform the registration. It uses uses the
 <a href='https://github.com/SuperElastix/SimpleElastix'>SimpleElastix</a> software for registration.
@@ -46,4 +46,3 @@ For code compatibility you will need to use <b>SimpleElastix</b> commit 8244e000
         --image_file_extension vti \
         --edge_size 3.5
 </code></pre>
-

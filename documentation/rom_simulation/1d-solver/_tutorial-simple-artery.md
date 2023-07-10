@@ -1,18 +1,21 @@
-<h1> Tutorial - Simple Artery </h1>
+# Tutorial - Simple Artery
+
 This tutorial demonstrates how to create a 1D Solver input file for a model of a single vessel with different outflow boundary conditions.
 
 In the following sections the contents of the 1D Solver input file are shown as shaded blocks. Text preceding each block
 describe its contents.
 
-<h2> Outlet Flow </h2>
-Create a 1D Simulation input file for a FLOW outlet boundary condition. 
+## Outlet Flow
+
+Create a 1D Simulation input file for a FLOW outlet boundary condition.
 Since the model contains a single vessel there is only one segment and thus no **JOINTS** need be defined.
 
 The complete 1D Simulation input file listing is
 <a href="documentation/rom_simulation/1d-solver/files/01_simpleArtery_Flow.in"> here </a>.
 
-<h3> 1D Solver input file </h3>
-Set the model name to be **simpleArtery\_Flow\_**.
+### 1D Solver input file
+
+Set the model name to be **simpleArtery_Flow\_**.
 
 ```
  MODEL simpleArtery_Flow_

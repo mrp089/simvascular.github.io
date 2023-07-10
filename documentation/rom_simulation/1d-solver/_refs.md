@@ -1,5 +1,4 @@
-
-# References #
+# References
 
 <a id="ref-1"> 
 [1] T.J.R. Hughes and J. Lubliner, **On the One-Dimensional Theory of Blood Flow in the Larger Vessels** , Mathematical Biosciences , 18(1-2) (1973), 161-170. 
@@ -47,5 +46,3 @@
 <a id="ref-12">
 [12] N. Xiao, J. Alastruey, and C. Alberto Figueroa (2014), A systematic comparison between 1‐D and 3‐D hemodynamics in compliant arterial models. Int. J. Numer. Meth. Biomed. Engng., 30: 204-231.
 </a>
-
-
