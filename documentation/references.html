@@ -131,22 +131,40 @@
   <section class="mainSection">
     <section class="navigationSection" style="float: left">
       <div>
-        <h5 class="skipTo refSec1">Overview</h5><br>
-        <h5 class="skipTo refSec2">Boundary Conditions</h5><br>
-        <h5 class="skipTo refSec3">Linear Solver</h5><br>
-        <h5 class="skipTo FSI">Fluid Structure Interaction</h5><br>
-        <h5 class="skipTo refSec4">Modeling</h5><br>
-        <h5 class="skipTo refSec5">Meshing</h5><br>
-        <h5 class="skipTo refSec6">Validation</h5><br>
-        <h5 class="skipTo refSec7">Clinical Applications</h5><br>
-        <h5 class="skipTo UQ">Optimization and Uncertainty Quantification</h5><br>
-        <h5 class="skipTo refSec8">Other Contributors</h5><br>
+        <h4 class="skipTo refSec1">Overview</h4>
+      </div>
+      <div>
+        <h4 class="skipTo refSec2">Boundary Conditions</h4>
+      </div>
+      <div>
+        <h4 class="skipTo refSec3">Linear Solver</h4>
+      </div>
+      <div>
+        <h4 class="skipTo FSI">Fluid Structure Interaction</h4>
+      </div>
+      <div>
+        <h4 class="skipTo refSec4">Modeling</h4>
+      </div>
+      <div>
+        <h4 class="skipTo refSec5">Meshing</h4>
+      </div>
+      <div>
+        <h4 class="skipTo refSec6">Validation</h4>
+      </div>
+      <div>
+        <h4 class="skipTo refSec7">Clinical Applications</h4>
+      </div>
+      <div>
+        <h4 class="skipTo UQ">Optimization and Uncertainty Quantification</h4>
+      </div>
+      <div>
+        <h4 class="skipTo refSec8">Other Contributors</h4>
       </div>
     </section>
 
     <section class="docsSection" style="float: right">
       <span id="refSec1">
-        <zero-md id="intro" src="references/_flowsolver.md" no-shadow></zero-md>
+        <zero-md id="math" src="references/_flowsolver.md" no-shadow></zero-md>
       </span>
       <span id="refSec2">
         <zero-md src="references/_bc.md" no-shadow></zero-md>
@@ -183,14 +201,10 @@
 
 
   <script>
-    var a_zero_md_element = document.getElementById("intro");
-    a_zero_md_element.addEventListener('zero-md-rendered', () => {
-        let el = document.createElement('script');
-        el.type = "text/javascript";
-        el.async = true;
-        el.id = "MathJax-script";
-        el.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js";
-        document.head.appendChild(el)
+    math.addEventListener('zero-md-rendered', () => {
+      var el = document.createElement('script');
+      el.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js';
+      document.head.appendChild(el);
     });
   </script>
 

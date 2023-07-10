@@ -157,7 +157,7 @@
 
     <section class="docsSection" style="float: right">
       <span id="sec1">
-        <zero-md id="intro" src="pulmonary/_significance.md" no-shadow></zero-md>
+        <zero-md id="math" src="pulmonary/_significance.md" no-shadow></zero-md>
       </span>
       <span id="sec2">
         <zero-md src="pulmonary/_data.md" no-shadow></zero-md>
@@ -179,14 +179,10 @@
 
 
   <script>
-    var a_zero_md_element = document.getElementById("intro");
-    a_zero_md_element.addEventListener('zero-md-rendered', () => {
-        let el = document.createElement('script');
-        el.type = "text/javascript";
-        el.async = true;
-        el.id = "MathJax-script";
-        el.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js";
-        document.head.appendChild(el)
+    math.addEventListener('zero-md-rendered', () => {
+      var el = document.createElement('script');
+      el.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js';
+      document.head.appendChild(el);
     });
   </script>
 

@@ -163,7 +163,7 @@
 
     <section class="docsSection" style="float: right">
       <span id="introduction">
-        <zero-md id="intro" src="meshing/_intro.md" no-shadow></zero-md>
+        <zero-md id="math" src="meshing/_intro.md" no-shadow></zero-md>
       </span>
       <span id="tetgenoverview">
         <zero-md src="meshing/_tetgenOverview.md" no-shadow></zero-md>
@@ -212,14 +212,10 @@
 
 
   <script>
-    var a_zero_md_element = document.getElementById("intro");
-    a_zero_md_element.addEventListener('zero-md-rendered', () => {
-        let el = document.createElement('script');
-        el.type = "text/javascript";
-        el.async = true;
-        el.id = "MathJax-script";
-        el.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js";
-        document.head.appendChild(el)
+    math.addEventListener('zero-md-rendered', () => {
+      var el = document.createElement('script');
+      el.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js';
+      document.head.appendChild(el);
     });
   </script>
 

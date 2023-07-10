@@ -187,7 +187,7 @@
 
     <section class="docsSection" style="float: right">
       <span id="introduction">
-        <zero-md id="intro" src="flowsolver/_intro.md" no-shadow></zero-md>
+        <zero-md id="math" src="flowsolver/_intro.md" no-shadow></zero-md>
       </span>
       <span id="overview">
         <zero-md  src="flowsolver/_overview.md" no-shadow></zero-md>
@@ -266,13 +266,10 @@
 
 
   <script>
-    intro.addEventListener('zero-md-rendered', () => {
-        let el = document.createElement('script');
-        el.type = "text/javascript";
-        el.async = true;
-        el.id = "MathJax-script";
-        el.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js";
-        document.head.appendChild(el)
+    math.addEventListener('zero-md-rendered', () => {
+      var el = document.createElement('script');
+      el.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js';
+      document.head.appendChild(el);
     });
   </script>
 

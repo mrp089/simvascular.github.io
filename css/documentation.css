@@ -150,9 +150,9 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .navigationSection {
-    padding-top: 30px;
+    padding-top: 20px;
     padding-right: 10px;
-    padding-left: 30px;
+    padding-left: 20px;
     padding-bottom: 5px;
     position: fixed;
     overflow: auto;
