@@ -60,7 +60,7 @@ p {
     text-align: center;
 }
 
-.innerHeader
+.innerHeader, .featuresHeader
 {
     width: 100%;
     display: block;
@@ -656,9 +656,12 @@ th:hover {
                 FEATURES
 
 ---------------------------------------------*/
+.featuresHeader h2 {
+    text-transform: none !important;
+}
 
 .featuresText {
-    text-align: justify;
+    text-align: center;
     /* width: 75%; */
     padding-left: 5%;
     padding-right: 5%;
