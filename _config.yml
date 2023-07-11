@@ -1,7 +1,6 @@
 include:
-  - /documentation/quickguide/_getting_started.md
-  - /documentation
-  - /clinical
-  - _getting_started.md
-
-ignore_theme_config: true
+  [
+    "documentation",
+    "documentation/quickguide/_getting_started.md",
+    "documentation/quickguide",
+  ]
