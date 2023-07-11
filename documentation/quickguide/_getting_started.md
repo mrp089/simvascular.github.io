@@ -1,3 +1,6 @@
+---
+---
+
 # Getting Started
 
 This document provides beginning users with the basic knowledge needed to get started using the SimVascular suite of software
