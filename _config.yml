@@ -1,6 +1,1 @@
-include:
-  [
-    "documentation",
-    "documentation/quickguide/_getting_started.md",
-    "documentation/quickguide",
-  ]
+keep_files: [".md"]
