@@ -1,1 +1,2 @@
 keep_files: [".md"]
+include: [".md"]
