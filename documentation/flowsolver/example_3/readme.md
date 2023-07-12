@@ -26,7 +26,7 @@ Select the file "restart.500.0" exported from Example 2
     Pressure: 133300 (initial pressure, estimated form the simulation result of the rigid case Example 2)
 
 <figure>
-  <img class="svImg scImgMd" src="/documentation/flowsolver/imgs/walldeformable.png">
+  <img class="svImg scImgMd" src="flowsolver/imgs/walldeformable.png">
   <figcaption class="svCaption" > </figcaption>
 </figure>
 
@@ -44,7 +44,7 @@ To create data files:
 Different from Example 2, the step also solves initial displacement, write the initial displacement to a vtp file "displacement.vtp" to review the solution, and finally append it to restar.0.1 we just copied from restart.500.0 of Example 2.
 
 <figure>
-  <img class="svImg svImgLg" src="/documentation/flowsolver/imgs/disp_paraview.png">
+  <img class="svImg svImgLg" src="flowsolver/imgs/disp_paraview.png">
   <figcaption class="svCaption" >Initial Displacement from displacement.vtp </figcaption>
 </figure>
 

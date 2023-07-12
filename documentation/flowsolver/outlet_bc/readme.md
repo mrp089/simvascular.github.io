@@ -23,7 +23,7 @@ Let's start setting outlet boundary condition.
     	Click "OK"
 
 <figure>
-  <img class="svImg svImgSm" src="/documentation/flowsolver/imgs/outletbcdialog.png">
+  <img class="svImg svImgSm" src="flowsolver/imgs/outletbcdialog.png">
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -51,7 +51,6 @@ For RCR BC:
     Rp, C, Rd: 0 0 0
     Click "OK"
 
-
 For Coronary BC:
 
     Select a group of outlets, right click
@@ -75,7 +74,6 @@ To split total resistance:
     Rp:Rd (for RCR BC):
     Ra:Ra-micro:Rv (for Coronary BC):
     Click "OK"
-
 
 To split total capacitance:
 

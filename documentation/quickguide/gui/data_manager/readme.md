@@ -23,7 +23,7 @@ The <i> Data Manager </i> view of the
 created following the steps demonstrated in the <a href="#tutorial"> Tutorial</a> section is shown in Fig. 7.
 
 <figure>
-  <img class="svImg svImgSm"  src="quickguide/gui/images/demo-data-manager.png">
+  <img class="svImg svImgSm"  src="quickguide/intro/images/demo-data-manager.png">
   <figcaption class="svCaption">Fig. 7 &nbsp An example of a <i>Project</i> displayed in the <i>Data Manager</i>.
       Instances of <i>Tools</i> added to the <i>Project</i> (e.g. <b>aorta</b>) are shown below the core <b>Images</b>, <b>Paths</b>,
       <b>Segmentations</b>, <b>Models</b>, <b>Meshes</b>, <b>Simulations</b>, <b>svFSI</b>, and

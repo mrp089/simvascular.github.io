@@ -5,7 +5,7 @@
 The following figure contains a schematic representation of the processes involved in running a simulation using SimVascular.
 
 <figure>
-  <img class="svImg svImgLg" src="/documentation/flowsolver/imgs/simulation_flowchart.png">
+  <img class="svImg svImgLg" src="flowsolver/imgs/simulation_flowchart.png">
   <figcaption class="svCaption" >Workflow for generating hemodynamic results of a cylindrical model starting from a stereolithography of its exterior surface</figcaption>
 </figure>
 
@@ -14,7 +14,7 @@ We start off with the files coming from the [meshing](docsMeshing.html) of the a
 **svPre** is the preprocessor for **svSolver**. The input data files to svPre contain a complete description of the discrete model: nodal coordinates, element connectivity, element adjacency information and connectivity of boundary nodes and elements. The **svPre** program can be called either from the command line (in terminal) or the Simulation tool (in GUI). The input data files for **svPresolver** are created from the mesh. They are organized as shown in the example below.
 
 <figure>
-  <img class="svImg svImgMd" src="/documentation/flowsolver/imgs/meshfiles.png">
+  <img class="svImg svImgMd" src="flowsolver/imgs/meshfiles.png">
   <figcaption class="svCaption" >Folder structure and file created after clicking on <b>Write Files</b></figcaption>
 </figure>
 
