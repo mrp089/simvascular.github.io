@@ -10,7 +10,7 @@ The image contrast is adjusted by changing the <i>window width</i>.
 A blue region in the <i>Image Windowing</i> tool shows then <i>window center</i> and <i>window width</i>.
 
 <figure>
-  <img class="svImg svImgXs"  src="quickguide/gui/images/image-window-level-tool.png">
+  <img class="svImg svImgXs"  src="/documentation/quickguide/gui/images/image-window-level-tool.png">
   <figcaption class="svCaption"> The <b>Image Windowing</b> tool. The <b>window width</b> and <b>window center</b> is 
       represented using a blue region within the tool. The two text boxes at the bottom of the tool show the 
       <b>window center</b> (upper box) and the <b>window width</b> (lower box).
@@ -35,27 +35,27 @@ The <i>window width</i> is changed non-uniformly about the <i>window center</i> 
 
   <tr>
     <td> No operation, original image brightness and contrast </td>
-    <td> <img src="quickguide/gui/images/image-window-level-demo-1.png" width="612" height="410"> </td>
+    <td> <img src="/documentation/quickguide/gui/images/image-window-level-demo-1.png" width="612" height="410"> </td>
   </tr>
 
   <tr>
     <td> Move the <i>window center</i> up by placing the mouse cursor in the center of the <i>Image Windowing</i> tool 
          blue region holding the left mouse button down while moving the mouse cursor up </td>
-    <td> <img src="quickguide/gui/images/image-window-level-demo-2.png" width="612" height="410"> </td>
+    <td> <img src="/documentation/quickguide/gui/images/image-window-level-demo-2.png" width="612" height="410"> </td>
   </tr>
 
   <tr>
     <td> Move the <i>window center</i> down by placing the mouse cursor in the center of the <i>Image Windowing</i> tool
          blue region holding the left mouse button down while moving the mouse cursor down 
     </td>
-    <td> <img src="quickguide/gui/images/image-window-level-demo-3.png" width="612" height="410"> </td>
+    <td> <img src="/documentation/quickguide/gui/images/image-window-level-demo-3.png" width="612" height="410"> </td>
   </tr>
 
   <tr>
     <td> Reduce the <i>window width</i> uniformly around the <i>window center</i> by placing the mouse cursor in the upper 
          boundary of the <i>Image Windowing</i> tool blue region holding and mouse button down while moving the mouse cursor down 
     </td>
-    <td> <img src="quickguide/gui/images/image-window-level-demo-4.png" width="612" height="410"> </td>
+    <td> <img src="/documentation/quickguide/gui/images/image-window-level-demo-4.png" width="612" height="410"> </td>
   </tr>
 
   <tr>
@@ -63,7 +63,7 @@ The <i>window width</i> is changed non-uniformly about the <i>window center</i> 
          boundary of the <i>Image Windowing</i> tool blue region holding and pressing shift-left mouse button down while 
          moving the mouse cursor down 
     </td>
-    <td> <img src="quickguide/gui/images/image-window-level-demo-5.png" width="612" height="410"> </td>
+    <td> <img src="/documentation/quickguide/gui/images/image-window-level-demo-5.png" width="612" height="410"> </td>
   </tr>
 
 </table>
@@ -72,7 +72,7 @@ The <i>window width</i> is changed non-uniformly about the <i>window center</i> 
 Selecting the <i>Image Window Level</i> tool with the right mouse button pops up the following menu
 
 <figure>
-  <img class="svImg svImgSm"  src="quickguide/gui/images/image-window-level-menu-1.png"> 
+  <img class="svImg svImgSm"  src="/documentation/quickguide/gui/images/image-window-level-menu-1.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 

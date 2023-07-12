@@ -17,102 +17,102 @@ The following table lists the controls used by the SimVascular GUI
     <td> Button </td>
     <td> A rectangular region that typically displays a text label describing its action. 
          A button performs an action when pressed (clicked on)</td>
-    <td><img src="quickguide/gui/images/gui-button.png" width="100" height="25"> </td>
+    <td><img src="/documentation/quickguide/gui/images/gui-button.png" width="100" height="25"> </td>
   </tr>
 
   <tr>
     <td> CheckBox </td>
     <td> A rectangular region that permits the user to make a binary choice, i.e. a choice between one of two possible mutually 
          exclusive options </td>
-    <td><img src="quickguide/gui/images/gui-check-box.png" width="100" height="20"> </td>
+    <td><img src="/documentation/quickguide/gui/images/gui-check-box.png" width="100" height="20"> </td>
   </tr>
 
   <tr>
     <td> ComboBox </td>
     <td> A drop-down list that allows the user to select a value from the list. </td>
-    <td> <img src="quickguide/gui/images/gui-combo-box.png" width="100" height="30"> </td>
+    <td> <img src="/documentation/quickguide/gui/images/gui-combo-box.png" width="100" height="30"> </td>
   </tr>
 
   <tr>
     <td> DialogBox </td>
     <td> A popup window that asks a user for input. </td>
-    <td> <img src="quickguide/gui/images/gui-dialog.png" width="150" height="125">  </td>
+    <td> <img src="/documentation/quickguide/gui/images/gui-dialog.png" width="150" height="125">  </td>
   </tr>
 
   <tr>
     <td> FileBrowser </td>
     <td> A popup window used to select a file or directory. </td>
-    <td> <img src="quickguide/gui/images/gui-file-browser.png" width="345" height="186">  </td>
+    <td> <img src="/documentation/quickguide/gui/images/gui-file-browser.png" width="345" height="186">  </td>
   </tr>
 
   <tr>
     <td> Icon </td>
     <td> A small graphical representation of a <i>Tool</i> or file. </td>
-    <td> <img src="quickguide/gui/images/gui-icon.png" width="50" height="40">  </td>
+    <td> <img src="/documentation/quickguide/gui/images/gui-icon.png" width="50" height="40">  </td>
   </tr>
 
   <tr>
     <td> InformationPopup </td>
     <td> A popup window that provides information to the user. </td>
-    <td> <img src="quickguide/gui/images/gui-info-popup.png" width="234" height="134">  </td>
+    <td> <img src="/documentation/quickguide/gui/images/gui-info-popup.png" width="234" height="134">  </td>
   </tr>
 
   <tr>
     <td> Menu </td> 
     <td> A list of choices offered to the user for selection. </td> 
-    <td> <img src="quickguide/gui/images/gui-menu.png" width="100" height="150">  </td>
+    <td> <img src="/documentation/quickguide/gui/images/gui-menu.png" width="100" height="150">  </td>
   </tr>
 
   <tr>
     <td> MenuBar </td> 
     <td> A thin, horizontal bar containing the text labels for a group of menus. 
-    <td> <img src="quickguide/gui/images/gui-menu-bar.png" width="200" height="20"> </td>
+    <td> <img src="/documentation/quickguide/gui/images/gui-menu-bar.png" width="200" height="20"> </td>
   </tr>
 
   <tr>
     <td> QuestionPopup </td>
     <td> A popup window that asks the user to respond to a yes/no question. </td>
-    <td> <img src="quickguide/gui/images/gui-quest-popup.png" width="234" height="134">  </td>
+    <td> <img src="/documentation/quickguide/gui/images/gui-quest-popup.png" width="234" height="134">  </td>
   </tr>
 
   <tr>
     <td> Slider </td> 
     <td> A horizontal bar used to set a value by moving an indicator on the bar horizontally. 
          Values can also be entered in the text box. </td>
-    <td> <img src="quickguide/gui/images/gui-slider.png" width="400" height="25">  </td>
+    <td> <img src="/documentation/quickguide/gui/images/gui-slider.png" width="400" height="25">  </td>
   </tr>
 
   <tr>
     <td> SpinBox </td> 
     <td> A rectangular region used to choose a value by clicking the up/down buttons or pressing up/down on the keyboard 
          to increase/decrease the value currently displayed.
-    <td> <img src="quickguide/gui/images/gui-spin-box.png" width="200" height="25">  </td>
+    <td> <img src="/documentation/quickguide/gui/images/gui-spin-box.png" width="200" height="25">  </td>
   </tr>
 
   <tr>
     <td> Table </td> 
     <td> A rectangular region that arranges data (e.g. text or other widgets) into rows and columns of cells. 
          Data can be modified by selecting a cell in the table. </td>
-    <td> <img src="quickguide/gui/images/gui-table.png" width="300" height="200">  </td>
+    <td> <img src="/documentation/quickguide/gui/images/gui-table.png" width="300" height="200">  </td>
   </tr>
 
   <tr>
     <td> TextBox </td> 
     <td> A rectangular region used to entry string, integer or float values. </td>
-    <td> <img src="quickguide/gui/images/gui-text-box.png" width="130" height="24">  </td>
+    <td> <img src="/documentation/quickguide/gui/images/gui-text-box.png" width="130" height="24">  </td>
   </tr>
 
   <tr>
     <td> ToolBar </td> 
     <td> A row of buttons at the top of window that controls software functions. </td>
-    <td> <img src="quickguide/gui/images/gui-tool-bar.png" width="250" height="20">  </td>
+    <td> <img src="/documentation/quickguide/gui/images/gui-tool-bar.png" width="250" height="20">  </td>
   </tr>
 
   <tr>
     <td> ToolBox </td> 
     <td> An area of a <i>Tool</i> panel that contains multiple pages of GUI widgets identified by a section 
          of rectangles with text at the Toolbox bottom. <br> Selecting a rectangle shows another page. </td>
-    <td> <img src="quickguide/gui/images/gui-tool-box.png" width="200" height="300">  </td>
+    <td> <img src="/documentation/quickguide/gui/images/gui-tool-box.png" width="200" height="300">  </td>
   </tr>
 
 </table>
@@ -123,7 +123,7 @@ The SimVascular main window GUI is composed of a _MenuBar_, _ToolBar_, _Data Man
 An additional _Tool Panel_ is displayed on the right side of the window when a <i>Tool</i> is active.
 
 <figure>
-  <img class="svImg svImgLg"  src="quickguide/gui/images/mainwindow.png"> 
+  <img class="svImg svImgLg"  src="/documentation/quickguide/gui/images/mainwindow.png"> 
   <figcaption class="svCaption">Fig. 4 &nbsp The SimVascular GUI layout</figcaption>
 </figure>
 

@@ -23,7 +23,7 @@ Let's start setting outlet boundary condition.
     	Click "OK"
 
 <figure>
-  <img class="svImg svImgSm" src="flowsolver/imgs/outletbcdialog.png">
+  <img class="svImg svImgSm" src="/documentation/flowsolver/imgs/outletbcdialog.png">
   <figcaption class="svCaption" ></figcaption>
 </figure>
 

@@ -15,14 +15,14 @@ The first line is a comment line that you don’t need to include, but it helps 
 **WARNING**: please note that flow coming **into** the model (forward flow) will have a negative sign, (like in the example considered here), whereas flow coming **out of** the model (backflow) will be positive. A good way to remember that is that in the case of forward flow, the vector that gives you the direction of the flow and the normal to the face of the model point in opposite directions, and therefore their dot product will be negative.
 
 <figure>
-  <img class="svImg svImgMd" src="flowsolver/imgs/negativeflow.png">
+  <img class="svImg svImgMd" src="/documentation/flowsolver/imgs/negativeflow.png">
   <figcaption class="svCaption" >Cylinder with negative inflow</figcaption>
 </figure>
 
 On the other hand, in a situation of back flow, the numerical value in the \*.flow file with be positive.
 
 <figure>
-  <img class="svImg svImgMd" src="flowsolver/imgs/positiveflow.png">
+  <img class="svImg svImgMd" src="/documentation/flowsolver/imgs/positiveflow.png">
   <figcaption class="svCaption" >Cylinder with positive inflow</figcaption>
 </figure>
 
@@ -48,7 +48,7 @@ Let's start setting inlet boundary condition.
     	Click "OK"
 
 <figure>
-  <img class="svImg svImgSm" src="flowsolver/imgs/inletbcdialog.png">
+  <img class="svImg svImgSm" src="/documentation/flowsolver/imgs/inletbcdialog.png">
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -61,6 +61,6 @@ Let's start setting inlet boundary condition.
 **WARNING**: Be careful with this! **SimVascular** is doing a Fourier Series approximation of the data that you provide in the \*.flow file. Since in this case, our data is constant flow, we only need one Fourier mode to capture this appropriately. For pulsatile flow problems, we will need more Fourier Modes to accurately represent the \*.flow data (usually, $10$ Fourier modes is enough for a pulsatile problem).
 
 <figure>
-  <img class="svImg svImgLg" src="flowsolver/imgs/inflowbc.png">
+  <img class="svImg svImgLg" src="/documentation/flowsolver/imgs/inflowbc.png">
   <figcaption class="svCaption" > </figcaption>
 </figure>

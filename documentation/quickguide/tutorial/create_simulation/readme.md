@@ -40,7 +40,7 @@ in the main aorta and iliac vessels.
   </tr>
 
   <tr>
-    <td><img src="quickguide/tutorial/images/create-simulation-1.png" width="512" height="360"> </td>
+    <td><img src="/documentation/quickguide/tutorial/images/create-simulation-1.png" width="512" height="360"> </td>
     <td> Select the <i>Simulations</i> <i>Tool</i> in the <i>Data Manager</i> with the right mouse button. 
          <br><br>
          Select the <b>Create Simulation job</b> menu option.
@@ -48,7 +48,7 @@ in the main aorta and iliac vessels.
   </tr>
 
   <tr>
-    <td><img src="quickguide/tutorial/images/create-simulation-2.png" width="512" height="360"> <br><br>
+    <td><img src="/documentation/quickguide/tutorial/images/create-simulation-2.png" width="512" height="360"> <br><br>
     </td>
     <td> A <b>Create Simulation Job</b> <i>DiaglogBox</i> appears. 
          <br><br>
@@ -67,7 +67,7 @@ in the main aorta and iliac vessels.
   </tr>
 
   <tr>
-    <td> <img src="quickguide/tutorial/images/create-simulation-3.png" width="512" height="360"> </td>
+    <td> <img src="/documentation/quickguide/tutorial/images/create-simulation-3.png" width="512" height="360"> </td>
     <td> A <i>Data Node</i> named <b>aorta-iliacs</b> (an instance of a <i>Simulations Tool</i>) is created under the
          <i>Data Manager</i> <i>Simulations Tool</i> type.
          <br><br>
@@ -79,7 +79,7 @@ in the main aorta and iliac vessels.
   </tr>
 
   <tr>
-    <td><img src="quickguide/tutorial/images/create-simulation-4.png" width="512" height="360"> </td>
+    <td><img src="/documentation/quickguide/tutorial/images/create-simulation-4.png" width="512" height="360"> </td>
     <td> <i>SV Simulation Panel</i> is a <i>ToolBox</i> containing multiple pages of GUI widgets identified by a section of 
          rectangles with text at the <i>Toolbox</i> bottom. Selecting a rectangle shows another page of GUI widgets.
          <br><br>
@@ -115,7 +115,7 @@ The left and right iliac outlets are set to a resistance boundary condition with
   </tr>
 
  <tr>
-    <td><img src="quickguide/tutorial/images/create-simulation-5.png" width="512" height="360"> </td>
+    <td><img src="/documentation/quickguide/tutorial/images/create-simulation-5.png" width="512" height="360"> </td>
     <td> The <i>ToolBox</i> <b>Inlet and Outlet BCs</b> page is used to set boundary conditions for the mesh inlet and outlet faces.
          <br><br>
          The <b>Name / BC Type / Values</b> <i>Table</i> contains the name of all <i>Model</i> <i>Faces</i> that have a <b>cap</b> 
@@ -126,10 +126,10 @@ The left and right iliac outlets are set to a resistance boundary condition with
   </tr>
 
   <tr>
-    <td><img src="quickguide/tutorial/images/create-simulation-6.png" width="512" height="360"> </td>
+    <td><img src="/documentation/quickguide/tutorial/images/create-simulation-6.png" width="512" height="360"> </td>
     <td> A <b>Set Inlet/Outlet BCs</b> <i>DialogBox</i> appears.
          <br><br>
-         Select the <b>Flow rate (from File) </b> <img src="quickguide/tutorial/images/simulation-gui-flow-file.png" width="22" height="20"> icon to bring up a <i>FileBrowser</i>.
+         Select the <b>Flow rate (from File) </b> <img src="/documentation/quickguide/tutorial/images/simulation-gui-flow-file.png" width="22" height="20"> icon to bring up a <i>FileBrowser</i>.
          <br><br>
          Select the <b>steady.flow</b> file from the <b>Tutorial/flow-files</b> directory. 
          <br><br>
@@ -138,7 +138,7 @@ The left and right iliac outlets are set to a resistance boundary condition with
   </tr>
 
   <tr>
-    <td><img src="quickguide/tutorial/images/create-simulation-7.png" width="512" height="360"> </td>
+    <td><img src="/documentation/quickguide/tutorial/images/create-simulation-7.png" width="512" height="360"> </td>
     <td> The <b>cap_aorta</b> boundary condition <b>BC Type</b> is now set to <b>Proscribed Velocities</b>. 
          <br><br>
          To set the outlet boundary condition for the left iliac double click with the left mouse button on <b>cap_left-iliac</b> in 
@@ -147,7 +147,7 @@ The left and right iliac outlets are set to a resistance boundary condition with
   </tr>
 
   <tr>
-    <td><img src="quickguide/tutorial/images/create-simulation-8.png" width="512" height="360"> </td>
+    <td><img src="/documentation/quickguide/tutorial/images/create-simulation-8.png" width="512" height="360"> </td>
     <td> A <b>Set Inlet/Outlet BCs</b> <i>DialogBox</i> appears.
         <br><br>
         From the <b>BC Type:</b> <i>ComboBox</i> select <b>Resistance</b>.
@@ -159,7 +159,7 @@ The left and right iliac outlets are set to a resistance boundary condition with
   </tr>
 
   <tr>
-    <td><img src="quickguide/tutorial/images/create-simulation-9.png" width="512" height="360"> </td>
+    <td><img src="/documentation/quickguide/tutorial/images/create-simulation-9.png" width="512" height="360"> </td>
     <td> The <b>cap_left-iliac</b> boundary condition <b>BC Type</b> is now set to <b>Resistance</b>.
          <br><br>
          To set the outlet boundary condition for the right iliac double click with the left mouse button on <b>cap_aorta_2</b> in
@@ -168,7 +168,7 @@ The left and right iliac outlets are set to a resistance boundary condition with
   </tr>
 
   <tr>
-    <td><img src="quickguide/tutorial/images/create-simulation-10.png" width="512" height="360"> </td>
+    <td><img src="/documentation/quickguide/tutorial/images/create-simulation-10.png" width="512" height="360"> </td>
     <td> A <b>Set Inlet/Outlet BCs</b> <i>DialogBox</i> appears.
         <br><br>
         From the <b>BC Type:</b> <i>ComboBox</i> select <b>Resistance</b>.
@@ -180,10 +180,10 @@ The left and right iliac outlets are set to a resistance boundary condition with
   </tr>
 
   <tr>
-    <td><img src="quickguide/tutorial/images/create-simulation-11.png" width="512" height="360"> </td>
+    <td><img src="/documentation/quickguide/tutorial/images/create-simulation-11.png" width="512" height="360"> </td>
     <td> The <b>cap_aorta_2</b> boundary condition <b>BC Type</b> is now set to <b>Resistance</b>.
          <br><br>
-         Press the <img src="quickguide/gui/images/gui-save-icon.png" width="40" height="35">
+         Press the <img src="/documentation/quickguide/gui/images/gui-save-icon.png" width="40" height="35">
          icon in the  <i>ToolBar</i> to save the <i>Project</i>.
          <br><br>
          Select the <i>ToolBox</i> <b>Solver Parameters</b> page.
@@ -212,7 +212,7 @@ A detailed discussion about solver parameters can be found in the SimVascular
   </tr>
 
  <tr>
-    <td><img src="quickguide/tutorial/images/create-simulation-12.png" width="512" height="360"> </td>
+    <td><img src="/documentation/quickguide/tutorial/images/create-simulation-12.png" width="512" height="360"> </td>
     <td> The <i>ToolBox</i> <b>Solver Parameters</b> page is used to set the parameters controlling <i>svSolver</i>
          solution and output. Parameter values are entered by clicking with the left mouse button on the appropriate
          <i>TextBox</i>. 
@@ -257,7 +257,7 @@ platforms it must be installed using a separate <i>svSolver</i> installer downlo
   </tr>
 
   <tr>
-    <td><img src="quickguide/tutorial/images/create-simulation-13.png" width="512" height="360"> </td>
+    <td><img src="/documentation/quickguide/tutorial/images/create-simulation-13.png" width="512" height="360"> </td>
     <td> The <i>ToolBox</i> <b>Create Files and Run Simulation</b> page is used to run <i>svSolver</i>.
          <br><br>
          Select the <b>aorta-iliacs</b> from the <b>Choose Mesh:</b> <i>ComboBox</i>. 
@@ -267,7 +267,7 @@ platforms it must be installed using a separate <i>svSolver</i> installer downlo
   </tr>
 
   <tr>
-    <td><img src="quickguide/tutorial/images/create-simulation-14.png" width="512" height="360"> </td>
+    <td><img src="/documentation/quickguide/tutorial/images/create-simulation-14.png" width="512" height="360"> </td>
     <td> An <i>InformationPopup</i> appears showing that the simulation files have been created.
          <br><br>
          Press the <i>InformationPopup</i> <b>OK</b> <i>Button</i>. 
@@ -284,7 +284,7 @@ platforms it must be installed using a separate <i>svSolver</i> installer downlo
   </tr>
 
   <tr>
-    <td><img src="quickguide/tutorial/images/create-simulation-15.png" width="512" height="360"> </td>
+    <td><img src="/documentation/quickguide/tutorial/images/create-simulation-15.png" width="512" height="360"> </td>
     <td> An <i>InformationPopup</i> appears showing that the simulation has successfully finished.
          <br><br>
          Press the <i>InformationPopup</i> <b>Show Details</b> <i>Button</i>.                             
@@ -292,7 +292,7 @@ platforms it must be installed using a separate <i>svSolver</i> installer downlo
   </tr>
 
   <tr>
-    <td><img src="quickguide/tutorial/images/create-simulation-16.png" width="512" height="360"> </td>
+    <td><img src="/documentation/quickguide/tutorial/images/create-simulation-16.png" width="512" height="360"> </td>
     <td> A <i>ScrollingTextBox</i> appears showing the simulation history: time step, CPU time in seconds, 
          measure of the nonlinear residual, etc.
          <br><br>
@@ -317,17 +317,17 @@ This section demonstrates how to convert the simulation results into VTK format 
   </tr>
 
   <tr>
-    <td><img src="quickguide/tutorial/images/create-simulation-17.png" width="512" height="360"> </td>
+    <td><img src="/documentation/quickguide/tutorial/images/create-simulation-17.png" width="512" height="360"> </td>
     <td> The <i>ToolBox</i> <b>Convert Results</b> page is used to convert <i>svSolver</i> results files into VTK format files.
          <br><br>
          GUI controls:
          <br><br>
          <ul style="list-style-type:none;">
-           <li> <img src="quickguide/tutorial/images/simulation-gui-results-dir.png" width="245" height="32"> - Displays
+           <li> <img src="/documentation/quickguide/tutorial/images/simulation-gui-results-dir.png" width="245" height="32"> - Displays
                 the simulation results directory. Use the 
-                <img src="quickguide/tutorial/images/simulation-gui-flow-file.png" width="22" height="20"> icon to bring up
+                <img src="/documentation/quickguide/tutorial/images/simulation-gui-flow-file.png" width="22" height="20"> icon to bring up
                 a <i>FileBrowser</i> to change the directory.</li><br>
-            <li> <img src="quickguide/tutorial/images/simulation-gui-start-stop.png" width="245" height="20"> - <i>TextBoxes</i> 
+            <li> <img src="/documentation/quickguide/tutorial/images/simulation-gui-start-stop.png" width="245" height="20"> - <i>TextBoxes</i> 
             to enter the start, stop and increment time step range used to convert simulation results files. Enter <b>0</b>, <b>500</b> 
             and <b>100</b>.</li>
          </ul>
@@ -337,7 +337,7 @@ This section demonstrates how to convert the simulation results into VTK format 
   </tr>
 
   <tr>
-    <td><img src="quickguide/tutorial/images/create-simulation-18.png" width="512" height="360"> </td>
+    <td><img src="/documentation/quickguide/tutorial/images/create-simulation-18.png" width="512" height="360"> </td>
     <td> A <i>FileBrowser</i> appears. 
          <br><br>
          Navigate to the <b>Tutorial/Simulations/aorta-iliacs</b> directory.
@@ -347,7 +347,7 @@ This section demonstrates how to convert the simulation results into VTK format 
   </tr>
 
   <tr>
-    <td><img src="quickguide/tutorial/images/create-simulation-19.png" width="512" height="360"> </td>
+    <td><img src="/documentation/quickguide/tutorial/images/create-simulation-19.png" width="512" height="360"> </td>
     <td> An <i>InformationPopup</i> appears showing that the simulation results files have been converted.
          <br><br>
          Select the <i>InformationPopup</i> <b>OK</b> <i>Button</i>. 

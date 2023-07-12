@@ -4,7 +4,7 @@
 Changing the principal planes scan slice changes the changes the location of the crosshairs in the 2D views and vice versa.
 
 <figure>
-  <img class="svImg svImgSm"  src="quickguide/gui/images/image-navigator.png"> 
+  <img class="svImg svImgSm"  src="/documentation/quickguide/gui/images/image-navigator.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
@@ -16,37 +16,37 @@ Changing the principal planes scan slice changes the changes the location of the
   </tr>
 
   <tr>
-    <td><img src="quickguide/gui/images/image-navigator-sbox-1.png" width="63" height="27"> </td>
+    <td><img src="/documentation/quickguide/gui/images/image-navigator-sbox-1.png" width="63" height="27"> </td>
     <td> Changes the sagittal plane scan slice using image coordinates </td>
   </tr>
 
   <tr>
-    <td><img src="quickguide/gui/images/image-navigator-sbox-2.png" width="63" height="27"> </td>
+    <td><img src="/documentation/quickguide/gui/images/image-navigator-sbox-2.png" width="63" height="27"> </td>
     <td> Changes the coronal plane scan slice using image coordinates </td>
   </tr>
 
   <tr>
-    <td><img src="quickguide/gui/images/image-navigator-sbox-3.png" width="63" height="27"> </td>
+    <td><img src="/documentation/quickguide/gui/images/image-navigator-sbox-3.png" width="63" height="27"> </td>
     <td> Changes the axial plane scan slice using image coordinates </td>
   </tr>
 
   <tr>
-    <td><img src="quickguide/gui/images/image-navigator-slider-1.png" width="250" height="27"> </td>
+    <td><img src="/documentation/quickguide/gui/images/image-navigator-slider-1.png" width="250" height="27"> </td>
     <td> Changes the axial plane scan slice using image slice number </td>
   </tr>
 
   <tr>
-    <td><img src="quickguide/gui/images/image-navigator-slider-2.png" width="245" height="22"> </td>
+    <td><img src="/documentation/quickguide/gui/images/image-navigator-slider-2.png" width="245" height="22"> </td>
     <td> Changes the sagittal plane scan slice using image slice number </td>
   </tr>
 
   <tr>
-    <td><img src="quickguide/gui/images/image-navigator-slider-3.png" width="245" height="22"> </td>
+    <td><img src="/documentation/quickguide/gui/images/image-navigator-slider-3.png" width="245" height="22"> </td>
     <td> Changes the coronal plane scan slice using image slice number </td>
   </tr>
 
   <tr>
-    <td><img src="quickguide/gui/images/image-navigator-time.png" width="245" height="22"> </td>
+    <td><img src="/documentation/quickguide/gui/images/image-navigator-time.png" width="245" height="22"> </td>
     <td> Changes the time step for time-resolved image data. </td>
   </tr>
 </table>

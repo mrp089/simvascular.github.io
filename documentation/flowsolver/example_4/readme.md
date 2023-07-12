@@ -23,7 +23,7 @@ inflow: Thickness: 0.2
 outlet: Thickness: 0.1
 
 <figure>
-  <img class="svImg scImgMd" src="flowsolver/imgs/wallvariable.png">
+  <img class="svImg scImgMd" src="/documentation/flowsolver/imgs/wallvariable.png">
   <figcaption class="svCaption" > </figcaption>
 </figure>
 
@@ -41,12 +41,12 @@ To create data files:
 Different from Example 3, the step also solves variable thickness or Young’s modulus, and assign them to the wall, instead of giving uniform thickness or Young’s modulus. varwallprop.vtp and displacement.vtp are created, which show the thickness and Young's modulus, and initial displacement, respectively:
 
 <figure>
-  <img class="svImg svImgLg" src="flowsolver/imgs/varwallprop_paraview.png">
+  <img class="svImg svImgLg" src="/documentation/flowsolver/imgs/varwallprop_paraview.png">
   <figcaption class="svCaption" >Variable Wall Thickness in varwallprop.vtp </figcaption>
 </figure>
 
 <figure>
-  <img class="svImg svImgLg" src="flowsolver/imgs/disp_varwall_paraview.png">
+  <img class="svImg svImgLg" src="/documentation/flowsolver/imgs/disp_varwall_paraview.png">
   <figcaption class="svCaption" >Initial Displacement in displacement.vtp </figcaption>
 </figure>
 

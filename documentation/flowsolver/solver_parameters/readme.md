@@ -8,7 +8,7 @@ There are many parameters for flow solver, but you are only required to set expl
     Step Construction : 2 # standard two iterations, enough for constant  problems.
 
 <figure>
-  <img class="svImg svImgMd" src="flowsolver/imgs/solverparameters.png">
+  <img class="svImg svImgMd" src="/documentation/flowsolver/imgs/solverparameters.png">
   <figcaption class="svCaption" ></figcaption>
 </figure>
 

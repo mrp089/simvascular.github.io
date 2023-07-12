@@ -10,7 +10,7 @@ manage adding/removing <i>Tool</i> instances and changing some of the properties
 When creating a new <i>Project</i> the <i> Data Manager </i> displays a list of core <i>Tool Types</i> (Fig. 6).
 
 <figure>
-  <img class="svImg svImgSm"  src="quickguide/gui/images/data-manager-new-project.png">
+  <img class="svImg svImgSm"  src="/documentation/quickguide/gui/images/data-manager-new-project.png">
   <figcaption class="svCaption">Fig. 6 &nbsp The <i>Data Manager</i> of a new <i>Project</i> listing 
       the core <b>Images</b>, <b>Paths</b>, <b>Segmentations</b>, <b>Models</b>, <b>Meshes</b>, <b>Simulations</b>, 
       <b>svFSI</b>, and <b>ROMSimulations</b> <b>Tool Types</b>.
@@ -23,7 +23,7 @@ The <i> Data Manager </i> view of the
 created following the steps demonstrated in the <a href="#tutorial"> Tutorial</a> section is shown in Fig. 7.
 
 <figure>
-  <img class="svImg svImgSm"  src="quickguide/intro/images/demo-data-manager.png">
+  <img class="svImg svImgSm"  src="/documentation/quickguide/intro/images/demo-data-manager.png">
   <figcaption class="svCaption">Fig. 7 &nbsp An example of a <i>Project</i> displayed in the <i>Data Manager</i>.
       Instances of <i>Tools</i> added to the <i>Project</i> (e.g. <b>aorta</b>) are shown below the core <b>Images</b>, <b>Paths</b>,
       <b>Segmentations</b>, <b>Models</b>, <b>Meshes</b>, <b>Simulations</b>, <b>svFSI</b>, and
@@ -89,28 +89,28 @@ The <i> Data Manager </i> has two GUI controls that are selected with the left m
 
   <tr>
     <td> 
-      <img src="quickguide/gui/images/data-manager-gui-control-arrow-1.png" width="30" height="22">
+      <img src="/documentation/quickguide/gui/images/data-manager-gui-control-arrow-1.png" width="30" height="22">
     </td>
     <td> Selecting the arrow toggles the display of the <i>Tool</i> instances. <br><br>
          Double clicking on a <i>Tool Type</i> performs the same function.
     </td>
     <td> 
-      <b> Toggle off</b><img src="quickguide/gui/images/data-manager-gui-control-arrow-2.png" width="160" height="23"> <br> <br>
-      <b> Toggle on</b> <img src="quickguide/gui/images/data-manager-gui-control-arrow-3.png" width="160" height="70">
+      <b> Toggle off</b><img src="/documentation/quickguide/gui/images/data-manager-gui-control-arrow-2.png" width="160" height="23"> <br> <br>
+      <b> Toggle on</b> <img src="/documentation/quickguide/gui/images/data-manager-gui-control-arrow-3.png" width="160" height="70">
     </td>
   </tr>
 
   <tr>
     <td> 
-      <img src="quickguide/gui/images/data-manager-gui-control-box-1.png" width="30" height="22">
+      <img src="/documentation/quickguide/gui/images/data-manager-gui-control-box-1.png" width="30" height="22">
     </td>
     <td> Selecting the CheckBox toggles the display of <i>Tool</i> geometry in the <i>Display</i>. 
          The CheckBox changes to blue when on. <br> <br>
          Selecting the box for a <i>Tool Type</i> toggles the display for all instances of that <i>Tool</i>.
     </td>
     <td> 
-      <b> Toggle off</b><img src="quickguide/gui/images/data-manager-gui-control-box-3.png" width="160" height="70"> <br> <br>
-      <b> Toggle on</b> <img src="quickguide/gui/images/data-manager-gui-control-box-2.png" width="160" height="70">
+      <b> Toggle off</b><img src="/documentation/quickguide/gui/images/data-manager-gui-control-box-3.png" width="160" height="70"> <br> <br>
+      <b> Toggle on</b> <img src="/documentation/quickguide/gui/images/data-manager-gui-control-box-2.png" width="160" height="70">
     </td>
   </tr>
 </table> 
@@ -123,7 +123,7 @@ opens a menu containing options common to all <i>Tool Types</i> and additional o
 Specialized options are located at the bottom of a menu and are separated from the common options by a line (Fig 8.).
 
 <figure>
-  <img class="svImg svImgLg"  src="quickguide/gui/images/data-manager-type-menu.png"> 
+  <img class="svImg svImgLg"  src="/documentation/quickguide/gui/images/data-manager-type-menu.png"> 
   <figcaption class="svCaption"> Fig. 8 &nbsp The menu for a <b>Paths</b> Tool Type showing common options in the top portion
                                  of the menu (<b>Global Reinit</b> through <b>Paste</b>) and specialized options (<b>Create Path</b>,
                                  <b>Import Paths</b> and <b>Export All as Legacy Paths</b>) separated from them by a line. 
@@ -212,7 +212,7 @@ The following table lists each <i>Tool Type</i> with a brief description of each
 
   <tr>
     <td> Images </td>
-    <td> <img src="quickguide/gui/images/data-manager-image-type-menu.png" width="150" height="200"> </td>
+    <td> <img src="/documentation/quickguide/gui/images/data-manager-image-type-menu.png" width="150" height="200"> </td>
     <td> 
       <i>Add/Replace Image</i> - Add or replace the image volume data for the <i>Project</i>. Image data can be DICOM or VTK VTI files.
       <br><br>
@@ -224,7 +224,7 @@ The following table lists each <i>Tool Type</i> with a brief description of each
 
   <tr>
     <td> Paths </td>
-    <td> <img src="quickguide/gui/images/data-manager-paths-type-menu.png" width="150" height="200"> </td>
+    <td> <img src="/documentation/quickguide/gui/images/data-manager-paths-type-menu.png" width="150" height="200"> </td>
     <td>
       <i> Create Path </i> - Create an instance of a <i>Paths</i> tool. <i>Paths</i> are then created from <i>Image</i> tool data.<br>
       <i> Import Paths </i> - Create an instance of a <i>Paths</i> tool from a <i>Path</i> data contained in SimVascular .pth or legacy .paths file. <br>
@@ -234,7 +234,7 @@ The following table lists each <i>Tool Type</i> with a brief description of each
 
   <tr>
     <td> Segmentations </td>
-    <td> <img src="quickguide/gui/images/data-manager-seg-type-menu.png" width="150" height="200"> </td>
+    <td> <img src="/documentation/quickguide/gui/images/data-manager-seg-type-menu.png" width="150" height="200"> </td>
     <td>
       <i> Create Contour Group </i> - Create an instance of a <i>Segmentations</i> tool. <i>Segmentations</i> are created using geometry from a <i>Paths</i> tool.  <br>
       <i> Import Segmentations </i> - Create an instance of a <i>Segmentations</i> tool from the data contained in a SimVascular .ctgr file. <br>
@@ -245,7 +245,7 @@ The following table lists each <i>Tool Type</i> with a brief description of each
 
   <tr>
     <td> Models </td>
-    <td> <img src="quickguide/gui/images/data-manager-models-type-menu.png" width="150" height="200"> </td>
+    <td> <img src="/documentation/quickguide/gui/images/data-manager-models-type-menu.png" width="150" height="200"> </td>
     <td>
       <i> Create Model </i> - Create an instance of a <i>Models</i> tool. 
                               A <i>Model</i> is created using segmentation geometry from one or more <i>Segmentations</i> tools. <br>
@@ -263,7 +263,7 @@ The following table lists each <i>Tool Type</i> with a brief description of each
 
   <tr>
     <td> Meshes </td>
-    <td> <img src="quickguide/gui/images/data-manager-meshes-type-menu.png" width="150" height="200"> </td>
+    <td> <img src="/documentation/quickguide/gui/images/data-manager-meshes-type-menu.png" width="150" height="200"> </td>
     <td>
       <i> Create Mesh </i> - Create an instance of a <i>Meshes</i> tool. 
                              A mesh is created using a model from a <i>Models</i> tool. <br>
@@ -278,7 +278,7 @@ The following table lists each <i>Tool Type</i> with a brief description of each
 
   <tr>
     <td> Simulations </td> 
-    <td> <img src="quickguide/gui/images/data-manager-sims-type-menu.png" width="150" height="200"> </td>
+    <td> <img src="/documentation/quickguide/gui/images/data-manager-sims-type-menu.png" width="150" height="200"> </td>
     <td>
       <i> Create Simulation job </i> - Create an instance of a <i>Simulations</i> tool.     
                              A CFD simulation job is created using a model from a <i>Models</i> tool and a mesh from 
@@ -288,7 +288,7 @@ The following table lists each <i>Tool Type</i> with a brief description of each
 
   <tr>
     <td> svFSI </td>
-    <td> <img src="quickguide/gui/images/data-manager-fsi-type-menu.png" width="150" height="200"> </td>
+    <td> <img src="/documentation/quickguide/gui/images/data-manager-fsi-type-menu.png" width="150" height="200"> </td>
     <td>
       <i> Create svFSI job </i> - Create an instance of a <i>svFSI</i> tool.
                                   A multi-physics simulation job is created using a model from a <i>Models</i> tool and 
@@ -298,7 +298,7 @@ The following table lists each <i>Tool Type</i> with a brief description of each
 
   <tr>
     <td> ROMSimulations </td>
-    <td> <img src="quickguide/gui/images/data-manager-rom-type-menu.png" width="150" height="200"> </td>
+    <td> <img src="/documentation/quickguide/gui/images/data-manager-rom-type-menu.png" width="150" height="200"> </td>
     <td>
       <i> Create ROM Simulation job </i> - Create an instance of a <i>ROMSimulation</i> tool.
                                            A reduced-order model (ROM) simulation job is created using a model from a 

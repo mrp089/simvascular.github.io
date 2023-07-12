@@ -3,7 +3,7 @@
 The <i>MenuBar</i> contains _File_, _Edit_, _Tools_, _Window_ and _Help_ menu items.
 
 <figure>
-  <img class="svImg svImgMd"  src="quickguide/gui/images/menus.png"> 
+  <img class="svImg svImgMd"  src="/documentation/quickguide/gui/images/menus.png"> 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 

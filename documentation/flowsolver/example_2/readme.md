@@ -17,7 +17,7 @@ Double click the row of "inflow", Analytic Type: plug
 Double click the row of "outlet", BC Type: RCR, Rp,C,Rd: 121 0.000015 1212
 
 <figure>
-  <img class="svImg scImgMd" src="flowsolver/imgs/outletrcr.png">
+  <img class="svImg scImgMd" src="/documentation/flowsolver/imgs/outletrcr.png">
   <figcaption class="svCaption" > </figcaption>
 </figure>
 

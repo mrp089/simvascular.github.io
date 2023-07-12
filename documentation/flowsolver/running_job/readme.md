@@ -18,7 +18,7 @@ restart.0.1 => restart.0.1, restart.0.2, ..., restart.0.8
 During the job running, the progress of simulation is shown at "Job Status" and the status bar at the the bottom of the main window:
 
 <figure>
-  <img class="svImg scImgMd" src="flowsolver/imgs/simulationstatus.png">
+  <img class="svImg scImgMd" src="/documentation/flowsolver/imgs/simulationstatus.png">
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
