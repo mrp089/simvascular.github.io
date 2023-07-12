@@ -1,11 +1,11 @@
 <h2 id="tutorial_starting_simvascular"> Starting SimVascular </h2>
 
 Once SimVascular has been <a href="https://github.com/SimVascular/SimVascular/wiki/wiki_for_users">Installed</a> it is started
-by selecting the <img src="/documentation/quickguide/tutorial/images/sv-start-icon.png" width="18" height="18"> icon from a
+by selecting the <img src="../documentation/quickguide/tutorial/images/sv-start-icon.png" width="18" height="18"> icon from a
 platform's list of applications (Fig. 1).
 
 <figure>
-  <img class="svImg svImgLg"  src="/documentation/quickguide/tutorial/images/sv-start.png">
+  <img class="svImg svImgLg"  src="../documentation/quickguide/tutorial/images/sv-start.png">
   <figcaption class="svCaption"> Fig. 1 &nbsp Starting the SimVascular application. </figcaption>
 </figure>
 

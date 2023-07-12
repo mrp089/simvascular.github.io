@@ -30,7 +30,7 @@ Create an instance of a <i>Meshes Tool</i> named <b>aorta-iliacs</b> used to cre
   </tr>
 
   <tr>
-    <td><img src="/documentation/quickguide/tutorial/images/create-mesh-1.png" width="512" height="360"> </td>
+    <td><img src="../documentation/quickguide/tutorial/images/create-mesh-1.png" width="512" height="360"> </td>
     <td> Select the <i>Meshes</i> <i>Tool</i> in the <i>Data Manager</i> with the right mouse button. 
          <br><br>
          Select the <b>Create Mesh</b> menu option.
@@ -38,7 +38,7 @@ Create an instance of a <i>Meshes Tool</i> named <b>aorta-iliacs</b> used to cre
   </tr>
 
   <tr>
-    <td><img src="/documentation/quickguide/tutorial/images/create-mesh-2.png" width="512" height="360"> <br><br>
+    <td><img src="../documentation/quickguide/tutorial/images/create-mesh-2.png" width="512" height="360"> <br><br>
     </td>
     <td> A <b>Create Mesh</b> <i>DiaglogBox</i> appears. 
          <br><br>
@@ -55,7 +55,7 @@ Create an instance of a <i>Meshes Tool</i> named <b>aorta-iliacs</b> used to cre
   </tr>
 
   <tr>
-    <td> <img src="/documentation/quickguide/tutorial/images/create-mesh-3.png" width="512" height="360"> </td>
+    <td> <img src="../documentation/quickguide/tutorial/images/create-mesh-3.png" width="512" height="360"> </td>
     <td> A <i>Data Node</i> named <b>aorta-iliacs</b> (an instance of a <i>Meshes Tool</i>) is created under the
          <i>Data Manager</i> <i>Meshes Tool</i> type.
 
@@ -85,33 +85,33 @@ The section demonstrates how to generate a finite element mesh from the <b>aorta
   </tr>
 
   <tr>
-    <td><img src="/documentation/quickguide/tutorial/images/create-mesh-4.png" width="512" height="360"> </td>
+    <td><img src="../documentation/quickguide/tutorial/images/create-mesh-4.png" width="512" height="360"> </td>
     <td> Some GUI controls: 
          <br><br>
          <ul style="list-style-type:none;">
-           <li> <img src="/documentation/quickguide/tutorial/images/mesh-gui-info.png" width="86" height="24"> - Displays a 
+           <li> <img src="../documentation/quickguide/tutorial/images/mesh-gui-info.png" width="86" height="24"> - Displays a 
                 <i>InformationPopup</i> showing the number of elements generated for the current mesh. </li> <br>
-           <li> <img src="/documentation/quickguide/tutorial/images/mesh-gui-run.png" width="90" height="23"> - Run the mesh generator. 
+           <li> <img src="../documentation/quickguide/tutorial/images/mesh-gui-run.png" width="90" height="23"> - Run the mesh generator. 
                 </li> <br>
-           <li> <img src="/documentation/quickguide/tutorial/images/mesh-gui-estimate.png" width="73" height="25"> - Estimate the element
+           <li> <img src="../documentation/quickguide/tutorial/images/mesh-gui-estimate.png" width="73" height="25"> - Estimate the element
                 size used to control mesh resolution. </li> <br>
          </ul>
          <br><br>
-         Select the <img src="/documentation/quickguide/tutorial/images/mesh-gui-estimate.png" width="73" height="25"> <i>Button</i>.
+         Select the <img src="../documentation/quickguide/tutorial/images/mesh-gui-estimate.png" width="73" height="25"> <i>Button</i>.
          <br><br>
-         Select the <img src="/documentation/quickguide/tutorial/images/mesh-gui-run.png" width="90" height="23"> <i>Button</i>.
+         Select the <img src="../documentation/quickguide/tutorial/images/mesh-gui-run.png" width="90" height="23"> <i>Button</i>.
          <br><br>
          Select the <b>Yes</b> <i>Button</i> on the <i>QuestionPopup</i> asking to continue.
     </td>
   </tr>
 
   <tr>
-    <td><img src="/documentation/quickguide/tutorial/images/create-mesh-5.png" width="512" height="360"> </td>
+    <td><img src="../documentation/quickguide/tutorial/images/create-mesh-5.png" width="512" height="360"> </td>
     <td> A <i>InformationPopup</i> is displayed showing the number of elements generated.
          <br><br>
          Press the <i>InformationPopup</i> <b>OK</b> <i>Button</i>.
          <br><br>
-         Press the <img src="/documentation/quickguide/gui/images/gui-save-icon.png" width="40" height="35">
+         Press the <img src="../documentation/quickguide/gui/images/gui-save-icon.png" width="40" height="35">
          icon in the <i>ToolBar</i> to save the <i>Project</i>.
     </td>
   </tr>

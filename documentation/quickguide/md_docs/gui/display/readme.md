@@ -7,7 +7,7 @@ context with medical image data. This enables matching geometric data (e.g. mode
 The layout of the <i>Display</i> windows and its GUI components are shown in Fig. 5.
 
 <figure>
-  <img class="svImg svImgMd"  src="/documentation/quickguide/images/display.png"> 
+  <img class="svImg svImgMd"  src="../documentation/quickguide/images/display.png"> 
   <figcaption class="svCaption"> Fig. 5 &nbsp The standard four-window view comprising three 2D and one 3D views.
 </figure>
 
@@ -92,7 +92,7 @@ the mouse cursor.
 <h3 id="window_menus"> Window Menus</h3>
 
 The three icons
-<img src="/documentation/quickguide/gui/images/display_icon_menu.png" width="70" height="30"> </td> displayed in the upper right
+<img src="../documentation/quickguide/gui/images/display_icon_menu.png" width="70" height="30"> </td> displayed in the upper right
 corner each window provides options to customize the view and crosshair behavior when selected using the left mouse button.
 
 <table class="table table-bordered" style="width:100%">
@@ -103,9 +103,9 @@ corner each window provides options to customize the view and crosshair behavior
   </tr>
 
   <tr>
-    <td><img src="/documentation/quickguide/gui/images/window-icon-1.png" width="28" height="24"> </td>
+    <td><img src="../documentation/quickguide/gui/images/window-icon-1.png" width="28" height="24"> </td>
     <td>
-       <img src="/documentation/quickguide/gui/images/window-menu-1.png" width="180" height="180"> 
+       <img src="../documentation/quickguide/gui/images/window-menu-1.png" width="180" height="180"> 
     </td>
     <td> 
       <ul style="list-style-type:none;"> 
@@ -115,7 +115,7 @@ corner each window provides options to customize the view and crosshair behavior
         <li> <b> Crosshair rotation </b> - Select to toggle using crosshairs to rotate two planes </li>
         <li> <b> Coupled crosshair rotation </b> - Select to toggle using crosshairs to rotate planes both planes </li>
         <li> <b> Swivel mode </b> - Select to toggle using crosshairs to rotate planes in about all three axes </li>
-        <li> <img src="/documentation/quickguide/gui/images/window-ts-slider.png" width="140" height="30"> 
+        <li> <img src="../documentation/quickguide/gui/images/window-ts-slider.png" width="140" height="30"> 
              - The <b>T</b>thicker <b>S</b>slices slider controls how many slices around the current one are used for a maximum intensity projection </li>
       </ul>
     </td>
@@ -123,23 +123,23 @@ corner each window provides options to customize the view and crosshair behavior
   </tr>
 
   <tr>
-    <td><img src="/documentation/quickguide/gui/images/window-icon-2.png" width="28" height="24"> </td>
+    <td><img src="../documentation/quickguide/gui/images/window-icon-2.png" width="28" height="24"> </td>
     <td> Changes the view layout </td>
     <td> The view is changed to a full-screen layout for the window and plane the mouse cursor is in.
-         When selected, it changes to <img src="/documentation/quickguide/gui/images/window-icon-4.png" width="28" height="24">
+         When selected, it changes to <img src="../documentation/quickguide/gui/images/window-icon-4.png" width="28" height="24">
      </td>
   </tr>
 
   <tr>
-    <td><img src="/documentation/quickguide/gui/images/window-icon-4.png" width="28" height="24"> </td>
+    <td><img src="../documentation/quickguide/gui/images/window-icon-4.png" width="28" height="24"> </td>
     <td> Changes the view layout </td>
     <td> Expands the corresponding window to full screen within the four window view </td>
   </tr>
 
   <tr>
-    <td><img src="/documentation/quickguide/gui/images/window-icon-3.png" width="28" height="24"> </td>
+    <td><img src="../documentation/quickguide/gui/images/window-icon-3.png" width="28" height="24"> </td>
     <td>
-       <img src="/documentation/quickguide/gui/images/window-menu-2.png" width="180" height="180"> 
+       <img src="../documentation/quickguide/gui/images/window-menu-2.png" width="180" height="180"> 
     </td>
     <td> 
       <ul style="list-style-type:none;"> 
