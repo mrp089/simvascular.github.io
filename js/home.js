@@ -160,54 +160,10 @@ $("#iconForSkip").click(function() {
     toggleMenu();
 });
 
-$("#skipToInstitutions").click(function() {
-    smoothScrollingToTag("institutions");
-    toggleMenu(true);
-});
-
-$("#skipToGallery").click(function() {
-    smoothScrollingToTag("gallery");
-    toggleMenu(true);
-});
-
-$("#skipToFeatures").click(function() {
-    smoothScrollingToTag("features");
-    toggleMenu(true);
-});
-
-$("#skipToDownload").click(function() {
-    smoothScrollingToTag("download");
-    toggleMenu(true);
-});
-
-$("#skipToDocumentation").click(function() {
-    smoothScrollingToTag("documentation");
-    toggleMenu(true);
-});
-
-$("#skipToSocials").click(function() {
-    smoothScrollingToTag("socials");
-    toggleMenu(true);
-});
-
-$("#skipToRepository").click(function() {
-    smoothScrollingToTag("repository");
-    toggleMenu(true);
-});
-
-$("#skipToWorkshops").click(function() {
-    smoothScrollingToTag("workshops");
-    toggleMenu(true);
-});
-
-$("#skipToTeam").click(function() {
-    smoothScrollingToTag("team");
-    toggleMenu(true);
-});
-
-$("#skipToContact").click(function() {
-    smoothScrollingToTag("contact");
-    toggleMenu(true);
+$(".skipTo").click(function() {
+    var classes = $(this).attr("class");
+    var id = classes.split(/\s+/)[1];
+    clickLink("#" + id, false);
 });
 
 $("#licenseTerms").click(function() {
