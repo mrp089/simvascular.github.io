@@ -60,7 +60,7 @@ p {
     text-align: center;
 }
 
-.innerHeader, .featuresHeader
+.innerHeader, .applicationsHeader
 {
     width: 100%;
     display: block;
@@ -72,7 +72,7 @@ p {
     padding-right: 20px;
 }
 
-.downloadLinks, .featuresLinks, .docLinks {
+.downloadLinks, .docLinks {
     padding: 15px;
     display: block;
     font-size: 25px;
@@ -168,12 +168,36 @@ p {
     color: white;
 }
 
+.hero_title {
+    font-size: 75px;
+    width: fit-content;
+    text-align: left;
+    margin: auto;
+}  
+
+@media only screen and (max-width: 1000px) {
+    .hero_title {
+        font-size: 60px;
+    }  
+}
+
+@media only screen and (max-width: 750px) {
+    .hero_title {
+        font-size: 40px;
+    }  
+}
+
+@media only screen and (max-width: 450px) {
+    .hero_title {
+        font-size: 25px;
+    }  
+}
 
 .firstHeader {
     display: block;
     float: left;
-    height: 50%;
-    min-height: 350px;
+    /* height: 25%;
+    min-height: 150px; */
     width: 100%;
     padding-top: 12%;
     padding-bottom: 12%;
@@ -183,8 +207,8 @@ p {
 
 @media only screen and (max-width: 576px){
     .firstHeader {
-        padding-top: 25px;
-        padding-bottom: 25px;
+        padding-top: 16%;
+        padding-bottom: 16%;
     }
 }
 
@@ -192,7 +216,7 @@ p {
     float: center;
     margin: auto;
     width: 65%;
-    min-width: 350px;
+    /* min-width: 350px; */
 }
 
 .introDescription p, .introDescription h1 {
@@ -645,14 +669,49 @@ th:hover {
 
 /*------------------------------------------ 
 
-                FEATURES
+                CAPABILITIES
 
 ---------------------------------------------*/
-.featuresHeader h2 {
+.checklist ul {
+    list-style-type: none;
+    color: var(--black);
+    padding: 0;
+}
+
+.checklist .row {
+    width: fit-content;
+    margin: auto;
+}
+
+.checklist li {
+    text-align: left;
+    line-height: 2em;
+    font-size: 20px;
+    padding-left: 15px;
+}
+
+.checklist li.capabilitiesHeader {
+    font-weight: bold;
+    font-size: 22px;
+    padding-left: 0px;
+    text-align: center;
+}
+
+.fa-check {
+    padding-right: 15px;
+    color: green;
+}
+
+/*------------------------------------------ 
+
+                APPLICATIONS
+
+---------------------------------------------*/
+.applicationsHeader h2 {
     text-transform: none !important;
 }
 
-.featuresText {
+.applicationsText {
     text-align: center;
     /* width: 75%; */
     padding-left: 5%;

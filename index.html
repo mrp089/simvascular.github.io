@@ -100,35 +100,79 @@
     </div>
   </section>
   <section class="body">
-    <div style="height: 75%">
     <div class="firstHeader" style="height: 100%">
       <div class="introDescription">
-        <h1 style="text-align: center;">Simvascular</h1>
-        <p class="paddingIntro">The only fully open-source software package providing a complete pipeline from medical image data segmentation to patient specific blood flow simulation and analysis.</p>
-        <p class="paddingIntro">The <a target="_blank" href="https://gateway.simvascular.org/">SimVascular Supercomputing Gateway</a> provides access to High-Performance Computing (HPC) clusters for running simulations using SimVascular CFD solvers. Simulations benefit from the performance levels that only large-scale HPC systems can offer and typically run an order of magnitude faster than on most workstations.</p>
+        <h1 class="hero_title">Simvascular</h1>
       </div>
     </div>
-  </div>
-  <div>
+  
+    <div>
       <div style="margin-top: 15px" class="newSectionHeader">
-        <h1 id="features">Applications</h1>
+        <h1 id="capabilities">Its Capabilities</h1>
+      </div>
+      <div class="newSectionContent">
+        <p class="subText">
+          Simvascular is the only fully open-source software package providing a complete pipeline 
+          from medical image data segmentation to patient specific blood flow simulation 
+          and analysis.
+        </p>
+        <div class="checklist container">
+          <div class="row gx-5" style="width: 100%;">
+                <ul class="col">
+                  <li class="capabilitiesHeader">
+                    Model construction
+                  </li>
+                  <li>
+                    <i class="fa-sharp fa-solid fa-check"></i>
+                    Manual path identification and segmentation
+                  </li>
+                  <li>
+                    <i class="fa-sharp fa-solid fa-check"></i>
+                    Automatic segmentation using ML
+                  </li>
+                  <li>
+                    <i class="fa-sharp fa-solid fa-check"></i>
+                    Automatic surface model generation
+                  </li>
+                </ul>
+                <ul class="col">
+                  <li class="capabilitiesHeader">
+                    Reduced ordered modeling
+                  </li>
+                  <li>
+                    <i class="fa-sharp fa-solid fa-check"></i>
+                    Zero-dimensional solver
+                  </li>
+                  <li>
+                    <i class="fa-sharp fa-solid fa-check"></i>
+                    One-dimensional solver
+                  </li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div class="everyOtherSection">
+      <div style="margin-top: 15px" class="newSectionHeader">
+        <h1 id="applications">Suite of Applications</h1>
       </div>
       <div class="newSectionContent">
         <div class="row justify-content-center">
           <div class="col-lg-4 col-md-6 col-12">
-            <div class="featuresHeader">
+            <div class="applicationsHeader">
               <h2>SimVascular</h2>
             </div>
-            <div class="featuresText">
+            <div class="applicationsText">
               <p> An interactive application for implementing all components
                 of the image-based pipeline</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 col-12">
-            <div class="featuresHeader">
+            <div class="applicationsHeader">
               <h2>svSolver</h2>
             </div>
-            <div class="featuresText">
+            <div class="applicationsText">
               <p>A parallel computational fluid dynamics (CFD) finite element
                 solver incorporating boundary conditions useful for blood flow
                 simulations</p>
@@ -137,317 +181,317 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-lg-4 col-md-6 col-12">
-            <div class="featuresHeader">
+            <div class="applicationsHeader">
               <h2>svFSI</h2>
             </div>
-            <div class="featuresText">
+            <div class="applicationsText">
               <p>A parallel multi-physics finite element solver designed for
                 computational modeling of the cardiovascular system </p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 col-12">
-            <div class="featuresHeader">
+            <div class="applicationsHeader">
               <h2>svOneDSolver</h2>
             </div>
-            <div class="featuresText">
+            <div class="applicationsText">
               <p>A reduced-order solver for the hemodynamics in
                 deformable 1D vascular networks</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 col-12">
-            <div class="featuresHeader">
+            <div class="applicationsHeader">
               <h2>svZeroDSolver</h2>
             </div>
-            <div class="featuresText">
+            <div class="applicationsText">
               <p>A reduced-order solver for the hemodynamics in zerodimensional 
                 lumped parameter models of vascular networks</p>
             </div>
           </div>
         </div>
       </div>
-      <a style="text-align: center" class="featuresLinks" href="" target="_blank">Click here to learn more.</a>
+    </div>
+  <!-- </div> -->
+
+  <div>
+    <div class="newSectionHeader">
+      <h1 id="download">Download Simvascular</h1>
+    </div>
+    <div class="newSectionContent">
+      <div class="innerHeader" style="height: 100%;">
+        <div>  
+              <h2><i class="iconInHeader fa-regular fa-user"></i>Users</h2>
+        </div>
+        <div>
+              <a class="downloadLinks" target="_blank" href="https://simtk.org/frs/index.php?group_id=188">Download Installation Package</a>
+              <a class="downloadLinks" target="_blank" href="https://simtk.org/frs/index.php?group_id=188">Download Example Projects</a>
+        </div><br>
+        <div>
+              <h2><i class="iconInHeader fa-solid fa-laptop-code"></i>Developers</h2>
+        </div>
+        <div>
+              <a style="margin-bottom: 30px;" class="downloadLinks" target="_blank" href="https://github.com/SimVascular/SimVascular">Source Code Repository</a>
+        </div>
+      </div>
+      <div>
+        <div style="width: 100%">
+            <h4 class="media-heading centerTitleText" id="licenseTerms">License Terms</h4><br>
+        </div>
+        <div class="media-body" id="toggleLicense" style="display: none">
+            <div class="BioPar justifiedText">
+              <h6 class="media-heading text-Left top-buffer">SimVascular components svModel, svMesh, svPre, and svPost are provided under the full BSD license subject to the terms below:</h6>
+              <p class="LegalStuff">
+                Copyright © 1998-2007 Stanford University, Charles Taylor, Nathan Wilson, Ken Wang. See SimVascular Acknowledgements file for additional contributors to the source code.
+                <br>
+                <br>
+                Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+                <br>
+                <br>
+                The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+                <br>
+                <br>
+                THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+              </p>
+              <h6 class="media-heading text-Left">The SimVascular solver, including svSolver and svLS, is provided under a modified BSD-license subject to the permissions below:</h6>
+              <p class="LegalStuff">
+                This software is Copyright © 2014 The Regents of the University of California. All Rights Reserved.
+                Permission to copy, modify, and distribute this software and its documentation for educational, research and non-profit purposes, without fee, and without a  written agreement is hereby granted, provided that the above copyright notice, this paragraph and the following three paragraphs appear in all copies.
+                <br>
+                <br>
+                Permission to make commercial use of this software may be obtained by contacting:
+                <br>
+                <br>
+                Technology Transfer Office<br>
+                9500 Gilman Drive, Mail Code 0910<br>
+                University of California<br>
+                La Jolla, CA 92093-0910<br>
+                (858) 534-5815<br>
+                invent@ucsd.edu
+                <br>
+                <br>
+                This software program and documentation are copyrighted by The Regents of the University of California. The software program and documentation are supplied "as is", without any accompanying services from The Regents. The Regents does not warrant that the operation of the program will be uninterrupted or error-free. The end-user understands that the program was developed for research purposes and is advised not to rely exclusively on the program for any reason.
+                <br>
+                <br>
+                IN NO EVENT SHALL THE UNIVERSITY OF CALIFORNIA BE LIABLE TO ANY PARTY FOR DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, INCLUDING LOST PROFITS, ARISING OUT OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF THE UNIVERSITY OF CALIFORNIA HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. THE  UNIVERSITY OF CALIFORNIA SPECIFICALLY DISCLAIMS ANY WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE SOFTWARE PROVIDED HEREUNDER IS ON AN "AS IS" BASIS, AND THE UNIVERSITY OF CALIFORNIA HAS NO OBLIGATIONS TO PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
+              </p>
+              <h6 class="media-heading text-Left">Licensing terms for external open source packages</h6>
+              <p class="LegalStuff">
+                ITK: <a target="_blank" href="https://www.itk.org/ITK/project/license.html">https://www.itk.org/ITK/project/license.html</a><br>
+                VTK: <a target="_blank" href="https://www.vtk.org/VTK/project/license.html">https://www.vtk.org/VTK/project/license.html</a><br>
+                Tetgen: <a target="_blank" href="https://wias-berlin.de/software/tetgen/1.5/agpl-3.0-standalone.html">https://wias-berlin.de/software/tetgen/1.5/agpl-3.0-standalone.html</a><br>
+              </p>
+              <h6 class="media-heading text-Left">Commercial components</h6>
+              <p class="LegalStuff">
+                MeshSim users should contact simmetrix for licensing information.
+              </p>
+              <h6 class="media-heading text-Left">Additional license information</h6>
+              <p class="LegalStuff">
+                Please see the additional license information contained in the SimVascular source code.
+              </p>
+            </div>
+        </div>
+      </div>
     </div>
   </div>
 
-    <div class="everyOtherSection">
-      <div class="newSectionHeader">
-        <h1 id="download">Download Simvascular</h1>
+  <div class="everyOtherSection">
+    <div class="newSectionHeader">
+      <h1 id="documentation">Documentation</h1>
+    </div>
+    <div class="newSectionContent" style="text-align:center">
+      <div class="containingDocsSection col-md-6 col-12">
+        <div class="docHeader">
+          <h2 class="media-heading">
+            <i class="iconInHeader fa-regular fa-user"></i>
+            User Guides
+          </h2>
+        </div>
+        <div class="docSection">
+          <div class="col-md-6 col-12">
+            <a class="docLinks" target="_blank" href="https://github.com/SimVascular/SimVascular/wiki//user_simvascular_software_suite_install">Installing SimVascular</a><br>
+            <a class="docLinks" target="_blank" href="documentation/quickguide.html">Getting Started</a><br>
+            <a class="docLinks" target="_blank" href="documentation/modeling.html">Modeling Guide</a><br>
+            <a class="docLinks" target="_blank" href="documentation/meshing.html">Meshing Guide</a><br>
+            <a class="docLinks" target="_blank" href="documentation/flowsolver.html">Simulation Guide</a><br>
+            <a class="docLinks" target="_blank" href="documentation/svfsi.html">svFSI Guide</a><br>
+          </div>
+          <div class="col-md-6 col-12">
+            <a class="docLinks" target="_blank" href="documentation/simcardio.html">SimCardio Guide</a><br>
+            <a class="docLinks" target="_blank" href="documentation/rom_simulation.html">ROM Simulation Guide</a><br>
+            <a class="docLinks" target="_blank" href="documentation/genbc.html">General B.C. Guide</a><br>
+            <a class="docLinks" target="_blank" href="documentation/python_interface.html">Python Interface</a><br>
+            <a class="docLinks" target="_blank" href="documentation/references.html">References</a><br>
+            <a class="docLinks" target="_blank" href="https://github.com/SimVascular/SimVascular/wiki/wiki_for_users">FAQ &amp; Wiki</a>
+          </div>
+        </div>
       </div>
-      <div class="newSectionContent">
-        <div class="innerHeader" style="height: 100%;">
-          <div>  
-                <h2><i class="iconInHeader fa-regular fa-user"></i>Users</h2>
-          </div>
-          <div>
-                <a class="downloadLinks" target="_blank" href="https://simtk.org/frs/index.php?group_id=188">Download Installation Package</a>
-                <a class="downloadLinks" target="_blank" href="https://simtk.org/frs/index.php?group_id=188">Download Example Projects</a>
-          </div><br>
-          <div>
-                <h2><i class="iconInHeader fa-solid fa-laptop-code"></i>Developers</h2>
-          </div>
-          <div>
-                <a style="margin-bottom: 30px;" class="downloadLinks" target="_blank" href="https://github.com/SimVascular/SimVascular">Source Code Repository</a>
+      <div class="containingDocsSection col-md-6 col-12">
+        <div class="docHeader">
+          <h2 class="media-heading">
+            <i class="iconInHeader fa-solid fa-stethoscope" style="padding-right: 15px"></i>
+            Clinical Case Studies</h2> 
+        </div>
+        <div class="docSection">
+          <a class="docLinks" target="_blank" href="clinical/coronary.html">Coronary Normal</a><br>
+          <a class="docLinks" target="_blank" href="clinical/aortofemoral1.html">Aortofemoral Normal - 1</a><br>
+          <a class="docLinks" target="_blank" href="clinical/aortofemoral2.html">Aortofemoral Normal - 2</a><br>
+          <a class="docLinks" target="_blank" href="clinical/pulmonary.html">Healthy Pulmonary</a>
+        </div>
+        <div class="docHeader ">
+          <h2 class="media-heading"><i class="iconInHeader fa-solid fa-laptop-code">
+          </i>Developer Guides</h2>
+        </div>
+        <div class="docSection">
+          <a class="docLinks" target="_blank" href="https://github.com/SimVascular/SimVascular/wiki/wiki_for_developers">Building SimVascular from Source</a>
+        </div>
+      </div>
+    </div>    
+  </div>
+
+  <div>
+    <div class="newSectionHeader">
+      <h1 id="acknowledgements">Get Support</h1>
+    </div>
+    <div class="newSectionContent">
+      <p>forum</p>
+      <p>source code</p>
+      <p>email</p>
+    </div>
+  </div>
+
+  <div class="everyOtherSection">
+    <div class="newSectionHeader">
+      <h1 id="gallery">Gallery</h1>
+    </div>
+
+    <div class="newSectionContent">
+      <div class="col-sm-6 col-12">
+        <div class="col-sm-6 col-12 headerForGalleryContainer">
+          <div class="headerForGallery">
+            <h2>
+              <i class="fa-solid fa-image" style="padding-right: 20px"></i>
+              Pictures
+            </h2>
           </div>
         </div>
         <div>
-          <div style="width: 100%">
-              <h4 class="media-heading centerTitleText" id="licenseTerms">License Terms</h4><br>
-          </div>
-          <div class="media-body" id="toggleLicense" style="display: none">
-              <div class="BioPar justifiedText">
-                <h6 class="media-heading text-Left top-buffer">SimVascular components svModel, svMesh, svPre, and svPost are provided under the full BSD license subject to the terms below:</h6>
-                <p class="LegalStuff">
-                  Copyright © 1998-2007 Stanford University, Charles Taylor, Nathan Wilson, Ken Wang. See SimVascular Acknowledgements file for additional contributors to the source code.
-                  <br>
-                  <br>
-                  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-                  <br>
-                  <br>
-                  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-                  <br>
-                  <br>
-                  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-                </p>
-                <h6 class="media-heading text-Left">The SimVascular solver, including svSolver and svLS, is provided under a modified BSD-license subject to the permissions below:</h6>
-                <p class="LegalStuff">
-                  This software is Copyright © 2014 The Regents of the University of California. All Rights Reserved.
-                  Permission to copy, modify, and distribute this software and its documentation for educational, research and non-profit purposes, without fee, and without a  written agreement is hereby granted, provided that the above copyright notice, this paragraph and the following three paragraphs appear in all copies.
-                  <br>
-                  <br>
-                  Permission to make commercial use of this software may be obtained by contacting:
-                  <br>
-                  <br>
-                  Technology Transfer Office<br>
-                  9500 Gilman Drive, Mail Code 0910<br>
-                  University of California<br>
-                  La Jolla, CA 92093-0910<br>
-                  (858) 534-5815<br>
-                  invent@ucsd.edu
-                  <br>
-                  <br>
-                  This software program and documentation are copyrighted by The Regents of the University of California. The software program and documentation are supplied "as is", without any accompanying services from The Regents. The Regents does not warrant that the operation of the program will be uninterrupted or error-free. The end-user understands that the program was developed for research purposes and is advised not to rely exclusively on the program for any reason.
-                  <br>
-                  <br>
-                  IN NO EVENT SHALL THE UNIVERSITY OF CALIFORNIA BE LIABLE TO ANY PARTY FOR DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, INCLUDING LOST PROFITS, ARISING OUT OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF THE UNIVERSITY OF CALIFORNIA HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. THE  UNIVERSITY OF CALIFORNIA SPECIFICALLY DISCLAIMS ANY WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE SOFTWARE PROVIDED HEREUNDER IS ON AN "AS IS" BASIS, AND THE UNIVERSITY OF CALIFORNIA HAS NO OBLIGATIONS TO PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
-                </p>
-                <h6 class="media-heading text-Left">Licensing terms for external open source packages</h6>
-                <p class="LegalStuff">
-                  ITK: <a target="_blank" href="https://www.itk.org/ITK/project/license.html">https://www.itk.org/ITK/project/license.html</a><br>
-                  VTK: <a target="_blank" href="https://www.vtk.org/VTK/project/license.html">https://www.vtk.org/VTK/project/license.html</a><br>
-                  Tetgen: <a target="_blank" href="https://wias-berlin.de/software/tetgen/1.5/agpl-3.0-standalone.html">https://wias-berlin.de/software/tetgen/1.5/agpl-3.0-standalone.html</a><br>
-                </p>
-                <h6 class="media-heading text-Left">Commercial components</h6>
-                <p class="LegalStuff">
-                  MeshSim users should contact simmetrix for licensing information.
-                </p>
-                <h6 class="media-heading text-Left">Additional license information</h6>
-                <p class="LegalStuff">
-                  Please see the additional license information contained in the SimVascular source code.
-                </p>
-              </div>
-          </div>
-        </div>
-      </div>
-    </div>
+          <!-- Slideshow container -->
+          <div id="slideshow-container">
 
-    <div>
-      <div class="newSectionHeader">
-        <h1 id="documentation">Documentation</h1>
-      </div>
-      <div class="newSectionContent" style="text-align:center">
-        <div class="containingDocsSection col-md-6 col-12">
-          <div class="docHeader">
-            <h2 class="media-heading">
-              <i class="iconInHeader fa-regular fa-user"></i>
-              User Guides
-            </h2>
-          </div>
-          <div class="docSection">
-            <div class="col-md-6 col-12">
-              <a class="docLinks" target="_blank" href="https://github.com/SimVascular/SimVascular/wiki//user_simvascular_software_suite_install">Installing SimVascular</a><br>
-              <a class="docLinks" target="_blank" href="documentation/quickguide.html">Getting Started</a><br>
-              <a class="docLinks" target="_blank" href="documentation/modeling.html">Modeling Guide</a><br>
-              <a class="docLinks" target="_blank" href="documentation/meshing.html">Meshing Guide</a><br>
-              <a class="docLinks" target="_blank" href="documentation/flowsolver.html">Simulation Guide</a><br>
-              <a class="docLinks" target="_blank" href="documentation/svfsi.html">svFSI Guide</a><br>
+            <!-- Full images with numbers and message Info -->
+            <div class="slides">
+              <img src="img/Img_Gallery_01.png" style="width:100%">
+              <div class="Info">BLOOD FLOW IN CABG SIMULATION</div>
             </div>
-            <div class="col-md-6 col-12">
-              <a class="docLinks" target="_blank" href="documentation/simcardio.html">SimCardio Guide</a><br>
-              <a class="docLinks" target="_blank" href="documentation/rom_simulation.html">ROM Simulation Guide</a><br>
-              <a class="docLinks" target="_blank" href="documentation/genbc.html">General B.C. Guide</a><br>
-              <a class="docLinks" target="_blank" href="documentation/python_interface.html">Python Interface</a><br>
-              <a class="docLinks" target="_blank" href="documentation/references.html">References</a><br>
-              <a class="docLinks" target="_blank" href="https://github.com/SimVascular/SimVascular/wiki/wiki_for_users">FAQ &amp; Wiki</a>
+
+            <div class="slides">
+              <img src="img/Img_Gallery_02.png" style="width:100%">
+              <div class="Info">BLOOD VELOCITY DISTRIBUTION IN CABG SIMULATION</div>
             </div>
-          </div>
-        </div>
-        <div class="containingDocsSection col-md-6 col-12">
-          <div class="docHeader">
-            <h2 class="media-heading">
-              <i class="iconInHeader fa-solid fa-stethoscope" style="padding-right: 15px"></i>
-              Clinical Case Studies</h2> 
-          </div>
-          <div class="docSection">
-            <a class="docLinks" target="_blank" href="clinical/coronary.html">Coronary Normal</a><br>
-            <a class="docLinks" target="_blank" href="clinical/aortofemoral1.html">Aortofemoral Normal - 1</a><br>
-            <a class="docLinks" target="_blank" href="clinical/aortofemoral2.html">Aortofemoral Normal - 2</a><br>
-            <a class="docLinks" target="_blank" href="clinical/pulmonary.html">Healthy Pulmonary</a>
-          </div>
-          <div class="docHeader ">
-            <h2 class="media-heading"><i class="iconInHeader fa-solid fa-laptop-code">
-            </i>Developer Guides</h2>
-          </div>
-          <div class="docSection">
-            <a class="docLinks" target="_blank" href="https://github.com/SimVascular/SimVascular/wiki/wiki_for_developers">Building SimVascular from Source</a>
-          </div>
-        </div>
-      </div>    
-    </div>
 
-    <div class="everyOtherSection">
-      <div class="newSectionHeader">
-        <h1 id="gallery">Gallery</h1>
-      </div>
-
-      <div class="newSectionContent">
-        <div class="col-sm-6 col-12">
-          <div class="col-sm-6 col-12 headerForGalleryContainer">
-            <div class="headerForGallery">
-              <h2>
-                <i class="fa-solid fa-image" style="padding-right: 20px"></i>
-                Pictures
-              </h2>
+            <div class="slides">
+              <img src="img/Img_Gallery_03.png" style="width:100%">
+              <div class="Info">BLOOD VELOCITY IN CORONARY ANEURISM</div>
             </div>
+            <div class="slides">
+              <img src="img/Img_Gallery_04.png" style="width:100%">
+              <div class="Info">HEMI-FONTAN CAVOPULMONARY CONNECTION</div>
+            </div>
+            <!-- Back and forward buttons -->
+            <a class="back" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="forward" onclick="plusSlides(1)">&#10095;</a>
           </div>
-          <div>
-            <!-- Slideshow container -->
-            <div id="slideshow-container">
-
-              <!-- Full images with numbers and message Info -->
-              <div class="slides">
-                <img src="img/Img_Gallery_01.png" style="width:100%">
-                <div class="Info">BLOOD FLOW IN CABG SIMULATION</div>
+            <!-- The circles/dots -->
+            <div class="dotsContainer">
+              <div style="margin:auto; width: fit-content;">
+                <span class="dots" onclick="currentSlide(0)"></span>
+                <span class="dots" onclick="currentSlide(1)"></span>
+                <span class="dots" onclick="currentSlide(2)"></span>
+                <span class="dots" onclick="currentSlide(3)"></span>
               </div>
-
-              <div class="slides">
-                <img src="img/Img_Gallery_02.png" style="width:100%">
-                <div class="Info">BLOOD VELOCITY DISTRIBUTION IN CABG SIMULATION</div>
-              </div>
-
-              <div class="slides">
-                <img src="img/Img_Gallery_03.png" style="width:100%">
-                <div class="Info">BLOOD VELOCITY IN CORONARY ANEURISM</div>
-              </div>
-              <div class="slides">
-                <img src="img/Img_Gallery_04.png" style="width:100%">
-                <div class="Info">HEMI-FONTAN CAVOPULMONARY CONNECTION</div>
-              </div>
-              <!-- Back and forward buttons -->
-              <a class="back" onclick="plusSlides(-1)">&#10094;</a>
-              <a class="forward" onclick="plusSlides(1)">&#10095;</a>
-            </div>
-              <!-- The circles/dots -->
-              <div class="dotsContainer">
-                <div style="margin:auto; width: fit-content;">
-                  <span class="dots" onclick="currentSlide(0)"></span>
-                  <span class="dots" onclick="currentSlide(1)"></span>
-                  <span class="dots" onclick="currentSlide(2)"></span>
-                  <span class="dots" onclick="currentSlide(3)"></span>
-                </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-12">
-          <div class="col-sm-6 col-12 headerForGalleryContainer">
-            <div class="headerForGallery">
-              <h2>
-                <i class="fa-solid fa-video" style="padding-right: 20px"></i>
-                Animations
-              </h2>
-            </div>
           </div>
         </div>
       </div>
-    </div>
-
-    <div>
-      <div class="newSectionHeader">
-        <h1 id="repository">The Vascular Model Repository</h1>
-      </div>
-      <div class="newSectionContent">
-          <!-- <img src="img/repbanner3.png" alt="a head"> -->
-            <span class="describeVMR col-md-6 col-12">
-              <div class="subHeader">
-                <h2 style="margin: 15px 0">What it is</h2>
-              </div>
-                <p style="text-align: justify;">The <a href="https://www.vascularmodel.com/" target="_blank">Vascular Model Repository</a>, a sister project of SimVascular, is a library of computational models of normal and diseased human cardiovascular and pulmonary anatomy and input and output boundary conditions for various physiologic states. Most models in the repository were created with SimVascular.</p>  
-              <div class="subHeader">
-                <h2 style="margin: 15px 0">Its purpose</h2>
-              </div>
-              <div>
-                <p style="text-align: justify;">These models can be used to simulate cardiovascular and pulmonary solid and fluid mechanics and will provide spatially and temporally-resolved benchmark solutions that can be used by academic, government and industry researchers to verify their computational methods. The SimVascular project provides an open source package for simulation to accompany the data provided in the model repository.</p>
-              </div>
-            </span>
-            <span class="embedVMR col-md-6 col-12">
-              <embed type="text/html" src="https://www.vascularmodel.com/" width="100%" height="100%">
-            </span>
-          
-      </div>
-    </div>
-
-    <!-- <div>
-      <div class="newSectionHeader">
-        <h1 id="tutor">Online Tutorials</h1>
-      </div>
-
-      <div class="newSectionContent">
-        <div class="col-md-6 col-12">
-          <p class="paddingTutor">The <a target="_blank" href="https://www.youtube.com/channel/UCT61XgTRqpfb39Hyio9IqGQ">SimVascular YouTube Channel</a> has a collection of videos on a variety of topics related to the use of the SimVascular suite of software applications.</p>
-          <p class="paddingTutor">The <a target="_blank" href="https://www.youtube.com/playlist?list=PL1CBZ8Wh-xvSKUsuBA4MM4Jba-psVdxXT">SimVascular Tutorial series</a> consists of recent videos demonstrating the complete pipeline from medical image data segmentation to patient specific blood flow simulation and analysis.</p>
-        </div>
-        <div class="embedYTVideo col-md-6 col-12">
-          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/videoseries?list=PL1CBZ8Wh-xvSKUsuBA4MM4Jba-psVdxXT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div> -->
-
-
-    <div class="everyOtherSection">
-      <div class="newSectionHeader">
-        <h1 id="socials">Socials</h1>
-      </div>
-      
-      <div class="newSectionContent" style="text-align: center;">
-        <p style="padding-bottom: 15px;" class="subText">Follow us to stay up to date on the latest from Simvascular</p>
-        <div class="col-md-6 col-12">
-          <div style="max-width: 75%; margin: auto;">
+      <div class="col-sm-6 col-12">
+        <div class="col-sm-6 col-12 headerForGalleryContainer">
+          <div class="headerForGallery">
             <h2>
-              <a href="https://twitter.com/simvascular?lang=en" target="_blank">
-              <i class="iconInHeader fa-brands fa-twitter"></i>Twitter</a>
+              <i class="fa-solid fa-video" style="padding-right: 20px"></i>
+              Animations
             </h2>
-            <p>Visit <a href="https://twitter.com/simvascular?lang=en" target="_blank">our Twitter page</a> for announcements on and the latest from Simvascular</p>
           </div>
         </div>
-        <div class="col-md-6 col-12">
-          <div style="max-width: 75%; margin: auto;">
-          <h2>
-            <a href="https://www.youtube.com/channel/UCT61XgTRqpfb39Hyio9IqGQ" target="_blank">
-            <i class="iconInHeader fa-brands fa-youtube"></i>Youtube</a>
-          </h2>
-          <p>Visit <a href="https://www.youtube.com/channel/UCT61XgTRqpfb39Hyio9IqGQ" target="_blank">our Youtube Channel</a> for online tutorials on how to use the SimVascular suite of software applications</p>
-        </div>  
       </div>
-        <div class="col-md-6 col-12">
-          <div style="max-width: 75%; margin: auto;">
+    </div>
+  </div>
+
+  <div>
+    <div class="newSectionHeader">
+      <h1 id="repository">The Vascular Model Repository</h1>
+    </div>
+    <div class="newSectionContent">
+      <span class="describeVMR col-md-6 col-12">
+        <div class="subHeader">
+          <h2 style="margin: 15px 0">What it is</h2>
+        </div>
+          <p style="text-align: justify;">The <a href="https://www.vascularmodel.com/" target="_blank">Vascular Model Repository</a>, a sister project of SimVascular, is a library of computational models of normal and diseased human cardiovascular and pulmonary anatomy and input and output boundary conditions for various physiologic states. Most models in the repository were created with SimVascular.</p>  
+        <div class="subHeader">
+          <h2 style="margin: 15px 0">Its purpose</h2>
+        </div>
+        <div>
+          <p style="text-align: justify;">These models can be used to simulate cardiovascular and pulmonary solid and fluid mechanics and will provide spatially and temporally-resolved benchmark solutions that can be used by academic, government and industry researchers to verify their computational methods. The SimVascular project provides an open source package for simulation to accompany the data provided in the model repository.</p>
+        </div>
+      </span>
+      <span class="embedVMR col-md-6 col-12">
+        <embed type="text/html" src="https://www.vascularmodel.com/" width="100%" height="100%">
+      </span>
+    </div>
+  </div>
+
+  <div class="everyOtherSection">
+    <div style="margin-top: 15px" class="newSectionHeader">
+      <h1 id="gateway">Supercomputing Gateway</h1>
+    </div>
+    <div class="newSectionContent">
+      <p class="paddingIntro">The <a target="_blank" href="https://gateway.simvascular.org/">SimVascular Supercomputing Gateway</a> provides access to High-Performance Computing (HPC) clusters for running simulations using SimVascular CFD solvers. Simulations benefit from the performance levels that only large-scale HPC systems can offer and typically run an order of magnitude faster than on most workstations.</p>
+    </div>
+  </div>
+
+  <div>
+    <div class="newSectionHeader">
+      <h1 id="socials">Socials</h1>
+    </div>
+    
+    <div class="newSectionContent" style="text-align: center;">
+      <p style="padding-bottom: 15px;" class="subText">Follow us to stay up to date on the latest from Simvascular</p>
+      <div class="col-md-6 col-12">
+        <div style="max-width: 75%; margin: auto;">
           <h2>
-            <a href="https://www.facebook.com/groups/835227759855853/" target="_blank">
-            <i class="iconInHeader fa-brands fa-facebook"></i>Facebook</a>
+            <a href="https://twitter.com/simvascular?lang=en" target="_blank">
+            <i class="iconInHeader fa-brands fa-twitter"></i>Twitter</a>
           </h2>
-          <p>Visit <a href="https://www.facebook.com/groups/835227759855853/" target="_blank">our Facebook page</a> for announcements on and the latest from Simvascular</p>
-        </div>   
+          <p>Visit <a href="https://twitter.com/simvascular?lang=en" target="_blank">our Twitter page</a> for announcements on and the latest from Simvascular</p>
+        </div>
       </div>
       <div class="col-md-6 col-12">
         <div style="max-width: 75%; margin: auto;">
+        <h2>
+          <a href="https://www.youtube.com/channel/UCT61XgTRqpfb39Hyio9IqGQ" target="_blank">
+          <i class="iconInHeader fa-brands fa-youtube"></i>Youtube</a>
+        </h2>
+        <p>Visit <a href="https://www.youtube.com/channel/UCT61XgTRqpfb39Hyio9IqGQ" target="_blank">our Youtube Channel</a> for online tutorials on how to use the SimVascular suite of software applications</p>
+      </div>  
+    </div>
+      <div class="col-md-6 col-12">
+        <div style="max-width: 75%; margin: auto;">
+        <h2>
+          <a href="https://www.facebook.com/groups/835227759855853/" target="_blank">
+          <i class="iconInHeader fa-brands fa-facebook"></i>Facebook</a>
+        </h2>
+        <p>Visit <a href="https://www.facebook.com/groups/835227759855853/" target="_blank">our Facebook page</a> for announcements on and the latest from Simvascular</p>
+      </div>   
+    </div>
+    <div class="col-md-6 col-12">
+      <div style="max-width: 75%; margin: auto;">
         <h2>
           <a href="https://simtk.org/mailman/listinfo/simvascular-news" target="_blank">
           <i class="iconInHeader fa-solid fa-envelope"></i>News mailing list</a>
@@ -456,40 +500,40 @@
       </div>
     </div>
 
-      </div>
     </div>
+  </div>
 
 
-    <div>
-      <div class="newSectionHeader">
-        <h1 id="workshops">Upcoming Workshops</h1>
-      </div>
-      <div class="newSectionContent">
-      <!-- <p>UPCOMING WORKSHOPS</p> -->
-      <p class="subText">Learn more about SimVascular by attending one of our workshops:</p>
-      <!-- link online rn doesn't work -->
-      <div class="listingOfWorkshops">
-        <p class="date">
-          JUNE 23, 2022
-        </p>
-        <p class="workshopName">
-          <a href="">
-            SB3C POST-CONFERENCE COMPUTATIONAL WORKSHOP
-          </a>
-        </p>
-        <p class="date">
-          MAY 15, 2024
-        </p>
-        <p class="workshopName">
-          <a href="">
-            Another conference!
-          </a>
-        </p>
-      </div>
-    </div> 
-    </div>  
+  <div class="everyOtherSection">
+    <div class="newSectionHeader">
+      <h1 id="workshops">Upcoming Workshops</h1>
+    </div>
+    <div class="newSectionContent">
+    <!-- <p>UPCOMING WORKSHOPS</p> -->
+    <p class="subText">Learn more about SimVascular by attending one of our workshops:</p>
+    <!-- link online rn doesn't work -->
+    <div class="listingOfWorkshops">
+      <p class="date">
+        JUNE 23, 2022
+      </p>
+      <p class="workshopName">
+        <a href="">
+          SB3C POST-CONFERENCE COMPUTATIONAL WORKSHOP
+        </a>
+      </p>
+      <p class="date">
+        MAY 15, 2024
+      </p>
+      <p class="workshopName">
+        <a href="">
+          Another conference!
+        </a>
+      </p>
+    </div>
+  </div> 
+  </div>  
 
-  <div class="everyOtherSection" style="padding-bottom: 30px">
+  <div style="padding-bottom: 30px">
     <div class="newSectionHeader">
       <h1 id="team">Team</h1>
     </div>
@@ -583,7 +627,7 @@
     </div>
   </div>
 
-  <div>
+  <div class="everyOtherSection">
     <div class="newSectionHeader">
       <h1 id="institutions">Institutions</h1>
     </div>
@@ -598,6 +642,16 @@
         <div class="threeTopImages col-sm-4 col-12 creditContainer">
           <img class="creditImage" src="img/osmsc.png" alt="Logo for osmsc"></img>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="newSectionHeader">
+      <h1 id="acknowledgements">Acknowledgements</h1>
+    </div>
+    <div class="newSectionContent">
+      <div class="row creditsRow">
         <div class="threeTopImages col-sm-4 col-12 creditContainer">
           <img class="creditImage" src="img/simtk.png" alt="Logo for SimTK"></img>
         </div>
@@ -606,24 +660,17 @@
         </div>
       </div>
     </div>
+    <div class="copyright">
+      <h5 class="innerCopyright">Copyright © SimVascular Development Team - 2023</h5>
+  </div>
   </div>
 
-  <div class="everyOtherSection" style="padding-bottom: 30px; margin-bottom: 0"> 
+  <!-- <div class="everyOtherSection" style="padding-bottom: 30px; margin-bottom: 0"> 
     <div class="newSectionHeader">
       <h1 id="contact">Contact Us</h1>
       </div>
 
       <div class="newSectionContent">
-        <!-- <h2 class="contactHeaders">Join the news mailing list.</h2>
-        
-          <h3 style="padding-bottom: 5px;" class="contactDescription">For announcements and latest news about SimVascular:</h3>
-          <h3 style="margin-bottom: 5px;" class="contactLinks">
-            <a href="https://simtk.org/mailman/listinfo/simvascular-news" target="_blank">Sign up for updates</a>
-          </h3>
-          <h3 style="margin-bottom: 5px;" class="contactLinks">
-            <a href="https://simtk.org/pipermail/simvascular-news/" target="_blank">View the Simvascular News Archive</a>
-          </h3>
-        </h2> -->
         <h2 class= "contactHeaders">We are very interested in your feedback and comments.</h2>
         <h3 class="contactDescription">Interact with other SimVascular users:</h3>
         <h3 class="contactLinks">
@@ -634,10 +681,7 @@
           <a href="https://github.com/SimVascular/SimVascular/issues" target="_blank">Suggest new features or report bugs</a>
         </h6>
     </div>
-    <div class="copyright">
-      <h5 class="innerCopyright">Copyright © SimVascular Development Team - 2023</h5>
-  </div>
-  </div>
+  </div> -->
   </section>
   <section class="skipToTopSection">
     <p id="skipToTop"><i class="fa-solid fa-arrow-up"></i></p>
