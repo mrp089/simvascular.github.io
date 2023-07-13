@@ -182,28 +182,10 @@ p {
 }
 
 .hero_title {
-    font-size: 75px;
+    font-size: 5vw;
     width: fit-content;
     text-align: left;
     margin: auto;
-}  
-
-@media only screen and (max-width: 1000px) {
-    .hero_title {
-        font-size: 60px;
-    }  
-}
-
-@media only screen and (max-width: 750px) {
-    .hero_title {
-        font-size: 40px;
-    }  
-}
-
-@media only screen and (max-width: 450px) {
-    .hero_title {
-        font-size: 25px;
-    }  
 }
 
 .firstHeader {
