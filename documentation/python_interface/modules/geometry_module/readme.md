@@ -11,7 +11,9 @@ the <b>align_profile()</b> function accessed directly from the <b>geometry</b> m
 </pre>
 
 <br>
+
 The <b>geometry</b> module defines two classes used to set lofting parameters
+
 <ul style="list-style-type:none;">
   <li> <b> <a href="#LoftOptionsClass"> LoftOptions </a> </b> </li>
   <li> <b> <a href="#LoftNurbsOptionsClass"> LoftNurbsOptions </a> </b> </li>

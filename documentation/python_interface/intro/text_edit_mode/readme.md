@@ -5,10 +5,10 @@ execute Python scripts. This is the preferred method to use when developing Pyth
 the **SV Data Manager**. A new Python script can be interactively written, tested and saved to a file. It can later be
 read in and executed.
 For example, the <b> PathDemo.py </b> script can be read in and executed by pressing the
-<img src="documentation/python_interface/imgs/play-icon.png" width="15" height="15"> button.
+<img src="/documentation/python_interface/imgs/play-icon.png" width="15" height="15"> button.
 
 <figure>
-  <img class="svImg svImgSm" src="documentation/python_interface/imgs/console-3.png">
+  <img class="svImg svImgSm" src="/documentation/python_interface/imgs/console-3.png">
   <figcaption class="svCaption" > Reading and executing the <b> PathDemo.py </b> script. </figcaption>
 </figure>
 <br>
