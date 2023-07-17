@@ -178,9 +178,9 @@ $("#sshadden").click(function() {
     clickLink("https://me.berkeley.edu/people/shawn-shadden/");
 });
 
-$("#nwilson").click(function() {
-    clickLink("https://www.anderson.ucla.edu/faculty-and-research/global-economics-and-management/faculty/wilson");
-});
+// $("#nwilson").click(function() {
+//     clickLink("https://www.anderson.ucla.edu/faculty-and-research/global-economics-and-management/faculty/wilson");
+// });
 
 $("#dparker").click(function() {
     clickLink("https://profiles.stanford.edu/david-parker?releaseVersion=10.5.2");
@@ -193,6 +193,9 @@ $("#vvedula").click(function() {
 $("#mpfaller").click(function() {
     clickLink("https://profiles.stanford.edu/martin-pfaller");
 });
-$("#fkong").click(function() {
-    clickLink("https://profiles.stanford.edu/fanwei-kong");
+$("#lpegolotti").click(function() {
+    clickLink("https://profiles.stanford.edu/luca-pegolotti");
 });
+// $("#fkong").click(function() {
+//     clickLink("https://profiles.stanford.edu/fanwei-kong");
+// });
