@@ -261,10 +261,8 @@ p {
 
 table {
     z-index: 20;
-    /* margin-right: 55px; */
     top: 75px;
-    /* padding-top: 75px;
-    border: 3px solid lightgrey; */
+
     display: block;
     overflow: auto;
     margin-bottom: 65px;
@@ -342,6 +340,12 @@ th {
 
 th:hover {
     background-color: white;
+}
+
+#naviconholder {
+    height: 75px;
+    width: 60px;
+    float: right;
 }
 
 @media only screen and (max-width: 767px){
@@ -584,7 +588,9 @@ th:hover {
     display: block;
     float: left;
     padding-bottom: 15px;
-    width: 100%;
+    width: 75%;
+    margin-right: 12.5%;
+    margin-left: 12.5%;
     position: relative;
   }
   

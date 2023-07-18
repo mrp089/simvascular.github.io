@@ -286,11 +286,12 @@ zero-md {
     color: var(--white);
 }
 
-.headerNavBar {
+#headerNavBar {
     top: 0px;
     right: 0px;
     position: fixed;
     z-index: 10;
+    height: 75px;
 }
 
 .navBarSection {

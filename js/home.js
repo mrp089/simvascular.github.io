@@ -62,46 +62,46 @@ $(window).resize(checkWidth());
 // END CAROUSEL for pictures
 
 // CAROUSEL for animations
-var animeSlidePosition = 0;
+// var animeSlidePosition = 0;
 
-animeSlideShow(animeSlidePosition);
+// animeSlideShow(animeSlidePosition);
 
-// forward/Back controls
-function plusAnimeSlide(n) {
-    animeSlideShow(animeSlidePosition += n);
-}
+// // forward/Back controls
+// function plusAnimeSlide(n) {
+//     animeSlideShow(animeSlidePosition += n);
+// }
 
-//  images controls
-function currentAnimeSlide(n) {
-    animeSlideShow(animeSlidePosition = n);
-}
+// //  images controls
+// function currentAnimeSlide(n) {
+//     animeSlideShow(animeSlidePosition = n);
+// }
 
-function animeSlideShow(n) {
-    var slides = document.getElementsByClassName("animeSlides");
-    var circles = document.getElementsByClassName("animeDots");
+// function animeSlideShow(n) {
+//     var slides = document.getElementsByClassName("animeSlides");
+//     var circles = document.getElementsByClassName("animeDots");
 
-    //so the n is continuous
-    if (n > slides.length-1) {animeSlidePosition = 0}
-    if (n < 0) {animeSlidePosition = slides.length-1}
+//     //so the n is continuous
+//     if (n > slides.length-1) {animeSlidePosition = 0}
+//     if (n < 0) {animeSlidePosition = slides.length-1}
     
-    //resets all slides
-    for (var i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
+//     //resets all slides
+//     for (var i = 0; i < slides.length; i++) {
+//         slides[i].style.display = "none";
+//     }
 
-    //displays selected slide
-    slides[animeSlidePosition].style.display = "block";
+//     //displays selected slide
+//     slides[animeSlidePosition].style.display = "block";
 
-    //resets all circles
-    for (var i = 0; i < circles.length; i++) {
-        if(circles[i].classList.contains("enable"))
-        {
-           circles[i].classList.remove("enable"); 
-        }   
-    }
-    //displays selected circle
-    circles[animeSlidePosition].classList.add("enable");
-}
+//     //resets all circles
+//     for (var i = 0; i < circles.length; i++) {
+//         if(circles[i].classList.contains("enable"))
+//         {
+//            circles[i].classList.remove("enable"); 
+//         }   
+//     }
+//     //displays selected circle
+//     circles[animeSlidePosition].classList.add("enable");
+// }
 
 // END CAROUSEL for animations
 
@@ -118,6 +118,50 @@ function clickLink(hrefTag, target_Blank = true)
     a.click();
 }
 
+var click_menuOn = false;
+
+$("#naviconholder").on("mouseover", function() {
+    var iconForSkip = document.getElementById("iconForSkip");
+    iconForSkip.style.color = "var(--white)";
+    toggleMenu();
+});
+
+$("#naviconholder").on("mouseout", function() {
+    if(!click_menuOn)
+    {
+        var iconForSkip = document.getElementById("iconForSkip");
+        iconForSkip.style.color = "var(--blue)";
+        toggleMenu(true);
+    }
+});
+
+$("#navElement").on("mouseover", function() {
+    toggleMenu();
+});
+
+$("#navElement").on("mouseout", function() {
+    if(!click_menuOn)
+    {
+        toggleMenu(true);
+    }    
+});
+
+$("#naviconholder").click(function() {
+    click_menuOn = !click_menuOn;
+    var iconForSkip = document.getElementById("iconForSkip");
+
+    if(!click_menuOn)
+    {
+        iconForSkip.style.color = "var(--blue)";
+        toggleMenu(true);
+    }
+    else
+    {
+        toggleMenu(false);
+        iconForSkip.style.color = "var(--white)";
+    }
+});
+
 function toggleMenu(closeMenu = false)
 {
     checkWidth();
@@ -130,7 +174,7 @@ function toggleMenu(closeMenu = false)
 
     
     //if the menu is currently on
-    if(element.classList.contains("visible") || closeMenu)
+    if(closeMenu)
     {
         element.classList.remove("visible");
 
@@ -194,10 +238,6 @@ $("#skipToTop").click(function() {
 
 $("#logo").click(function() {
     clickLink("/index.html", false);
-});
-
-$("#iconForSkip").click(function() {
-    toggleMenu();
 });
 
 $(".skipTo").click(function() {
