@@ -81,20 +81,28 @@ p {
     padding-right: 20px;
 }
 
-.downloadLinks, .docLinks {
+.docLinks {
     padding: 15px;
     display: block;
-    font-size: 25px;
+    font-size: 22px;
 }
 
 .downloadLinks {
     text-align: center;
 }
 
-@media only screen and (max-width: 768px) {
-    h1 {
-        font-size: 30px;
-     }
+.downloadLinks .btn {
+    color: var(--black);
+    border: 1.5px solid var(--verydarkblue);
+    text-transform: none;
+    font-size: 22px;
+    margin: 15px;
+}
+
+.downloadLinks .btn:hover {
+    background-color: var(--darkblue);
+    border: 1.5px solid var(--darkblue);
+    color: white;
 }
 
 @media (min-width: 768px){
@@ -1016,6 +1024,19 @@ th:hover {
         text-align: left;
         font-size: 20px;
         padding: 15px;
+    }
+}
+
+@media (max-width: 350px){
+    h1 {
+        font-size: 7vw;
+    }
+    .iconInHeader {
+        padding-right: 5px;
+    }
+    .downloadLinks .btn {
+        font-size: 6vw;
+        padding: 4px 8px;
     }
 }
 
