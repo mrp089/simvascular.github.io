@@ -17,32 +17,28 @@ function checkWidth()
 $(window).ready(checkWidth());
 $(window).resize(checkWidth());
 
-// CAROUSEL
-    var slidePosition = 0;
-    SlideShow(slidePosition);
+// CAROUSEL for pictures
+    var pictureSlidePosition = 0;
+
+    PictureSlideShow(pictureSlidePosition);
 
     // forward/Back controls
-    function plusSlides(n) {
-        SlideShow(slidePosition += n);
+    function plusPicSlides(n) {
+        PictureSlideShow(pictureSlidePosition += n);
     }
 
     //  images controls
-    function currentSlide(n) {
-        SlideShow(slidePosition = n);
+    function currentPicSlide(n) {
+        PictureSlideShow(pictureSlidePosition = n);
     }
 
-    // if(there hasn't ever been a click)
-    // {
-        // setTimeout(SlideShow, 2000);
-    // }
-
-    function SlideShow(n) {
-        var slides = document.getElementsByClassName("slides");
-        var circles = document.getElementsByClassName("dots");
+    function PictureSlideShow(n) {
+        var slides = document.getElementsByClassName("picSlides");
+        var circles = document.getElementsByClassName("picDots");
 
         //so the n is continuous
-        if (n > slides.length-1) {slidePosition = 0}
-        if (n < 0) {slidePosition = slides.length-1}
+        if (n > slides.length-1) {pictureSlidePosition = 0}
+        if (n < 0) {pictureSlidePosition = slides.length-1}
         
         //resets all slides
         for (var i = 0; i < slides.length; i++) {
@@ -50,7 +46,7 @@ $(window).resize(checkWidth());
         }
 
         //displays selected slide
-        slides[slidePosition].style.display = "block";
+        slides[pictureSlidePosition].style.display = "block";
 
         //resets all circles
         for (var i = 0; i < circles.length; i++) {
@@ -60,10 +56,54 @@ $(window).resize(checkWidth());
             }   
         }
         //displays selected circle
-        circles[slidePosition].classList.add("enable");
+        circles[pictureSlidePosition].classList.add("enable");
     }
 
-// END CAROUSEL
+// END CAROUSEL for pictures
+
+// CAROUSEL for animations
+var animeSlidePosition = 0;
+
+animeSlideShow(animeSlidePosition);
+
+// forward/Back controls
+function plusAnimeSlide(n) {
+    animeSlideShow(animeSlidePosition += n);
+}
+
+//  images controls
+function currentAnimeSlide(n) {
+    animeSlideShow(animeSlidePosition = n);
+}
+
+function animeSlideShow(n) {
+    var slides = document.getElementsByClassName("animeSlides");
+    var circles = document.getElementsByClassName("animeDots");
+
+    //so the n is continuous
+    if (n > slides.length-1) {animeSlidePosition = 0}
+    if (n < 0) {animeSlidePosition = slides.length-1}
+    
+    //resets all slides
+    for (var i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    //displays selected slide
+    slides[animeSlidePosition].style.display = "block";
+
+    //resets all circles
+    for (var i = 0; i < circles.length; i++) {
+        if(circles[i].classList.contains("enable"))
+        {
+           circles[i].classList.remove("enable"); 
+        }   
+    }
+    //displays selected circle
+    circles[animeSlidePosition].classList.add("enable");
+}
+
+// END CAROUSEL for animations
 
 function clickLink(hrefTag, target_Blank = true)
 {
