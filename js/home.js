@@ -204,6 +204,8 @@ function toggleMenu(closeMenu = false)
         if (smallScreen) {
             $('.html').css({"overflow": "auto"})
             $('.body').css({"overflow": "auto"})
+            $('.html').css({"overflow-x": "hidden"})
+            $('.body').css({"overflow-x": "hidden"})
         }
 
         navigationSection.classList.remove("menuOn");
@@ -267,6 +269,14 @@ $(".skipTo").click(function() {
     var classes = $(this).attr("class");
     var id = classes.split(/\s+/)[1];
     clickLink("#" + id, false);
+    if(smallScreen)
+    {
+        //closes menu if smallScreen
+        var iconForSkip = document.getElementById("iconForSkip");
+        iconForSkip.style.color = "var(--blue)";
+        toggleMenu(true);
+        click_menuOn = false;
+    }
 });
 
 $("#licenseTerms").click(function() {

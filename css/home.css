@@ -377,7 +377,7 @@ th:hover {
         text-align: center!important;
     }
     table {
-        /* padding-right: 50px; */
+        height: calc(100% - 75px);
         width: 100%;
     }
   }
