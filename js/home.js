@@ -1,4 +1,5 @@
 var smallScreen;
+var currentScreenWidth;
 
 checkWidth();
 
@@ -11,53 +12,122 @@ function checkWidth()
     {
         smallScreen = false;
     }
+    
+    if(currentScreenWidth != document.documentElement.clientWidth)
+    {
+        var smallWindow = false;
+
+        if(document.documentElement.clientWidth <= 767)
+        {
+            smallWindow = true;
+        }
+
+        listenersForMenu(smallWindow);
+    }
+    
+    currentScreenWidth = document.documentElement.clientWidth;
 }
 
-//hooks that check width
-$(window).ready(checkWidth());
-$(window).resize(checkWidth());
+window.onresize = checkWidth();
+
+var click_menuOn = false;
+
+function listenersForMenu(smallWindow) {
+    // console.log("enters listenersForMenu" + "\nsmallWindow: ");
+    // console.log(smallWindow);
+    $("#naviconholder").off();
+    $("#navElement").off();
+    $("#naviconholder").unbind();
+
+    //if the screen is not a small window (and won't open the full-screen navigation)
+    //allows for hovering
+    if(!smallWindow)
+    {
+        $("#naviconholder").on("mouseover", function() {
+            var iconForSkip = document.getElementById("iconForSkip");
+            iconForSkip.style.color = "var(--white)";
+            toggleMenu();
+        });
+    
+        $("#naviconholder").on("mouseout", function() {
+            if(!click_menuOn)
+            {
+                var iconForSkip = document.getElementById("iconForSkip");
+                iconForSkip.style.color = "var(--blue)";
+                toggleMenu(true);
+            }
+        });
+    
+        $("#navElement").on("mouseover", function() {
+            toggleMenu();
+        });
+    
+        $("#navElement").on("mouseout", function() {
+            if(!click_menuOn)
+            {
+                toggleMenu(true);
+            }    
+        });
+    }
+
+    $("#naviconholder").click(function() {
+        click_menuOn = !click_menuOn;
+        var iconForSkip = document.getElementById("iconForSkip");
+
+        if(!click_menuOn)
+        {
+            iconForSkip.style.color = "var(--blue)";
+            toggleMenu(true);
+        }
+        else
+        {
+            toggleMenu(false);
+            iconForSkip.style.color = "var(--white)";
+        }
+    });
+}
 
 // CAROUSEL for pictures
-    var pictureSlidePosition = 0;
+var pictureSlidePosition = 0;
 
-    PictureSlideShow(pictureSlidePosition);
+PictureSlideShow(pictureSlidePosition);
 
-    // forward/Back controls
-    function plusPicSlides(n) {
-        PictureSlideShow(pictureSlidePosition += n);
+// forward/Back controls
+function plusPicSlides(n) {
+    PictureSlideShow(pictureSlidePosition += n);
+}
+
+//  images controls
+function currentPicSlide(n) {
+    PictureSlideShow(pictureSlidePosition = n);
+}
+
+function PictureSlideShow(n) {
+    var slides = document.getElementsByClassName("picSlides");
+    var circles = document.getElementsByClassName("picDots");
+
+    //so the n is continuous
+    if (n > slides.length-1) {pictureSlidePosition = 0}
+    if (n < 0) {pictureSlidePosition = slides.length-1}
+    
+    //resets all slides
+    for (var i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
     }
 
-    //  images controls
-    function currentPicSlide(n) {
-        PictureSlideShow(pictureSlidePosition = n);
+    //displays selected slide
+    slides[pictureSlidePosition].style.display = "block";
+
+    //resets all circles
+    for (var i = 0; i < circles.length; i++) {
+        if(circles[i].classList.contains("enable"))
+        {
+            circles[i].classList.remove("enable"); 
+        }   
     }
-
-    function PictureSlideShow(n) {
-        var slides = document.getElementsByClassName("picSlides");
-        var circles = document.getElementsByClassName("picDots");
-
-        //so the n is continuous
-        if (n > slides.length-1) {pictureSlidePosition = 0}
-        if (n < 0) {pictureSlidePosition = slides.length-1}
-        
-        //resets all slides
-        for (var i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-
-        //displays selected slide
-        slides[pictureSlidePosition].style.display = "block";
-
-        //resets all circles
-        for (var i = 0; i < circles.length; i++) {
-            if(circles[i].classList.contains("enable"))
-            {
-               circles[i].classList.remove("enable"); 
-            }   
-        }
-        //displays selected circle
-        circles[pictureSlidePosition].classList.add("enable");
-    }
+    //displays selected circle
+    circles[pictureSlidePosition].classList.add("enable");
+}
 
 // END CAROUSEL for pictures
 
@@ -117,50 +187,6 @@ function clickLink(hrefTag, target_Blank = true)
     
     a.click();
 }
-
-var click_menuOn = false;
-
-$("#naviconholder").on("mouseover", function() {
-    var iconForSkip = document.getElementById("iconForSkip");
-    iconForSkip.style.color = "var(--white)";
-    toggleMenu();
-});
-
-$("#naviconholder").on("mouseout", function() {
-    if(!click_menuOn)
-    {
-        var iconForSkip = document.getElementById("iconForSkip");
-        iconForSkip.style.color = "var(--blue)";
-        toggleMenu(true);
-    }
-});
-
-$("#navElement").on("mouseover", function() {
-    toggleMenu();
-});
-
-$("#navElement").on("mouseout", function() {
-    if(!click_menuOn)
-    {
-        toggleMenu(true);
-    }    
-});
-
-$("#naviconholder").click(function() {
-    click_menuOn = !click_menuOn;
-    var iconForSkip = document.getElementById("iconForSkip");
-
-    if(!click_menuOn)
-    {
-        iconForSkip.style.color = "var(--blue)";
-        toggleMenu(true);
-    }
-    else
-    {
-        toggleMenu(false);
-        iconForSkip.style.color = "var(--white)";
-    }
-});
 
 function toggleMenu(closeMenu = false)
 {

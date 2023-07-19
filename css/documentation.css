@@ -292,6 +292,8 @@ zero-md {
     position: fixed;
     z-index: 10;
     height: 75px;
+    /* wider so more range of motion when hovering */
+    width: 75px;
 }
 
 .navBarSection {
