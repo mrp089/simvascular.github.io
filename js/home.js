@@ -12,29 +12,26 @@ function checkWidth()
     {
         smallScreen = false;
     }
-    
-    if(currentScreenWidth != document.documentElement.clientWidth)
+
+    if(document.documentElement.clientWidth != currentScreenWidth)
     {
-        var smallWindow = false;
-
-        if(document.documentElement.clientWidth <= 767)
-        {
-            smallWindow = true;
-        }
-
-        listenersForMenu(smallWindow);
+        listenersForMenu();
+        currentScreenWidth = document.documentElement.clientWidth;
     }
-    
-    currentScreenWidth = document.documentElement.clientWidth;
 }
 
 window.onresize = checkWidth();
 
 var click_menuOn = false;
 
-function listenersForMenu(smallWindow) {
-    // console.log("enters listenersForMenu" + "\nsmallWindow: ");
-    // console.log(smallWindow);
+function listenersForMenu() {
+    var smallWindow = false;
+
+        if(document.documentElement.clientWidth <= 767)
+        {
+            smallWindow = true;
+        }
+
     $("#naviconholder").off();
     $("#navElement").off();
     $("#naviconholder").unbind();

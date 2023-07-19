@@ -4,6 +4,15 @@ html, body {
     font-size: 17px;
 }
 
+::selection {
+    background: var(--lighterpink); /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+    background: var(--lighterpink); /* Gecko Browsers */
+}
+
+
 html { 
     scroll-behavior: smooth;
     scroll-padding-top: 90px;
@@ -316,7 +325,7 @@ zero-md {
 
 .navTitle, .navSubLink {
     padding: 15px;
-    color: var(--white);
+    color: white;
 }
 
 .navTitle {
@@ -330,17 +339,13 @@ zero-md {
 .navSubLink p {
     padding: 0;
     margin: 0;
-    color: var(--white);
+    color: white;
     font-size: 18px;
 }
 
 .navTitle:hover, .navSubLink:hover {
-    background-color: var(--white);
+    background-color: white;
     color: var(--black);
-}
-
-.navSubLink p {
-    color: var(--white);
 }
 
 .navSubLink p:hover, .navSubLink:hover p {
