@@ -282,33 +282,3 @@ $(".skipTo").click(function() {
 $("#licenseTerms").click(function() {
     toggleLicense();
 });
-
-$("#amarsden").click(function() {
-    clickLink("https://profiles.stanford.edu/alison-marsden");
-});
-
-$("#sshadden").click(function() {
-    clickLink("https://me.berkeley.edu/people/shawn-shadden/");
-});
-
-// $("#nwilson").click(function() {
-//     clickLink("https://www.anderson.ucla.edu/faculty-and-research/global-economics-and-management/faculty/wilson");
-// });
-
-$("#dparker").click(function() {
-    clickLink("https://profiles.stanford.edu/david-parker?releaseVersion=10.5.2");
-});
-
-$("#vvedula").click(function() {
-    clickLink("https://www.me.columbia.edu/faculty/vijay-vedula");
-});
-
-$("#mpfaller").click(function() {
-    clickLink("https://profiles.stanford.edu/martin-pfaller");
-});
-$("#lpegolotti").click(function() {
-    clickLink("https://profiles.stanford.edu/luca-pegolotti");
-});
-// $("#fkong").click(function() {
-//     clickLink("https://profiles.stanford.edu/fanwei-kong");
-// });
