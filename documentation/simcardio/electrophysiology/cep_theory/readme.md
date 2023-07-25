@@ -3,7 +3,7 @@
 The propagation of electrical signal in the heart is governed by a reaction-diffusion like equation,
 
 $$
-\frac{\partial V}{\partial t} + \frac{I\_{ion} - I\_{app}(t)}{C\_m}  = \nabla \cdot\left( \mathbf{D}\nabla V \right)
+\frac{\partial V}{\partial t} + \frac{I_{ion} - I_{app}(t)}{C_m}  = \nabla \cdot\left( \mathbf{D}\nabla V \right)
 $$
 
 $$

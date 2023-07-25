@@ -3,7 +3,7 @@
 The STRUCT equation solves equations for nonlinear structural dynamics using finite element formulation. We start with the function spaces and weak form. We require that the trial and weighting functions satisfy their respective properties on the current domain. The strong form of the momentum balance is
 
 $$ \rho\ddot{\mathbf{u}} = \nabla\_{x}\cdot{\sigma} + \rho\mathbf{f_b}, $$
-$$ \sigma\cdot \mathbf{n} = \mathbf{h},~\mathrm{on}~\left(\Gamma\_{t}\right)\_{h}. $$
+$$ \sigma\cdot \mathbf{n} = \mathbf{h},\~\mathrm{on}\~\left(\Gamma\_{t}\right)\_{h}. $$
 
 where $\sigma$ is the stress term in the current configuration.
 
@@ -19,8 +19,8 @@ $$ \lambda=\frac{E v}{(1+v)(1-2 v)}, \quad \mu=\frac{E}{2(1+v)}, \quad \kappa=\l
 
 where, $\lambda$ and $\mu$ are the Lame's first and second parameters, respectively, and $\kappa$ is the bulk modulus. The second Piola-Kirchhoff stress tensors for a few standard constitutive models are given as,
 
-$$ \mathbf{S}^{StVK} = 2 \mu \mathbf{E} + \lambda \operatorname{tr}(\mathbf{E}) \mathbf{I}, ~~~ \textrm{St. Venant-Kirchhoff} $$
-$$ \mathbf{S}^{mStVK} = \kappa \operatorname{ln}(J) \mathbf{C}^{-1} + \mu(\mathbf{C} - \mathbf{I}), ~~~ \textrm{Modified St. Venant-Kirchhoff} $$
-$$ \mathbf{S\_{iso}}^{nHK} = \mu J^{-2/3} \left(\mathbf{I} - \frac{1}{3} \operatorname{tr}(\mathbf{C}) \mathbf{C}^{-1} \right), ~~ \textrm{Neo-Hookean} $$
+$$ \mathbf{S}^{StVK} = 2 \mu \mathbf{E} + \lambda \operatorname{tr}(\mathbf{E}) \mathbf{I}, \~\~\~ \textrm{St. Venant-Kirchhoff} $$
+$$ \mathbf{S}^{mStVK} = \kappa \operatorname{ln}(J) \mathbf{C}^{-1} + \mu(\mathbf{C} - \mathbf{I}), \~\~\~ \textrm{Modified St. Venant-Kirchhoff} $$
+$$ \mathbf{S\_{iso}}^{nHK} = \mu J^{-2/3} \left(\mathbf{I} - \frac{1}{3} \operatorname{tr}(\mathbf{C}) \mathbf{C}^{-1} \right), \~\~ \textrm{Neo-Hookean} $$
 
 where $\mathbf{I}$ is the identity matrix. For the Neo-Hookean and other hyperelastic constitutive models, the $\mathbf{S}$ tensor is computed as $\mathbf{S} = \mathbf{S\_{iso}} + \mathbf{S\_{vol}}$, where $\mathbf{S\_{vol}} = p J \mathbf{C}^{-1}$, and $p$ is the hydrostatic pressure computed based on the chosen dilational strain-energy function. See the section on <a href="#material-model">Material models</a> and the corresponding references for the available dilational penalty models in **svFSI** .
