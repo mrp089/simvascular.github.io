@@ -232,47 +232,44 @@ $$\frac{\partial S}{\partial z}(B,t) = -\frac{S(B,t)}{l} + \exp(\gamma\\, t)\\,\
 
 Furthermore we integrate the balance of momentum equation in time to obtain:
 
-$$Q(B,t) = -c^2\\,\int\_{0}^{t}\\,\frac{\partial S}{\partial z}(B,t)\\,\exp(2\gamma(t-t\_0))\\,dt\_0 + Q^0(B)\exp(2\\,\gamma\\,t)$$
+$$
+Q(B,t) = -c^2\\,\int\_{0}^{t}\\,\frac{\partial S}{\partial z}(B,t)\\,\exp(2\gamma(t-t\_0))\\,dt\_0 + Q^0(B)\exp(2\\,\gamma\\,t)
+$$
 
 We can then derive a map between the flow rate and the cross-sectional area using (3.29) and (3.30):
 
 $$
-Q(B,t) =
-c^2\\,\int\_{0}^{t}\left[\frac{S(B,t^{\*})}{l} - \exp(\gamma\\,t^{\*})\\,\int\_{0}^{t^{\*}}\int\_{B}^{L}\frac{\partial G}{\partial z}(B,t^{\*},z\_0,t\_0)\\,f\_{B}(z\_0,t\_0)\\,dz\_0\\,dt\_0\right]\exp(2\\,\gamma\\,(t-t^{\*}))\\,dt^{\*} +
-c^2\\,\int\_{0}^{t}\mathcal{H}(t^{\*})\exp(2\\,\gamma\\,(t-t^{\*}))\\,dt^{\*} + Q^0(B)\exp(2\\,\gamma\\,t)
+Q(B,t) = c^2\\,\int\_{0}^{t}\left[\frac{S(B,t^{\*})}{l} - \exp(\gamma\\,t^{\*})\\,\int\_{0}^{t^{\*}}\int\_{B}^{L}\frac{\partial G}{\partial z}(B,t^{\*},z\_0,t\_0)\\,f\_{B}(z\_0,t\_0)\\,dz\_0\\,dt\_0\right]\exp(2\\,\gamma\\,(t-t^{\*}))\\,dt^{\*} + c^2\\,\int\_{0}^{t}\mathcal{H}(t^{\*})\exp(2\\,\gamma\\,(t-t^{\*}))\\,dt^{\*} + Q^0(B)\exp(2\\,\gamma\\,t)
 $$
 
 After integrating by parts in time, the derivatives that constitute $f\_B(z\_0,t\_0)$, and using the
 Green’s function $\eqref{5}$, the final map reads:
 
 $$
-Q(B,t) = \frac{c^2}{l}\\,\int\_{0}^{t}\left[1 + \sum\_{n=1}^{\infty}2\right]\\,S(B,t^{\*})\exp(2\\,\gamma\\,(t-t^{\*}))\\,dt^{\*}
--\left(\frac{c}{l}\right)^3\\,\int\_{0}^{t}\exp(\gamma\\,(2\\,t - t^{\*}))\int\_{0}^{t^{\*}}\\,S(B,t\_0)\exp(-\gamma\\,t\_0)\left[\sum\_{n=1}^{\infty}\frac{2\\,n^2\\,\pi^2}{\sqrt{\lambda\_n}}\\,\sin(c\\,\sqrt{\lambda\_n}(t^{\*}-t\_0))\right]\\,dt\_0\\,dt^{\*}
- + Q^0(B)\exp(2\\,\gamma\\,t) + \Theta\\,\left[S^0(B), \dot{S}\_0(B), S\_L(t),\dot{S}\_L(t),\ddot{S}\_L(t)\right] \label{9} \tag {9}
+Q(B,t) = \frac{c^2}{l}\\,\int\_{0}^{t}\left[1 + \sum\_{n=1}^{\infty}2\right]\\,S(B,t^{\*})\exp(2\\,\gamma\\,(t-t^{\*}))\\,dt^{\*} -\left(\frac{c}{l}\right)^3\\,\int\_{0}^{t}\exp(\gamma\\,(2\\,t - t^{\*}))\int\_{0}^{t^{\*}}\\,S(B,t\_0)\exp(-\gamma\\,t\_0)\left[\sum\_{n=1}^{\infty}\frac{2\\,n^2\\,\pi^2}{\sqrt{\lambda\_n}}\\,\sin(c\\,\sqrt{\lambda\_n}(t^{\*}-t\_0))\right]\\,dt\_0\\,dt^{\*} + Q^0(B)\exp(2\\,\gamma\\,t) + \Theta\\,\left[S^0(B), \dot{S}\_0(B), S\_L(t),\dot{S}\_L(t),\ddot{S}\_L(t)\right] \label{9} \tag {9}
 $$
 
 and
 
 $$
 \Theta\\,\left[S^0(B), \dot{S}\_0(B), S\_L(t),\dot{S}\_L(t),\ddot{S}\_L(t)\right] = - \left[\sum\_{n=1}^{\infty}\frac{2\\,c}{l\\,\sqrt{\lambda\_n}}\\,\sin(c\\,\sqrt{\lambda\_n}\\,t)\right]\exp(\gamma\\,t)\\,S(B,0)
-+ \left[\sum\_{n=1}^{\infty}\\,\frac{2\\,l}{c\\,n^2\\,\pi^2\\,\sqrt{\lambda\_n}}\left(\gamma\\,\sin(c\\,\sqrt{\lambda}\\,t)\right) + c\\,\sqrt{\lambda\_n}\\,\left(\cos(c\\,\sqrt{\lambda\_n}\\,t) - \exp(\gamma\\,t)\right)\right]\exp(\gamma\\,t)\\,\dot{S}(B,0) +
--c^2\int\_{0}^{t}\mathcal{H}(t^{\*})\exp(2\\,\gamma\\,(t-t^{\*}))\\,dt^{\*}
+\+ \left[\sum\_{n=1}^{\infty}\\,\frac{2\\,l}{c\\,n^2\\,\pi^2\\,\sqrt{\lambda\_n}}\left(\gamma\\,\sin(c\\,\sqrt{\lambda}\\,t)\right) + c\\,\sqrt{\lambda\_n}\\,\left(\cos(c\\,\sqrt{\lambda\_n}\\,t) - \exp(\gamma\\,t)\right)\right]\exp(\gamma\\,t)\\,\dot{S}(B,0) +
+\-c^2\int\_{0}^{t}\mathcal{H}(t^{\*})\exp(2\\,\gamma\\,(t-t^{\*}))\\,dt^{\*}
 $$
 
-The operators for the wave boundary condition can now be derived using $\eqref{7} and $\eqref{9},, assuming as for the upstream numerical domain that the initial cross-sectional area is the same as the reference cross-sectional area:
+The operators for the wave boundary condition can now be derived using $\eqref{7}$ and $\eqref{9}$, assuming as for the upstream numerical domain that the initial cross-sectional area is the same as the reference cross-sectional area:
 
 $$Q(B,t) = M\_1(S) + H\_1,\\, \gamma = \frac{N}{2\\,S^{0}},\\, \forall n \in \mathbb{N}\_{>0},\\,\lambda = \frac{n^2\\,\pi^2}{l^2} - \frac{\gamma^2}{c^2}$$
 
 $$
-M\_1(S) = \frac{c^2}{l}\int\_{0}^{t}\left[1 + \sum\_{n=1}^{\infty}\\,2\right]\\,S(B,t^{\*})\exp\left[2\gamma(t-t^{\*})\right]\\,dt^{\*}
-- \left(\frac{c^2}{l}\right)^3\\,\int\_{0}^{t}\exp\left[\gamma(2t - t^{\*})\right]\int\_{0}^{t^{\*}}S(B,t\_0)\exp(-\gamma\\,t\_{0})\left[\sum\_{n=1}^{\infty}\frac{2\\,n^2\\,\pi^2}{\sqrt{\lambda\_n}}\\,sin\left(t^{\*} - t\_{0}\right)\right]\\,dt\_0\\,dt^{\*}
+M\_1(S) = \frac{c^2}{l}\int\_{0}^{t}\left[1 + \sum\_{n=1}^{\infty}\\,2\right]\\,S(B,t^{\*})\exp\left[2\gamma(t-t^{\*})\right]\\,dt^{\*} - \left(\frac{c^2}{l}\right)^3\\,\int\_{0}^{t}\exp\left[\gamma(2t - t^{\*})\right]\int\_{0}^{t^{\*}}S(B,t\_0)\exp(-\gamma\\,t\_{0})\left[\sum\_{n=1}^{\infty}\frac{2\\,n^2\\,\pi^2}{\sqrt{\lambda\_n}}\\,sin\left(t^{\*} - t\_{0}\right)\right]\\,dt\_0\\,dt^{\*}
 $$
 
-$$H\_1 = Q^{0}(B)\exp\left(2\,\gamma\,t\right) + \Theta\left[S^0(B), \dot{S}^{0}(B), S\_L(t), \dot{S}\_L(t), \ddot{S}\_L(t)\right]$$
+$$H\_1 = Q^{0}(B)\exp\left(2\\,\gamma\\,t\right) + \Theta\left[S^0(B), \dot{S}^{0}(B), S\_L(t), \dot{S}\_L(t), \ddot{S}\_L(t)\right]$$
 
-$$M\_2(S) = \frac{4}{3}\frac{\left[M\_1(S) + H\_1\right]^2}{S} + \frac{4\,\sqrt{\pi}}{3}\frac{E\,h}{\rho}\sqrt{S}$$
+$$M\_2(S) = \frac{4}{3}\frac{\left[M\_1(S) + H\_1\right]^2}{S} + \frac{4\\,\sqrt{\pi}}{3}\frac{E\\,h}{\rho}\sqrt{S}$$
 
-$$H\_2 = -\frac{4}{3\,\rho}\,E\,h\,\pi\,r^0(B)$$
+$$H\_2 = -\frac{4}{3\\,\rho}\\,E\\,h\\,\pi\\,r^0(B)$$
 
 The flow rate is a function of pressure history and depends also on waves coming from the far end boundary conditions and the initial conditions everywhere in the downstream domain.
 For simplicity, we implemented the equation above assuming that the initial state corresponded to the static solution around which the wave equation is derived, with zero initial derivative of the cross-sectional area and a constant distant cross-sectional area.
@@ -280,123 +277,109 @@ For simplicity, we implemented the equation above assuming that the initial stat
 The _DtN_ map has now been derived for a variety of boundary conditions. The reader interested in the effect of a different boundary condition can follow the same approach to derive the corresponding map.
 In particular, this approach can be applied for complex lumped models of the coronary bed, and can also be performed very similarly for lumped-parameter heart models at the inlet of the numerical domain.
 
-<h2> Finite Element Discretization </h2>
-We employ a stabilized space-time finite element method, known for its robustness, based on the Discontinuous Galerkin method in time. The procedure presented herein employs ideas developed in Hughes and Mallet <a href="#ref-10">[10]</a> and Hughes, Franca and Hulbert <a href="#ref-11">[11]</a>. 
-We previously <a href="#ref-4">[4]</a> described a space-time method with flow rate, pressure and resistance boundary conditions that employed a  different strong form (non conservative).
-Here we retained the same stabilization term. The present formulation accommodates more general inflow and outflow boundary conditions. We use shape functions that are piecewise constant in time and piecewise linear in space. 
+## Finite Element Discretization
+
+We employ a stabilized space-time finite element method, known for its robustness, based on the Discontinuous Galerkin method in time. The procedure presented herein employs ideas developed in Hughes and Mallet <a href="#ref-10">[10]</a> and Hughes, Franca and Hulbert <a href="#ref-11">[11]</a>.
+
+We previously <a href="#ref-4">[4]</a> described a space-time method with flow rate, pressure and resistance boundary conditions that employed a different strong form (non conservative).
+Here we retained the same stabilization term. The present formulation accommodates more general inflow and outflow boundary conditions. We use shape functions that are piecewise constant in time and piecewise linear in space.
+
 Let $\tilde{\mathcal{V}}$ be the finite-dimensional approximation of $\mathcal{V}$ restricted to $(0,B)\times(t\_n,t\_n+1)$. Thus, the weak form for slab $n+1$, from $t\_n$ to $t\_n+1$ reads:
 
 Find $\mathbf{U^h}$ in $\mathbf{V^h}$ such that $\forall\mathbf{W^h}$ in $\mathbf{V^h}$.
 
 $$
-\int\_{t\_n^{+}}^{t\_{n+1}^{-}}\int\_{0}^{B}\left[\mathbf{W}\_{,t}^{T}\,\mathbf{U}^{\mathbf{h}} +
-\mathbf{W}\_{,z}^{T}\,\mathbf{F}(\mathbf{U}) -
-\mathbf{W}\_{,z}^{T}\,\mathbf{K}\,\mathbf{U}\_{,z} +
-\mathbf{W}^{T}\,\mathbf{G}\left(\mathbf{U}\right)
-\right]\,dz\,dt
+\int\_{t\_n^{+}}^{t\_{n+1}^{-}}\int\_{0}^{B}\left[\mathbf{W}\_{,t}^{T}\\,\mathbf{U}^{\mathbf{h}} + \mathbf{W}\_{,z}^{T}\\,\mathbf{F}(\mathbf{U}) - \mathbf{W}\_{,z}^{T}\\,\mathbf{K}\\,\mathbf{U}\_{,z} + \mathbf{W}^{T}\\,\mathbf{G}\left(\mathbf{U}\right) \right]\\,dz\\,dt
 $$
 
 $$
-- \int\_{0}^{B}\mathbf{W}^{T}\left(z,t\_{n+1}^{-}\right)\,\mathbf{U}\left(z,t\_{n+1}^{-}\right)\,dz
-+ \int\_{0}^{B}\,\mathbf{W}^{T}\left(z,t\_{n+1}^{+}\right)\,\mathbf{U}\left(z,t\_{n+1}^{-}\right)\,dz
+\- \int\_{0}^{B}\mathbf{W}^{T}\left(z,t\_{n+1}^{-}\right)\\,\mathbf{U}\left(z,t\_{n+1}^{-}\right)\\,dz + \int\_{0}^{B}\\,\mathbf{W}^{T}\left(z,t\_{n+1}^{+}\right)\\,\mathbf{U}\left(z,t\_{n+1}^{-}\right)\\,dz
 $$
 
 $$
-+ \int\_{t\_{n}^{+}}^{t\_{n+1}^{-}}{\mathbf{W}[\mathbf{F}(\mathbf{U}) -
-\mathbf{K}\,\mathbf{U}\_{,z}]}\_{z = 0}\,dt
-- \int\_{t\_{n}^{+}}^{t\_{n+1}^{-}}{\mathbf{W}[\mathbf{M}(\mathbf{U}) + \mathbf{H}]}\_{z = B}\,dt = 0
+\+ \int\_{t\_{n}^{+}}^{t\_{n+1}^{-}}{\mathbf{W}[\mathbf{F}(\mathbf{U}) - \mathbf{K}\\,\mathbf{U}\_{,z}]}\_{z = 0}\\,dt - \int\_{t\_{n}^{+}}^{t\_{n+1}^{-}}{\mathbf{W}[\mathbf{M}(\mathbf{U}) + \mathbf{H}]}\_{z = B}\\,dt = 0
 $$
 
 For simplicity, we have dropped the superscript $h$. After discretization in time, (3.34) becomes
 (the superscript $n+1$ refers to time slab $n+1$):
 
-$$\Delta t\_n\int\_{0}^{B}\left[\mathbf{W}\_{,z}^{T,n+1}\,\mathbf{F}^{n+1}(\mathbf{U^{n+1}}) - \mathbf{W}\_{,z}^{T,n+1}\,\mathbf{K}\,\mathbf{U}\_{,z}^{n+1} + \mathbf{W}^{T,n+1}\,\mathbf{G}^{n+1}(\mathbf{U}^{n+1})\right]\,dz $$
+$$\Delta t\_n\int\_{0}^{B}\left[\mathbf{W}\_{,z}^{T,n+1}\\,\mathbf{F}^{n+1}(\mathbf{U^{n+1}}) - \mathbf{W}\_{,z}^{T,n+1}\\,\mathbf{K}\\,\mathbf{U}\_{,z}^{n+1} + \mathbf{W}^{T,n+1}\\,\mathbf{G}^{n+1}(\mathbf{U}^{n+1})\right]\\,dz $$
 
 $$
-- \int\_{0}^{B}\,\mathbf{W}^{T,n+1}\left(\mathbf{U}^{n+1} - \mathbf{U}^{n}\right)\,dz
-+ \Delta t\_{n}\left[\mathbf{W}^{T,n+1}\left(\mathbf{F}^{n+1}(\mathbf{U}^{n+1}) - \mathbf{K}\,\mathbf{U}\_{,z}^{n+1}\right)\right]\_{z=0}
-- \int\_{t\_n^{+}}^{t\_{n+1}^{-}}\left[\mathbf{W}^{T,n+1}\left(\mathbf{M}^{n+1}(\mathbf{U}) + \mathbf{H}^{n+1}\right)\right]\_{z=B} = 0 \label{10} \tag{10}
+\- \int\_{0}^{B}\\,\mathbf{W}^{T,n+1}\left(\mathbf{U}^{n+1} - \mathbf{U}^{n}\right)\\,dz + \Delta t\_{n}\left[\mathbf{W}^{T,n+1}\left(\mathbf{F}^{n+1}(\mathbf{U}^{n+1}) - \mathbf{K}\\,\mathbf{U}\_{,z}^{n+1}\right)\right]\_{z=0} - \int\_{t\_n^{+}}^{t\_{n+1}^{-}}\left[\mathbf{W}^{T,n+1}\left(\mathbf{M}^{n+1}(\mathbf{U}) + \mathbf{H}^{n+1}\right)\right]\_{z=B} = 0 \label{10} \tag{10}
 $$
 
 The boundary term appears in the box in this last equation.
 Stabilization terms are added to $\eqref{10}$. To that end, we define the matrices $\mathbf{A}$ and $\mathbf{C\_A}$:
 
 $$
-\mathbf{A} =
-\begin{bmatrix}
-0 & 1 \cr
--(1 + \delta)\,\left(\frac{U\_2}{U\_1}\right)^2 + \frac{U\_1}{\rho}\frac{\partial\tilde{p}}{\partial S} & (1 + \delta)\,\frac{2\,U\_2}{U\_1} \cr
-\end{bmatrix}
+\mathbf{A} = \begin{bmatrix} 0 & 1 \cr -(1 + \delta)\\,\left(\frac{U\_2}{U\_1}\right)^2 + frac{U\_1}{\rho}\frac{\partial\tilde{p}}{\partial S} & (1 + \delta)\\,\frac{2\\,U\_2}{U\_1} \cr \end{bmatrix}
 $$
 
 $$
-\mathbf{C\_A} =
-\begin{bmatrix}
--\frac{\psi}{U\_1} & 0 \cr
-f-\frac{1}{\rho}\,\frac{\partial\tilde{p}}{\partial z} & \frac{N}{U\_1} \cr
-\end{bmatrix}
+\mathbf{C\_A} = \begin{bmatrix} -\frac{\psi}{U\_1} & 0 \cr f-\frac{1}{\rho}\\,\frac  partial\tilde{p}}{\partial z} & \frac{N}{U\_1} \cr \end{bmatrix}
 $$
 
 We also define the matrix differential operator:
 
 $$
-\mathcal{L}(\mathbf{U}) = \mathbf{I}\,\frac{\partial}{\partial t} + \mathbf{A}(\mathbf{U})\,\frac{\partial}{\partial z} - \mathbf{K}\,\frac{\partial^2}{\partial z^2} - \mathbf{C\_A}(\mathbf{U})
+\mathcal{L}(\mathbf{U}) = \mathbf{I}\\,\frac{\partial}{\partial t} + \mathbf{A}(\mathbf{U})\\,\frac{\partial}{\partial z} - \mathbf{K}\\,\frac{\partial^2}{\partial z^2} - \mathbf{C\_A}(\mathbf{U})
 $$
 
-Note that $\mathcal{L}(\mathbf{U})\,\mathbf{U}$ is the residual of the advective form of the partial differential equation system. For the current case of a piecewise constant approximation in time and a piecewise linear approximation in space this simplifies to
+Note that $\mathcal{L}(\mathbf{U})\\,\mathbf{U}$ is the residual of the advective form of the partial differential equation system. For the current case of a piecewise constant approximation in time and a piecewise linear approximation in space this simplifies to
 
-$$\mathcal{L}(\mathbf{U})\,\mathbf{U} = \mathbf{A}(\mathbf{U})\,\mathbf{U}\_{,z} - \mathbf{C\_A}(\mathbf{U})\,\mathbf{U}$$
+$$\mathcal{L}(\mathbf{U})\\,\mathbf{U} = \mathbf{A}(\mathbf{U})\\,\mathbf{U}\_{,z} - \mathbf{C\_A}(\mathbf{U})\\,\mathbf{U}$$
 
 The stabilization term takes the form:
 
-$$\Delta t\_n\sum\_{e}\int\_{\Omega\_e}\left(\mathcal{L}(\mathbf{U})^T\,\mathbf{W}\right)^T\boldsymbol{\tau}\,\mathcal{L}(\mathbf{U})\,\mathbf{U}\,dz $$
+$$\Delta t\_n\sum\_{e}\int\_{\Omega\_e}\left(\mathcal{L}(\mathbf{U})^T\\,\mathbf{W}\right)^T\boldsymbol{\tau}\\,\mathcal{L}(\mathbf{U})\\,\mathbf{U}\\,dz $$
 
 The summation ranges over the element interiors and $\tau = \tau(\mathbf{U})$ is the stabilization matrix defined by:
 
 $$
-\boldsymbol{\tau} = \left[\frac{2}{\Delta t\_n}\mathbf{I} + \frac{2}{h}\vert\mathbf{A}\vert + 3\,\left(\frac{2}{h}\right)^2\,\mathbf{K} + \vert\mathbf{C\_A}\vert\right]^{-1}
+\boldsymbol{\tau} = \left[\frac{2}{\Delta t\_n}\mathbf{I} + \frac{2}{h}\vert\mathbf{A}\vert + 3\\,\left(\frac{2}{h}\right)^2\\,\mathbf{K} + \vert\mathbf{C\_A}\vert\right]^{-1}
 $$
 
 Here, the absolute value of a 2x2 matrix B can be obtained from the Cayley-Hamilton theorem,
 
 $$
-\vert\mathbf{B}\vert = \frac{\mathbf{B}^2 + \sqrt{det(\mathbf{B}^2)}\,\mathbf{I}}{\sqrt{tr(\mathbf{B}^2) + 2\,\sqrt{det(\mathbf{B}^2)}}}
+\vert\mathbf{B}\vert = \frac{\mathbf{B}^2 + \sqrt{det(\mathbf{B}^2)}\\,\mathbf{I}}{\sqrt{tr(\mathbf{B}^2) + 2\\,\sqrt{det(\mathbf{B}^2)}}}
 $$
 
-Therefore the final variational problem is: find $\mathbf{U}^{n+1}$ such that $\forall\,\mathbf{W}$:
+Therefore the final variational problem is: find $\mathbf{U}^{n+1}$ such that $\forall\\,\mathbf{W}$:
 
 $$
-\Delta t\_n\int\_{0}^{B}\left[\mathbf{W}\_{,z}^{T,n+1}\,\mathbf{F}^{n+1}(\mathbf{U^{n+1}}) - \mathbf{W}\_{,z}^{T,n+1}\,\mathbf{K}\,\mathbf{U}\_{,z}^{n+1} + \mathbf{W}^{T,n+1}\,\mathbf{G}^{n+1}(\mathbf{U}^{n+1})\right]\,dz
+\Delta t\_n\int\_{0}^{B}\left[\mathbf{W}\_{,z}^{T,n+1}\\,\mathbf{F}^{n+1}(\mathbf{U^{n+1}}) - \mathbf{W}\_{,z}^{T,n+1}\\,\mathbf{K}\\,\mathbf{U}\_{,z}^{n+1} + \mathbf{W}^{T,n+1}\\,\mathbf{G}^{n+1}(\mathbf{U}^{n+1})\right]\\,dz
 $$
 
 $$
-- \int\_{0}^{B}\,\mathbf{W}^{T,n+1}\left(\mathbf{U}^{n+1} - \mathbf{U}^{n}\right)\,dz
-+ \Delta t\_{n}\left[\mathbf{W}^{T,n+1}\left(\mathbf{F}^{n+1}(\mathbf{U}^{n+1}) - \mathbf{K}\,\mathbf{U}\_{,z}^{n+1}\right)\right]\_{z=0}
+\- \int\_{0}^{B}\\,\mathbf{W}^{T,n+1}\left(\mathbf{U}^{n+1} - \mathbf{U}^{n}\right)\\,dz + \Delta t\_{n}\left[\mathbf{W}^{T,n+1}\left(\mathbf{F}^{n+1}(\mathbf{U}^{n+1}) - \mathbf{K}\\,\mathbf{U}\_{,z}^{n+1}\right)\right]\_{z=0}
 $$
 
-$$- \int\_{t\_n^{+}}^{t\_{n+1}^{-}}\left[\mathbf{W}^{T,n+1}\left(\mathbf{M}^{n+1}(\mathbf{U}) + \mathbf{H}^{n+1}\right)\right]\_{z=B} = 0 $$
+$$
+\- \int\_{t\_n^{+}}^{t\_{n+1}^{-}}\left[\mathbf{W}^{T,n+1}\left(\mathbf{M}^{n+1}(\mathbf{U}) + \mathbf{H}^{n+1}\right)\right]\_{z=B} = 0
+$$
 
 $$
-+ \Delta\,t\_{n}\sum\_{e}\int\_{\Omega\_e}\left(\mathbf{W}\_{,z}^{T}\,\mathbf{A}^{n+1} - \mathbf{W}^{T}\,\mathbf{C}\_{A}^{n+1}\right)\boldsymbol{\tau}\left(\mathbf{A}^{n+1}\mathbf{U}\_{,z}^{n+1} - \mathbf{C}\_{A}^{n+1}\,\mathbf{U}^{n+1}\right)\,dz = 0
+\+ \Delta\\,t\_{n}\sum\_{e}\int\_{\Omega\_e}\left(\mathbf{W}\_{,z}^{T}\\,\mathbf{A}^{n+1} - \mathbf{W}^{T}\\,\mathbf{C}\_{A}^{n+1}\right)\boldsymbol{\tau}\left(\mathbf{A}^{n+1}\mathbf{U}\_{,z}^{n+1} - \mathbf{C}\_{A}^{n+1}\\,\mathbf{U}^{n+1}\right)\\,dz = 0
 $$
 
 Using piecewise linear shape functions in space $N\_A, A = 1,\dots, m$ with $m$ the number of nodes, the global nodal residual is:
 
 $$
-\mathbf{R}\_{A} = \Delta\,t\_{n}\,\int\_{0}^{B}\,N\_{A,z}\left(\mathbf{F}^{n+1}(\mathbf{U}^{n+1}) - \mathbf{K}\,\mathbf{U}\_{,z}^{n+1}\right) + N\_{A}\,\mathbf{G}^{n+1}(\mathbf{U^{n+1}})\,dz
+\mathbf{R}\_{A} = \Delta\\,t\_{n}\\,\int\_{0}^{B}\\,N\_{A,z}\left(\mathbf{F}^{n+1}(\mathbf{U}^{n+1}) - \mathbf{K}\\,\mathbf{U}\_{,z}^{n+1}\right) + N\_{A}\\,\mathbf{G}^{n+1}(\mathbf{U^{n+1}})\\,dz
 $$
 
 $$
-- \int\_{0}^{B}\,N\_{A}\left(\mathbf{U}^{n+1} - \mathbf{U}^{n}\right)\,dz
-+ \Delta\,t\_n\left[N\_{A}\left(\mathbf{F}^{n+1}(\mathbf{U}^{n+1}) - \mathbf{K}\,\mathbf{U}\_{,z}^{n+1}\right)\right]\_{z=0}
+\- \int\_{0}^{B}\\,N\_{A}\left(\mathbf{U}^{n+1} - \mathbf{U}^{n}\right)\\,dz + \Delta\\,  \_n\left[N\_{A}\left(\mathbf{F}^{n+1}(\mathbf{U}^{n+1}) - \mathbf{K}\\,\mathbf{U}\_{,z}^{n+1}\right)\right]\_{z=0}
 $$
 
 $$
-- \int\_{t\_{n}^{+}}^{t\_{n+1}^{-}}\left[N\_{A}\left(\mathbf{M}^{n+1}(\mathbf{U}) + \mathbf{H}^{n+1}\right)\right]\_{z=B}\,dt
+\- \int\_{t\_{n}^{+}}^{t\_{n+1}^{-}}\left[N\_{A}\left(\mathbf{M}^{n+1}(\mathbf{U}) + \mathbf{H}^{n+1}\right)\right]\_{z=B}\\,dt
 $$
 
 $$
-+ \Delta\,t\_{n}\,\sum\_{e}\,\int\_{\Omega\_e}\left(N\_{A,z}\,\mathbf{A}^{n+1} - N\_{A}\,\mathbf{C}\_{A}^{n+1}\right)\,\boldsymbol{\tau}\,\left(\mathbf{A}^{n+1}\,\mathbf{U}\_{,z}^{n+1} - \mathbf{C}\_{A}^{n+1}\,\mathbf{U}^{n+1}\right)\,dz = 0
+\+ \Delta\\,t\_{n}\\,\sum\_{e}\\,\int\_{\Omega\_e}\left(N\_{A,z}\\,\mathbf{A}^{n+1} - N\_{A}\\,\mathbf{C}\_{A}^{n+1}\right)\\,\boldsymbol{\tau}\\,\left(\mathbf{A}^{n+1}\\,\mathbf{U}\_{,z}^{n+1} - \mathbf{C}\_{A}^{n+1}\\,\mathbf{U}^{n+1}\right)\\,dz = 0
 $$
 
 These nonlinear equations are then solved with a modified Newton-Raphson technique <a href="#ref-4">[4]</a>. At each iteration k+1 in the time step n+1, the non-linear loop consists of two steps:
@@ -404,7 +387,7 @@ These nonlinear equations are then solved with a modified Newton-Raphson techniq
 Solve for the increment $\Delta\mathbf{U}\_{C}^{n+1,k+1}$:
 
 $$
-\mathbf{K}\_{AC}^{n+1,k}\,\Delta\mathbf{U}\_{C}^{n+1,k+1} = -\mathbf{R}\_{A}^{n+1,k},\quad\text{with}\quad\mathbf{K}\_{AC}^{n+1,k} = \frac{\partial\mathbf{R}\_{A}^{n+1,k}}{\partial\mathbf{U}\_{C}},\quad A,C=1,\dots,m
+\mathbf{K}\_{AC}^{n+1,k}\\,\Delta\mathbf{U}\_{C}^{n+1,k+1} = -\mathbf{R}\_{A}^{n+1,k},\quad\text{with}\quad\mathbf{K}\_{AC}^{n+1,k} = \frac{\partial\mathbf{R}\_{A}^{n+1,k}}{\partial\mathbf{U}\_{C}},\quad A,C=1,\dots,m
 $$
 
 Update the solution:
@@ -416,17 +399,16 @@ $$
 The matrices $\mathbf{A}$, $\mathbf{C^A}$, $\mathbf{C^F}$ (recall :eq:$eq13$) and $\tau$ are frozen in the calculation of the tangent matrix:
 
 $$
-\mathbf{K}\_{AC} = \Delta\,t\_n\,\int\_{0}^{B}\,N\_{A,z}\,\left(\frac{\partial\,\mathbf{F}^{n+1,k}}{\partial\,\mathbf{U}\_{C}^{n+1,k}}
-- \mathbf{K}\,N\_{C,z}\right) + N\_A\,N\_C\,\mathbf{C}\_{F}^{n+1,k}\,dz
+\mathbf{K}\_{AC} = \Delta\\,t\_n\\,\int\_{0}^{B}\\,N\_{A,z}\\,\left(\frac{\partial\\,\mathbf{F}^{n+1,k}}{\partial\\,\mathbf{U}\_{C}^{n+1,k}} - \mathbf{K}\\,N\_{C,z}\right) + N\_A\\,N\_C\\,\mathbf{C}\_{F}^{n+1,k}\\,dz
 $$
 
-$$ - \int\_{0}^{B}\,N_A\,N_C\,\mathbf{I}\,dz $$
+$$ \- \int\_{0}^{B}\\,N_A\\,N_C\\,\mathbf{I}\\,dz $$
 
-$$ + \Delta\,t_n\left[N\_A\left(\frac{\partial\,\mathbf{F}^{n+1,k}}{\partial\,\mathbf{U}\_{C}^{n+1,k}} - \mathbf{K}\,N\_{C,z}\right)\right]\_{z=0} $$
+$$ \+ \Delta\\,t_n\left[N\_A\left(\frac{\partial\\,\mathbf{F}^{n+1,k}}{\partial\\,\mathbf{U}\_{C}^{n+1,k}} - \mathbf{K}\\,N\_{C,z}\right)\right]\_{z=0} $$
 
-$$ - \int\_{t_n^{+}}^{t\_{n+1}^{-}}\,\left[N\_A\,\frac{\partial\,\mathbf{M}^{n+1,k}}{\partial\,\mathbf{U}\_{C}^{n+1,k}}\right]\_{z=B}\,dt $$
+$$ \- \int\_{t_n^{+}}^{t\_{n+1}^{-}}\\,\left[N\_A\\,\frac{\partial\\,\mathbf{M}^{n+1,k}}{\partial\\,\mathbf{U}\_{C}^{n+1,k}}\right]\_{z=B}\\,dt $$
 
-$$ + \Delta\,t\_{n}\,\sum\_{e}\,\int\_{\Omega_e}\left(N\_{A,z}\,\mathbf{A}^{n+1} - N\_{A}\,\mathbf{C}\_{A}^{n+1}\right)\,\boldsymbol{\tau}\,\left(\mathbf{A}^{n+1}\,\mathbf{U}\_{,z}^{n+1} - \mathbf{C}\_{A}^{n+1}\,\mathbf{U}^{n+1}\right)\,dz = 0 $$
+$$ \+ \Delta\\,t\_{n}\\,\sum\_{e}\\,\int\_{\Omega_e}\left(N\_{A,z}\\,\mathbf{A}^{n+1} - N\_{A}\\,\mathbf{C}\_{A}^{n+1}\right)\\,\boldsymbol{\tau}\\,\left(\mathbf{A}^{n+1}\\,\mathbf{U}\_{,z}^{n+1} - \mathbf{C}\_{A}^{n+1}\\,\mathbf{U}^{n+1}\right)\\,dz = 0 $$
 
 After the residual converges to a chosen tolerance, the scheme is advanced in time to solve for a new time step, initialized with the solution at the previous time step.
 
