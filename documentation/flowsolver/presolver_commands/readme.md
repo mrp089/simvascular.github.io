@@ -153,7 +153,7 @@ This section lists the available **svPre** commands, the associated parameters a
 <tr>
   <td>initial_velocity</td>
   <td>(double) (double) (double)</td>
-  <td>Set the initial velocity as the given values in the model if not read from other files. The default is $v_0 = 0.001,\,0.001,\,0.001$</td>
+  <td>Set the initial velocity as the given values in the model if not read from other files. The default is $v_0 = 0.001,\\,0.001,\\,0.001$</td>
 </tr>
 </table>
 

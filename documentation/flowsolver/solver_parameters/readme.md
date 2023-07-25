@@ -17,7 +17,7 @@ There are many parameters for flow solver, but you are only required to set expl
 **Number of Timesteps: 200** and **Time Step Size: 0.03** - These two lines control the amount of physical time that you run your problem for. In this case,
 
 $$
-\text{Total physical time} = \text{N. time steps} \times \text{Time Step Size} = T = N \times \Delta t = 200 \times 0.03 = 6.0\,\text{sec}
+\text{Total physical time} = \text{N. time steps} \times \text{Time Step Size} = T = N \times \Delta t = 200 \times 0.03 = 6.0\\,\text{sec}
 $$
 
 Note that this doesn't match the **period** options we specified before. In this case, like we mentioned before, it does not really make sense to talk about a _cardiac cycle_ (this is a steady flow), but if we wanted to run this analysis for _six_ cardiac cycles, we would have to run the problem for $6.0$ seconds of physical time. If we kept our choice of time step size the same ( $\Delta t = 0.03$ sec), we will need a total number of time steps of $N = 200$.
@@ -27,7 +27,7 @@ Note that this doesn't match the **period** options we specified before. In this
 **WARNING**: Now the question is: how do you come up with a reasonable value for $\Delta t$? There is not a straightforward answer for this. $\Delta t$ is the parameter that controls your **temporal discretization**, which is something that works in a similar fashion to the **spatial discretization** given by your mesh: the finer, the more accurate the results, but also the bigger the size of the problem and the time to solve it! We don’t want to get into a lot of theoretical details now, so we will just provide you with a reasonable **recipe** to evaluate this parameter. The **recipe** to estimate a reasonable $\Delta t$ is based on a dimensionless parameter called the **CFL** number. The CFL number relates the velocities happening in the fluid domain ($v$), a temporal discretization parameter ($\Delta t$), and a mesh discretization parameter (i.e. mesh size) ($h$) as follows:
 
 $$
-\text{CFL} = \frac{v\,\Delta t}{h}
+\text{CFL} = \frac{v\\,\Delta t}{h}
 $$
 
 We want this **CFL** number to be around $1.0$. This will mean that, for the velocities present in our fluid domain, the temporal and spatial discretizations are _balanced_. In our problem, it can be shown that the average expected velocity is about $v = 16.7$ cm/s; the spatial discretization parameter or finite element size is $h = 0.5$. Therefore, if we shoot for a CFL number close to one, we have:

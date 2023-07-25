@@ -52,7 +52,7 @@ The following expressions are used in [this paper](docsRefs.html#refSec2).
 $$
 p\_0 = 1,\quad
 p\_1 = R\_{a-micro}C\_a + (R\_v + R\_{v-micro})(C\_a + C\_{im}),\quad
-p\_2 = C\_{a}\,C\_{im}\,R\_{a-micro}(R\_v + R\_{v-micro}).
+p\_2 = C\_{a}\\,C\_{im}\\,R\_{a-micro}(R\_v + R\_{v-micro}).
 $$
 
 $$

@@ -21,7 +21,7 @@ balance are given by (z is the axial coordinate):
 
 $$\frac{\partial S}{\partial t} + \frac{\partial Q}{\partial z} = -\psi$$
 
-$$\frac{\partial Q}{\partial t} + \frac{\partial}{\partial z}\left[(1 + \delta)\,\frac{Q^2}{S}\right] + \frac{S}{\rho}\,\frac{\partial p}{\partial z} = S\,f + N\,\frac{Q}{S} + \nu\frac{\partial^2 Q}{\partial z^2}$$
+$$\frac{\partial Q}{\partial t} + \frac{\partial}{\partial z}\left[(1 + \delta)\\,\frac{Q^2}{S}\right] + \frac{S}{\rho}\\,\frac{\partial p}{\partial z} = S\\,f + N\\,\frac{Q}{S} + \nu\frac{\partial^2 Q}{\partial z^2}$$
 
 The primary variables are the cross-sectional area $S$, the pressure $p$, and the volumetric flow rate $Q$.
 The density of the fluid is given by ρ (assumed constant), the external force by $f$, the kinematic viscosity by $\nu$ (assumed constant)
@@ -29,7 +29,7 @@ and $\psi$ is an outflow function (taken to be zero for impermeable vessels).
 The variables $\delta$ and $N$ are defined by the choice of a profile function for the velocity over the cross-section. Here we choose
 a time-varying, parabolic flow profile, thus Hughes and Lubliner <a href="#ref-1">[1]</a>:
 
-$$\delta = \frac{1}{3},\quad N = -8\,\pi\,\nu \label{1} \tag{1} $$
+$$\delta = \frac{1}{3},\quad N = -8\\,\pi\\,\nu \label{1} \tag{1} $$
 
 The governing equations are of mixed parabolic-hyperbolic type, but have mainly a hyperbolic nature since the diffusive term is small. We thus impose one boundary condition at each inlet/outlet by specifying values of the primary variables or a relationship between them.
 
@@ -39,7 +39,7 @@ $$ Q(z,t) = Q_in(t),\quad z\in\Gamma_in $$
 
 The initial conditions for this problem are given by (where $S^0(z)$, $Q^0(z)$ and $p^0(z)$ are prescribed functions):
 
-$$ S(z,0) = S^0(z),Q(z,0) = Q^0(z)\,\text{and}\, p(z,0) = p^0(z) $$
+$$ S(z,0) = S^0(z),Q(z,0) = Q^0(z)\\,\text{and}\\, p(z,0) = p^0(z) $$
 
 In order to complete the above system, we need to introduce a constitutive relationship. An elastic model is assumed, which relates the pressure to the cross-sectional area as follows:
 
@@ -51,31 +51,31 @@ $$ S(z,t) = \tilde{S}[p(z,t),z,t] \label{2} \tag{2} $$
 
 The particular constitutive relationship that we have used is that proposed by Olufsen <a href="#ref-3">[3]</a>:
 
-$$ \tilde{p}(S,z) = p^0(z) + \frac{4}{3}\,\frac{E\,h}{r^0(z)}\,\left(1 - \sqrt{\frac{S^0(z)}{S(z,t)}}\right) \label{3} \tag{3} $$
+$$ \tilde{p}(S,z) = p^0(z) + \frac{4}{3}\\,\frac{E\\,h}{r^0(z)}\\,\left(1 - \sqrt{\frac{S^0(z)}{S(z,t)}}\right) \label{3} \tag{3} $$
 
 here the Young’s modulus $E$ and the wall thickness $h$ relate to the radius $r^0 = \sqrt{S^0(z)/\pi}$:
 
-$$ \frac{E\,h}{r^0(z)} = k_1\,\exp{k_2\,r^0(z)} + k_3 $$
+$$ \frac{E\\,h}{r^0(z)} = k_1\\,\exp{k_2\\,r^0(z)} + k_3 $$
 
 In this relationship, $k\_1$, $k\_2$, and $k\_3$ are empirically-derived constants with values in CGS units of
 $2x10^{7} g⋅ s^{-2}⋅ cm^{-1}$, $-22.53 cm^{-1}$, and $8.65 x 10^{5} g⋅ s^{-2}⋅ cm^{-1}$, respectively.
 Here we use a constant initial pressure $p^0(z) = p^0$. By noting that the pressure gradient can be expanded as
 
-$$ \frac{\partial p}{\partial z} = \frac{\partial\tilde{p}}{\partial S}\,\frac{\partial S}{\partial z} + \frac{\partial\tilde{p}}{\partial z} $$
+$$ \frac{\partial p}{\partial z} = \frac{\partial\tilde{p}}{\partial S}\\,\frac{\partial S}{\partial z} + \frac{\partial\tilde{p}}{\partial z} $$
 
 we can rewrite the system of partial differential equations in the following quasi-linear conservative form:
 
-$$ \frac{\partial\mathbf{U}}{\partial t} + \frac{\partial\mathbf{F}}{\partial z} - \mathbf{K}\,\frac{\partial^2\mathbf{U}}{\partial z^2} = G,\,\text{or}\quad\frac{\partial\mathbf{U}}{\partial t} + \frac{\partial\mathbf{F}}{\partial z} - \mathbf{K}\,\frac{\partial^2\mathbf{U}}{\partial z^2} = \mathbf{C}\_F\,\mathbf{U} $$
+$$ \frac{\partial\mathbf{U}}{\partial t} + \frac{\partial\mathbf{F}}{\partial z} - \mathbf{K}\\,\frac{\partial^2\mathbf{U}}{\partial z^2} = G,\\,\text{or}\quad\frac{\partial\mathbf{U}}{\partial t} + \frac{\partial\mathbf{F}}{\partial z} - \mathbf{K}\\,\frac{\partial^2\mathbf{U}}{\partial z^2} = \mathbf{C}\_F\\,\mathbf{U} $$
 
 where
 
 $$ \mathbf{U} = \begin{bmatrix}U_1\ \cr U_2 \end{bmatrix} = \begin{bmatrix} S \cr Q \end{bmatrix} \label{4} \tag{4} $$
 
-$$ \mathbf{F} = \begin{bmatrix} U_2 \cr (1 + \delta)\,\frac{U_2^2}{U_1} + \frac{1}{\rho}\,\int\_{p^0}^{p(z,t)}\tilde{S}(p,z,t)\,dp \end{bmatrix}, \quad \mathbf{K} = \begin{bmatrix} 0 & 0 \cr 0 & \nu\\ \end{bmatrix} $$
+$$ \mathbf{F} = \begin{bmatrix} U_2 \cr (1 + \delta)\\,\frac{U_2^2}{U_1} + \frac{1}{\rho}\\,\int\_{p^0}^{p(z,t)}\tilde{S}(p,z,t)\\,dp \end{bmatrix}, \quad \mathbf{K} = \begin{bmatrix} 0 & 0 \cr 0 & \nu\\ \end{bmatrix} $$
 
-$$ \mathbf{G} = \begin{bmatrix} -\psi \cr U_1\,f + N\,\frac{U_2}{U_1} + \int\_{p^0}^{p}\frac{1}{\rho}\,\frac{\partial\tilde{S}(p,z,t)}{\partial z}\,dp \end{bmatrix},\quad $$
+$$ \mathbf{G} = \begin{bmatrix} -\psi \cr U_1\\,f + N\\,\frac{U_2}{U_1} + \int\_{p^0}^{p}\frac{1}{\rho}\\,\frac{\partial\tilde{S}(p,z,t)}{\partial z}\\,dp \end{bmatrix},\quad $$
 
-$$ \mathbf{C}\_F = \begin{bmatrix} -\frac{\psi}{U_1} & 0 \cr f + \frac{1}{U_1}\,\int\_{p^0}^{p}\frac{1}{\rho}\,\frac{\partial\tilde{S}(p,z,t)}{\partial z}\,dp & \frac{N}{U_1} \end{bmatrix} $$
+$$ \mathbf{C}\_F = \begin{bmatrix} -\frac{\psi}{U_1} & 0 \cr f + \frac{1}{U_1}\\,\int\_{p^0}^{p}\frac{1}{\rho}\\,\frac{\partial\tilde{S}(p,z,t)}{\partial z}\\,dp & \frac{N}{U_1} \end{bmatrix} $$
 
 The motivation to work with the conservative form rather than the advective form as in previous work <a href="#ref-4">[4]</a>, is to be able to integrate by part the convective term and obtain a flux (a boundary integral) through which the multidomain coupling can be performed.
 
@@ -85,13 +85,13 @@ In the present conservative formulation, boundary conditions are prescribed in a
 
 <h2> Weak form </h2>
 
-The weak formulation of the initial boundary value problem is given as follows with $\Omega = [0, L]$ : find $\mathbf{U}$ in $\mathcal{V} = \{\mathbf{U}:\Omega\times (0,T)\rightarrow\mathbb{R}^2\,|\,\mathbf{U}(z,t)\in H\_0^1\}$ such that $\forall\,\mathbf{W} = \left[W\_1\,W\_2\right]^T\in\mathcal{V}$,
+The weak formulation of the initial boundary value problem is given as follows with $\Omega = [0, L]$ : find $\mathbf{U}$ in $\mathcal{V} = \{\mathbf{U}:\Omega\times (0,T)\rightarrow\mathbb{R}^2\\,|\\,\mathbf{U}(z,t)\in H\_0^1\}$ such that $\forall\\,\mathbf{W} = \left[W\_1\\,W\_2\right]^T\in\mathcal{V}$,
 
 $$
 \begin{eqnarray}
-   & \int\_{0}^{t}\int\_{0}^{L}\left(-\mathbf{W}\_{,t}^T\,\mathbf{U} - \mathbf{W}\_{,z}^T\,\mathbf{F} + \mathbf{W}\_{,z}^T\,\mathbf{K}\,\mathbf{U}\_{,z}-\mathbf{W}^T\,\mathbf{G}\right)\,dz\,dt + \int\_{0}^{T} \left[\mathbf{W}^T\left(\mathbf{F}-\mathbf{K}\mathbf{U}\_{,z}\right)\right]\\\_{0}^{L}\,dt + \cr
-   & \int\_{0}^{L}\mathbf{W}^T(z,T)\mathbf{U}(z,T)\,dz - \cr
-   & \int\_{0}^{L}\mathbf{W}^T(z,0)\,\mathbf{U}^0(z)\,dz = 0
+   & \int\_{0}^{t}\int\_{0}^{L}\left(-\mathbf{W}\_{,t}^T\\,\mathbf{U} - \mathbf{W}\_{,z}^T\\,\mathbf{F} + \mathbf{W}\_{,z}^T\\,\mathbf{K}\\,\mathbf{U}\_{,z}-\mathbf{W}^T\\,\mathbf{G}\right)\\,dz\\,dt + \int\_{0}^{T} \left[\mathbf{W}^T\left(\mathbf{F}-\mathbf{K}\mathbf{U}\_{,z}\right)\right]\\\_{0}^{L}\\,dt + \cr
+   & \int\_{0}^{L}\mathbf{W}^T(z,T)\mathbf{U}(z,T)\\,dz - \cr
+   & \int\_{0}^{L}\mathbf{W}^T(z,0)\\,\mathbf{U}^0(z)\\,dz = 0
    \end{eqnarray}
 $$
 
@@ -118,11 +118,11 @@ The disjoint nature of this expression is used to derive a new variational form 
 
 $$
 \begin{eqnarray}
-& \int\_{0}^{t}\int\_{0}^{B}\left(-\mathbf{W}\_{,t}^{n\,T}\,\mathbf{U}^{n} - \mathbf{W}\_{,z}^{n\,T}\,\mathbf{F}(\mathbf{U}^{n}) + \mathbf{W}\_{,z}^{n\,T}\,\mathbf{K}\,\mathbf{U}^{n}\_{,z}-\mathbf{W}^{n\,T}\,\mathbf{G}(\mathbf{U}^{n})\right)\,dz\,dt \cr
-& -\int\_{0}^{B}\,\mathbf{W}^{n\,T}(z,T)\,\mathbf{U}^{n}(z,T)\,dz +
-\int\_{0}^{B}\mathbf{W}^{n\,T}(z,0)\,\mathbf{U}^{n}(z,0)\,dz + \cr
-& \int\_{0}^{T}\left[\mathbf{W}^{n\,T}\left(\mathbf{F}(\mathbf{U}^{n}) - \mathbf{K}\,\mathbf{U}^{n}\_{,z}\right)\right]\_{z=0}\,dt -
-\int\_{0}^{T}\left[\mathbf{W}^{a\,T}\left(\mathbf{F}(\mathbf{U}^{a}) - \mathbf{K}\,\mathbf{U}^{a}\_{,z}\right)\right]\_{z=B}\,dt = 0
+& \int\_{0}^{t}\int\_{0}^{B}\left(-\mathbf{W}\_{,t}^{n\\,T}\\,\mathbf{U}^{n} - \mathbf{W}\_{,z}^{n\\,T}\\,\mathbf{F}(\mathbf{U}^{n}) + \mathbf{W}\_{,z}^{n\\,T}\\,\mathbf{K}\\,\mathbf{U}^{n}\_{,z}-\mathbf{W}^{n\\,T}\\,\mathbf{G}(\mathbf{U}^{n})\right)\\,dz\\,dt \cr
+& -\int\_{0}^{B}\\,\mathbf{W}^{n\\,T}(z,T)\\,\mathbf{U}^{n}(z,T)\\,dz +
+\int\_{0}^{B}\mathbf{W}^{n\\,T}(z,0)\,\mathbf{U}^{n}(z,0)\\,dz + \cr
+& \int\_{0}^{T}\left[\mathbf{W}^{n\\,T}\left(\mathbf{F}(\mathbf{U}^{n}) - \mathbf{K}\\,\mathbf{U}^{n}\_{,z}\right)\right]\_{z=0}\\,dt -
+\int\_{0}^{T}\left[\mathbf{W}^{a\\,T}\left(\mathbf{F}(\mathbf{U}^{a}) - \mathbf{K}\\,\mathbf{U}^{a}\_{,z}\right)\right]\_{z=B}\\,dt = 0
 \end{eqnarray} \label{5} \tag{5}
 $$
 
@@ -145,11 +145,11 @@ The final result is
 
 $$
 \begin{eqnarray}
-& \int\_{0}^{t}\int\_{0}^{B}\left(-\mathbf{W}\_{,t}^{n\,T}\,\mathbf{U}^{n} - \mathbf{W}\_{,z}^{n\,T}\,\mathbf{F}(\mathbf{U}^{n}) + \mathbf{W}\_{,z}^{n\,T}\,\mathbf{K}\,\mathbf{U}^{n}\_{,z}-\mathbf{W}^{n\,T}\,\mathbf{G}(\mathbf{U}^{n})\right)\,dz\,dt \cr
-& -\int\_{0}^{B}\,\mathbf{W}^{n\,T}(z,T)\,\mathbf{U}^{n}(z,T)\,dz +
-\int\_{0}^{B}\mathbf{W}^{n\,T}(z,0)\,\mathbf{U}^{n}(z,0)\,dz + \cr
-& \int\_{0}^{T}\left[\mathbf{W}^{n\,T}\left(\mathbf{F}(\mathbf{U}^{n}) - \mathbf{K}\,\mathbf{U}^{n}\_{,z}\right)\right]\_{z=0}\,dt -
-\int\_{0}^{T}\left[\mathbf{W}^{n\,T}\left(\mathbf{M}(\mathbf{U}^{n}) + \mathbf{H}\right)\right]\_{z=B}\,dt = 0
+& \int\_{0}^{t}\int\_{0}^{B}\left(-\mathbf{W}\_{,t}^{n\\,T}\\,\mathbf{U}^{n} - \mathbf{W}\_{,z}^{n\\,T}\\,\mathbf{F}(\mathbf{U}^{n}) + \mathbf{W}\_{,z}^{n\\,T}\\,\mathbf{K}\\,\mathbf{U}^{n}\_{,z}-\mathbf{W}^{n\\,T}\\,\mathbf{G}(\mathbf{U}^{n})\right)\\,dz\\,dt \cr
+& -\int\_{0}^{B}\\,\mathbf{W}^{n\\,T}(z,T)\\,\mathbf{U}^{n}(z,T)\\,dz +
+\int\_{0}^{B}\mathbf{W}^{n\\,T}(z,0)\\,\mathbf{U}^{n}(z,0)\\,dz + \cr
+& \int\_{0}^{T}\left[\mathbf{W}^{n\\,T}\left(\mathbf{F}(\mathbf{U}^{n}) - \mathbf{K}\\,\mathbf{U}^{n}\_{,z}\right)\right]\_{z=0}\\,dt -
+\int\_{0}^{T}\left[\mathbf{W}^{n\\,T}\left(\mathbf{M}(\mathbf{U}^{n}) + \mathbf{H}\right)\right]\_{z=B}\\,dt = 0
 \end{eqnarray}
 $$
 
@@ -168,7 +168,7 @@ equations $\eqref{4}$ and $\eqref{6}$:
 $$
 \begin{eqnarray}
 M\_1(Q,S) + H\_1 & = Q \cr
-M\_2(Q,S) + H\_2 & = (1 + \delta)\,\frac{Q^2}{S} + \frac{1}{\rho}\int\_{p\_0}^{p} \tilde{S}(p,z,t)\,dp
+M\_2(Q,S) + H\_2 & = (1 + \delta)\\,\frac{Q^2}{S} + \frac{1}{\rho}\int\_{p\_0}^{p} \tilde{S}(p,z,t)\\,dp
 \end{eqnarray} \label{7} \tag{7}
 $$
 
@@ -183,7 +183,7 @@ Then using equations $\eqref{1}$, $\eqref{2}$, $\eqref{3}$, and integrating the 
 $$
 \begin{eqnarray}
 M\_1(S) & = \frac{\tilde{p}(S,B)}{R},\quad H\_1 = 0 \cr
-M\_2(S) & = \frac{4}{3}\,\frac{M\_1(S)^2}{S} + frac{4\,\sqrt{\pi}}{3}\,\frac{E\,h}{\rho}\,\sqrt{S},\quad H\_2 = -\frac{4}{3\,\rho}\,E\,h\,\pi\,r^{0}(B)
+M\_2(S) & = \frac{4}{3}\\,\frac{M\_1(S)^2}{S} + frac{4\\,\sqrt{\pi}}{3}\\,\frac{E\\,h}{\rho}\\,\sqrt{S},\quad H\_2 = -\frac{4}{3\\,\rho}\\,E\\,h\\,\pi\\,r^{0}(B)
 \end{eqnarray}
 $$
 
@@ -191,19 +191,19 @@ $$
 
 Flow and pressure are related by the following relationship
 
-$$Q(B,t) = \left[Q(B,0) - \frac{p^0(B)}{R}\right]\exp(-\alpha\,t) + \frac{p(B,t)}{R} - \frac{1}{R^2\,C}\,\int\_{0}^{t} p(B,\tau)\exp(-\alpha(t-\tau))\,d\tau$$
+$$Q(B,t) = \left[Q(B,0) - \frac{p^0(B)}{R}\right]\exp(-\alpha\\,t) + \frac{p(B,t)}{R} - \frac{1}{R^2\\,C}\\,\int\_{0}^{t} p(B,\tau)\exp(-\alpha(t-\tau))\\,d\tau$$
 
-$$\alpha = \frac{R + R\_d}{R\,R\_d\,C}$$
+$$\alpha = \frac{R + R\_d}{R\\,R\_d\\,C}$$
 
 Then using equations $\eqref{1}$, $\eqref{2}$ and $\eqref{3}$, and integrating the pressure term in $\eqref{7}$:
 
-$$M\_1(S) = \frac{\tilde{p}[S(B,t),B,t]}{R} - \frac{1}{R^2\,C}\,\int\_{0}^{t}\tilde{p}[S(B,\tau),B,\tau]\,\exp(-\alpha(t-\tau))\,d\tau$$
+$$M\_1(S) = \frac{\tilde{p}[S(B,t),B,t]}{R} - \frac{1}{R^2\\,C}\\,\int\_{0}^{t}\tilde{p}[S(B,\tau),B,\tau]\\,\exp(-\alpha(t-\tau))\\,d\tau$$
 
-$$H\_1 = \left[Q(B,0) - \frac{p^0(B)}{R}\right]\exp(-\alpha\,t)$$
+$$H\_1 = \left[Q(B,0) - \frac{p^0(B)}{R}\right]\exp(-\alpha\\,t)$$
 
-$$M\_2(S) = \frac{4}{3}\,\frac{[M\_1(S) + H\_1]^2}{S} + \frac{4\,\sqrt{\pi}}{3}\,\frac{E\,h}{\rho}\,\sqrt{S}$$
+$$M\_2(S) = \frac{4}{3}\\,\frac{[M\_1(S) + H\_1]^2}{S} + \frac{4\\,\sqrt{\pi}}{3}\\,\frac{E\\,h}{\rho}\\,\sqrt{S}$$
 
-$$H\_2 = -\frac{4}{3\,\rho}\,E\,h\,\pi\, r^{0}(B)$$
+$$H\_2 = -\frac{4}{3\,\rho}\\,E\\,h\\,\pi\\, r^{0}(B)$$
 
 The flow rate at time $t$ depends on the entire history of the pressure represented by the time integral in the above equations.
 
@@ -211,15 +211,15 @@ The flow rate at time $t$ depends on the entire history of the pressure represen
 
 Another example of a memory map is the impedance model: the downstream domain is approximated using linear wave propagation theory and we further assume that the solution is periodic in time. We can then derive
 
-$$Q(B,t) = \frac{1}{T}\int\_{t-\tau}^{t}\,p(B,\tau)\,y(B,t-\tau)\,d\tau \label{8}  \tag{8} $$
+$$Q(B,t) = \frac{1}{T}\int\_{t-\tau}^{t}\\,p(B,\tau)\\,y(B,t-\tau)\\,d\tau \label{8}  \tag{8} $$
 
 The flow rate at time $t$ depends on the history of the pressure over one period. Here $y(B,t)$ is the inverse Fourier transform of the admittance function
 The representation formula for the operators then reads, using equations $\eqref{1}$, $\eqref{2}$, $\eqref{3}$,
 $\eqref{7}$, $\eqref{8}$:
 
-$$M\_1(S) = \frac{1}{T}\,\int\_{t-\tau}^{t}\,\tilde{p}\left[S(B,\tau),B\right]\,y(B,t-\tau)\,d\tau,\quad H\_1=0$$
+$$M\_1(S) = \frac{1}{T}\\,\int\_{t-\tau}^{t}\\,\tilde{p}\left[S(B,\tau),B\right]\\,y(B,t-\tau)\\,d\tau,\quad H\_1=0$$
 
-$$M\_2(S) = \frac{4}{3}\,\frac{M\_1(S)^2}{S} + \frac{4\,\sqrt{\pi}}{3}\,\frac{E\,h}{\rho}\,\sqrt{S},\quad H\_2 = -\frac{4}{3\,\rho}\,E\,h\,\pi\, r^{0}(B)$$
+$$M\_2(S) = \frac{4}{3}\\,\frac{M\_1(S)^2}{S} + \frac{4\\,\sqrt{\pi}}{3}\\,\frac{E\\,h}{\rho}\\,\sqrt{S},\quad H\_2 = -\frac{4}{3\\,\rho}\\,E\\,h\\,\pi\\, r^{0}(B)$$
 
 The flow rate at time $t$ depends on the history of the pressure over one cardiac cycle represented by the time integral in the above equations.
 
@@ -228,44 +228,44 @@ Another example of a memory map is the more general one-dimensional wave equatio
 For this latter case, we approximate the downstream domain using one-dimensional linear wave propagation theory but do not assume periodicity in time. 
 As an example, in the case where the downstream domain is a single elastic vessel with length $l$ and wave speed $c$, going from the boundary point $B$ to the far end point $L$, we derived a map with the related Green’s function that relates cross-sectional area and its derivative at the inlet of a segment:
 
-$$\frac{\partial S}{\partial z}(B,t) = -\frac{S(B,t)}{l} + \exp(\gamma\, t)\,\int\_{0}^{t}\int\_{B}^{L}\,\frac{\partial G}{\partial z}(B,t,z\_0,t\_0)\,f\_B(z\_0,t\_0)\,dz\_0\,dt\_0 + \mathcal{H}(t)$$
+$$\frac{\partial S}{\partial z}(B,t) = -\frac{S(B,t)}{l} + \exp(\gamma\\, t)\\,\int\_{0}^{t}\int\_{B}^{L}\\,\frac{\partial G}{\partial z}(B,t,z\_0,t\_0)\\,f\_B(z\_0,t\_0)\\,dz\_0\\,dt\_0 + \mathcal{H}(t)$$
 
 Furthermore we integrate the balance of momentum equation in time to obtain:
 
-$$Q(B,t) = -c^2\,\int\_{0}^{t}\,\frac{\partial S}{\partial z}(B,t)\,\exp(2\gamma(t-t\_0))\,dt\_0 + Q^0(B)\exp(2\,\gamma\,t)$$
+$$Q(B,t) = -c^2\\,\int\_{0}^{t}\\,\frac{\partial S}{\partial z}(B,t)\\,\exp(2\gamma(t-t\_0))\\,dt\_0 + Q^0(B)\exp(2\\,\gamma\\,t)$$
 
 We can then derive a map between the flow rate and the cross-sectional area using (3.29) and (3.30):
 
 $$
 Q(B,t) =
-c^2\,\int\_{0}^{t}\left[\frac{S(B,t^{\*})}{l} - \exp(\gamma\,t^{\*})\,\int\_{0}^{t^{\*}}\int\_{B}^{L}\frac{\partial G}{\partial z}(B,t^{\*},z\_0,t\_0)\,f\_{B}(z\_0,t\_0)\,dz\_0\,dt\_0\right]\exp(2\,\gamma\,(t-t^{\*}))\,dt^{\*} +
-c^2\,\int\_{0}^{t}\mathcal{H}(t^{\*})\exp(2\,\gamma\,(t-t^{\*}))\,dt^{\*} + Q^0(B)\exp(2\,\gamma\,t)
+c^2\\,\int\_{0}^{t}\left[\frac{S(B,t^{\*})}{l} - \exp(\gamma\\,t^{\*})\\,\int\_{0}^{t^{\*}}\int\_{B}^{L}\frac{\partial G}{\partial z}(B,t^{\*},z\_0,t\_0)\\,f\_{B}(z\_0,t\_0)\\,dz\_0\\,dt\_0\right]\exp(2\\,\gamma\\,(t-t^{\*}))\\,dt^{\*} +
+c^2\\,\int\_{0}^{t}\mathcal{H}(t^{\*})\exp(2\\,\gamma\\,(t-t^{\*}))\\,dt^{\*} + Q^0(B)\exp(2\\,\gamma\\,t)
 $$
 
 After integrating by parts in time, the derivatives that constitute $f\_B(z\_0,t\_0)$, and using the
 Green’s function $\eqref{5}$, the final map reads:
 
 $$
-Q(B,t) = \frac{c^2}{l}\,\int\_{0}^{t}\left[1 + \sum\_{n=1}^{\infty}2\right]\,S(B,t^{\*})\exp(2\,\gamma\,(t-t^{\*}))\,dt^{\*}
--\left(\frac{c}{l}\right)^3\,\int\_{0}^{t}\exp(\gamma\,(2\,t - t^{\*}))\int\_{0}^{t^{\*}}\,S(B,t\_0)\exp(-\gamma\,t\_0)\left[\sum\_{n=1}^{\infty}\frac{2\,n^2\,\pi^2}{\sqrt{\lambda\_n}}\,\sin(c\,\sqrt{\lambda\_n}(t^{\*}-t\_0))\right]\,dt\_0\,dt^{\*}
- + Q^0(B)\exp(2\,\gamma\,t) + \Theta\,\left[S^0(B), \dot{S}\_0(B), S\_L(t),\dot{S}\_L(t),\ddot{S}\_L(t)\right] \label{9} \tag {9}
+Q(B,t) = \frac{c^2}{l}\\,\int\_{0}^{t}\left[1 + \sum\_{n=1}^{\infty}2\right]\\,S(B,t^{\*})\exp(2\\,\gamma\\,(t-t^{\*}))\\,dt^{\*}
+-\left(\frac{c}{l}\right)^3\\,\int\_{0}^{t}\exp(\gamma\\,(2\\,t - t^{\*}))\int\_{0}^{t^{\*}}\\,S(B,t\_0)\exp(-\gamma\\,t\_0)\left[\sum\_{n=1}^{\infty}\frac{2\\,n^2\\,\pi^2}{\sqrt{\lambda\_n}}\\,\sin(c\\,\sqrt{\lambda\_n}(t^{\*}-t\_0))\right]\\,dt\_0\\,dt^{\*}
+ + Q^0(B)\exp(2\\,\gamma\\,t) + \Theta\\,\left[S^0(B), \dot{S}\_0(B), S\_L(t),\dot{S}\_L(t),\ddot{S}\_L(t)\right] \label{9} \tag {9}
 $$
 
 and
 
 $$
-\Theta\,\left[S^0(B), \dot{S}\_0(B), S\_L(t),\dot{S}\_L(t),\ddot{S}\_L(t)\right] = - \left[\sum\_{n=1}^{\infty}\frac{2\,c}{l\,\sqrt{\lambda\_n}}\,\sin(c\,\sqrt{\lambda\_n}\,t)\right]\exp(\gamma\,t)\,S(B,0)
-+ \left[\sum\_{n=1}^{\infty}\,\frac{2\,l}{c\,n^2\,\pi^2\,\sqrt{\lambda\_n}}\left(\gamma\,\sin(c\,\sqrt{\lambda}\,t)\right) + c\,\sqrt{\lambda\_n}\,\left(\cos(c\,\sqrt{\lambda\_n}\,t) - \exp(\gamma\,t)\right)\right]\exp(\gamma\,t)\,\dot{S}(B,0) +
--c^2\int\_{0}^{t}\mathcal{H}(t^{\*})\exp(2\,\gamma\,(t-t^{\*}))\,dt^{\*}
+\Theta\\,\left[S^0(B), \dot{S}\_0(B), S\_L(t),\dot{S}\_L(t),\ddot{S}\_L(t)\right] = - \left[\sum\_{n=1}^{\infty}\frac{2\\,c}{l\\,\sqrt{\lambda\_n}}\\,\sin(c\\,\sqrt{\lambda\_n}\\,t)\right]\exp(\gamma\\,t)\\,S(B,0)
++ \left[\sum\_{n=1}^{\infty}\\,\frac{2\\,l}{c\\,n^2\\,\pi^2\\,\sqrt{\lambda\_n}}\left(\gamma\\,\sin(c\\,\sqrt{\lambda}\\,t)\right) + c\\,\sqrt{\lambda\_n}\\,\left(\cos(c\\,\sqrt{\lambda\_n}\\,t) - \exp(\gamma\\,t)\right)\right]\exp(\gamma\\,t)\\,\dot{S}(B,0) +
+-c^2\int\_{0}^{t}\mathcal{H}(t^{\*})\exp(2\\,\gamma\\,(t-t^{\*}))\\,dt^{\*}
 $$
 
 The operators for the wave boundary condition can now be derived using $\eqref{7} and $\eqref{9},, assuming as for the upstream numerical domain that the initial cross-sectional area is the same as the reference cross-sectional area:
 
-$$Q(B,t) = M\_1(S) + H\_1,\, \gamma = \frac{N}{2\,S^{0}},\, \forall n \in \mathbb{N}\_{>0},\,\lambda = \frac{n^2\,\pi^2}{l^2} - \frac{\gamma^2}{c^2}$$
+$$Q(B,t) = M\_1(S) + H\_1,\\, \gamma = \frac{N}{2\\,S^{0}},\\, \forall n \in \mathbb{N}\_{>0},\\,\lambda = \frac{n^2\\,\pi^2}{l^2} - \frac{\gamma^2}{c^2}$$
 
 $$
-M\_1(S) = \frac{c^2}{l}\int\_{0}^{t}\left[1 + \sum\_{n=1}^{\infty}\,2\right]\,S(B,t^{\*})\exp\left[2\gamma(t-t^{\*})\right]\,dt^{\*}
-- \left(\frac{c^2}{l}\right)^3\,\int\_{0}^{t}\exp\left[\gamma(2t - t^{\*})\right]\int\_{0}^{t^{\*}}S(B,t\_0)\exp(-\gamma\,t\_{0})\left[\sum\_{n=1}^{\infty}\frac{2\,n^2\,\pi^2}{\sqrt{\lambda\_n}}\,sin\left(t^{\*} - t\_{0}\right)\right]\,dt\_0\,dt^{\*}
+M\_1(S) = \frac{c^2}{l}\int\_{0}^{t}\left[1 + \sum\_{n=1}^{\infty}\\,2\right]\\,S(B,t^{\*})\exp\left[2\gamma(t-t^{\*})\right]\\,dt^{\*}
+- \left(\frac{c^2}{l}\right)^3\\,\int\_{0}^{t}\exp\left[\gamma(2t - t^{\*})\right]\int\_{0}^{t^{\*}}S(B,t\_0)\exp(-\gamma\\,t\_{0})\left[\sum\_{n=1}^{\infty}\frac{2\\,n^2\\,\pi^2}{\sqrt{\lambda\_n}}\\,sin\left(t^{\*} - t\_{0}\right)\right]\\,dt\_0\\,dt^{\*}
 $$
 
 $$H\_1 = Q^{0}(B)\exp\left(2\,\gamma\,t\right) + \Theta\left[S^0(B), \dot{S}^{0}(B), S\_L(t), \dot{S}\_L(t), \ddot{S}\_L(t)\right]$$
