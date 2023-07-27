@@ -878,46 +878,67 @@ th:hover {
 
 /*------------------------------------------ 
 
-            WORKSHOPS
+            RECENT NEWS
 
 ---------------------------------------------*/
 
-.listingOfWorkshops {
-    width: fit-content;
+.newNews {
+    width: 75%;
     margin: auto;
     margin-top: 15px;
     margin-bottom: 30px;
+    padding: 25px;
+    border: 5px solid #033651ba;
+    background-color: #dde4ef6b;
+    /* border-radius: 50px; */
+}
+.news_date, .news_name, .news_place, .news_label {
+    letter-spacing: 0.75px;
+    word-wrap: break-word;
 }
 
-.date, .workshopName {
-    width: fit-content;
-    /* background-color: var(--verydarkblue); */
-    margin: 0 0 10px;
-    /* border: 5px solid var(--lightbluegrey) */
+.news_date, .news_label {
+    display: inline-block;
+    position: relative;
 }
 
-.date{
+.news_date{
+    text-align: right;
+    font-size: 18px;
+    color: #033651;
+}
+
+.news_label {
     text-align: left;
-    padding: 7.5px 15px;
+    font-size: 22px;
+    color: #033651;
 }
 
-.workshopName {
-    text-align: center;
-    padding: 15px 30px;
-    margin:auto;
+.news_name {
+    text-align: left;
+    font-size: 35px;
+}
+
+.news_place {
+    color: #033651;
+    font-style: italic;
     margin-top: 15px;
-    margin-bottom: 25px;
-    max-width: 90%;
-    border-radius: 15px;
+    font-size: 24px;
 }
 
-/* .listingOfWorkshops a{
-    color: var(--darkblue)
-}
+@media only screen and (max-width : 576px) {
+    .news_name {
+        font-size: 25px;
+    }
 
-.listingOfWorkshops a:hover {
-    color: var(--blue)
-} */
+    .news_place {
+        font-size: 20px;
+    }
+
+    .news_date{
+        text-align: left;
+    }
+}
 
 /*------------------------------------------ 
 
