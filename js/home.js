@@ -5,7 +5,7 @@ checkWidth();
 
 function checkWidth()
 {
-    if (screen.width <= 767 && (document.documentElement.clientWidth <= 767)) {
+    if (document.documentElement.clientWidth <= 767) {
         smallScreen = true;
     }
     else

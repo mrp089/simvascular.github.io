@@ -121,7 +121,7 @@
       </div>
     </div>
   
-    <div>
+    <div class="section">
       <div style="margin-top: 15px" class="newSectionHeader">
         <h1 id="capabilities">Its Capabilities</h1>
       </div>
@@ -269,16 +269,11 @@
     </div>
   <!-- </div> -->
 
-  <div>
+  <div class="section">
     <div class="newSectionHeader">
       <h1 id="download">Download Simvascular</h1>
     </div>
-    <div class="newSectionContent">
-      <!-- <div class="innerHeader" style="height: 100%;">
-        <div>  
-              <h2><i class="iconInHeader fa-regular fa-user"></i>Users</h2>
-        </div>
-        <div> -->
+    <div class="newSectionContent removePadding">
         <div>
           <div style="width: 100%;">
               <h4 class="media-heading centerTitleText" id="licenseTerms">License Terms</h4><br>
@@ -360,7 +355,7 @@
     <div class="newSectionHeader">
       <h1 id="documentation">Documentation</h1>
     </div>
-    <div class="newSectionContent" style="text-align:center">
+    <div class="newSectionContent removePadding" style="text-align:center">
       <div class="containingDocsSection col-md-6 col-12">
         <div class="docHeader">
           <h2 class="media-heading">
@@ -402,7 +397,7 @@
     </div>    
   </div>
 
-  <div>
+  <div class="section">
     <div class="newSectionHeader">
       <h1 id="support">Getting Support</h1>
     </div>   
@@ -465,7 +460,7 @@
               </div>
           </div>
         </div>
-      </div>
+  </div>
       <!-- <div class="col-sm-6 col-12">
         <div class="col-sm-6 col-12 headerForGalleryContainer">
           <div class="headerForGallery">
@@ -518,11 +513,12 @@
     </div>
   </div>-->
 
-  <div>
+  <div class="section">
     <div class="newSectionHeader">
       <h1 id="repository">The Vascular Model Repository</h1>
     </div>
     <div class="newSectionContent">
+      <div class="row" style="width: 100%; margin: auto;">
       <span class="describeVMR col-md-6 col-12">
         <div class="subHeader">
           <h2 style="margin: 15px 0">What it is</h2>
@@ -535,10 +531,11 @@
           <p style="text-align: justify;">These models can be used to simulate cardiovascular and pulmonary solid and fluid mechanics and will provide spatially and temporally-resolved benchmark solutions that can be used by academic, government and industry researchers to verify their computational methods. The SimVascular project provides an open source package for simulation to accompany the data provided in the model repository.</p>
         </div>
       </span>
-      <span class="embedVMR col-md-6 col-12">
-        <embed type="text/html" src="https://www.vascularmodel.com/" width="100%" height="100%">
+      <span class="embedVMRcontainer col-md-6 col-12">
+        <embed id="embedVMR" type="text/html" src="https://www.vascularmodel.com/" width="100%" height="100%">
       </span>
     </div>
+  </div>
   </div>
 
   <div class="everyOtherSection">
@@ -546,11 +543,11 @@
       <h1 id="gateway">Supercomputing Gateway</h1>
     </div>
     <div class="newSectionContent">
-      <p class="paddingIntro">The <a target="_blank" href="https://gateway.simvascular.org/">SimVascular Supercomputing Gateway</a> provides access to High-Performance Computing (HPC) clusters for running simulations using SimVascular CFD solvers. Simulations benefit from the performance levels that only large-scale HPC systems can offer and typically run an order of magnitude faster than on most workstations.</p>
+      <p class="gatewayText">The <a target="_blank" href="https://gateway.simvascular.org/">SimVascular Supercomputing Gateway</a> provides access to High-Performance Computing (HPC) clusters for running simulations using SimVascular CFD solvers. Simulations benefit from the performance levels that only large-scale HPC systems can offer and typically run an order of magnitude faster than on most workstations.</p>
     </div>
   </div>
 
-  <div>
+  <div class="section">
     <div class="newSectionHeader">
       <h1 id="socials">Socials</h1>
     </div>
@@ -597,7 +594,6 @@
     </div>
   </div>
 
-
   <div class="everyOtherSection">
     <div class="newSectionHeader">
       <h1 id="workshops">Upcoming Workshops</h1>
@@ -627,7 +623,7 @@
   </div> 
   </div>  
 
-  <div style="padding-bottom: 30px">
+  <div class="section" style="padding-bottom: 30px">
     <div class="newSectionHeader">
       <h1 id="team">Team</h1>
       <!-- <p class="subText">
@@ -746,7 +742,7 @@
     </div>
   </div>
 
-  <div>
+  <div class="section">
     <div class="newSectionHeader">
       <h1 id="acknowledgements">Acknowledgements</h1>
       <!-- <p class="subText">
