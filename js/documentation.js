@@ -45,6 +45,11 @@ $(".navSubLink").click(function() {
     clickLink(href);
 });
 
+$(".navLink").click(function() {
+    var href = $(this).children()[0].getAttribute("href");
+    clickLink(href);
+});
+
 $("#headerNavBar").on("mouseover", function() {
     var iconForSkip = document.getElementById("iconForSkip");
     iconForSkip.style.color = "var(--white)";
