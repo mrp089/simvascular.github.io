@@ -518,9 +518,17 @@ th:hover {
     display: block;
     float: left;
     width: 100%;
-    padding-left: 4%;
-    padding-right: 4%;
+    padding-left: 45px;
+    padding-right: 45px;
 }
+
+@media only screen and (max-width: 767px) {
+    .newSectionContent {
+        padding-left: 25px;
+        padding-right: 25px; 
+    }
+}
+
 
 .removePadding {
     padding-left: 0;
@@ -838,14 +846,16 @@ th:hover {
 }
 
 #embedVMR {
-  border: 5px solid var(--lightgrey)  
+  border: 7px solid #172229;
+  border-style: ridge;
 }
 
 .embedVMRcontainer {
-    min-height: 400px;
+    min-height: 550px;
     float: right;
     display: block;
     padding-bottom: 35px;
+    padding-left: 35px;
 }
 
 .describeVMR {
@@ -858,9 +868,9 @@ th:hover {
     }
 }
 
-@media (min-width: 992px){
-    .embedVMR {
-        padding-left: 0px;
+@media (max-width: 768px){
+    .embedVMRcontainer {
+        padding-left: 15px;
     }
 }
 
