@@ -335,15 +335,22 @@ zero-md {
 .navLink p {
     margin: 0;
     padding: 0;
-    color: white;
+    color: var(--grey);
     font-size: 18px
 }
 
 .navTitle, .navSubLink, .navLink {
     padding: 15px;
-    color: white;
     background-color: var(--black);
     cursor: pointer;
+}
+
+.navTitle, .navSubLink p, .navLink p {
+    color: var(--grey);
+}
+
+.navTitle:has(+ div .navSubLink.active), .navSubLink.active p, .navLink.active p {
+    color: white;
 }
 
 .navTitle, .navLink {
@@ -357,15 +364,14 @@ zero-md {
 .navSubLink p {
     padding: 0;
     margin: 0;
-    color: white;
     font-size: 18px;
 }
-
+/* 
 .navTitle:hover, .navSubLink:hover, .navLink:hover {
     background-color: white;
     color: var(--black);
-}
+} */
 
-.navSubLink p:hover, .navSubLink:hover p, .navLink:hover p {
-    color: var(--black);
+.navTitle:hover, .navTitle:has(+ div .navSubLink:hover), .navSubLink:hover p, .navLink:hover p {
+    color: white;
 }
