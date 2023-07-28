@@ -331,6 +331,7 @@ zero-md {
     right: 0px; */
     float: right;
     position: relative;
+    padding-right: 15px;
     z-index: 10;
     height: 75px;
     /* wider so more range of motion when hovering */

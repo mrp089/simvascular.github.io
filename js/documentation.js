@@ -8,7 +8,14 @@ function setWidth()
     header.style.width = document.documentElement.clientWidth + "px";
 }
 
-window.onresize = setWidth;
+function resetWidth()
+{
+    setWidth()
+    var headerNavBar = document.getElementById("headerNavBar");
+    headerNavBar.style.paddingRight = "0px";
+}
+
+window.onresize = resetWidth;
 
 
 // document.documentElement.clientWidth
