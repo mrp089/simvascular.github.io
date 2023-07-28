@@ -47,7 +47,7 @@ The physical meaning of these constants is related to the resistances and capaci
   <figcaption class="svCaption" >Circuit visualization for coronary boundary condition</figcaption>
 </figure>
 
-The following expressions are used in [this paper](docsRefs.html#refSec2).
+The following expressions are used in [this paper](references.html#refSec2).
 
 $$
 p\_0 = 1,\quad

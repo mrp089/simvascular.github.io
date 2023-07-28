@@ -7,7 +7,7 @@ to construct a model of the vascular anatomy using a series segmentations genera
 
 The following sections demonstrate how to create a path defining the main aorta and right iliac, and another for the left iliac.
 A detailed discussion about creating paths can be found in the SimVascular
-<a href="http://simvascular.github.io/docsModelGuide.html#modelingPathPlanning.html">Modeling Guide / Path Planning</a> documentation.
+<a href="modeling.html#modelingPathPlanning.html">Modeling Guide / Path Planning</a> documentation.
 
 <h3 id="tutorial_create_paths_1"> Create an instance of a <i>Paths Tool</i> for the aorta/right iliac </h3>
 Create an instance of a <i>Paths Tool</i> named <b>aorta</b> used to define <i>Path</i> geometry for the main aorta 

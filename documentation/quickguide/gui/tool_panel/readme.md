@@ -2,7 +2,7 @@
 
 The <i>Tool Panel</i> is a rectangular region located to the far right the SimVascular main window used to display GUI controls
 for a <i> Tool</i>. A <i>Tool Panel</i> is made visible by double-clicking with the mouse left button on a <i>Data Node</i> in
-the <a href="#data_manager_interaction">Data Manager</a> (Fig. 9).
+the <a href="#gui_data_manager">Data Manager</a> (Fig. 9).
 
 <figure>
   <img class="svImg svImgMd"  src="/documentation/quickguide/gui/images/tool-panel-paths.png">

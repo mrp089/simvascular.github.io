@@ -30,4 +30,4 @@ segmentation.Error: CircleSegmentation() The 'normal' argument is not a 3D point
 </pre>
 
 <br>
-All API errors are handled using exceptions. See the <a href="#modules_error_handling"> Error Handling </a> section..
+All API errors are handled using exceptions. See the <a href="#modules_error_handling"> Error Handling </a> section.

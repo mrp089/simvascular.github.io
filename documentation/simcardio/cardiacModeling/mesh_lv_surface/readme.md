@@ -3,7 +3,7 @@
 ### Using SimVascular Python Shell
 
 The SimVascular
-<a href='http://simvascular.github.io/docsPythonInterface.html#python_shell'> Python Shell </a>
+<a href='python_interface.html#python_shell'> Python Shell </a>
 can be used to run the
 <a href="https://github.com/SimVascular/SimVascular/tree/master/Python/site-packages/sv_auto_lv_modeling/modeling/surface_main.py">
 surface_main.py </a> Python surface generation script using the following commands
@@ -29,7 +29,7 @@ surface_main.py </a> Python surface generation script using the following comman
 
 ### Using SimVascular Python Console
 
-The SimVascular GUI <a href='http://simvascular.github.io/docsPythonInterface.html#console'> Python Console </a>
+The SimVascular GUI <a href='python_interface.html#console'> Python Console </a>
 can be used for surface generation. Use the Python console <strong>Text Editor</strong> mode to enter the following Python commands
 
 <pre><code class='language-python' lang='python'>from sv_auto_lv_modeling.auto_lv import Modeling

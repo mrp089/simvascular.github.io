@@ -68,7 +68,7 @@ The <b> meshing </b> module defines the following classes
 </div>
 
 <br>
-<div id="TetGenClass" class="PythonClassDiv" >
+<div id="TetGenOptionsClass" class="PythonClassDiv" >
 <legend style="font-size:20px; text-align:left"> <b> TetGenOptions </b> </legend>
 <iframe src="/documentation/python_interface/modules/docs/meshing_TetGenOptions.html" style="background-color: #FFFFFF" frameborder="0" height="400" width="95%"> </iframe>
 </div>

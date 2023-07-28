@@ -24,14 +24,14 @@ The geometry created by each <i>Tool</i> is typically stored in <a href="https:/
 VTP and VTU <a href="https://vtk.org/wp-content/uploads/2015/04/file-formats.pdf"> VTK File Formats </a>.
 
 Each <i>Tool</i> has a panel containing GUI controls (i.e. widgets) used to specify the parameters that control tool behavior.
-A <i>Tool</i> panel is displayed using the <a href="#data_manager"> Data Manager </a>.
+A <i>Tool</i> panel is displayed using the <a href="#gui_data_manager"> Data Manager </a>.
 
 <br>
 <!-- <h3 id="intro_tools_instances"> Creating Tool Instances</h3> -->
 
 ### Creating Tool Instances
 
-An instance of a particular <i>Tool</i> type is created using options selected from <a href="#data_manager_menus">Data Manager Menus</a>.
+An instance of a particular <i>Tool</i> type is created using options selected from <a href="#gui_data_manager">Data Manager Menus</a>.
 Some <i>Tool</i> instances can be created in two ways based on the source of the data used by the <i>Tool</i>
 
 <ol>

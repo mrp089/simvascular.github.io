@@ -429,7 +429,7 @@ This section discusses the options available in the **solver.inp** file.
   <td>Backflow Stabilization Coefficient</td>
   <td>(0.2)</td>
   <td>(double in [0,1])</td>
-  <td>Backflow stabilization coefficient. For the definition of these coefficient, see the [following publications](docsRefs.html#refSec2)</td>
+  <td>Backflow stabilization coefficient. For the definition of these coefficient, see the [following publications](references.html#refSec2)</td>
 </tr>
 <tr>
   <td>Number of Surfaces which zero out in-plane tractions</td>
@@ -496,7 +496,7 @@ This section discusses the options available in the **solver.inp** file.
   <td>Number of Dirichlet Surfaces</td>
   <td>(0)</td>
   <td>(integer)</td>
-  <td>This is the total number of surfaces where the 3D model exchanges Pressure information with the 0D lumped parameter network model. For details the reader should read [this publication](docsRefs.html#refSec2)</td>
+  <td>This is the total number of surfaces where the 3D model exchanges Pressure information with the 0D lumped parameter network model. For details the reader should read [this publication](references.html#refSec2)</td>
 </tr>
 <tr>
   <td>List of Dirichlet Surfaces</td>
@@ -508,7 +508,7 @@ This section discusses the options available in the **solver.inp** file.
   <td>Number of Neumann Surfaces</td>
   <td>(0)</td>
   <td>(integer)</td>
-  <td>This is the total number of surfaces where the 3D model exchanges flow rate information with the 0D lumped parameter network model. For details the reader should read [this publication](docsRefs.html#refSec2)</td>
+  <td>This is the total number of surfaces where the 3D model exchanges flow rate information with the 0D lumped parameter network model. For details the reader should read [this publication](references.html#refSec2)</td>
 </tr>
 <tr>
   <td>List of Neumann Surfaces</td>

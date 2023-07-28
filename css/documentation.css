@@ -2,6 +2,7 @@ html, body {
     background-color: white;
     color: var(--black);
     font-size: 17px;
+    word-wrap: break-word;
 }
 
 ::selection {
@@ -56,6 +57,20 @@ h3 {
     font-size: 24px;
 }
 
+@media only screen and (max-width: 767px) {
+    h1 {
+        font-size: 7vw;
+    }
+    
+    h2 {
+        font-size: 6vw;
+    }
+    
+    h3 {
+        font-size: 5vw;
+    }
+}
+
 h1, h2, h3, h4, h5, h6 {
     color: var(--black)
 }
@@ -104,19 +119,26 @@ h1, h2, h3, h4, h5, h6, p {
     padding-bottom: 15px;
 }
 
+.navRow {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
 .topLeftLogo {
-    height: 55px;
-    top: 10px;
-    left: 10px;
-    position: fixed;
+    /* top: 10px;
+    left: 10px; */
+    position: relative;
     z-index: 20;
+    height: 75px;
+    padding: 10px;
 }
 
 .topRightBars {
     height: 55px;
-    top: 10px;
-    right: 10px;
-    position: fixed;
+    /* top: 10px;
+    right: 10px; */
+    position: relative;
+    text-align: right;
     z-index: 20;
 }
 
@@ -125,7 +147,7 @@ h1, h2, h3, h4, h5, h6, p {
     display: block;
     position: fixed;
     height: 75px;
-    width: 100%;
+    /* width: 100%; */
     z-index: 19;
     background-color: var(--black);
 }
@@ -305,9 +327,10 @@ zero-md {
 }
 
 #headerNavBar {
-    top: 0px;
-    right: 0px;
-    position: fixed;
+    /* top: 0px;
+    right: 0px; */
+    float: right;
+    position: relative;
     z-index: 10;
     height: 75px;
     /* wider so more range of motion when hovering */
@@ -315,11 +338,13 @@ zero-md {
 }
 
 .navBarSection {
-    top: 75px;
-    right: 0;
+    /* top: 75px;
+    right: 0; */
     display: block;
     width: 275px;
-    position: fixed;
+    text-align: left;
+    position: relative;
+    float: right;
     overflow: auto;
     height: calc(100% - 78px);
 

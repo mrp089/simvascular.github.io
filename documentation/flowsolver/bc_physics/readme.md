@@ -55,7 +55,7 @@ That is, a relationship between pressure and flow modes for different frequencie
   <figcaption class="svCaption" >Circuit representation of RCR block</figcaption>
 </figure>
 
-- **Coronary boundary conditions**. These conditions simulate what happens at the coronary outlets. The implementation in the **svSolver** follows the derivations in [this paper](docsRefs.html#refSec2).
+- **Coronary boundary conditions**. These conditions simulate what happens at the coronary outlets. The implementation in the **svSolver** follows the derivations in [this paper](references.html#refSec2).
 
 - **Closed-loop boundary circulation model**. The capability of coupling a 3D finite element model with a lumped parameter model is built into the **svSolver**. Documentation on this feature will be available with later releases of the code.
 

@@ -1,7 +1,18 @@
-function scrollToTop() {
+setWidth();
 
+function setWidth()
+{
+    var body = document.getElementsByTagName("body")[0]
+    body.style.width = document.documentElement.clientWidth + "px";
+    var header = document.getElementsByClassName("header")[0]
+    header.style.width = document.documentElement.clientWidth + "px";
+}
+
+
+// document.documentElement.clientWidth
+
+function scrollToTop() {
     window.scrollTo({top: 0, behavior: 'smooth'});
-    
 }
 
 $("#skipToTop").click(function() {

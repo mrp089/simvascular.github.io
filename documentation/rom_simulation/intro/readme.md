@@ -19,7 +19,7 @@ this ROM can be complex enough to provide a good approximatation of circulatory 
 
 The geometry of the one-dimensional networks used by the **sv1DSolver** is based on the centerlines computed from the surface
 of a 3D geometric model. The 3D geometric model is created from image data using the typical
-SimVascular <a href="docsModelGuide.html"> modeling workflow </a>.
+SimVascular <a href="modeling.html"> modeling workflow </a>.
 
 Centerlines represent a 1D characterization of blood vessel geometry. The centerlines are computed for a 3D surface using
 the <a href="http://www.vmtk.org/tutorials/Centerlines.html"> Vascular Modeling Toolkit </a>. The computation solves a wave propagation

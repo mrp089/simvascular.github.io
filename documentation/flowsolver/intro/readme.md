@@ -12,11 +12,11 @@ Building on the original PHASTA code, there have been a number of important addi
 
 Building on the above features, the Marsden lab at Stanford has added additional key functionality enabling efficient and stable solutions with models of the circulatory physiology:
 
-- [**Backflow stabilization.**](docsRefs.html#refSec2) This problem usually arises in large vessels that are exposed to backflow in 3D and 2D flow simulations. This phenomenon may be a cause of divergence of the numerical scheme due to bulk reversal of the flow through an outlet, localized areas of flow reversal or use of a boundary 0D circulation model.
+- [**Backflow stabilization.**](references.html#refSec2) This problem usually arises in large vessels that are exposed to backflow in 3D and 2D flow simulations. This phenomenon may be a cause of divergence of the numerical scheme due to bulk reversal of the flow through an outlet, localized areas of flow reversal or use of a boundary 0D circulation model.
 
-- Custom and efficient [**linear solver.**](docsRefs.html#refSec3) Accurate simulation of blood flow in vessels require the repeated solution of linear systems of equations with millions of unknowns. Moreover, use of closed-loop boundary models significantly increases the degree of coupling between boundary degrees of freedoms. The **svLS** linear solver is designed to efficiently handle large cardiovascular simulations with arbitrary boundary conditions and reduce solution times.
+- Custom and efficient [**linear solver.**](references.html#refSec3) Accurate simulation of blood flow in vessels require the repeated solution of linear systems of equations with millions of unknowns. Moreover, use of closed-loop boundary models significantly increases the degree of coupling between boundary degrees of freedoms. The **svLS** linear solver is designed to efficiently handle large cardiovascular simulations with arbitrary boundary conditions and reduce solution times.
 
-- Multiscale Coupling for [**closed loop boundary conditions.**](docsRefs.html#refSec2) Coupling a three-dimensional finite element solver with a 0D lumped circulation model drastically improves the possibility of realistically simulate patient-specific hemodynamics and physiology.
+- Multiscale Coupling for [**closed loop boundary conditions.**](references.html#refSec2) Coupling a three-dimensional finite element solver with a 0D lumped circulation model drastically improves the possibility of realistically simulate patient-specific hemodynamics and physiology.
 
 ### About this guide
 
@@ -32,4 +32,4 @@ In addition, this tutorial will show you a number of good practices that are imp
 
 ### Theory and Implementation
 
-The theory and implementation details are not covered in this document. For more information about those details, please refer to our [publications page](docsRefs.html).
+The theory and implementation details are not covered in this document. For more information about those details, please refer to our [publications page](references.html).

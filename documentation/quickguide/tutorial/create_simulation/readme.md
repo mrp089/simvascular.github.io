@@ -25,7 +25,7 @@ and boundary conditions must be consistent with the spatial dimensions of the fi
 <br>
 The following sections demonstrate how to setup a CFD simulation for <i>svSolver</i> using the <b>aorta-iliacs</b> solid model
 and finite element mesh. A detailed discussion about CFD simulations can be found in the SimVascular
-<a href="http://simvascular.github.io/docsFlowSolver.html">Simulation Guide</a> documentation.
+<a href="flowsolver.html">Simulation Guide</a> documentation.
 
 <h3 id="tutorial_create_simulation_1"> Create an instance of a <i>Simulations Tool</i> for the <b>aorta-iliacs</b> model.  </h3>
 
@@ -202,7 +202,7 @@ The value of the time step size is an important factor contributing to the stabi
 The value of the time step size depends on the size of the finite element mesh and type and values used for boundary conditions.
 
 A detailed discussion about solver parameters can be found in the SimVascular
-<a href="http://simvascular.github.io/docsFlowSolver.html#solverparameters">Simulation Guide / Solver Parameters</a> documentation.
+<a href="flowsolver.html#solverparameters">Simulation Guide / Solver Parameters</a> documentation.
 
 <table class="table table-bordered" style="width:100%">
   <caption> Set solver parameters </caption>

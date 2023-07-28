@@ -45,7 +45,7 @@ tool. This may be useful when building models of complex vascular anatomy.
 
 The segmentation surface does not have the planar caps needed for SimVascular models. However, the SimVascular Modeling tool can use paths
 to trim the surface at its ends. Caps can then be created for the trimmed model using the Modeling tool <b>Fill Holes w/o ID</b> operation
-(see <a href="http://simvascular.github.io/docsModelGuide.html#modelingEditingPolyData">Modeling Guide - Global/Local Operations</a>).
+(see <a href="modeling.html#modelingEditingPolyData">Modeling Guide - Global/Local Operations</a>).
 
 <!-- ====================================== Level Set Tool ================================= -->
 

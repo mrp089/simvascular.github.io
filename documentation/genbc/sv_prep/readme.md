@@ -4,7 +4,7 @@ We will assume at this point that you will have already built the geometry of yo
 pipeline in SimVascular. This tutorial will start right at the **Simulations** module. Create a new Simulation job by right-clicking
 the **Simulations** item in the **Data Manager**, then click **Create New Simulation Job**. Select the appropriate Model from the
 drop down menu and give it the name **cyl_sim**. Navigate through the various tabs to set simulation parameters discussed
-in <a href="http://simvascular.github.io/docsQuickGuide.html#simulation"> Quick Guide / Simulations</a>. In particular, the values for
+in <a href="flowsolver.html#solverparameters"> Simulation / Solver Parameters</a>. In particular, the values for
 **Number of Time Steps**, **Time Step Size** and **Number of Timesteps between Restarts** parameters under the **Solver Parameters**
 tab must be set.
 

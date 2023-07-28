@@ -16,7 +16,7 @@ be successfully meshed and suitable for a CFD simulation.
 <br>
 The following sections demonstrate how to create a finite element mesh from the <b>aorta-iliacs</b> <i>PolyData</i> solid model 
 using the <i>TetGen</i> mesh generation software. A detailed discussion about mesh generation can be found in the SimVascular
-<a href="http://simvascular.github.io/docsMeshing.html">Meshing Guide</a> documentation.
+<a href="meshing.html">Meshing Guide</a> documentation.
 
 <h3 id="tutorial_create_mesh_1"> Create an instance of a <i>Meshes Tool</i> for the <b>aorta-iliacs</b> model.  </h3>
 
