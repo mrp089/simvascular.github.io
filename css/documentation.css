@@ -346,8 +346,9 @@ zero-md {
     position: relative;
     float: right;
     overflow: auto;
+    padding-right: 25px;
+    background-color: var(--black);
     height: calc(100% - 78px);
-
 }
 
 .navBarSection details {

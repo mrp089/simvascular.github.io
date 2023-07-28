@@ -8,6 +8,8 @@ function setWidth()
     header.style.width = document.documentElement.clientWidth + "px";
 }
 
+window.onresize = setWidth;
+
 
 // document.documentElement.clientWidth
 
