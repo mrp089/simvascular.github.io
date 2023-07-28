@@ -1,4 +1,11 @@
+var counter = 0;
+
 setWidth();
+
+setTimeout(() => {
+    anchorLinks();
+    console.log(counter + " docs")
+}, 20);
 
 function setWidth()
 {
@@ -6,6 +13,21 @@ function setWidth()
     body.style.width = document.documentElement.clientWidth + "px";
     var header = document.getElementsByClassName("header")[0]
     header.style.width = document.documentElement.clientWidth + "px";
+}
+
+function anchorLinks()
+{
+    var array = document.getElementsByTagName("a");
+
+    for(var i = 0; i < array.length; i++)
+    {
+        console.log(array[i])
+        if(array[i].href.includes('docs'))
+        {
+            counter++;
+        }
+    }
+
 }
 
 function resetWidth()
