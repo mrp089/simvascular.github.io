@@ -120,7 +120,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .navRow {
-    padding-right: 10px;
+    /* padding-right: 10px; */
     padding-left: 10px;
 }
 
@@ -338,15 +338,13 @@ zero-md {
 }
 
 .navBarSection {
-    /* top: 75px;
-    right: 0; */
     display: block;
     width: 275px;
     text-align: left;
     position: relative;
     float: right;
     overflow: auto;
-    padding-right: 25px;
+    /* padding-right: 25px; */
     background-color: var(--black);
     height: calc(100% - 78px);
 }
