@@ -177,6 +177,7 @@ h1, h2, h3, h4, h5, h6, p {
     width: 300px;
     background-color: var(--white);
     display: inline-block;
+    z-index: 10;
 }
 
 @media only screen and (max-width: 768px) {
