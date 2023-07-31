@@ -269,7 +269,7 @@ table {
     position: fixed;
     right: 0px;
     height: 75%;
-    width: 275px;
+    width: 225px;
 }
 .tbody {
     width: 100%;
@@ -319,7 +319,7 @@ th {
 }
 
 .skipItem {
-    font-size: 22px;
+    font-size: 18px;
     color: var(--white);
     margin: 0px;
 }
@@ -334,7 +334,7 @@ tr {
 
 th {
     text-align: right;
-    padding: 15px;
+    padding: 10px;
     background-color: var(--black);
 }
 
@@ -364,10 +364,6 @@ th:hover {
     .colContainsContent {
         padding-top: 0px;
     }
-    #contentOfSkip{
-        /* padding-left: 15px; */
-        /* width: 70%; */
-    }
     
     #iconForSkip.menuOn {
         margin-top: 15px;
@@ -379,6 +375,12 @@ th:hover {
     table {
         height: calc(100% - 75px);
         width: 100%;
+    }
+    .skipItem {
+        font-size: 22px;
+    }
+    th {
+        padding: 15px;
     }
   }
 

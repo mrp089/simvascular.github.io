@@ -129,8 +129,8 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .topLeftLogo {
-    /* top: 10px;
-    left: 10px; */
+    /* top: 10px; */
+    left: 5px;
     position: relative;
     z-index: 20;
     height: 75px;
@@ -285,7 +285,7 @@ zero-md {
     background-color: var(--lightbluegrey);
 }
 
-#skipToTopBackground {
+.skipToTopSection {
     position: fixed;
     bottom: 15px;
     right: 15px;
@@ -298,7 +298,7 @@ zero-md {
     opacity: 0.75;
 }
 
-#skipToTopBackground:hover {
+.skipToTopSection:hover {
     opacity: 1;
 }
 

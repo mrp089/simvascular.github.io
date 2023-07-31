@@ -45,7 +45,7 @@ function clickLink(hrefTag, targetBlank = true)
 }
 
 $("#logo").click(function() {
-    clickLink("/index.html");
+    clickLink("/index.html", false);
 });
 
 $(".skipTo").click(function() {
@@ -65,12 +65,12 @@ var click_menuOn = false;
 
 $(".navSubLink").click(function() {
     var href = $(this).children()[0].getAttribute("href");
-    clickLink(href);
+    clickLink(href, false);
 });
 
 $(".navLink").click(function() {
     var href = $(this).children()[0].getAttribute("href");
-    clickLink(href);
+    clickLink(href, false);
 });
 
 $("#headerNavBar").on("mouseover", function() {
