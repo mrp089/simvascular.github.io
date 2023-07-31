@@ -1,26 +1,10 @@
 var counter = 0;
 
-setWidth();
-
 setTimeout(() => {
     anchorLinks();
     console.log(counter + " docs")
 }, 20);
 
-function setWidth()
-{
-    var width = document.documentElement.clientWidth;
-    var height = document.documentElement.clientHeight;
-
-    var body = document.getElementsByTagName("body")[0]
-    body.style.width = width + "px";
-    var header = document.getElementsByClassName("header")[0]
-    header.style.width = width + "px";
-    var skipToTop = document.getElementById("skipToTopBackground");
-    // height and width of skipToTop is 68px
-    skipToTop.style.marginLeft = (width - 68 - 25) + "px";
-    skipToTop.style.marginTop = (height - 68 - 25) + "px";
-}
 
 function anchorLinks()
 {
@@ -36,16 +20,6 @@ function anchorLinks()
     }
 
 }
-
-function resetWidth()
-{
-    setWidth()
-    var headerNavBar = document.getElementById("headerNavBar");
-    headerNavBar.style.paddingRight = "0px";
-}
-
-window.onresize = resetWidth;
-
 
 // document.documentElement.clientWidth
 

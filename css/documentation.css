@@ -3,6 +3,8 @@ html, body {
     color: var(--black);
     font-size: 17px;
     word-wrap: break-word;
+    /* overflow-x: hidden; */
+    width: 100%;
 }
 
 ::selection {
@@ -103,6 +105,8 @@ p {
 }
 
 .mainSection {
+    overflow-x: hidden;
+    overflow-y: auto;
     float: left;
     width: 100%;
     display: block;
@@ -134,7 +138,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .topRightBars {
-    height: 55px;
+    height: 75px;
     /* top: 10px;
     right: 10px; */
     position: relative;
@@ -147,7 +151,7 @@ h1, h2, h3, h4, h5, h6, p {
     display: block;
     position: fixed;
     height: 75px;
-    /* width: 100%; */
+    width: 100%;
     z-index: 19;
     background-color: var(--black);
 }
@@ -269,6 +273,7 @@ h1, h2, h3, h4, h5, h6, p {
 span:has(zero-md) {
     height: fit-content;
     display: block;
+    overflow-x: auto;
 }
 
 zero-md {
@@ -280,21 +285,17 @@ zero-md {
     background-color: var(--lightbluegrey);
 }
 
-/* #skipToTopContainer {
-    position: fixed;
-    left: 0;
-    top: 0;
-} */
-
 #skipToTopBackground {
     position: fixed;
+    bottom: 15px;
+    right: 15px;
     height: 68px;
     width: 68px;
     background-color: var(--verydarkblue);
     border-radius: 50px;
     text-align: center;
     cursor: pointer;
-    opacity: 0.5;
+    opacity: 0.75;
 }
 
 #skipToTopBackground:hover {
@@ -334,7 +335,7 @@ zero-md {
     right: 0px; */
     float: right;
     position: relative;
-    padding-right: 15px;
+    /* padding-right: 15px; */
     z-index: 10;
     height: 75px;
     /* wider so more range of motion when hovering */
