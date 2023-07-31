@@ -344,14 +344,13 @@ zero-md {
 
 .navBarSection {
     display: block;
+    float: right;
+    max-height: 625px;
     width: 275px;
+    overflow: auto;
     text-align: left;
     position: relative;
-    float: right;
-    overflow: auto;
-    /* padding-right: 25px; */
     background-color: var(--black);
-    height: calc(100% - 78px);
 }
 
 .navBarSection details {
