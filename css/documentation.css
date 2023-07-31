@@ -360,6 +360,10 @@ zero-md {
     cursor: pointer;
 }
 
+details summary::-webkit-details-marker {
+    display: none;
+}
+
 .navLink a {
     margin: 0;
     padding: 0;
