@@ -295,7 +295,7 @@ zero-md {
     border-radius: 50px;
     text-align: center;
     cursor: pointer;
-    opacity: 0.75;
+    opacity: 0.5;
 }
 
 .skipToTopSection:hover {
@@ -360,7 +360,7 @@ zero-md {
     cursor: pointer;
 }
 
-.navLink p {
+.navLink a {
     margin: 0;
     padding: 0;
     color: var(--grey);
@@ -373,11 +373,11 @@ zero-md {
     cursor: pointer;
 }
 
-.navTitle, .navSubLink p, .navLink p {
+.navTitle, .navSubLink a, .navLink a {
     color: var(--grey);
 }
 
-.navTitle:has(+ div .navSubLink.active), .navSubLink.active p, .navLink.active p {
+.navTitle:has(+ div .navSubLink.active), .navSubLink.active a, .navLink.active a {
     color: white;
 }
 
@@ -389,7 +389,7 @@ zero-md {
     padding-left: 30px;
 }
 
-.navSubLink p {
+.navSubLink a {
     padding: 0;
     margin: 0;
     font-size: 17px;
@@ -400,6 +400,6 @@ zero-md {
     color: var(--black);
 } */
 
-.navTitle:hover, .navTitle:has(+ div .navSubLink:hover), .navSubLink:hover p, .navLink:hover p {
+.navTitle:hover, .navTitle:has(+ div .navSubLink:hover), .navSubLink:hover a, .navLink:hover a {
     color: white;
 }
