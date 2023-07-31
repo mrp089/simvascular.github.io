@@ -1,6 +1,6 @@
 ## Cellular Activation Models
 
-Depending on how the depolarization and repolarization within a single cardiac myocyte is described, the electrophysiology models can be roughly divided into two categories: biophysics-based ionic models (such as the ten Tusscher-Panfilov (TTP) model<a href="#ref-2">[2]</a><a href="#ref-3">[3]</a>), and phenomenological models (such as the Aliev-Panfilov (AP), Fitzhugh-Nagumo (FN) models<a href="#ref-4">[4]</a>).
+Depending on how the depolarization and repolarization within a single cardiac myocyte is described, the electrophysiology models can be roughly divided into two categories: biophysics-based ionic models (such as the ten Tusscher-Panfilov (TTP) model <a href="#ref-2">[2]</a> <a href="#ref-3">[3]</a>), and phenomenological models (such as the Aliev-Panfilov (AP), Fitzhugh-Nagumo (FN) models <a href="#ref-4">[4]</a>).
 
 ### Biophysics-based Ionic Models
 
@@ -29,7 +29,7 @@ For the TTP model in <strong>svFSI</strong>, the following units have to be used
 
 <figure>
   <img class="svImg svImgMd" src="/documentation/simcardio/electrophysiology/images/Calcium.png">
-  <figcaption class="svCaption" >Structures involved in $Ca^{2+}$ cycling<a href="#ref-6">[6]</a>.</figcaption>
+  <figcaption class="svCaption" >Structures involved in $Ca^{2+}$ cycling <a href="#ref-6">[6]</a>.</figcaption>
 </figure>
 
 ### Phenomenological Models
@@ -83,19 +83,19 @@ The following table provides a summary of all the available electrophysiology mo
     </tr>
     </thead>
     <tr>
-      <td>Aliev-Panfilov model<a href="#ref-4">[4]</td>
+      <td>Aliev-Panfilov model <a href="#ref-4">[4]</td>
       <td>"ap", "aliev-panfilov"</td>
     </tr>
     <tr>
-      <td>Fitzhugh-Nagumo model<a href="#ref-4">[4]</a></td>
+      <td>Fitzhugh-Nagumo model <a href="#ref-4">[4]</a></td>
       <td>"fn", "fitzhugh-nagumo"</td>
     </tr>
     <tr>
-      <td>Bueno-Orovio-Cherry-Fenton model<a href="#ref-5">[5]</a></td>
+      <td>Bueno-Orovio-Cherry-Fenton model <a href="#ref-5">[5]</a></td>
       <td>"bo", "bueno-orovio"</td>
     </tr>
     <tr>
-      <td>tenTusscher-Panfilov model<a href="#ref-3">[3]</a></td>
+      <td>tenTusscher-Panfilov model <a href="#ref-3">[3]</a></td>
       <td>"ttp", "tentusscher-panfilov"</td>
     </tr>
   </table>

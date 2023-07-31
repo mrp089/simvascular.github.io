@@ -15,11 +15,11 @@ Below is the list of available material constitutive models in **svFSI** :
     <td> "quad", "Quad", "quadratic", "Quadratic" </td>
   </tr>
   <tr>
-    <td>Simo-Taylor91 model<a href="#ref-5">[5]</a></td>
+    <td>Simo-Taylor91 model <a href="#ref-5">[5]</a></td>
     <td>"ST91", "Simo-Taylor91"</td>
   </tr>
   <tr>
-    <td>Miehe94 model<a href="#ref-6">[6]</a></td>
+    <td>Miehe94 model <a href="#ref-6">[6]</a></td>
     <td>"M94", "Miehe94"</td>
   </tr>
 </table>

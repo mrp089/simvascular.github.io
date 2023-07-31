@@ -2,8 +2,7 @@
 
 The <i> Data Manager </i> is used to view a <i>Project</i> as a hierarchy of <i>Tools</i> and <i>Data Nodes </i>
 representing the data created by <i>Tool</i> instances: images, paths, segmentations, models, meshes, and simulation jobs.
-Most of the <i>Tools</i> produce geometry that can be interactively viewed in the 2D and 3D views of the
-<a href="#display"> Display </a> area of the main window. The <i> Data Manager </i> provides an interface to interactively
+Most of the <i>Tools</i> produce geometry that can be interactively viewed in the 2D and 3D views of the Display area of the main window. The <i> Data Manager </i> provides an interface to interactively
 manage adding/removing <i>Tool</i> instances and changing some of the properties used to display the geometric data created by a
 <i>Tool</i> (e.g. color).
 
