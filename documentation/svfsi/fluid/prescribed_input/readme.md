@@ -4,7 +4,7 @@ To set up the input file, set the equation to be FSI to allow the mesh to move u
 
 ```
     Add BC: moving_wall {
-        Type: Dirichlet 
+        Type: Dirichlet
         Time dependence: General
         Temporal and spatial values file path: wall_motion.dat
         Profile: Flat
@@ -23,7 +23,7 @@ It is recommended to include remeshing if the wall motion is such that the domai
         Min dihedral angle: 10.0
         Max radius ratio: 1.1
         Remesh frequency: 100
-        Frequency for copying data: 1  
+        Frequency for copying data: 1
     }
 ```
 
@@ -42,10 +42,10 @@ Under the mesh equation, we similarly add the motion file.
         Output: Spatial {
             Displacement: t
         }
-        
+
         #---------- Add the BC for the moving_wall to the mesh equation as well ------
         Add BC: moving_wall {
-            Type: Dirichlet 
+            Type: Dirichlet
             Time dependence: General
             Temporal and spatial values file path: wall_motion.dat
             Profile: Flat
@@ -56,4 +56,4 @@ Under the mesh equation, we similarly add the motion file.
     }
 ```
 
-Follow this [instruction](http://simvascular.github.io/docssvFSI.html#app_restart_after_remesh) if you need to restart your simulation after stoppage.
+Follow this [instruction](svfsi.html#app_restart_after_remesh) if you need to restart your simulation after stoppage.

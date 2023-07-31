@@ -1,6 +1,6 @@
 ## Input file format
 
-**svFSI** uses plain-text input file. This input file will define the physics solved, mesh, linear solver, boundary conditions and general simulation parameters. An overview of the syntax could be found <a href=https://sites.google.com/site/memt63/tools/MUPFES/mupfes-scripting>here</a>. The input file for svFSI is a scripting code that sets values to specific parameters. A colon ":" is used as a separator between the keyword or key phrase and its value. If the parameters being set are single-valued constants, you may use a **single line structure** as,
+**svFSI** uses plain-text input file. This input file will define the physics solved, mesh, linear solver, boundary conditions and general simulation parameters. An overview of the syntax could be found <a href="https://sites.google.com/site/memt63/tools/MUPFES/mupfes-scripting">here</a>. The input file for svFSI is a scripting code that sets values to specific parameters. A colon ":" is used as a separator between the keyword or key phrase and its value. If the parameters being set are single-valued constants, you may use a **single line structure** as,
 
 ```
 <keyword or key phrase>: 1.3
@@ -57,7 +57,7 @@ Increment in saving restart files: 200
 
 <a id="mesh_info"> <h4> Mesh information </h4></a>
 
-Mesh data is provided in the second part. It mainly includes the paths to volumetric meshes and boundary meshes. There may also be additional information such as domains, fiber orientation, initial values, prestress, etc. Multiples meshes can be loaded for the same or different equations within svFSI. svFSI supports reading multiple mesh formats as mentioned [here](http://simvascular.github.io/docssvFSI.html#mesh). Regardless of the mesh format, the mesh information is provided using the block structure. Nested keywords "Add mesh" and "Add face" could be used to provide paths to the mesh and face files. The users should also provide a string-based name for each mesh and face immediately after the colon. This name will be useful when when setting boundary conditions later. For example:
+Mesh data is provided in the second part. It mainly includes the paths to volumetric meshes and boundary meshes. There may also be additional information such as domains, fiber orientation, initial values, prestress, etc. Multiples meshes can be loaded for the same or different equations within svFSI. svFSI supports reading multiple mesh formats as mentioned [here](svfsi.html#mesh). Regardless of the mesh format, the mesh information is provided using the block structure. Nested keywords "Add mesh" and "Add face" could be used to provide paths to the mesh and face files. The users should also provide a string-based name for each mesh and face immediately after the colon. This name will be useful when when setting boundary conditions later. For example:
 
 ```
 Add mesh: mesh_name {

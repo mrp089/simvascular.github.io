@@ -1,6 +1,6 @@
 ### Create the solid domain mesh
 
-Similar to the way we create the mesh for the fluid domain in SimVascular (see: http://simvascular.github.io/meshing.html) we can now create the mesh for the solid domain.
+Similar to the way we [create the mesh](meshing.html) for the fluid domain in SimVascular, we can now create the mesh for the solid domain.
 
 1.  Import the .stl of the structural domain geometry into SimVascular
 
@@ -8,7 +8,7 @@ Similar to the way we create the mesh for the fluid domain in SimVascular (see: 
 
     <figure>
       <img class="svImg svImgLg" src="/documentation/svfsi/fsi/imgs/importing_solid_into_SV.png" style="width:100%;height:auto;max-width: 30vw;">
-      <figcaption class="svCaption" >Importing .stl model into SimVascular.</figcaption>
+      <figcaption class="svCaption">Importing .stl model into SimVascular.</figcaption>
     </figure>
 
 2.  Extract faces, rename them if wanted
