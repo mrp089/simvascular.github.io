@@ -1,4 +1,4 @@
-/* line 4, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+/* line 4 */
 body {
   width: 100%;
   height: 100%;
@@ -6,52 +6,47 @@ body {
   color: var(--white);
 }
 
-/* line 12, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+/* line 12 */
 html {
   width: 100%;
   height: 100%; }
 
-/* line 22, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+/* line 22 */
+h1, h2, h3, h4, h5, h6 {
   margin: 0 0 35px;
   text-transform: uppercase;
   font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-weight: 700;
   letter-spacing: 1px; }
 
-/* line 30, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+/* line 30 */
 p {
   margin: 0 0 25px;
   font-size: 18px;
   line-height: 1.5; }
 
 @media (min-width: 767px) {
-  /* line 37, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+  /* line 37 */
   p {
     margin: 0 0 35px;
     font-size: 20px;
     line-height: 1.6; } }
-/* line 44, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+/* line 44 */
 a {
   color: #219ab3;
   -webkit-transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out; }
-  /* line 50, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+  /* line 50 */
   a:hover, a:focus {
     text-decoration: none;
     color: #11505d; }
 
-/* line 56, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+/* line 56 */
 .light {
   font-weight: 400; }
 
-/* line 60, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+/* line 60 */
 .navbar-custom {
   margin-bottom: 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -59,39 +54,39 @@ a {
   font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
   background-color: black; 
 }
-  /* line 66, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+  /* line 66 */
   .navbar-custom .navbar-brand {
     font-weight: 700; }
-    /* line 68, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+    /* line 68 */
     .navbar-custom .navbar-brand:focus {
       outline: none; }
-    /* line 71, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+    /* line 71 */
     .navbar-custom .navbar-brand .navbar-toggle {
       padding: 4px 6px;
       font-size: 16px;
       color: white; }
-      /* line 76, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+      /* line 76 */
       .navbar-custom .navbar-brand .navbar-toggle:focus, .navbar-custom .navbar-brand .navbar-toggle:active {
         outline: none; }
-  /* line 81, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+  /* line 81 */
   .navbar-custom a {
     color: white; }
-  /* line 86, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+  /* line 86 */
   .navbar-custom .nav li.active {
     outline: nonte;
     background-color: rgba(255, 255, 255, 0.3); }
-  /* line 90, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+  /* line 90 */
   .navbar-custom .nav li a {
     -webkit-transition: background .3s ease-in-out;
     -moz-transition: background .3s ease-in-out;
     transition: background .3s ease-in-out; }
-    /* line 96, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+    /* line 96 */
     .navbar-custom .nav li a:hover, .navbar-custom .nav li a:focus, .navbar-custom .nav li a.active {
       outline: none;
       background-color: rgba(255, 255, 255, 0.3); }
 
 @media (min-width: 767px) {
-  /* line 106, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+  /* line 106 */
   .navbar {
     padding: 20px 0;
     border-bottom: none;
@@ -101,15 +96,15 @@ a {
     -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
     transition: background .5s ease-in-out,padding .5s ease-in-out; }
 
-  /* line 116, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+  /* line 116 */
   .top-nav-collapse {
     padding: 0;
     background-color: black; }
 
-  /* line 121, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+  /* line 121 */
   .navbar-custom.top-nav-collapse {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3); } }
-/* line 126, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+/* line 126 */
 .intro {
   display: table;
   width: 100%;
@@ -123,51 +118,52 @@ a {
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover; }
-  /* line 139, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+  /* line 139 */
   .intro .intro-body {
     display: table-cell;
     vertical-align: middle; }
-    /* line 142, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+    /* line 142 */
     .intro .intro-body .brand-heading {
       font-size: 40px; }
-    /* line 146, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+    /* line 146 */
     .intro .intro-body .intro-text {
       font-size: 25px; }
 
 @media (max-width: 320px) {
-  /* line 153, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+  /* line 153 */
   .intro {
     height: 100%;
     padding: 0px; }
-    /* line 157, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+    /* line 157 */
     .intro .intro-body .brand-heading {
       font-size: 25px; }
-    /* line 161, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+    /* line 161 */
     .intro .intro-body .intro-text {
       font-size: 15px; } }
 @media (min-width: 767px) {
-  /* line 169, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+  /* line 169 */
   .intro {
     height: 100%;
     padding: 100px; }
-    /* line 173, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+    /* line 173 */
     .intro .intro-body .brand-heading {
       font-size: 40px; }
-    /* line 177, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+    /* line 177 */
     .intro .intro-body .intro-text {
       font-size: 20px; } }
 @media (min-width: 1024px) {
-  /* line 185, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+  /* line 185 */
   .intro {
     height: 100%;
     padding: 0; }
-    /* line 189, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+    /* line 189 */
     .intro .intro-body .brand-heading {
       font-size: 50px; }
-    /* line 193, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+    /* line 193 */
     .intro .intro-body .intro-text {
       font-size: 25px; } }
-/* line 200, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+      
+/* line 200 */
 .btn-circle {
   width: 70px;
   height: 70px;
@@ -181,18 +177,18 @@ a {
   -webkit-transition: background .3s ease-in-out;
   -moz-transition: background .3s ease-in-out;
   transition: background .3s ease-in-out; }
-  /* line 214, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+  /* line 214 */
   .btn-circle:hover, .btn-circle:focus {
     outline: none;
     color: white;
     background: rgba(255, 255, 255, 0.1); }
-  /* line 219, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+  /* line 219 */
   .btn-circle i.animated {
     -webkit-transition-property: -webkit-transform;
     -webkit-transition-duration: 1s;
     -moz-transition-property: -moz-transform;
     -moz-transition-duration: 1s; }
-  /* line 226, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+  /* line 226 */
   .btn-circle:hover i.animated {
     -webkit-animation-name: pulse;
     -moz-animation-name: pulse;
@@ -204,38 +200,38 @@ a {
     -moz-animation-timing-function: linear; }
 
 @-webkit-keyframes pulse {
-  /* line 240, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+  /* line 240 */
   0 {
     -webkit-transform: scale(1);
     transform: scale(1); }
 
-  /* line 245, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+  /* line 245 */
   50% {
     -webkit-transform: scale(1.2);
     transform: scale(1.2); }
 
-  /* line 250, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+  /* line 250 */
   100% {
     -webkit-transform: scale(1);
     transform: scale(1); } }
 
 @-moz-keyframes pulse {
-  /* line 257, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+  /* line 257 */
   0 {
     -moz-transform: scale(1);
     transform: scale(1); }
 
-  /* line 262, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+  /* line 262 */
   50% {
     -moz-transform: scale(1.2);
     transform: scale(1.2); }
 
-  /* line 267, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+  /* line 267 */
   100% {
     -moz-transform: scale(1);
     transform: scale(1); } }
 
-/* line 273, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+/* line 273 */
 .download-section {
   width: 100%;
   padding: 50px 0;
@@ -247,30 +243,30 @@ a {
   background-size: cover;
   -o-background-size: cover; }
 
-/* line 285, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+/* line 285 */
 #map {
   width: 100%;
   height: 200px;
   margin-top: 100px; }
 
-/* line 291, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+/* line 291 */
 .content-section {
   padding-top: 100px; }
 
 @media screen and (min-width: 768px) and (max-width: 1200px) {
-  /* line 296, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+  /* line 296 */
   .content-section {
     padding-top: 200px; } }
 @media (min-width: 768px) {
-  /* line 302, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+  /* line 302 */
   .download-section {
     padding: 100px 0; }
 
-  /* line 306, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+  /* line 306 */
   #map {
     height: 400px;
     margin-top: 250px; } }
-/* line 312, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+/* line 312 */
 .btn {
   text-transform: uppercase;
   font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -279,171 +275,171 @@ a {
   -moz-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out; }
 
-/* line 321, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+/* line 321 */
 .btn-default {
   border: 1px solid #219ab3;
   color: #219ab3;
   background-color: transparent; }
-  /* line 326, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+  /* line 326 */
   .btn-default:hover, .btn-default:focus {
     border: 1px solid #219ab3;
     outline: none;
     color: black;
     background-color: #219ab3; }
 
-/* line 334, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+/* line 334 */
 ul.banner-social-buttons {
   margin-top: 0; }
 
 @media (max-width: 1199px) {
-  /* line 339, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+  /* line 339 */
   ul.banner-social-buttons {
     margin-top: 15px; } }
 @media (max-width: 767px) {
-  /* line 346, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+  /* line 346 */
   ul.banner-social-buttons li {
     display: block;
     margin-bottom: 20px;
     padding: 0; }
-    /* line 350, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+    /* line 350 */
     ul.banner-social-buttons li:last-child {
       margin-bottom: 0; } }
-/* line 357, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+/* line 357 */
 footer {
   padding: 50px 0; }
-  /* line 359, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+  /* line 359 */
   footer p {
     margin: 0; }
 
-/* line 364, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+/* line 364 */
 ::-moz-selection {
   text-shadow: none;
   background: #fcfcfc;
   background: rgba(255, 255, 255, 0.2); }
 
-/* line 370, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+/* line 370 */
 ::selection {
   text-shadow: none;
   background: #fcfcfc;
   background: rgba(255, 255, 255, 0.2); }
 
-/* line 376, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+/* line 376 */
 img::selection {
   background: transparent; }
 
-/* line 380, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+/* line 380 */
 img::-moz-selection {
   background: transparent; }
 
-/* line 384, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+/* line 384 */
 body {
   webkit-tap-highlight-color: rgba(255, 255, 255, 0.2); }
 
-/* line 388, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+/* line 388 */
 #team p {
   text-align: justify; }
 
-/* line 396, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+/* line 396 */
 .fixed {
   height: 400px;
   overflow: hidden; }
 
-/* line 397, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+/* line 397 */
 .scrollit {
   height: 400px;
   overflow-y: scroll; }
 
-/* line 400, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+/* line 400 */
 .LegalStuff {
   font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: small; }
 
-/* line 405, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+/* line 405 */
 .content {
   display: none; }
 
-/* line 407, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+/* line 407 */
 .BioPar p {
   font-family: "Montserrat";
   font-size: x-small; }
 
-/* line 412, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+/* line 412 */
 .top-buffer {
   margin-top: 30px; }
 
-/* line 413, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+/* line 413 */
 .bottom-buffer-small {
   margin-bottom: 5px; }
 
-/* line 414, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+/* line 414 */
 .top-buffer-small {
   margin-top: 5px; }
 
-/* line 415, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+/* line 415 */
 .top-buffer-md {
   margin-top: 15px; }
 
-/* line 418, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+/* line 418 */
 .justifiedText {
   text-align: justify; }
 
-/* line 422, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+/* line 422 */
 .otherContrib {
   font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: small; }
 
-/* line 427, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+/* line 427 */
 .thumBlack {
   background-color: black;
   border-color: gray; }
 
-/* line 432, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+/* line 432 */
 #visitorMessage {
   resize: none; }
 
-/* line 436, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+/* line 436 */
 .test {
   border: 0px;
   border-color: black;
   border-width: 0px; }
 
-/* line 442, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+/* line 442 */
 .repoImgLeft {
   float: left; }
 
-/* line 445, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+/* line 445 */
 .repoImgRight {
   float: right; }
 
-/* line 448, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+/* line 448 */
 .repoImgCenter {
   float: center; }
 
-/* line 452, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+/* line 452 */
 .thumBlackRepo {
   background-color: black;
   border-color: black;
   height: 150px; }
 
-/* line 458, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+/* line 458 */
 .likeSch {
   display: inline-block; }
 
-/* line 462, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+/* line 462 */
 #svLogoTitle {
   width: 100%; }
 
-/* line 466, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+/* line 466 */
 .centerTitleText {
   margin: auto;
   text-align: center; }
 
-/* line 471, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+/* line 471 */
 .centreDoc {
   width: 50%;
   margin: 0 auto; }
 
-/* line 476, /home/dave/software/ktbolt/simvascular.github.io/source/css/grayscale.scss */
+/* line 476 */
 .rotate90 {
   -webkit-transform: rotate(270deg);
   -moz-transform: rotate(270deg);
