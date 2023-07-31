@@ -31,7 +31,7 @@ The principal planes slice is represented by a pair of crosshairs the 2D view wi
 mouse button in a 2D view centers the crosshair on that point. Pressing the right mouse button and moving the mouse zooms
 in and out. Scrolling the mouse wheel changes the principal plane slice for which the mouse cursor is in.
 
-Changing the principal planes slice changes the values displayed in the <a href="#image_navigator"> Image Navigator </a>
+Changing the principal planes slice changes the values displayed in the <a href="#gui_image_navigator"> Image Navigator </a>
 and vice versa.
 
 The function of the mouse buttons depends on the window the mouse cursor is in.

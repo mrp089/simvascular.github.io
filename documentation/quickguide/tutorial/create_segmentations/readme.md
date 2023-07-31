@@ -29,7 +29,7 @@ In SimVascular, a series of segmentations along a <i>Path</i> is called a <i>Con
 
 The following sections demonstrate how to create segmentations using the <b>aorta</b> and <b>left-iliac</b> <i>Paths</i>.
 A detailed discussion about segmentation can be found in the SimVascular
-<a href="modeling.html#modelingSegmentation.html">Modeling Guide / Segmentation</a> documentation.
+<a href="modeling.html#modelingSegmentation">Modeling Guide / Segmentation</a> documentation.
 
 <h3 id="tutorial_create_segs_1"> Create an instance of a <i>Segmentations Tool</i> for the aorta/right iliac </h3>
 

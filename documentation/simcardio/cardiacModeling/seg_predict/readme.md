@@ -29,7 +29,7 @@ prediction.py </a> Python script. For example
 ### Segmenting using the SimVascular GUI Python Console
 
 Image segmentation can also be performed from within the SimVascular GUI
-<a href='python_interface.html.html#console'> Python console </a>.
+<a href='python_interface.html#console'> Python console </a>.
 Use the Python console <strong>Text Editor</strong> mode to enter the following Python commands
 
 <pre><code class='language-python' lang='python'>

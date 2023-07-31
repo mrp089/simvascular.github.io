@@ -10,7 +10,7 @@ function anchorLinks()
 {
     var array = document.getElementsByTagName("a");
 
-    for(var i = 0; i < array.length; i++)
+    for(var i = 16; i < array.length; i++)
     {
         console.log(array[i])
         if(array[i].href.includes('docs'))

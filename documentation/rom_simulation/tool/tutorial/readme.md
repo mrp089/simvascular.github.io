@@ -3,7 +3,7 @@
 This section demonstrates how to use the **1D Simulation Tool** to interactively create the geometry,
 boundary conditions and solver parameters needed to execute a **sv1DSolver** simulation. The geometry of
 the one-dimensional networks used for a 1D simulation is based on the model of the aorta and branching
-left and right iliac vessels created in the Demo Project discussed in the SimVascular <a href="quickguide.html#simulation"> Getting Started </a> documentation.
+left and right iliac vessels created in the Demo Project discussed in the SimVascular <a href="quickguide.html"> Getting Started </a> documentation.
 
 A flow rate inlet boundary condition is used for the aorta inlet. RCR boundary conditions are used for left and
 left and right iliac vessels.
