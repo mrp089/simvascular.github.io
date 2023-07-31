@@ -280,10 +280,14 @@ zero-md {
     background-color: var(--lightbluegrey);
 }
 
-.skipToTopSection {
+/* #skipToTopContainer {
     position: fixed;
-    bottom: 15px;
-    right: 15px;
+    left: 0;
+    top: 0;
+} */
+
+#skipToTopBackground {
+    position: fixed;
     height: 68px;
     width: 68px;
     background-color: var(--verydarkblue);
@@ -293,12 +297,11 @@ zero-md {
     opacity: 0.5;
 }
 
-.skipToTopSection:hover {
+#skipToTopBackground:hover {
     opacity: 1;
 }
 
 #skipToTop {
-    margin: auto;
     font-size: 38px;
     color: white;
 }

@@ -9,10 +9,17 @@ setTimeout(() => {
 
 function setWidth()
 {
+    var width = document.documentElement.clientWidth;
+    var height = document.documentElement.clientHeight;
+
     var body = document.getElementsByTagName("body")[0]
-    body.style.width = document.documentElement.clientWidth + "px";
+    body.style.width = width + "px";
     var header = document.getElementsByClassName("header")[0]
-    header.style.width = document.documentElement.clientWidth + "px";
+    header.style.width = width + "px";
+    var skipToTop = document.getElementById("skipToTopBackground");
+    // height and width of skipToTop is 68px
+    skipToTop.style.marginLeft = (width - 68 - 25) + "px";
+    skipToTop.style.marginTop = (height - 68 - 25) + "px";
 }
 
 function anchorLinks()
