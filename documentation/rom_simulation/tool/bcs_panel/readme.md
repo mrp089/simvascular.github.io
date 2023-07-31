@@ -49,7 +49,7 @@ Point Number - Defines ?
 <br>
 Fourier Modes - Defines ?
 <br>
-Flow rate (from file) - Selecting the **...** brings a file browser used to selected a flow file.
+Flow rate (from file) - Selecting the <strong>...</strong> brings a file browser used to selected a flow file.
 <br>
 Period -
 <br>

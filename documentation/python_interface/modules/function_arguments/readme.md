@@ -10,8 +10,9 @@ the meaning of the data passed to the **Circle** class constructor
 </pre>
 
 <br>
+
 All data passed to a function is checked against the type expected by the function. A type mismatch generates an error.
-General type errors are detected by Python. For example, using a string for the <i>radius</i> argument which expects a 
+General type errors are detected by Python. For example, using a string for the <i>radius</i> argument which expects a
 float generates a Python **TypeError**
 
 <pre>
@@ -20,9 +21,10 @@ TypeError: CircleSegmentation() argument 1 must be float, not str
 </pre>
 
 <br>
+
 Errors associated with data needed by the C++ functions called from the SimVascular API are detected within the API C++
-implementation. For example, passing in a list of two instead of three floats for the **Circle** class constructor 
-<i>normal</i> argument generates a **segmentation** module error
+implementation. For example, passing in a list of two instead of three floats for the **Circle** class constructor
+<i>normal</i> argument generates a <b>segmentation</b> module error
 
 <pre>
 >>> seg = sv.segmentation.Circle(radius=1.0, center=[1.0,0.0,0.0], normal=[1.0])

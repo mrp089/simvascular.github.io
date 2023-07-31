@@ -84,8 +84,8 @@ Close the panel before creating or opening a SimVascular project.
 </div>
 
 <br>
-The **3D Level Set Tool** creates a **level-set** node under the SV Data Manager <i>Images</i> node. The **level-set** node
-itself has four sub-nodes used to store and display geometry created by each of the panels
+
+The **3D Level Set Tool** creates a **level-set** node under the SV Data Manager <i>Images</i> node. The **level-set** node itself has four sub-nodes used to store and display geometry created by each of the panels
 
 <ul style="list-style-type:none;">
   <li> <b>seed-points</b> - Seed points, displayed as green or red spheres. </li>
@@ -261,8 +261,7 @@ Create a SimVascular project and read in the demo-image.vti image data file from
 <br>
 <b>Step 2 - Open the 3D Level Set Tool</b> <br>
 Select the
-<img src="/documentation/modeling/imgs/3d-level-set/level-set-icon.png" width="20" height="20"> icon located at the top of the
-SimVascular toolbar to open the **3D Level Set Tool** panel. Select the <i>Seeds</i> sub-panel.
+<img src="/documentation/modeling/imgs/3d-level-set/level-set-icon.png" width="20" height="20"> icon located at the top of the SimVascular toolbar to open the <strong>3D Level Set Tool</strong> panel. Select the <i>Seeds</i> sub-panel.
 <figure>
 <img class="svImg svImgXl" src="/documentation/modeling/imgs/3d-level-set/example-1/fig-2.png">
 </figure>

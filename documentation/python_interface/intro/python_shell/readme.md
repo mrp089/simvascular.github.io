@@ -16,6 +16,7 @@ where <em>DATE</em> is the SimVascular install date (e.g. 2020-04-06). In the fo
 the SimVascular launch script.
 
 <br>
+
 The SimVascular Python interpreter, the application that executes Python programs, is invoked in interactive mode using the **---python** flag.
 That means you can enter Python statements or expressions interactively and have them executed or evaluated while you wait.
 The **Python Shell** behaves like the standard Python interpreter and therefore supports automatic indentation to mark blocks of code.
@@ -38,6 +39,7 @@ Hello
 </pre>
 
 <br>
+
 The **Python Shell** is terminated using
 
 <pre>
@@ -47,7 +49,8 @@ Windows: exit() or hold the Ctrl key down while you enter a Z, then hit the “E
 </pre>
 
 <br>
-Python scripts are read in and executed using a double-dash **---** before the script name. The **Python Shell** passes the script to the 
+
+Python scripts are read in and executed using a double-dash **---** before the script name. The **Python Shell** passes the script to the
 Python interpreter for execution and then exits.
 
 <pre>

@@ -17,9 +17,9 @@ The **sv** package defines the following modules
 
 <br>
 Modules are accessed using <b>sv.<i>MODULENAME</i></b>. The <b>sv</b> package can also be imported into Python using the 
-<b>from sv import \*</b> statement. This makes all of the module names accessible without the **sv** prefix. A single <b>sv</b> 
+<b>from sv import \*</b> statement. This makes all of the module names accessible without the <b>sv</b> prefix. A single <b>sv</b> 
 module can be imported using <b>from sv import <i>MODULENAME</i></b>. The difference between the these statements is seen using 
-the **dir()** function which shows imported modules
+the <b>dir()</b> function which shows imported modules
 
 <pre>
 <div style="font-size:10px; height: auto; overflow: visible;">

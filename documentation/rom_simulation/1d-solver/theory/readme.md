@@ -99,8 +99,9 @@ where the initial condition is given by $\mathbf{U}^0(z) = \left[S^0(z),Q^0(z)\r
 The boundary conditions are not specified at this point.
 
 <h2> Disjoint Decomposition </h2>
-We adopt the disjoint decomposition approach described in 2.3 to derive appropriate outflow boundary conditions. 
-First, we divide our spatial domain $\Omega=[0,L]$ into an upstream **numerical** domain $\Omega^{n}: z\in(0,B)$, 
+
+We adopt the disjoint decomposition approach described in 2.3 to derive appropriate outflow boundary conditions.
+First, we divide our spatial domain $\Omega=[0,L]$ into an upstream **numerical** domain $\Omega^{n}: z\in(0,B)$,
 and a downstream **analytic** domain $\Omega^{a}: z\in(B,L)$.
 
 The boundary that separates these domains is defined as $\Gamma\_{B} : z = B$. We define a disjoint decomposition of

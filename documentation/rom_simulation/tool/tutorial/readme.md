@@ -115,14 +115,15 @@ The panel contains a table listing the inlet (cap_aorta) and two outlet (cap_rig
 defined for the model.
 
 <br>
-<h4><b> Set <i>cap\_aorta</i> inlet flow boundary condition </b></h4>
-Double click with the left mouse button on <b>cap\_aorta</b> under the **Name** column. 
-This brings up a **Set Inlet/Outlet BCs** popup window. To set an inlet flow boundary condition 
+<h4><b> Set <i>cap_aorta</i> inlet flow boundary condition </b></h4>
+Double click with the left mouse button on <b>cap_aorta</b> under the <b>Name</b> column.
+This brings up a <b>Set Inlet/Outlet BC</b> popup window. To set an inlet flow boundary condition
+
 <div style="background-color: #F0F0F0; padding: 10px">
-1) From the <b>BC Type</b> list select **Prescribed Velocities** <br>
-2) Left click on the **Flow rate (from file)** **...** button to bring up a file browser    <br>
-3) Select the inflow.flow file from the project's **flow-files** directory <br>
-4) Select **OK**<br>
+1) From the <b>BC Type</b> list select <b>Prescribed Velocities</b><br>
+2) Left click on the <b>Flow rate (from file)...</b> button to bring up a file browser<br>
+3) Select the inflow.flow file from the project's <b>flow-files</b> directory <br>
+4) Select <b>OK</b><br>
 </div>
 <br>
 <figure>
@@ -132,13 +133,13 @@ This brings up a **Set Inlet/Outlet BCs** popup window. To set an inlet flow bou
 <br>
 
 <br>
-<h4><b> Set <i>cap\_right\_iliac</i> RCR boundary condition </b></h4>
-Double click with the left mouse button on <b>cap_right_iliac</b> under the **Name** column. 
-This brings up a **Set Inlet/Outlet BCs** popup window. To set an RCR boundary condition 
+<h4><b> Set <i>cap_right_iliac</i> RCR boundary condition </b></h4>
+Double click with the left mouse button on <b>cap_right_iliac</b> under the <b>Name</b> column. 
+This brings up a <b>Set Inlet/Outlet BCs</b> popup window. To set an RCR boundary condition 
 <div style="background-color: #F0F0F0; padding: 10px">
-1) From the <b>BC Type</b> list select **RCR** <br>
-2) Enter <i>90 0.0008 1200</i> into the <b>$R\_p C R\_d$</b> text box <br>
-3) Select **OK**
+1) From the <b>BC Type</b> list select <b>RCR</b> <br>
+2) Enter <i>90 0.0008 1200</i> into the <b>$R_p C R_d$</b> text box <br>
+3) Select <b>OK</b>
 </div>
 <br>
 <figure>
@@ -148,13 +149,13 @@ This brings up a **Set Inlet/Outlet BCs** popup window. To set an RCR boundary c
 <br>
 
 <br>
-<h4><b> Set <i>cap\_aorta\_2</i> RCR boundary condition </b></h4>
-Double click with the left mouse button on <b>cap\_aorta\_2</b> under the **Name** column.
-This brings up a **Set Inlet/Outlet BCs** popup window. To set the values for the RCR boundary condition
+<h4><b> Set <i>cap_aorta_2</i> RCR boundary condition </b></h4>
+Double click with the left mouse button on <b>cap_aorta_2</b> under the <b>Name</b> column.
+This brings up a <b>Set Inlet/Outlet BCs</b> popup window. To set the values for the RCR boundary condition
 <div style="background-color: #F0F0F0; padding: 10px">
-1) From the <b>BC Type</b> list select **RCR** <br>
-2) Enter <i>100 0.0004 1100</i> into the <b>$R\_p C R\_d$</b> text box <br>
-3) Select **OK**
+1) From the <b>BC Type</b> list select <b>RCR</b> <br>
+2) Enter <i>100 0.0004 1100</i> into the <b>$R_p C R_d$</b> text box <br>
+3) Select <b>OK</b>
 </div>
 <br>
 <figure>
@@ -193,9 +194,9 @@ properties for vessel walls.
 To set the material model to Olufsen
 
 <div style="background-color: #F0F0F0; padding: 10px">
-1) From the <b>Material Model </b> list select **OLUFSEN** <br>
-2) Enter <i> 2.0e7 </i> into the <b>$K\_1 $</b> text box <br>
-3) Enter <i> 8.65e5  </i> into the <b>$K\_3 $</b> text box <br>
+1) From the <b>Material Model </b> list select <b>OLUFSEN</b> <br>
+2) Enter <i> 2.0e7 </i> into the <b>$K_1$</b> text box <br>
+3) Enter <i> 8.65e5  </i> into the <b>$K_3$</b> text box <br>
 4) Enter <i> 113324.0 </i> into the <b>Pressure</b> text box <br>
 </div>
 <br>
@@ -226,9 +227,9 @@ parameters needed to execute the 1D Solver.
 To set the solver parameters
 
 <div style="background-color: #F0F0F0; padding: 10px">
-1) Double click with the left mouse button on the **Number of Timesteps** **Values** column and enter <i>10000</i>. <br>
-2) Double click with the left mouse button on the **Time Steps Size** **Values** column and enter <i>0.001</i>. <br>
-3) Double click with the left mouse button on the **Number of Timesteps between Saving Data** **Values** column and enter <i>1</i>. <br>
+1) Double click with the left mouse button on the <b>Number of Timesteps</b> <b>Values</b> column and enter <i>10000</i>. <br>
+2) Double click with the left mouse button on the <b>Time Steps Size</b> <b>Values</b> column and enter <i>0.001</i>. <br>
+3) Double click with the left mouse button on the <b>Number of Timesteps between Saving Data</b> <b>Values</b> column and enter <i>1</i>. <br>
 </div>
 <br>
 

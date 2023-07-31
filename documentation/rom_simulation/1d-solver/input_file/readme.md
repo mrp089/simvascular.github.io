@@ -385,7 +385,7 @@ Output formats
 VTK export options
 
   <ul style="list-style-type:none;">
-    <li>0 - Output multiple files (default). A separate file is written for each saved increment. A **pvd** file is also provided which contains the time information of the sequence. This is the best option to create animations. </li><br>
+    <li>0 - Output multiple files (default). A separate file is written for each saved increment. A <b>pvd</b> file is also provided which contains the time information of the sequence. This is the best option to create animations. </li><br>
     <li>1 - The results for all time steps are plotted to a single XML VTK file. </li><br>
   </ul>
 
@@ -433,8 +433,8 @@ Arguments
     <li><i>id</i> (integer) - Segment ID. </li><br>
     <li><i>length</i> (double - Segment length. </li><br>
     <li><i>nelems</i> (integer) - Total finite elements in segment. </li><br>
-    <li><i>inode</i> (integer) - Segment inlet **Node**. </li><br>
-    <li><i>onode</i> (integer) - Segment outlet **Node**. </li><br>
+    <li><i>inode</i> (integer) - Segment inlet <b>Node</b>. </li><br>
+    <li><i>onode</i> (integer) - Segment outlet <b>Node</b>. </li><br>
     <li><i>iarea</i> (double - Segment inlet area. </li><br>
     <li><i>oarea</i> (double - Segment outlet area. </li><br>
     <li><i>iflow</i> (double - Segment initial flow. </li><br>

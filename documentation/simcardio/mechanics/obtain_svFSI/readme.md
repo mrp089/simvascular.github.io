@@ -7,5 +7,5 @@ The **svFSI** executable (either built from source or downloaded from SimTK) is 
 
 <figure>
   <img class="svImg svImgMd" src="/documentation/simcardio/mechanics/images/path_to_binary.png">
-  <figcaption class="svCaption" >Set up path to **svFSI** solver in SimVascular.</figcaption>
+  <figcaption class="svCaption" >Set up path to <b>svFSI</b> solver in SimVascular.</figcaption>
 </figure>

@@ -65,7 +65,7 @@ Now a new contour is created and added to the group.
 
 In general, you should go with the normal approach above: making more segmentations than you will need and then selecting a subset to define the vessel. However, in the following exercise, we will try to gain some intuition that makes batch level set segmentation possible and efficient.
 
-<font color="red">**HELPFUL HINT:**</font> Finding suitable level set parameters based on a few cross sections and then doing batch segmentation can dramatically speed up model building. Make sure the seed fits within the lumen of the vessel for all the positions we’d like to segment in the batch.
+<font color="red"><strong>HELPFUL HINT:</strong></font> Finding suitable level set parameters based on a few cross sections and then doing batch segmentation can dramatically speed up model building. Make sure the seed fits within the lumen of the vessel for all the positions we’d like to segment in the batch.
 
 Now let's try to create contours in batch model using levelset.
 
@@ -106,4 +106,4 @@ Secondly, you want to check to make sure that the segmentation does not include 
   <figcaption class="svCaption" ></figcaption>
 </figure>
 
-<font color="red">**HELPFUL HINT:** </font> You want the spacing between locations to be sufficient to capture the curvature and other changes in the vessel. If the vessel is relatively straight, as is the case in this the abdominal aorta for this dataset, you can space the segmentations relatively far apart.
+<font color="red"><strong>HELPFUL HINT:</strong></font> You want the spacing between locations to be sufficient to capture the curvature and other changes in the vessel. If the vessel is relatively straight, as is the case in this the abdominal aorta for this dataset, you can space the segmentations relatively far apart.
