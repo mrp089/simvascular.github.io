@@ -1,28 +1,3 @@
-var counter = 0;
-
-setTimeout(() => {
-    anchorLinks();
-    console.log(counter + " docs")
-}, 20);
-
-
-function anchorLinks()
-{
-    var array = document.getElementsByTagName("a");
-
-    for(var i = 16; i < array.length; i++)
-    {
-        console.log(array[i])
-        if(array[i].href.includes('docs'))
-        {
-            counter++;
-        }
-    }
-
-}
-
-// document.documentElement.clientWidth
-
 function scrollToTop() {
     window.scrollTo({top: 0, behavior: 'smooth'});
 }
