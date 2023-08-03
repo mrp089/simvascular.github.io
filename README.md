@@ -324,8 +324,130 @@ If you are adding the link to a new clinical test case page, copy an anchor elem
 <a class="docLinks" target="_blank" href="clinical/name_of_html_file">Label</a><br>
 ```
 
-Try to keep the order of the pages in the Documentation section of the landing page the same as that in the navigation bar in the headers of the documentation pages for consistency. After updating the Documentation section, render the landing page in a local server to check how it looks and if the link paths are correct.
+Try to keep the order of the pages in the Documentation section of the landing page the same as that in the navigation bar in the headers of the documentation pages for consistency. After updating the Documentation section, render `index.html` in a local server to check how it looks and if the link paths are correct.
 
 ### Editing the landing page
 
-Unlike the documentation and clinical test cases, the landing page is written purely in `html` and is not generated from `md` files.
+Unlike the documentation and clinical test cases, the landing page is written purely in `html` and is not generated from markdown files.
+
+The landing page using styling from [Bootstrap](https://getbootstrap.com/), a library for responsive layout because we want the website to be as compatible with mobile devices as possible.
+
+#### Updating the Capabilities section
+
+The capabilities section is styled with Bootstrap for compatability with mobile devices.
+
+Every new section of capabilities has its own `<ul>` element, with the following classes `class="col-lg-6 col-12 p-5"`. In each `<ul>` element, the first `<li>` element is the header for that capability. This element has the class `class="capabilitiesHeader"`.
+
+The following `<li>` elements have an icon element
+`<i class="fa-sharp fa-solid fa-check"></i>`, which displays the checkmark, and text follows the `<i>` element to describe the sub-capability.
+
+An example structure is as follows:
+
+```
+<ul class="col-lg-6 col-12 p-5">
+    <li class="capabilitiesHeader">
+        The header of the capability section
+    </li>
+    <li>
+        <i class="fa-sharp fa-solid fa-check"></i>
+        The label for the sub-capability
+    </li>
+    <!-- other <li> elements -->
+</ul>
+```
+
+If you want to add sub-categories under the sub-capability, you can add the class `<li class="indented">` to the `<li>` element.
+
+An example structure is as follows:
+
+```
+<li>
+    <i class="fa-sharp fa-solid fa-check"></i>
+    The label for the sub-capability
+</li>
+<li class="indented">
+    <i class="fa-sharp fa-solid fa-check"></i>
+    The label for the sub-sub-capability
+</li>
+```
+
+After updating the Capabilities section, render `index.html` in a local server to check how it looks and if the presentation is how you intended.
+
+#### Updating the Applications section
+
+The applications section is styled with Bootstrap for compatability with mobile devices.
+
+Every section for a new application is set up the same way. There is a `<div>` with the following classes `class="col-lg-4 col-md-6 col-12"`. Then, there is an `<div class="applicationsHeader">` element, followed by a `<h2>` element with the name of the SimVascular application.
+
+After the `<div class="applicationsHeader">`, there is an `<div class="applicationsText">` element, which is followed by a `<p>` element that contains the text describing the SimVacular application.
+
+An example structure is as follows:
+
+```
+<div class="col-lg-4 col-md-6 col-12">
+    <div class="applicationsHeader">
+        <h2>SimVascular</h2>
+    </div>
+    <div class="applicationsText">
+        <p> An interactive application for implementing all components
+        of the image-based pipeline</p>
+    </div>
+</div>
+```
+
+To update the content under an application, change the text inside the `<p>` element.
+
+To create a new section for a new application, copy the entire `<div>` as encoded above, and modify the `<h2>` element text content and the `<p>` element text content. If you want to create a new row, add another `<div>` element with the following classes `<div class="row justify-content-center">`.
+
+After updating the Applications section, you can render `index.html` in a local server to check how it looks and if the presentation is how you intended.
+
+#### Adding pictures to the Gallery section
+
+After updating the Gallery section, you can render `index.html` in a local server to test scrolling through the gallery and check that the presentation is as you intended.
+
+#### Updating the Recent News section
+
+After updating the Recent News section, you can render `index.html` in a local server to check how it looks and if the presentation is how you intended.
+
+#### Updating the Team section
+
+After updating the Team section, you can render `index.html` in a local server to check if the presentation is how you intended and that the profile links are functional.
+
+#### Updating the Institutions or Acknowledgements section
+
+After updating the Institutions or Acknowledgements section, you can render `index.html` in a local server to check if the presentation is how you intended.
+
+#### Adding new sections
+
+Each section is set up the same way. There is a `<div>` element with the class `class="section"` or `class="everyOtherSection"`.
+
+The landing page has a color scheme in which every other section has the `background-color: var(--lightbluegrey)`. This is manually done by alternating between applying the class `<div class="section"> `and `<div class="everyOtherSection">` to the landing page sections. When adding a new section, make sure to update this class in every section to maintain an alternating pattern and keep the landing page consistent.
+
+After that `<div>` element, there is a `<div class="newSectionHeader">` with an `<h1>` element in it. The `<h1>` element has an `id` that the navigation bar in the header of the landing page uses to skip to that section of the page.
+
+After `<div class="newSectionHeader">`, there is a `<div class="newSectionContent">` which is the `<div>` element that contains the content of the section. In this `<div>`, you can add what you wanted in your new section.
+
+This structure resembles the following
+
+```
+<div class="section">
+    <div class="newSectionHeader">
+        <h1 id="section_id">Title of Section</h1>
+    </div>
+    <div class="newSectionContent">
+        <!-- The content of the section -->
+    </div>
+</div>
+```
+
+Once you have created the new section in `index.html`, update the navigation bar in the header. To do so, find the `<div id="navigationSection">`. To add a new navigation link, copy the following code:
+
+```
+ <tr class="skipTo section_id">
+    <th>
+        <p class="skipItem">Title of Section</p>
+    </th>
+</tr>
+```
+
+The `<tr>` element represents a new row in the `<table>` element which defines the navigation bar. The `<tr>` element must have two classes. The first class must be `skipTo`, which styles the row and adds functionality to the navigation link. The second class must be the `id` attribute of the `<h1>` header of your new section. The `<p>` element must have the class `class="skipItem"`, a class which styles the navigation link.

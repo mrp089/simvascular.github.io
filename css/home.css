@@ -262,7 +262,6 @@ p {
 table {
     z-index: 20;
     top: 75px;
-
     display: block;
     overflow: auto;
     margin-bottom: 65px;
