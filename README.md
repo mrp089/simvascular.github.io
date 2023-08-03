@@ -34,7 +34,7 @@ For example:
 
 <h5> An example **header** </h5>
 
-instead of bolding the word "header" because the markdown styling with the \*\* to signify bolding was placed inside the `<h4>` element, and markdown styling does not render inside `html` elements.
+instead of bolding the word "header" because the markdown styling with the \*\* to signify bolding was placed inside the `<h5>` element, and markdown styling does not render inside `html` elements.
 
 To still be able to bold the word that you want inside an `html` element, you can use the `html` styling. In this case, instead of writing `<h5> An example **header**</h5>`, which will not render correctly, you can write `<h5> An example <b>header</b></h5>` where `<b>` is the element to bold words in `html`.
 
@@ -119,7 +119,7 @@ will render as
 
 ##### This will render because there is a space.
 
-Markdown is also sensitive to new lines. Only have an empty line between two paragraphs will render a distinct paragraph.
+Markdown is also sensitive to new lines. Only having an extra space between two paragraphs will render a distinct paragraph.
 
 For example, this code
 
@@ -140,6 +140,19 @@ in the same paragraph.
 This will be
 
 in a different paragraph.
+
+Notice in the example above that the extra space creates a distinct paragraph.
+
+This sensitivity to new lines also applies when rendering `html` elements. If there is an extra space between `html` elements when the `html` is indented, it will not render properly.
+
+<ul>
+    <li>This renders correctly because there is no extra space between the previous html element and the current one.</li>
+
+<li>This will render correctly even though there is an extra space because there is no indent.</li>
+    
+    <li>This will not render correctly because there is an extra space between the previous html element and the current one and an indent.</li>
+
+<ul>
 
 To check that the markdown you have written will render correctly, you can render it through the `<zero-md>` element and open the `html` page with a local server.
 
