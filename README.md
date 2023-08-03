@@ -7,15 +7,15 @@ Click on the following links to skip to that section.
 <table>
         <tr>
                 <th>
-                        For the landing page     
+                        Updating the landing page     
                 </th>
                 <th>
-                        For the documentation
+                        Updating the documentation
                 </th>
         </tr>
         <tr>
                 <th>
-                        <a href="#updating-the-recent-news-section">Updating the Recent News Section</a>
+                        <a href="#updating-the-recent-news-section">The Recent News section</a>
                 </th>
                 <th>
                         <a href="#editing-existing-documentation">Editing existing documentation</a>
@@ -23,7 +23,7 @@ Click on the following links to skip to that section.
         </tr>
         <tr>
                 <th>
-                         <a href="#updating-the-capabilities-section">Updating the Capabilities Section</a>
+                         <a href="#updating-the-capabilities-section">The Capabilities section</a>
                 </th>
                 <th>
                         <a href="#adding-new-sections-on-the-same-html-page">Adding new sections</a>
@@ -31,15 +31,12 @@ Click on the following links to skip to that section.
         </tr>
          <tr>
                 <th>
-                        <a href="#updating-the-team-section">Updating the Team Section</a>
+                        <a href="#updating-the-team-section">The Team section</a>
                 </th>
                 <th>
                         <a href="#creating-new-user-guide-or-clinical-test-case-pages">Creating new documentation pages</a>
                 </th>
-        </tr>
-
-
-        
+        </tr>        
 </table>
 
 If markdown does not seem to be rendering properly, check out the <a href="#notes-on-writing-markdown-files">Notes on writing markdown files</a> section.
