@@ -608,3 +608,5 @@ Once you have created the new section in `index.html`, update the navigation bar
 ```
 
 The `<tr>` element represents a new row in the `<table>` element which defines the navigation bar. The `<tr>` element must have two classes. The first class must be `skipTo`, which styles the row and adds functionality to the navigation link. The second class must be the `id` attribute of the `<h1>` header of your new section. The `<p>` element must have the class `class="skipItem"`, a class which styles the navigation link.
+
+After adding a new section, you can render `index.html` in a local server to check if the navigation bar link works and if the section displays as you intended.
