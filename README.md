@@ -16,6 +16,8 @@ Before editing, you should first fork **simvascular.github.io** to your own repo
 
 ### Adding new sections on the same `html` page
 
-### Creating `html` pages
+### Creating documentation or clinical test case pages
+If you want to create a new documentation page, find and copy the `template.html` page in the documentation folder. If you want to create a new clinical test case page, find and copy the `template.html` page in the clinical folder. These pages will have the foundational `html` necessary for the documentation or clinical case page. There are three places in this file to find and update in order to create a new documentation or clinical test case page: the header, the navigation section, and the paths to the new markdown files from the `<zero-md>` element.
 
 ### Editing the home page
+Unlike the documentation and clinical test cases, the home page is written purely in `html` and is not generated from `md` files.
