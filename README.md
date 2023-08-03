@@ -15,26 +15,26 @@ Click on the following links to skip to that section in the documentation.
         </tr>
         <tr>
                 <th>
-                   <a href="#updating-the-recent-news-section">Updating the Recent News Section</a>
+                        <a href="#updating-the-recent-news-section">Updating the Recent News Section</a>
                 </th>
                 <th>
-                   <a href="#updating-the-capabilities-section">Updating the Capabilities Section</a>
+                        <a href="#editing-existing-documentation">Editing existing documentation</a>
                 </th>
         </tr>
         <tr>
                 <th>
-                   <a href="#updating-the-capabilities-section">Updating the Capabilities Section</a>
+                         <a href="#updating-the-capabilities-section">Updating the Capabilities Section</a>
                 </th>
                 <th>
-                   <a href="#adding-new-sections">Adding new sections</a>
+                        <a href="#adding-new-sections">Adding new sections</a>
                 </th>
         </tr>
          <tr>
                 <th>
-                   <a href="#updating-the-team-section">Updating the Team Section</a>
+                        <a href="#updating-the-team-section">Updating the Team Section</a>
                 </th>
                 <th>
-                   <a href="#creating-new-user-guide-or-clinical-test-case-pages">Creating new pages</a>
+                        <a href="#creating-new-user-guide-or-clinical-test-case-pages">Creating new pages</a>
                 </th>
         </tr>
 
