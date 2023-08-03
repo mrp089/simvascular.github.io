@@ -2,7 +2,24 @@
 
 This is the repository for the SimVascular website.
 
-## Editing the user guides or clinical test cases
+Click on the following links to skip to that section in the documentation.
+
+<div style="padding-right: 15px;">
+    For the landing page
+    <a href="#updating-the-recent-news-section">Updating the Recent News Section</a>
+    <a href="#updating-the-capabilities-section">Updating the Capabilities Section</a>
+    <a href="#updating-the-team-section">Updating the Team Section</a>
+
+    For the documentation
+    <a href="#editing-existing-documentation">Editing existing documentation</a>
+    <a href="#adding-new-sections">Adding new sections</a>
+    <a href="#creating-new-user-guide-or-clinical-test-case-pages">Creating new pages</a>
+
+    If markdown does not seem to be rendering properly, check out the <a href="#notes-on-writing-markdown-files">Notes on writing markdown files</a> section.
+
+</div>
+
+## Updating the documentation
 
 Thank you for updating SimVascular's documentation.
 
@@ -128,6 +145,17 @@ When the markdown is translated to `html`, the single `\` disappears, which remo
 When the markdown file is rendered using the `<zero-md>` element, the element translates the file to `html`, which is read directly when viewing the `html` page. For this reason, the paths in the markdown files should be written relative to the `html` page, not relative to the markdown file.
 
 For example, in the `template` markdown files, which is placed in multiple folders, the path to the `quickguide.html` file would normally be "../../quickguide.html". However, because the file is rendered into an `html` page that will be next to the `quickguide.html` page, you should write the path as only "quickguide.html." This is because "quickguide.html" is the path relative to the `html` page into which the markdown will be translated.
+
+A note about referencing `id` attributes in anchor links:
+
+Anchor links in markdown files can reference the following `id` attributes:
+
+1. `id`s that are inside the same markdown file
+2. `id`s that are in the `<span>` elements surrounding `<zero-md> elements` inside the same `html` file
+3. `id`s that are in the `<span>` elements surrounding `<zero-md> elements` inside other `html` files
+4. All `id`s that are referenced in the landing page
+
+They cannot, however, reference `id`s that are inside other markdown files.
 
 #### Other notes for writing markdown
 
@@ -286,11 +314,11 @@ When choosing an `id` for the `<span>` elements, consider that it will be used a
 
 After this page has been modified, check how it displays on a local server. A few key places to check are: the navigation bar in the header, the navigation section, and the body of the documentation. When viewing the rendered `html` page in a local server, you can ctrl F for "#" and "$" to check for errors rendering headers or math equations respectively.
 
-Once you are happy with this page, update the navigation bar in the headers of all the documentation and clinical test case files to add the new page you have created and update the landing page's [Documentation](https://simvascular.github.io/#documentation) section to include the new page of documentation you have created.
+Once you are happy with this page, update the navigation bar in the headers of all the user guide and clinical test case files to add the new page you have created and update the landing page's [Documentation](https://simvascular.github.io/#documentation) section to include the new page of documentation you have created.
 
 #### Updating the navigation bar in page headers
 
-When adding a new `html` page, its path should be added to the navigation bar in the headers of the other documentation and clinical test case `html` files to keep the website's headers consistent.
+When adding a new `html` page, its path should be added to the navigation bar in the headers of the other user guide and clinical test case `html` files to keep the website's headers consistent.
 
 If you are adding a user guide page, add the navigation element under the `<summary>` element that has the label "User Guides." The element will resemble the following: a `<div>` element with the `class="navSubLink` and an updated `href` link for the `<a>` directing to the new page.
 
@@ -308,11 +336,11 @@ If you are adding a clinical test case page, add the navigation element under th
 </div>
 ```
 
-Once you have updated the navigation bars in the headers of the documentation and clinical test case ages, render the website on a local version to check the navigation links to make sure that they work correctly and that the order in which the page links appear in the navigation section is consistent throughout the headers.
+Once you have updated the navigation bars in the headers of the user guide and clinical test case pages, render the website on a local version to check the navigation links to make sure that they work correctly and that the order in which the page links appear in the navigation section is consistent throughout the headers.
 
 #### Updating the landing page documentation section
 
-Unlike the documentation and clinical test cases, the landing page of the SimVascular website is written purely in `html` and is not generated from `md` files. The landing `html` file is named `index.html`. You can find the documentation section of the landing page by searching for `id="documentation"`.
+Unlike the user guide and clinical test case pages, the landing page of the SimVascular website is written purely in `html` and is not generated from `md` files. The landing `html` file is named `index.html`. You can find the documentation section of the landing page by searching for `id="documentation"`.
 
 If you are adding the link to a new User Guide page, copy an anchor element from another link under the "User Guide" section. It may resemble the following `<a>` element with the following attributes: `class="docLinks"`, `target="_blank"`, and an `href` that has the path to the `html` file you have created. After the `<a>` element, add a `<br>` for styling consistency.
 
@@ -332,7 +360,7 @@ Try to keep the order of the pages in the Documentation section of the landing p
 
 Thank you for updating SimVascular's landing page.
 
-Unlike the documentation and clinical test cases, the landing page is written purely in `html` and is not generated from markdown files.
+Unlike the user guide and clinical test case pages, the landing page is written purely in `html` and is not generated from markdown files.
 
 The landing page using styling from [Bootstrap](https://getbootstrap.com/), a library for responsive layout because we want the website to be as compatible with mobile devices as possible.
 
