@@ -2,7 +2,7 @@
 
 This is the repository for the SimVascular website.
 
-## Usage
+## Editing the documentation or clinical test cases
 
 The SimVascular website documentation can be found in the documentation folder, and the SimVascular website clinical test cases can be found in the clinical folder. In each folder, there are `html` files and their corresponding folder, which share the same name. For example, the folder associated with the `quickguide.html` file is named quickguide.
 
@@ -326,13 +326,13 @@ If you are adding the link to a new clinical test case page, copy an anchor elem
 
 Try to keep the order of the pages in the Documentation section of the landing page the same as that in the navigation bar in the headers of the documentation pages for consistency. After updating the Documentation section, render `index.html` in a local server to check how it looks and if the link paths are correct.
 
-### Editing the landing page
+## Updating the landing page
 
 Unlike the documentation and clinical test cases, the landing page is written purely in `html` and is not generated from markdown files.
 
 The landing page using styling from [Bootstrap](https://getbootstrap.com/), a library for responsive layout because we want the website to be as compatible with mobile devices as possible.
 
-#### Updating the Capabilities section
+### Updating the Capabilities section
 
 The capabilities section is styled with Bootstrap for compatability with mobile devices.
 
@@ -373,7 +373,7 @@ An example structure is as follows:
 
 After updating the Capabilities section, render `index.html` in a local server to check how it looks and if the presentation is how you intended.
 
-#### Updating the Applications section
+### Updating the Applications section
 
 The applications section is styled with Bootstrap for compatability with mobile devices.
 
@@ -403,7 +403,7 @@ To create a new row, add another `<div>` element with the following classes `<di
 
 After updating the Applications section, you can render `index.html` in a local server to check how it looks and if the presentation is how you intended.
 
-#### Adding pictures to the Gallery section
+### Adding pictures to the Gallery section
 
 The JavaScript behind the gallery section can be found in `home.js`, but this does not need to updated to add a picture to the Gallery section.
 
@@ -440,7 +440,7 @@ To change pictures in the gallery, change the `src` path in the `<img>` element,
 
 After updating the Gallery section, you can render `index.html` in a local server to test scrolling through the gallery and check that the presentation is as you intended.
 
-#### Updating the Recent News section
+### Updating the Recent News section
 
 Each news panel is set up the same way. There is a `<div>` with the class `class="newNews"` that contains the panel.
 
@@ -523,7 +523,7 @@ To update information in the Recent News section, update the following five plac
 
 After updating the Recent News section, you can render `index.html` in a local server to check how it looks and if the presentation is how you intended.
 
-#### Updating the Team section
+### Updating the Team section
 
 To add a new profile in the Team section, copy the template code below and change the code in the following places:
 
@@ -556,7 +556,7 @@ Place your modified code alongside the other `<div class="col-md-4 col-6">` elem
 
 After updating the Team section, you can render `index.html` in a local server to check if the presentation is how you intended and that the profile links are functional.
 
-#### Updating the Institutions or Acknowledgements section
+### Updating the Institutions or Acknowledgements section
 
 To add an institution or acknowledgement, find the Institutions or Acknowledgements section respectively. Copy the code below and change it in the following places:
 
@@ -574,7 +574,7 @@ Place your modified code alongside the other `<div class="col-sm-6 col-12 credit
 
 After updating the Institutions or Acknowledgements section, you can render `index.html` in a local server to check if the presentation is how you intended.
 
-#### Adding new sections
+### Adding new sections
 
 Each section is set up the same way. There is a `<div>` element with the class `class="section"` or `class="everyOtherSection"`.
 
