@@ -2,9 +2,11 @@
 
 This is the repository for the SimVascular website.
 
-## Editing the documentation or clinical test cases
+## Editing the user guides or clinical test cases
 
-The SimVascular website documentation can be found in the documentation folder, and the SimVascular website clinical test cases can be found in the clinical folder. In each folder, there are `html` files and their corresponding folder, which share the same name. For example, the folder associated with the `quickguide.html` file is named quickguide.
+Thank you for updating SimVascular's documentation.
+
+The SimVascular website user guides can be found in the documentation folder, and the SimVascular website clinical test cases can be found in the clinical folder. In each folder, there are `html` files and their corresponding folder, which share the same name. For example, the folder associated with the `quickguide.html` file is named quickguide.
 
 In each folder, there are markdown files from which the content in the `html` files is generated. [Markdown](https://daringfireball.net/projects/markdown) is a lightweight markup language with plain text formatting syntax that can be editied using a text editor.
 
@@ -212,15 +214,15 @@ If the section you have written is a subcategory of a category, group it togethe
 </div>
 ```
 
-Once you have updated the `docsSection` and the `navigationSection`, render the updated documentation page in a local server to see how it looks.
+Once you have updated the `docsSection` and the `navigationSection`, you can render the updated documentation page in a local server to see how it looks.
 
-### Creating documentation or clinical test case pages
+### Creating new user guide or clinical test case pages
 
-If you want to create a new documentation page, find and copy the `template.html` page in the documentation folder. If you want to create a new clinical test case page, find and copy the `template.html` page in the clinical folder. These pages will have the foundational `html` necessary for the documentation or clinical case page. Rename this file to describe your new documentation page.
+If you want to create a new user guide page, find and copy the `template.html` page in the documentation folder. If you want to create a new clinical test case page, find and copy the `template.html` page in the clinical folder. These pages will have the foundational `html` necessary for the user guide or clinical case page. Rename this file to describe your new documentation page.
 
-Before creating the `html` page for the new documentation or clinical test case, you may want to begin by writing the documentation in markdown files. First, create a folder with the same name as the `html` page you want to create. In this folder, for each markdown file, create a new folder with a relevant name for the section and place a `readme.md` file inside that folder. Write your documentation for each section in these `readme.md` files.
+Before creating the `html` page for the new user guide or clinical test case, you may want to begin by writing the documentation in markdown files. First, create a folder with the same name as the `html` page you want to create. In this folder, for each markdown file, create a new folder with a relevant name for the section and place a `readme.md` file inside that folder. Write your documentation for each section in these `readme.md` files.
 
-Once you have created the markdown files you seek to render in `html`, there are three places in this file to find and update in order to create a new documentation or clinical test case page: the navigation bar in the header, the navigation section on the left of the documentation page, and the paths to the new markdown files from the `<zero-md>` element.
+Once you have created the markdown files you seek to render in `html`, there are three places in this file to find and update in order to create a new user guide or clinical test case page: the navigation bar in the header, the navigation section on the left of the documentation page, and the paths to the new markdown files from the `<zero-md>` element.
 
 #### Updating the navigation bar
 
@@ -290,7 +292,7 @@ Once you are happy with this page, update the navigation bar in the headers of a
 
 When adding a new `html` page, its path should be added to the navigation bar in the headers of the other documentation and clinical test case `html` files to keep the website's headers consistent.
 
-If you are adding a documentation or user guide page, add the navigation element under the `<summary>` element that has the label "User Guides." The element will resemble the following: a `<div>` element with the `class="navSubLink` and an updated `href` link for the `<a>` directing to the new page.
+If you are adding a user guide page, add the navigation element under the `<summary>` element that has the label "User Guides." The element will resemble the following: a `<div>` element with the `class="navSubLink` and an updated `href` link for the `<a>` directing to the new page.
 
 ```
 <div class="navSubLink">
@@ -312,7 +314,7 @@ Once you have updated the navigation bars in the headers of the documentation an
 
 Unlike the documentation and clinical test cases, the landing page of the SimVascular website is written purely in `html` and is not generated from `md` files. The landing `html` file is named `index.html`. You can find the documentation section of the landing page by searching for `id="documentation"`.
 
-If you are adding the link to a new documentation or User Guide page, copy an anchor element from another link under the "User Guide" section. It may resemble the following `<a>` element with the following attributes: `class="docLinks"`, `target="_blank"`, and an `href` that has the path to the `html` file you have created. After the `<a>` element, add a `<br>` for styling consistency.
+If you are adding the link to a new User Guide page, copy an anchor element from another link under the "User Guide" section. It may resemble the following `<a>` element with the following attributes: `class="docLinks"`, `target="_blank"`, and an `href` that has the path to the `html` file you have created. After the `<a>` element, add a `<br>` for styling consistency.
 
 ```
 <a class="docLinks" target="_blank" href="documentation/name_of_html_file">Label</a><br>
@@ -327,6 +329,8 @@ If you are adding the link to a new clinical test case page, copy an anchor elem
 Try to keep the order of the pages in the Documentation section of the landing page the same as that in the navigation bar in the headers of the documentation pages for consistency. After updating the Documentation section, render `index.html` in a local server to check how it looks and if the link paths are correct.
 
 ## Updating the landing page
+
+Thank you for updating SimVascular's landing page.
 
 Unlike the documentation and clinical test cases, the landing page is written purely in `html` and is not generated from markdown files.
 
