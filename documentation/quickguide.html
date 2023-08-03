@@ -30,6 +30,18 @@
     }
   </script>
 
+  
+  <script>
+    MathJax = {
+        tex: {
+          inlineMath: [
+            ['$', '$'],
+            ['\\(', '\\)'],
+          ],
+        },
+      };
+  </script>
+
 <script
     type="module"
     src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"
@@ -183,76 +195,76 @@
 
     <section class="docsSection" style="float: right">
       <span id="getting_started">
-        <zero-md src="quickguide/intro/getting_started/readme.md"></zero-md>
+        <zero-md id="math" src="quickguide/intro/getting_started/readme.md" no-shadow></zero-md>
       </span>
       <span id="introduction">
-        <zero-md src="quickguide/intro/intro/readme.md"></zero-md>
+        <zero-md src="quickguide/intro/intro/readme.md" no-shadow></zero-md>
       </span>
       <span id="intro_pipeline">
-        <zero-md src="quickguide/intro/pipeline/readme.md"></zero-md>
+        <zero-md src="quickguide/intro/pipeline/readme.md" no-shadow></zero-md>
       </span>
       <span id="intro_tools">
-        <zero-md src="quickguide/intro/tools/readme.md"></zero-md>
+        <zero-md src="quickguide/intro/tools/readme.md" no-shadow></zero-md>
       </span>
       <span id="intro_projects">
-        <zero-md src="quickguide/intro/projects/readme.md"></zero-md>
+        <zero-md src="quickguide/intro/projects/readme.md" no-shadow></zero-md>
       </span>
       <span id="intro_mitk">
-        <zero-md src="quickguide/intro/mitk/readme.md"></zero-md>
+        <zero-md src="quickguide/intro/mitk/readme.md" no-shadow></zero-md>
       </span>
       <span id="gui">
-        <zero-md src="quickguide/gui/intro/readme.md"></zero-md>
+        <zero-md src="quickguide/gui/intro/readme.md" no-shadow></zero-md>
       </span>
       <span id="menubar">
-        <zero-md src="quickguide/gui/menubar/readme.md"></zero-md>
+        <zero-md src="quickguide/gui/menubar/readme.md" no-shadow></zero-md>
       </span>
       <span id="toolbar">
-        <zero-md src="quickguide/gui/toolbar/readme.md"></zero-md>
+        <zero-md src="quickguide/gui/toolbar/readme.md" no-shadow></zero-md>
       </span>
       <span id="gui_display">
-        <zero-md src="quickguide/gui/display/readme.md"></zero-md>
+        <zero-md src="quickguide/gui/display/readme.md" no-shadow></zero-md>
       </span>
       <span id="image_windowing">
-        <zero-md src="quickguide/gui/image_windowing/readme.md"></zero-md>
+        <zero-md src="quickguide/gui/image_windowing/readme.md" no-shadow></zero-md>
       </span>
       <span id="gui_data_manager">
-        <zero-md src="quickguide/gui/data_manager/readme.md"></zero-md>
+        <zero-md src="quickguide/gui/data_manager/readme.md" no-shadow></zero-md>
       </span>
       <span id="gui_tool_panel">
-        <zero-md src="quickguide/gui/tool_panel/readme.md"></zero-md>
+        <zero-md src="quickguide/gui/tool_panel/readme.md" no-shadow></zero-md>
       </span>
       <span id="gui_image_navigator">
-        <zero-md src="quickguide/gui/image_navigator/readme.md"></zero-md>
+        <zero-md src="quickguide/gui/image_navigator/readme.md" no-shadow></zero-md>
       </span>
       <span id="tutorial">
-        <zero-md src="quickguide/tutorial/intro/readme.md"></zero-md>
+        <zero-md src="quickguide/tutorial/intro/readme.md" no-shadow></zero-md>
       </span>
       <span id="tutorial_starting_simvascular">
-        <zero-md src="quickguide/tutorial/starting_simvascular/readme.md"></zero-md>
+        <zero-md src="quickguide/tutorial/starting_simvascular/readme.md" no-shadow></zero-md>
       </span>
       <span id="tutorial_create_project">
-        <zero-md src="quickguide/tutorial/create_project/readme.md"></zero-md>
+        <zero-md src="quickguide/tutorial/create_project/readme.md" no-shadow></zero-md>
       </span>
       <span id="tutorial_add_image_data">
-        <zero-md src="quickguide/tutorial/add_image_data/readme.md"></zero-md>
+        <zero-md src="quickguide/tutorial/add_image_data/readme.md" no-shadow></zero-md>
       </span>
       <span id="tutorial_create_paths">
-        <zero-md src="quickguide/tutorial/create_paths/readme.md"></zero-md>
+        <zero-md src="quickguide/tutorial/create_paths/readme.md" no-shadow></zero-md>
       </span>
       <span id="tutorial_create_segmentations">
-        <zero-md src="quickguide/tutorial/create_segmentations/readme.md"></zero-md>
+        <zero-md src="quickguide/tutorial/create_segmentations/readme.md" no-shadow></zero-md>
       </span>
       <span id="tutorial_create_solid_model">
-        <zero-md src="quickguide/tutorial/create_solid_model/readme.md"></zero-md>
+        <zero-md src="quickguide/tutorial/create_solid_model/readme.md" no-shadow></zero-md>
       </span>
       <span id="tutorial_create_finite_element_mesh">
-        <zero-md src="quickguide/tutorial/create_finite_element_mesh/readme.md"></zero-md>
+        <zero-md src="quickguide/tutorial/create_finite_element_mesh/readme.md" no-shadow></zero-md>
       </span>
       <span id="tutorial_create_simulation">
-        <zero-md src="quickguide/tutorial/create_simulation/readme.md"></zero-md>
+        <zero-md src="quickguide/tutorial/create_simulation/readme.md" no-shadow></zero-md>
       </span>
       <span id="tutorial_summary">
-        <zero-md src="quickguide/tutorial/summary/readme.md"></zero-md>
+        <zero-md src="quickguide/tutorial/summary/readme.md" no-shadow></zero-md>
       </span>
     </section>
   </section>
@@ -260,11 +272,13 @@
     <p id="skipToTop"><i class="fa-solid fa-arrow-up"></i></p>
   </section>
 
-  <!-- Style CSS -->
-  <link rel="stylesheet" href="../css/bootstrap.css">
-  <link rel="stylesheet" href="../css/grayscale.css">
-  <link rel="stylesheet" href="../css/standards.css">
-  <link rel="stylesheet" href="../css/documentation.css">
+  <script>
+    math.addEventListener('zero-md-rendered', () => {
+      var el = document.createElement('script');
+      el.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js';
+      document.head.appendChild(el);
+    });
+  </script>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
