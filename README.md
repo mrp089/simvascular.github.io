@@ -6,14 +6,14 @@ Click on the following links to skip to that section in the documentation.
 
 <div style="padding-right: 15px;">
 For the landing page
-<a href="#updating-the-recent-news-section">Updating the Recent News Section</a>
-<a href="#updating-the-capabilities-section">Updating the Capabilities Section</a>
-<a href="#updating-the-team-section">Updating the Team Section</a>
+<a href="#updating-the-recent-news-section">Updating the Recent News Section</a><br>
+<a href="#updating-the-capabilities-section">Updating the Capabilities Section</a><br>
+<a href="#updating-the-team-section">Updating the Team Section</a><br>
 
 For the documentation
-<a href="#editing-existing-documentation">Editing existing documentation</a>
-<a href="#adding-new-sections">Adding new sections</a>
-<a href="#creating-new-user-guide-or-clinical-test-case-pages">Creating new pages</a>
+<a href="#editing-existing-documentation">Editing existing documentation</a><br>
+<a href="#adding-new-sections">Adding new sections</a><br>
+<a href="#creating-new-user-guide-or-clinical-test-case-pages">Creating new pages</a><br>
 
 If markdown does not seem to be rendering properly, check out the <a href="#notes-on-writing-markdown-files">Notes on writing markdown files</a> section.
 
