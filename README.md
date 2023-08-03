@@ -71,6 +71,32 @@ While this is helpful, the way markdown is rendered will not render `html` eleme
         For example, this will not render as **bold** despite the bold markdown styling
         <b>HTML</b> styling does not render either.
 
+This sensitivity to new lines also applies when writing with `html` elements, which is usually written with indents. You can have indents in when writing `html`, but if you do, there cannot be an extra space between the elements.
+
+For example, this code
+
+```
+<ul>
+    <li>This renders correctly because there is no extra space between the previous html element and the current one.</li>
+
+<li>This will render correctly even though there is an extra space because there is no indent.</li>
+
+    <li>This will not render correctly because there is an extra space between the previous html element and the current one and an indent.</li>
+
+<ul>
+```
+
+will render as
+
+<ul>
+    <li>This renders correctly because there is no extra space between the previous html element and the current one.</li>
+
+<li>This will render correctly even though there is an extra space because there is no indent.</li>
+    
+    <li>This will not render correctly because there is both an extra space between the previous html element and the current one and an indent.</li>
+
+<ul>
+
 To check that the markdown you have written will render correctly, you can render it through the `<zero-md>` element and open the `html` page with a local server.
 
 #### Writing math equations in markdown
@@ -142,17 +168,6 @@ This will be
 in a different paragraph.
 
 Notice in the example above that the extra space creates a distinct paragraph.
-
-This sensitivity to new lines also applies when rendering `html` elements. If there is an extra space between `html` elements when the `html` is indented, it will not render properly.
-
-<ul>
-    <li>This renders correctly because there is no extra space between the previous html element and the current one.</li>
-
-<li>This will render correctly even though there is an extra space because there is no indent.</li>
-    
-    <li>This will not render correctly because there is an extra space between the previous html element and the current one and an indent.</li>
-
-<ul>
 
 To check that the markdown you have written will render correctly, you can render it through the `<zero-md>` element and open the `html` page with a local server.
 
