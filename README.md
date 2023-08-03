@@ -24,31 +24,54 @@ In order to differentiate between the different markdown files all titled "readm
 
 #### Embedding HTML in markdown files
 
-Markdown is very compatible with `html`, so you can use `html` and markdown interchangebly in a markdown file, and it will render `html` correctly. However, you cannot use markdown styling inside `html` elements.
+Markdown is very compatible with `html`, so you can use `html` and markdown interchangebly in a markdown file, and it will render `html` correctly. However, there are a few places where the languages may not render correctly.
+
+For one, you cannot use markdown styling inside `html` elements.
 
 For example:
 
-`<h4> An example **header** </h4>` will display "An example \*\*header\*\*" instead of bolding the word "header" because the markdown styling with the \*\* to signify bolding was placed inside the `<h4>` element.
+`<h5> An example **header** </h5>` will display as
 
-To still be able to bold the word that you want inside an `html` element, you can use the `html` styling. In this case, instead of writing `<h4> An example **header**</h4>`, which will not render correctly, you can write `<h4> An example <b>header</b></h4>`, where `<b>` is the element to bold words in `html`.
+<h5> An example **header** </h5>
+
+instead of bolding the word "header" because the markdown styling with the \*\* to signify bolding was placed inside the `<h4>` element, and markdown styling does not render inside `html` elements.
+
+To still be able to bold the word that you want inside an `html` element, you can use the `html` styling. In this case, instead of writing `<h5> An example **header**</h5>`, which will not render correctly, you can write `<h5> An example <b>header</b></h5>` where `<b>` is the element to bold words in `html`.
 
 Another detail to make sure the page renders the styling correctly is to add new lines between code in html and in markdown.
 
 For example, this code
 
 ```
-<h4> An example header </h4>
+<h5> An example header </h5>
 This is styled with **html** and not markdown because there is no new line
 
-This has a new line so it is styled with **markdown**
-```
-
-will renders as follows
-
-<h4> An example header </h4>
-This is styled with **html** and not markdown because there is no new line
+<h5> An example header </h5>
 
 This has a new line so it is styled with **markdown**.
+```
+
+will renders as follows:
+
+<h5> An example header </h5>
+This is styled with **html** and not markdown because there is no new line
+
+<h5> An example header </h5>
+
+This has a new line so it is styled with **markdown**.
+
+Notice how, in the example above, the new line is necessary for the markdown styling to apply.
+
+A similar detail to look out for is indentation in markdown. Indenting a section of code twice in markdown will render it as though it were code.
+
+        This is an example of an indented piece of code.
+
+While this is helpful, the way markdown is rendered will not render `html` elements or markdown styling in this indented section.
+
+        For example, this will not render as **bold** despite the bold markdown styling
+        <b>HTML</b> styling does not render either.
+
+To check that the markdown you have written will render correctly, you can render it through the `<zero-md>` element and open the `html` page with a local server.
 
 #### Writing math equations in markdown
 
@@ -77,6 +100,48 @@ When the markdown is translated to `html`, the single `\` disappears, which remo
 When the markdown file is rendered using the `<zero-md>` element, the element translates the file to `html`, which is read directly when viewing the `html` page. For this reason, the paths in the markdown files should be written relative to the `html` page, not relative to the markdown file.
 
 For example, in the `template` markdown files, which is placed in multiple folders, the path to the `quickguide.html` file would normally be "../../quickguide.html". However, because the file is rendered into an `html` page that will be next to the `quickguide.html` page, you should write the path as only "quickguide.html." This is because "quickguide.html" is the path relative to the `html` page into which the markdown will be translated.
+
+#### Other notes for writing markdown
+
+Markdown is sensitive to spaces and new lines. Headers without a space after the last "#" will not render correctly.
+
+For example, this code
+
+```
+#####This will not render as a header because there is no space.
+
+##### This will render because there is a space
+```
+
+will render as
+
+#####This will not render as a header because there is no space.
+
+##### This will render because there is a space.
+
+Markdown is also sensitive to new lines. Only have an empty line between two paragraphs will render a distinct paragraph.
+
+For example, this code
+
+```
+This will be
+in the same paragraph
+
+This will be
+
+in a different paragraph.
+```
+
+will render as
+
+This will be
+in the same paragraph.
+
+This will be
+
+in a different paragraph.
+
+To check that the markdown you have written will render correctly, you can render it through the `<zero-md>` element and open the `html` page with a local server.
 
 ### Editing existing documentation
 
