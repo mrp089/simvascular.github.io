@@ -26,7 +26,7 @@ Click on the following links to skip to that section.
                          <a href="#updating-the-capabilities-section">Updating the Capabilities Section</a>
                 </th>
                 <th>
-                        <a href="#adding-new-sections">Adding new sections</a>
+                        <a href="#adding-new-sections-on-the-same-html-page">Adding new sections</a>
                 </th>
         </tr>
          <tr>
