@@ -397,23 +397,180 @@ An example structure is as follows:
 
 To update the content under an application, change the text inside the `<p>` element.
 
-To create a new section for a new application, copy the entire `<div>` as encoded above, and modify the `<h2>` element text content and the `<p>` element text content. If you want to create a new row, add another `<div>` element with the following classes `<div class="row justify-content-center">`.
+To create a new section for a new application, copy the entire `<div>` as encoded above, and modify the `<h2>` element text content and the `<p>` element text content.
+
+To create a new row, add another `<div>` element with the following classes `<div class="row justify-content-center">`. For information on the column and row classes in these `<div>` elements, visit [Bootstrap's documentation on rows and columns](https://getbootstrap.com/docs/5.3/layout/columns).
 
 After updating the Applications section, you can render `index.html` in a local server to check how it looks and if the presentation is how you intended.
 
 #### Adding pictures to the Gallery section
 
+The JavaScript behind the gallery section can be found in `home.js`, but this does not need to updated to add a picture to the Gallery section.
+
+To add pictures, there are two places to add: the picture element and the element for the dots displayed under the gallery images.
+
+The structure of each gallery image is displayed as follows. The image and caption are surrounded by a `<div>` with the classes `class="slides picSlides"`. Inside that `<div>`, there is an `<img>` with a `src` that links to the image, which should be placed with the other gallery images in the `img/gallery/` folder. There is also style applied to the image specifying `style="width:100%"`. After the image in the `<div>` is another `<div>` with the class `class="caption"`, and the text content in that `<div>` should describe the image.
+
+An example of this structure is shown below. To add a new picture, first add this slide in the order you want it to appear in the carousel inside the `<div class="slideshow-container">`.
+
+```
+<div class="slides picSlides">
+    <img src="pathToImage" style="width:100%">
+    <div class="caption">Caption for your image</div>
+</div>
+```
+
+After adding the new pictures, update the number of dots under the carousel by copying the `<span class="dots picDots" onclick="currentPicSlide(#)"></span>` element and changing the number inside currentPicSlide(#) to the next integer. Place this new `<span class="dots picDots">` element alongside the other `<span class="dots picDots">` elements.
+
+After doing so, make sure that the number of `<span>` elements matches the number of pictures in the gallery, and that the numbers in currentPicSlide(#) are in ascending order.
+
+For example, if there are three pictures, the dots `html` section should resemble
+
+```
+<div class="dotsContainer">
+    <div style="margin:auto; width: fit-content;">
+        <span class="dots picDots" onclick="currentPicSlide(0)"></span>
+        <span class="dots picDots" onclick="currentPicSlide(1)"></span>
+        <span class="dots picDots" onclick="currentPicSlide(2)"></span>
+    </div>
+</div>
+```
+
+To change pictures in the gallery, change the `src` path in the `<img>` element, and update the caption to a relevant description of the new picture.
+
 After updating the Gallery section, you can render `index.html` in a local server to test scrolling through the gallery and check that the presentation is as you intended.
 
 #### Updating the Recent News section
+
+Each news panel is set up the same way. There is a `<div>` with the class `class="newNews"` that contains the panel.
+
+Inside the `<div>`, there is a `<div>` with the class `class="row"`, which creates a row that contains the news label on the left and the news date on the right. In the `<div class="row">`, there is a `<div class="col-sm-6 col-12 news_label">`, which contains the label of what type of news is being displayed. The label has two parts: a relevant icon and a description of the label.
+
+The icons used in this website come from [fontawesome](https://fontawesome.com/search?o=r&m=free).
+
+For example, to label the news as an "Event," a calendar icon from fontawesome is used and the description is "Event." The `html` code for this would resemble the following.
+
+```
+<div class="col-sm-6 col-12 news_label">
+    <i class="iconInHeader fa-regular fa-calendar"></i>
+    Event
+</div>
+```
+
+Additionally in the `<div class="row">` is the `<div>` for the date of when the news is relevant, which has the classes `<div class="col-sm-6 col-12 news_label">`. Inside this `<div>`, there is a `<p>` element, with the date of when the event will take place.
+
+The `html` code for this would resemble the following.
+
+```
+<div class="col-sm-6 col-12 news_date">
+    <p>Month Start_Date - End_Date, YEAR</p>
+</div>
+```
+
+After the `<div class="row">`, there is a `<div>` with the class `class="news_name"`. This section is for the name/label of the news. Inside the `<div>`, there is an anchor element with a link to a relevant website regarding more information on the news.
+
+For example, for a workshop, the code for this section would resemble
+
+```
+<div class="news_name">
+    <a target="_blank" href="https://www.cmbbe-symposium.com/2023/workshops/">
+        Workshop at the CMBBE symposium
+    </a>
+</div>
+```
+
+After the `<div class="news_name">`, there is a `<div>` with the class `<div class="news_place">`, which describes where the news takes place.
+
+For example, if a workshop took place in Paris, France, the code for this section would resemble
+
+```
+<div class="news_place">
+    Takes place in Paris, France
+</div>
+```
+
+All put together, the new panel for recent news would have the following code.
+
+```
+<div class="newNews">
+    <div class="row">
+        <div class="col-sm-6 col-12 news_label">
+            <i class="iconInHeader fa-regular fa-calendar"></i>
+            Event
+        </div>
+        <div class="col-sm-6 col-12 news_date">
+            <p>MAY 3 - 5, 2023</p>
+        </div>
+    </div>
+    <div class="news_name">
+        <a target="_blank" href="https://www.cmbbe-symposium.com/2023/workshops/">
+            Workshop at the CMBBE symposium
+        </a>
+    </div>
+    <div class="news_place">
+        Takes place in Paris, France
+    </div>
+</div>
+```
+
+To update information in the Recent News section, update the following five places when applicable:
+
+1. The relevant icon for the news type (ex: a calendar icon)
+2. The description of the news type (ex: "Event")
+3. The date the news takes place (ex: MAY 3 - 5, 2023)
+4. The name of the news (ex: Workshop at the CMBBE symposium)
+5. The place the news takes place (ex: Takes place in Paris, France)
 
 After updating the Recent News section, you can render `index.html` in a local server to check how it looks and if the presentation is how you intended.
 
 #### Updating the Team section
 
+To add a new profile in the Team section, copy the template code below and change the code in the following places:
+
+1. Replace `href="path_link"` with a relevant link that would give the user more information on the person. This could be a link to an institutional profile page or a LinkedIn profile.
+
+2. Replace `src="image_source"` with the path to an image of the person. Images for these sections would be placed in the `img/team/` folder. The dimensions of this image must be a perfect square, so that the profile icon is circular.
+
+3. Replace `alt="alt_of_image"` with a description of what the image is showing. This alternate description will only show if the website cannot access the image.
+
+4. Replace `name_of_person` with the first and last name of the person you want to add.
+
+```
+<div class="col-md-4 col-6">
+    <div class="team-item">
+    <div class="team-triangle">
+        <a href="path_link" target="_blank">
+        <div class="team-content">
+            <img src="image_source" alt="alt_of_image">
+            <div class="team-hover text-center"  style="cursor:pointer">
+            <p style="font-size: 17px;">name_of_person</p>
+            </div>
+        </div>
+        </a>
+    </div>
+    </div>
+</div>
+```
+
+Place your modified code alongside the other `<div class="col-md-4 col-6">` elements in the order that you wish for the team member to appear in.
+
 After updating the Team section, you can render `index.html` in a local server to check if the presentation is how you intended and that the profile links are functional.
 
 #### Updating the Institutions or Acknowledgements section
+
+To add an institution or acknowledgement, find the Institutions or Acknowledgements section respectively. Copy the code below and change it in the following places:
+
+1. Replace `src="image_source"` with the path to image logo of the institution or acknowledgement. Logos for these sections would be placed in the `img/institutions/` folder.
+
+2. Replace `alt="alt_of_image"` with a description of what the image is showing. This alternate description will only show if the website cannot access the image.
+
+```
+<div class="col-sm-6 col-12 creditContainer">
+    <img class="creditImage" src="image_source" alt="alt_of_image"></img>
+</div>
+```
+
+Place your modified code alongside the other `<div class="col-sm-6 col-12 creditContainer">` elements in the order that you wish for institution or acknowledgement to appear in. These elements should all be placed inside the `<div class="row creditsRow">`.
 
 After updating the Institutions or Acknowledgements section, you can render `index.html` in a local server to check if the presentation is how you intended.
 
