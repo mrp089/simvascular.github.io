@@ -34,7 +34,7 @@ Click on the following links to skip to that section.
                         <a href="#updating-the-team-section">Updating the Team Section</a>
                 </th>
                 <th>
-                        <a href="#creating-new-user-guide-or-clinical-test-case-pages">Creating new pages</a>
+                        <a href="#creating-new-user-guide-or-clinical-test-case-pages">Creating new documentation pages</a>
                 </th>
         </tr>
 
@@ -269,7 +269,7 @@ If the section you have written is a subcategory of a category, group it togethe
 
 Once you have updated the `docsSection` and the `navigationSection`, you can render the updated documentation page in a local server to see how it looks.
 
-### Creating new user guide or clinical test case pages
+### Creating new documentation pages
 
 If you want to create a new user guide page, find and copy the `template.html` page in the documentation folder. If you want to create a new clinical test case page, find and copy the `template.html` page in the clinical folder. These pages will have the foundational `html` necessary for the user guide or clinical case page. Rename this file to describe your new documentation page.
 
