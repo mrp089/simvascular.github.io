@@ -4,20 +4,45 @@ This is the repository for the SimVascular website.
 
 Click on the following links to skip to that section in the documentation.
 
-<div style="padding-right: 15px;">
-For the landing page
-<a href="#updating-the-recent-news-section">Updating the Recent News Section</a><br>
-<a href="#updating-the-capabilities-section">Updating the Capabilities Section</a><br>
-<a href="#updating-the-team-section">Updating the Team Section</a><br>
+<table>
+        <tr>
+                <th>
+                        For the landing page     
+                </th>
+                <th>
+                        For the documentation
+                </th>
+        </tr>
+        <tr>
+                <th>
+                   <a href="#updating-the-recent-news-section">Updating the Recent News Section</a>
+                </th>
+                <th>
+                   <a href="#updating-the-capabilities-section">Updating the Capabilities Section</a>
+                </th>
+        </tr>
+        <tr>
+                <th>
+                   <a href="#updating-the-capabilities-section">Updating the Capabilities Section</a>
+                </th>
+                <th>
+                   <a href="#adding-new-sections">Adding new sections</a>
+                </th>
+        </tr>
+         <tr>
+                <th>
+                   <a href="#updating-the-team-section">Updating the Team Section</a>
+                </th>
+                <th>
+                   <a href="#creating-new-user-guide-or-clinical-test-case-pages">Creating new pages</a>
+                </th>
+        </tr>
 
-For the documentation
-<a href="#editing-existing-documentation">Editing existing documentation</a><br>
-<a href="#adding-new-sections">Adding new sections</a><br>
-<a href="#creating-new-user-guide-or-clinical-test-case-pages">Creating new pages</a><br>
+
+        
+</table>
 
 If markdown does not seem to be rendering properly, check out the <a href="#notes-on-writing-markdown-files">Notes on writing markdown files</a> section.
-
-</div>
 
 ## Updating the documentation
 
