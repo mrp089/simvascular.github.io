@@ -165,6 +165,7 @@ When the markdown is translated to `html`, the single `\` disappears, which remo
 #### Notes on paths and links
 
 ##### Relative paths in markdown files
+
 When the markdown file is rendered using the `<zero-md>` element, the element translates the file to `html`, which is read directly when viewing the `html` page. For this reason, the paths in the markdown files should be written relative to the `html` page, not relative to the markdown file.
 
 For example, in the `template` markdown files, which is placed in multiple folders, the path to the `quickguide.html` file would normally be "../../quickguide.html". However, because the file is rendered into an `html` page that will be next to the `quickguide.html` page, you should write the path as only "quickguide.html." This is because "quickguide.html" is the path relative to the `html` page into which the markdown will be translated.
@@ -172,6 +173,7 @@ For example, in the `template` markdown files, which is placed in multiple folde
 A note about referencing `id` attributes in anchor links:
 
 ##### Referencing `id` attributes
+
 Anchor links in markdown files can reference the following `id` attributes:
 
 1. `id`s that are inside the same markdown file
@@ -182,6 +184,20 @@ Anchor links in markdown files can reference the following `id` attributes:
 They cannot, however, reference `id`s that are inside other markdown files.
 
 ##### Image paths on github.io
+
+For simplicity between paths, a majority of images are referenced with their global path. An example of this path is displayed below.
+
+```
+<img src="/documentation/quickguide/intro/images/sv-pipeline.png">
+```
+
+On SimVascular's website, this will render correctly. However, if you have forked the simvascular.github.io and build and run the page through your github account, the images will not render correctly. This is because the fork you have made is a Project site instead of a User or Organization site. The difference between the two is detailed [here](https://www.tracktownsoftware.com/jekyll/github/2020/12/22/GitHubPagesUserVsProjectSites.html).
+
+To still be able to view images, there are two options.
+
+1. Rename your fork of simvascular.github.io to your_github_username.github.io to make your fork a User site instead of a Project site.
+
+2. View your fork of the website from a local server instead of viewing it when it is deployed from your account with github pages.
 
 #### Other notes for writing markdown
 
