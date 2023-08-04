@@ -51,15 +51,17 @@ In each folder, there are markdown files from which the content in the `html` fi
 
 The markdown files are accessed and translated into `html` through the `<zero-md>` element, which is placed in the `html` file. Documentation on `<zero-md>` can be found [here](https://zerodevx.github.io/zero-md/).
 
+The icons used in this website come from [fontawesome](https://fontawesome.com/search?o=r&m=free).
+
 Before editing, you should first fork **simvascular.github.io** to your own repository and sync it with https://github.com/SimVascular/simvascular.github.io.
 
 ### Notes on writing markdown files
 
-Because the markdown files are rendered through the `<zero-md>` element, there are a few specifications to ensure that the markdown is rendered correctly. These are detailed below.
+Because the markdown files are rendered through the `<zero-md>` element, there are a few details to look out for to ensure the markdown renders correctly. These are detailed below.
 
 #### Naming all documentation markdown files "readme.md"
 
-Because the SimVascular website is hosted directly from github.io, markdown files that are not named `readme.md` are not considered by the github.io compiler even if they are linked in the rendered `html` page. For the markdown file to be read by github.io when compiling the website, it must be named "readme.md."
+Markdown files with a name that is not `readme.md` are not considered by the github.io compiler even if they are linked in `<zero-md>` elements in the rendered `html` page. Because the SimVascular website is hosted with github pages, all markdown files accessed by `<zero-md>` elements should be named `readme.md` to be accessed in the compiling of the website.
 
 In order to differentiate between the different markdown files all titled "readme.md," the markdown files are placed in their own folders.
 
@@ -75,7 +77,7 @@ For example:
 
 <h5> An example **header** </h5>
 
-instead of bolding the word "header" because the markdown styling with the \*\* to signify bolding was placed inside the `<h5>` element, and markdown styling does not render inside `html` elements.
+The word "header" is not bold because the markdown styling with the \*\* to signify bolding was placed inside the `<h5>` element, and markdown styling does not render inside `html` elements.
 
 To still be able to bold the word that you want inside an `html` element, you can use the `html` styling. In this case, instead of writing `<h5> An example **header**</h5>`, which will not render correctly, you can write `<h5> An example <b>header</b></h5>` where `<b>` is the element to bold words in `html`.
 
@@ -112,7 +114,7 @@ While this is helpful, the way markdown is rendered will not render `html` eleme
         For example, this will not render as **bold** despite the bold markdown styling
         <b>HTML</b> styling does not render either.
 
-This sensitivity to new lines also applies when writing with `html` elements, which is usually written with indents. You can have indents in when writing `html`, but if you do, there cannot be an extra space between the elements.
+This sensitivity to new lines also applies when writing with `html` elements, which is usually written with indents. You can use indentation when writing `html`, but if you do, there cannot be an extra space between the `html` elements.
 
 For example, this code
 
@@ -122,9 +124,9 @@ For example, this code
 
 <li>This will render correctly even though there is an extra space because there is no indent.</li>
 
-    <li>This will not render correctly because there is an extra space between the previous html element and the current one and an indent.</li>
+    <li>This will not render correctly because there is an indent and an extra space between the previous html element and the current one.</li>
 
-<ul>
+</ul>
 ```
 
 will render as
@@ -136,7 +138,7 @@ will render as
     
     <li>This will not render correctly because there is both an extra space between the previous html element and the current one and an indent.</li>
 
-<ul>
+</ul>
 
 To check that the markdown you have written will render correctly, you can render it through the `<zero-md>` element and open the `html` page with a local server.
 
@@ -156,11 +158,11 @@ In order to render the math equations correctly, the `<zero-md>` elements must h
 </script>
 ```
 
-With this system of adding the links after the `<zero-md>` element has rendered the markdown file, the markdown file is first translated to `html` then converted with Mathjax.
+This code adds the script to display LaTex with Mathjax after the markdown has been translated to `html` through the `<zero-md>` element. Because the markdown file is first translated to `html` then converted with Mathjax, the way LaTex is written in markdown differs slightly from the default.
 
-For this reason, the way LaTex is written in markdown differs slightly from the default, and the symbols `\,`, `\_`, and `\~` in LaTex should be written as `\\,`, `\\_`, and `\\~` in the markdown file.
+The symbols `\,`, `\_`, and `\~` in LaTex should be written as `\\,`, `\\_`, and `\\~` in the markdown file.
 
-When the markdown is translated to `html`, the single `\` disappears, which removes the ability to properly convert the LaTex with Mathjax. By making the single `\` a double `\\`, when the markdown is translated, the `html` will have a single `\`, which will properly render.
+The single `\` in markdown will be removed when the code is translated to `html`, which will prevent Mathjax from rendering the styling correctly. This is the reason a double `\\` should be used. Markdown with `\\` is translated into `html` as `\`, which will then be properly rendered with Mathjax.
 
 #### Notes on paths and links
 
@@ -168,9 +170,11 @@ When the markdown is translated to `html`, the single `\` disappears, which remo
 
 When the markdown file is rendered using the `<zero-md>` element, the element translates the file to `html`, which is read directly when viewing the `html` page. For this reason, the paths in the markdown files should be written relative to the `html` page, not relative to the markdown file.
 
-For example, in the `template` markdown files, which is placed in multiple folders, the path to the `quickguide.html` file would normally be "../../quickguide.html". However, because the file is rendered into an `html` page that will be next to the `quickguide.html` page, you should write the path as only "quickguide.html." This is because "quickguide.html" is the path relative to the `html` page into which the markdown will be translated.
+Normally, the path to the `quickguide.html` file from the `template` markdown files, which are placed in multiple folders, would be "../../quickguide.html," for example.
 
-A note about referencing `id` attributes in anchor links:
+However, because the file is rendered into an `html` page that will be next to the `quickguide.html` page, the path that the markdown file should use is "quickguide.html." This is because "quickguide.html" is the path relative to the `html` page into which the markdown will be translated.
+
+To be able to view the correct paths in both the markdown files and the `html` files, a majority of links use a global, instead of a relative, path.
 
 ##### Referencing `id` attributes
 
@@ -183,21 +187,27 @@ Anchor links in markdown files can reference the following `id` attributes:
 
 They cannot, however, reference `id`s that are inside other markdown files.
 
-##### Image paths on github.io
+##### Images rendered with github pages
 
-For simplicity between paths, a majority of images are referenced with their global path. An example of this path is displayed below.
+For simplicity in regards to file paths, a majority of images are referenced with their global path instead of a relative path. An example of this path is displayed below.
 
 ```
 <img src="/documentation/quickguide/intro/images/sv-pipeline.png">
 ```
 
-On SimVascular's website, this will render correctly. However, if you have forked the simvascular.github.io and build and run the page through your github account, the images will not render correctly. This is because the fork you have made is a Project site instead of a User or Organization site. The difference between the two is detailed [here](https://www.tracktownsoftware.com/jekyll/github/2020/12/22/GitHubPagesUserVsProjectSites.html).
+This path will render correctly in the following places:
 
-To still be able to view images, there are two options.
+1. The markdown file.
+2. The `html` page when it is viewed on a local server
+3. The `html` page when it is viewed on simvascular.github.io
+
+However, it will not render properly if you view your fork of the website through github pages on your account. This is because the fork you have likely made is a Project site instead of a User or Organization site. The difference between the two is detailed [here](https://www.tracktownsoftware.com/jekyll/github/2020/12/22/GitHubPagesUserVsProjectSites.html). Choosing one or the other changes the root of the folder path.
+
+To still be able to view images from your fork, you can do either of the two options below.
 
 1. Rename your fork of simvascular.github.io to your_github_username.github.io to make your fork a User site instead of a Project site.
 
-2. View your fork of the website from a local server instead of viewing it when it is deployed from your account with github pages.
+2. View your fork of the website from a local server instead of viewing it when it is deployed from your github account with github pages.
 
 #### Other notes for writing markdown
 
@@ -217,7 +227,7 @@ will render as
 
 ##### This will render because there is a space.
 
-Markdown is also sensitive to new lines. Only having an extra space between two paragraphs will render a distinct paragraph.
+Markdown is also sensitive to new lines. Not having an extra space between two paragraphs will not render as a distinct paragraph.
 
 For example, this code
 
@@ -245,17 +255,17 @@ To check that the markdown you have written will render correctly, you can rende
 
 ### Editing existing documentation
 
-To edit existing documentation without creating new sections or `html` pages, go to the markdown file of the section that you want to edit and make your changes. While making changes, it can help to render the `html` page on a local server to see how your changes render. If you aren't seeing your changes to the markdown files render, try refreshing the `html` page you are rendering.
+To edit existing documentation without creating new sections or `html` pages, you can go to the markdown file of the section that you want to edit and make your changes. While making changes, it can help to render the `html` page containing that markdown file on a local server to see how your changes render. If you aren't seeing your changes to the markdown files render, try refreshing the `html` page you are locally hosting.
 
-Once your changes have been pushed, the website documentation will render with the update. Due to caching in browsers, you may be able to see your changes more quickly if you clear your cache or view the website in incognito mode, which does not use cache.
+Once your changes have been pushed, the website documentation will render with the update. Due to caching in browsers, you may not be able to see your changes immediately. To view them more quickly, you can clear your cache or view SimVascular website in incognito mode, which does not use cache.
 
 ### Adding new sections on the same `html` page
 
-To add a new section of documentation in a documentation page, first find folder that corresponds to the `html` file that renders the page you want to change. Create a new folder with the title of the section you want to add, create a markdown file named `readme.md`, and place the `readme.md` file in the folder that you created. Write your new documentation section in this `readme.md` file.
+To add a new section of documentation in an existing page, first find folder that corresponds to the `html` file that renders the page you want to change. Create a new folder with the title of the section you want to add, create a markdown file named `readme.md`, and place the `readme.md` file in the folder that you created. Write your new documentation section in this `readme.md` file.
 
 To add the markdown file you have written to the `html` page, find the `html` file that renders the page you want to change. First locate the section `<section class="docsSection">` which contain `<span>` elements with `<zero-md>` elements in them.
 
-Add your own <span> element with a <zero-md> element in it. The `<span>` element should have a unique `id` that corresponds to the section you have added, and the `<zero-md>` element should have a `src` attribute that links to the path to your markdown file.
+Add your own <span> element with a <zero-md> element in it. The `<span>` element should have a unique `id` that corresponds to the section you have added, and the `<zero-md>` element should have a `src` attribute that links to the path to your markdown file and a `no-shadow` attribute.
 
 When choosing an `id` for the `<span>` elements, consider that it will be used as a class in the navigation section. Some classes like `class="intro"` and `class="container"` have styles applied to them in other contexts, so try to choose a unique name for the `id`.
 
@@ -263,7 +273,7 @@ When choosing an `id` for the `<span>` elements, consider that it will be used a
     <zero-md src="path_to_the_markdown_file" no-shadow></zero-md>
 </span>
 
-After updating the `docsSection` of the `html` page, add the section you have written to the section `class="navigationSection"` in the same `html` page.
+After updating the `docsSection` of the `html` page, go to the section `<section class="navigationSection">` in the same `html` page and add the section you have written to the navigation section that appears to the left of the documentation. Make sure that the sections organized in the navigation bar are in the order that they appear on the page.
 
 If the section you have written is a category on its own, create a new `<div>` and use a `<h4>` element as exemplified below.
 
@@ -273,7 +283,7 @@ If the section you have written is a category on its own, create a new `<div>` a
 </div>
 ```
 
-If the section you have written is a subcategory of a category, group it together under the category's under the `<div>` element after the `<h4>` element and label it with a `<p>` element.
+If the section you have written is a subcategory of a category, group it together under the `<div>` element after the `<h4>` element and label it with a `<p>` element as exemplified below.
 
 ```
 <div>
@@ -284,37 +294,41 @@ If the section you have written is a subcategory of a category, group it togethe
 </div>
 ```
 
-Once you have updated the `docsSection` and the `navigationSection`, you can render the updated documentation page in a local server to see how it looks.
+Whether or not the section you have added is a category or a subcategory, the `<h4>` or `<p>` element must have two classes. The first class must be `skipTo`, which applies styling to the navigation link and allows the link to work. The second class must be the `id` of the `<span>` element that you placed around the `<zero-md>` element rendering the markdown file with the section you added. This is exemplified above.
+
+Once you have updated the `docsSection` and the `navigationSection`, you can render the updated documentation page in a local server to check how the markdown renders and that the navigation link works.
 
 ### Creating new documentation pages
 
-If you want to create a new user guide page, find and copy the `template.html` page in the documentation folder. If you want to create a new clinical test case page, find and copy the `template.html` page in the clinical folder. These pages will have the foundational `html` necessary for the user guide or clinical case page. Rename this file to describe your new documentation page.
+Before creating the `html` page for the new user guide or clinical test case page, you may want to begin by writing some documentation in markdown files. To do so, first create a folder with the same name as the `html` page you want to create. In this folder, each markdown file you create will represent a section in the documentation page. For each new section and corresponding markdown file, create a new folder with a relevant name for that section and place a `readme.md` file inside that folder. Write your documentation for each section in these `readme.md` files.
 
-Before creating the `html` page for the new user guide or clinical test case, you may want to begin by writing the documentation in markdown files. First, create a folder with the same name as the `html` page you want to create. In this folder, for each markdown file, create a new folder with a relevant name for the section and place a `readme.md` file inside that folder. Write your documentation for each section in these `readme.md` files.
+If you want to create a new user guide page, find and copy the `template.html` page in the documentation folder. If you want to create a new clinical test case page, find and copy the `template.html` page in the clinical folder. These pages will have the foundational `html` necessary for the user guide or clinical case page. Rename this file to describe your new documentation page in accordance with the name of the folder you have created containing the markdown files.
 
-Once you have created the markdown files you seek to render in `html`, there are three places in this file to find and update in order to create a new user guide or clinical test case page: the navigation bar in the header, the navigation section on the left of the documentation page, and the paths to the new markdown files from the `<zero-md>` element.
+Once you have created the markdown files you seek to render in `html`, there are three places in this `html` file to update in order to complete the page.
 
-#### Updating the navigation bar
+1. The navigation bar in the header
+2. The navigationSection that appears on the left of the documentation page
+3. The docsSection that contains the `<zero-md>` elements that will render the markdown files you have written into `html`.
 
-Find the section in the `template.html` page where there are `<div>` elements with the class `class="navSubLink"` as exemplified below:
+#### Updating the navigation bar in the header
 
-```
-<div class="navSubLink">
-    <a href="references.html">References</a>
-</div>
-```
-
-Copy one of these elements and re-label their `href` and label with the path and name of the new page you created respectively. Then, add the class `active` alongside the class `navSubLink` in the `<div>` element, so that the label in the navigation bar is highlighted when someone views that page. The new `<div>` element should resemble the following.
+Find the section `<div class="navBarSection">` in the `template.html` page where there are `<div>` elements with the class `class="navSubLink"` as exemplified below:
 
 ```
 <div class="navSubLink active">
-    <a href="your_page.html">Your page</a>
+    <a href="name_of_file.html">Name_of_new_page</a>
 </div>
 ```
 
-#### Changing the navigation section
+Copy the example element above and re-label `name_of_file` with the path to the new page you have created. Then, update `Name_of_new_page` with the name of the new page that you created.
 
-In the `<section class="mainSection">` section, under `<section class="navigationSection">`, there is a template structure for the navigation section. Every new category is placed in its own `<div>` section, and category titles are labeled with the `<h4>` element. Subcategories are grouped together under a `<div>` after the `<h4>` element and labeled with a `<p>` element.
+The class `active` is present in the `<div>` element above because that will highlight the link to your page in the navigation bar when users are viewing your page to inform users which page they are viewing. No other `navSubLink` `<div>` element should have this `active` class except the one you are creating.
+
+#### Changing the navigation section on the left
+
+In the `temlate.html` page that you copied, in `<section class="navigationSection">`, there is a template structure for the navigation section. Every new category is placed in its own `<div>` section. Category titles are labeled with the `<h4>` element. Subcategories are grouped together under a `<div>` after the `<h4>` element and labeled with a `<p>` element.
+
+The template of this structure is copied below.
 
 ```
 <div>
@@ -329,15 +343,19 @@ In the `<section class="mainSection">` section, under `<section class="navigatio
 
 Other navigation sections may have slightly varying structures. The organization can depend on how the page is laid out and what presentation makes the most sense.
 
-Every element in the navigtion section has the same class structure, `class="skipTo id"`. The first class is always `skipTo`, which styles the label and allows the element to act as a navigation link. The second class is the `id` of the `<span>` element that surrounds the `<zero-md>` element. More information on this can be found in the "Linking the markdown files with `<zero-md>`" section of this documentation.
+Every element in the navigtion section has the same class structure, `class="skipTo id"`. The first class is always `skipTo`, which styles the label and allows the element to act as a navigation link. The second class is the `id` of the `<span>` element that surrounds the `<zero-md>` element. More information on these `<span>` elements, go to <a href="#changing-the-docssection-with-the-zero-md-elements">Changing the docsSection</a> section of this documentation.
 
-When choosing an `id` for the `<span>` elements, consider that it will be used as a class in the navigation section. Some classes like `class="intro"` and `class="container"` have styles applied to them in other contexts, so try to choose a unique name for the `id` and check how the navigation section looks to proofread for styling issues.
+When choosing an `id` for the `<span>` elements, consider that it will be used as a class in the navigation section. Some classes like `class="intro"` and `class="container"` have styles applied to them in other contexts, so try to choose a unique name for the `id`.
 
-#### Linking the markdown files with `<zero-md>`
+Once you have updated the navigationSection, you can render the `html` file you have created in a local server to check the functionality of the navigation links and how the section looks.
 
-In the `<section class="docsSection">`, the `template.html` page has a template strucutre setting up the example for linking the markdown files to the html page using the `<zero-md>` file. Every `<zero-md>` element is surrounded with a `<span>` element, which has the `id` that should be referenced to skip to the section written in the markdown file that is linked to the `<zero-md>` element.
+#### Changing the docsSection with the `<zero-md>` elements
 
-The first `<zero-md>` element must have the `id="math"` attribute, but the following <zero-md> elements do not. Having at least one `<zero-md>` element with the `id="math"` attribute will allow any mathematical equations written in the markdown files to be renders correctly on the page using [Mathjax](https://www.mathjax.org/).
+In the `<section class="docsSection">`, the `template.html` page has a template structure that exemplifies how to set up the `<zero-md>` element to link markdown files to your `html` file. Every `<zero-md>` element is surrounded with a `<span>` element, which has an `id` attribute. This `id` should be referenced to skip to the section written in the markdown file that is linked to the `<zero-md>` element.
+
+The first `<zero-md>` element must have the `id="math"` attribute, but the following <zero-md> elements should not have this. Having at least one `<zero-md>` element with the `id="math"` attribute will allow any mathematical equations written in LaTex in the markdown files to be rendered correctly on the page using [Mathjax](https://www.mathjax.org/).
+
+The example structure of this code is below.
 
 ```
 <span id="section_1">
@@ -354,15 +372,15 @@ Every markdown file associated to this new `html` page should represent a sectio
 
 When choosing an `id` for the `<span>` elements, consider that it will be used as a class in the navigation section. Some classes like `class="intro"` and `class="container"` have styles applied to them in other contexts, so try to choose a unique name for the `id`.
 
-After this page has been modified, check how it displays on a local server. A few key places to check are: the navigation bar in the header, the navigation section, and the body of the documentation. When viewing the rendered `html` page in a local server, you can ctrl F for "#" and "$" to check for errors rendering headers or math equations respectively.
+After this page has been modified, check how it displays on a local server. A few key places to check are: the navigation bar in the header, the navigation section on the left of the page, and the body of the documentation. When viewing the rendered `html` page in a local server, you can use Ctrl F with "#" and "$" to check for errors rendering headers or math equations respectively.
 
-Once you are happy with this page, update the navigation bar in the headers of all the user guide and clinical test case files to add the new page you have created and update the landing page's [Documentation](https://simvascular.github.io/#documentation) section to include the new page of documentation you have created.
+Once you are happy with this page, you will need to update the navigation bar in the headers of all the user guide and clinical test case files to add the new page you have created. You will also need to update the landing page's [Documentation](https://simvascular.github.io/#documentation) section to include the new page of documentation you have created to that list of links.
 
 #### Updating the navigation bar in page headers
 
-When adding a new `html` page, its path should be added to the navigation bar in the headers of the other user guide and clinical test case `html` files to keep the website's headers consistent.
+When adding a new `html` page, its path should be added to the navigation bar in the headers of the other user guide and clinical test case `html` files. The navigation bar of the new `html` page should already be updated. Make sure to keep the order of the navigation links consistent throughout the website, and remember to also update the headers of the two `template.html` pages, as these too need to be up-to-date.
 
-If you are adding a user guide page, add the navigation element under the `<summary>` element that has the label "User Guides." The element will resemble the following: a `<div>` element with the `class="navSubLink` and an updated `href` link for the `<a>` directing to the new page.
+If you are adding a user guide page, add the navigation element under the `<summary>` element that has the label "User Guides." The element should resemble the following: a `<div>` element with the `class="navSubLink` and an updated `href` link for the `<a>` directing to the new page.
 
 ```
 <div class="navSubLink">
@@ -370,7 +388,7 @@ If you are adding a user guide page, add the navigation element under the `<summ
 </div>
 ```
 
-If you are adding a clinical test case page, add the navigation element under the `<summary>` element that has the label "Clinical Cases." The element will resemble the following: a `<div>` element with the `class="navSubLink` and an updated `href` link for the `<a>` directing to the new page.
+If you are adding a clinical test case page, add the navigation element under the `<summary>` element that has the label "Clinical Cases." The element should resemble the following: a `<div>` element with the `class="navSubLink` and an updated `href` link for the `<a>` directing to the new page.
 
 ```
 <div class="navSubLink">
@@ -382,18 +400,18 @@ Once you have updated the navigation bars in the headers of the user guide and c
 
 #### Updating the landing page documentation section
 
-Unlike the user guide and clinical test case pages, the landing page of the SimVascular website is written purely in `html` and is not generated from `md` files. The landing `html` file is named `index.html`. You can find the documentation section of the landing page by searching for `id="documentation"`.
+Unlike the user guide and clinical test case pages, the landing page of the SimVascular website is written purely in `html` and is not generated from markdown files. The landing `html` file is named `index.html`. You can find the documentation section of the landing page by searching for `id="documentation"`.
 
 If you are adding the link to a new User Guide page, copy an anchor element from another link under the "User Guide" section. It may resemble the following `<a>` element with the following attributes: `class="docLinks"`, `target="_blank"`, and an `href` that has the path to the `html` file you have created. After the `<a>` element, add a `<br>` for styling consistency.
 
 ```
-<a class="docLinks" target="_blank" href="documentation/name_of_html_file">Label</a><br>
+<a class="docLinks" target="_blank" href="documentation/name_of_html_file.html">Label</a><br>
 ```
 
 If you are adding the link to a new clinical test case page, copy an anchor element from another link under the "Clinical Case Studies" section. It may resemble the following `<a>` element with the following attributes: `class="docLinks"`, `target="_blank"`, and an `href` that has the path to the `html` file you have created. After the `<a>` element, add a `<br>` for styling consistency.
 
 ```
-<a class="docLinks" target="_blank" href="clinical/name_of_html_file">Label</a><br>
+<a class="docLinks" target="_blank" href="clinical/name_of_html_file.html">Label</a><br>
 ```
 
 Try to keep the order of the pages in the Documentation section of the landing page the same as that in the navigation bar in the headers of the documentation pages for consistency. After updating the Documentation section, render `index.html` in a local server to check how it looks and if the link paths are correct.
@@ -412,8 +430,8 @@ The capabilities section is styled with Bootstrap for compatability with mobile 
 
 Every new section of capabilities has its own `<ul>` element, with the following classes `class="col-lg-6 col-12 p-5"`. In each `<ul>` element, the first `<li>` element is the header for that capability. This element has the class `class="capabilitiesHeader"`.
 
-The following `<li>` elements have an icon element
-`<i class="fa-sharp fa-solid fa-check"></i>`, which displays the checkmark, and text follows the `<i>` element to describe the sub-capability.
+The `<li>` elements that follow have an icon element
+`<i class="fa-sharp fa-solid fa-check"></i>`, which displays the checkmark icon, and text follows the `<i>` element to describe the sub-capability.
 
 An example structure is as follows:
 
@@ -451,7 +469,7 @@ After updating the Capabilities section, render `index.html` in a local server t
 
 The applications section is styled with Bootstrap for compatability with mobile devices.
 
-Every section for a new application is set up the same way. There is a `<div>` with the following classes `class="col-lg-4 col-md-6 col-12"`. Then, there is an `<div class="applicationsHeader">` element, followed by a `<h2>` element with the name of the SimVascular application.
+Every section for a new application is set up the same way. There is a `<div>` with the following classes `class="col-lg-4 col-md-6 col-12"`. Inside that `<div>`, there is an `<div class="applicationsHeader">` element, followed by a `<h2>` element with the name of the SimVascular application.
 
 After the `<div class="applicationsHeader">`, there is an `<div class="applicationsText">` element, which is followed by a `<p>` element that contains the text describing the SimVacular application.
 
@@ -473,7 +491,7 @@ To update the content under an application, change the text inside the `<p>` ele
 
 To create a new section for a new application, copy the entire `<div>` as encoded above, and modify the `<h2>` element text content and the `<p>` element text content.
 
-To create a new row, add another `<div>` element with the following classes `<div class="row justify-content-center">`. For information on the column and row classes in these `<div>` elements, visit [Bootstrap's documentation on rows and columns](https://getbootstrap.com/docs/5.3/layout/columns).
+To create a new row of application, add a new `<div>` element with the following classes `<div class="row justify-content-center">`. The `<div class="col-lg-4 col-md-6 col-12">` will be placed inside the `<div class="row justify-content-center">`. For information on the column and row classes in these `<div>` elements, visit [Bootstrap's documentation on rows and columns](https://getbootstrap.com/docs/5.3/layout/columns).
 
 After updating the Applications section, you can render `index.html` in a local server to check how it looks and if the presentation is how you intended.
 
@@ -481,16 +499,16 @@ After updating the Applications section, you can render `index.html` in a local 
 
 The JavaScript behind the gallery section can be found in `home.js`, but this does not need to updated to add a picture to the Gallery section.
 
-To add pictures, there are two places to add: the picture element and the element for the dots displayed under the gallery images.
+To add pictures, there are two elements to add: the picture element and the element for the dots displayed under the gallery images.
 
-The structure of each gallery image is displayed as follows. The image and caption are surrounded by a `<div>` with the classes `class="slides picSlides"`. Inside that `<div>`, there is an `<img>` with a `src` that links to the image, which should be placed with the other gallery images in the `img/gallery/` folder. There is also style applied to the image specifying `style="width:100%"`. After the image in the `<div>` is another `<div>` with the class `class="caption"`, and the text content in that `<div>` should describe the image.
+The structure of each gallery image is as follows. The image and caption are surrounded by a `<div>` with the classes `class="slides picSlides"`. Inside that `<div>`, there is an `<img>` with a `src` that links to the image, which should be placed with the other gallery images in the `img/gallery/` folder. There is also style applied to the image specifying `style="width:100%"`. After the image in the `<div>` is another `<div>` with the class `class="caption"`, and the text content in that `<div>` should describe the image.
 
 An example of this structure is shown below. To add a new picture, first add this slide in the order you want it to appear in the carousel inside the `<div class="slideshow-container">`.
 
 ```
 <div class="slides picSlides">
     <img src="pathToImage" style="width:100%">
-    <div class="caption">Caption for your image</div>
+    <div class="caption">Caption_for_your_image</div>
 </div>
 ```
 
@@ -510,19 +528,28 @@ For example, if there are three pictures, the dots `html` section should resembl
 </div>
 ```
 
-To change pictures in the gallery, change the `src` path in the `<img>` element, and update the caption to a relevant description of the new picture.
+To update pictures in the gallery, change the `src` path in the `<img>` element, and update the caption to an updated description for the new picture.
 
 After updating the Gallery section, you can render `index.html` in a local server to test scrolling through the gallery and check that the presentation is as you intended.
 
 ### Updating the Recent News section
 
-Each news panel is set up the same way. There is a `<div>` with the class `class="newNews"` that contains the panel.
+To update information in the Recent News section, update the following six places when applicable:
 
-Inside the `<div>`, there is a `<div>` with the class `class="row"`, which creates a row that contains the news label on the left and the news date on the right. In the `<div class="row">`, there is a `<div class="col-sm-6 col-12 news_label">`, which contains the label of what type of news is being displayed. The label has two parts: a relevant icon and a description of the label.
+1. The relevant icon for the news type (ex: a calendar icon)
+2. The description of the news type (ex: "Event")
+3. The date the news takes place (ex: MAY 3 - 5, 2023)
+4. The name of the news (ex: Workshop at the CMBBE symposium)
+5. A relevant link for more information on the annoucement (ex: https://www.cmbbe-symposium.com/2023/workshops/)
+6. The place the news takes place (ex: Takes place in Paris, France)
 
-The icons used in this website come from [fontawesome](https://fontawesome.com/search?o=r&m=free).
+Each news panel is set up the same way. A `<div>` with the class `class="newNews"` contains the `html` elements containing the information on the recent news announcement. To update an existing news panel, you can simply change the text content inside the `<div class="newNews">` in the relevant places. To add a new panel, you can duplicate another Recent news announcement and update the text content in the relevant places.
 
-For example, to label the news as an "Event," a calendar icon from fontawesome is used and the description is "Event." The `html` code for this would resemble the following.
+Inside the `<div class="newNews">`, there is a `<div>` with the class `class="row"`, which creates a row with [Bootstrap](https://getbootstrap.com/docs/5.3/layout/columns) that contains the news label on the left and the news date on the right.
+
+In the `<div class="row">`, there is a `<div class="col-sm-6 col-12 news_label">`, which contains the label of what type of news is being displayed. The label has two parts: a relevant icon and text for the label. The icons used in this website come from [fontawesome](https://fontawesome.com/search?o=r&m=free).
+
+For example, to label the news as an "Event," a calendar icon from fontawesome is used and the label text content is "Event." The `html` code for this would resemble the following.
 
 ```
 <div class="col-sm-6 col-12 news_label">
@@ -531,7 +558,7 @@ For example, to label the news as an "Event," a calendar icon from fontawesome i
 </div>
 ```
 
-Additionally in the `<div class="row">` is the `<div>` for the date of when the news is relevant, which has the classes `<div class="col-sm-6 col-12 news_label">`. Inside this `<div>`, there is a `<p>` element, with the date of when the event will take place.
+Additionally in the `<div class="row">`, there is the `<div>` for the date, which has the classes `<div class="col-sm-6 col-12 news_date">`. Inside this `<div>`, there is a `<p>` element, with the date of when the event will take place.
 
 The `html` code for this would resemble the following.
 
@@ -541,7 +568,17 @@ The `html` code for this would resemble the following.
 </div>
 ```
 
-After the `<div class="row">`, there is a `<div>` with the class `class="news_name"`. This section is for the name/label of the news. Inside the `<div>`, there is an anchor element with a link to a relevant website regarding more information on the news.
+The following is an example of this code.
+
+```
+<div class="col-sm-6 col-12 news_date">
+    <p>MAY 3 - 5, 2023</p>
+</div>
+```
+
+Try to keep the formatting of the date consistent with the other news announcements.
+
+After the `<div class="row">`, there is a `<div>` with the class `class="news_name"`. This `<div>` is for the name of the news. Inside the `<div>`, there is an anchor `<a>` element with a `href` link to a relevant website regarding more information on the news and the attribute `target="_blank"` so that the link opens in a new tab. The text content of the `<a>` element would be the name of the news.
 
 For example, for a workshop, the code for this section would resemble
 
@@ -563,7 +600,9 @@ For example, if a workshop took place in Paris, France, the code for this sectio
 </div>
 ```
 
-All put together, the new panel for recent news would have the following code.
+Try to keep the formatting for the locations consistent with the other news announcements.
+
+All put together, an example of a new news announcement would resemble the following.
 
 ```
 <div class="newNews">
@@ -587,27 +626,11 @@ All put together, the new panel for recent news would have the following code.
 </div>
 ```
 
-To update information in the Recent News section, update the following five places when applicable:
-
-1. The relevant icon for the news type (ex: a calendar icon)
-2. The description of the news type (ex: "Event")
-3. The date the news takes place (ex: MAY 3 - 5, 2023)
-4. The name of the news (ex: Workshop at the CMBBE symposium)
-5. The place the news takes place (ex: Takes place in Paris, France)
-
 After updating the Recent News section, you can render `index.html` in a local server to check how it looks and if the presentation is how you intended.
 
 ### Updating the Team section
 
-To add a new profile in the Team section, copy the template code below and change the code in the following places:
-
-1. Replace `href="path_link"` with a relevant link that would give the user more information on the person. This could be a link to an institutional profile page or a LinkedIn profile.
-
-2. Replace `src="image_source"` with the path to an image of the person. Images for these sections would be placed in the `img/team/` folder. The dimensions of this image must be a perfect square, so that the profile icon is circular.
-
-3. Replace `alt="alt_of_image"` with a description of what the image is showing. This alternate description will only show if the website cannot access the image.
-
-4. Replace `name_of_person` with the first and last name of the person you want to add.
+To add a new profile in the Team section, copy the template code below and change the code in the following places.
 
 ```
 <div class="col-md-4 col-6">
@@ -617,7 +640,7 @@ To add a new profile in the Team section, copy the template code below and chang
         <div class="team-content">
             <img src="image_source" alt="alt_of_image">
             <div class="team-hover text-center"  style="cursor:pointer">
-            <p style="font-size: 17px;">name_of_person</p>
+                <p style="font-size: 17px;">name_of_person</p>
             </div>
         </div>
         </a>
@@ -626,17 +649,21 @@ To add a new profile in the Team section, copy the template code below and chang
 </div>
 ```
 
+1. Replace `path_link` with a relevant link that would give the user more information on the person. This could be a link to an institutional profile page or a LinkedIn profile.
+
+2. Replace `image_source` with the path to an image of the person. The dimensions of this image must be a perfect square, so that the profile icon is circular. Images for these sections would be placed in the `img/team/` folder.
+
+3. Replace `alt_of_image` with a description of what the image is showing. This alternate description will only show if the website cannot access the image.
+
+4. Replace `name_of_person` with the first and last name of the person you want to add.
+
 Place your modified code alongside the other `<div class="col-md-4 col-6">` elements in the order that you wish for the team member to appear in.
 
 After updating the Team section, you can render `index.html` in a local server to check if the presentation is how you intended and that the profile links are functional.
 
 ### Updating the Institutions or Acknowledgements section
 
-To add an institution or acknowledgement, find the Institutions or Acknowledgements section respectively. Copy the code below and change it in the following places:
-
-1. Replace `src="image_source"` with the path to image logo of the institution or acknowledgement. Logos for these sections would be placed in the `img/institutions/` folder.
-
-2. Replace `alt="alt_of_image"` with a description of what the image is showing. This alternate description will only show if the website cannot access the image.
+To add an institution or acknowledgement, find the Institutions or Acknowledgements section by searching for `id="institutions"` and `id="acknowledgements"` respectively. Copy the code below and change it in the following places:
 
 ```
 <div class="col-sm-6 col-12 creditContainer">
@@ -644,17 +671,21 @@ To add an institution or acknowledgement, find the Institutions or Acknowledgeme
 </div>
 ```
 
+1. Replace `image_source` with the path to the image of the logo of the institution or acknowledgement. These images should be placed in the `img/institutions/` folder.
+
+2. Replace `alt_of_image` with a description of what the image is showing. This alternate description will only show if the website cannot access the image.
+
 Place your modified code alongside the other `<div class="col-sm-6 col-12 creditContainer">` elements in the order that you wish for institution or acknowledgement to appear in. These elements should all be placed inside the `<div class="row creditsRow">`.
 
 After updating the Institutions or Acknowledgements section, you can render `index.html` in a local server to check if the presentation is how you intended.
 
 ### Adding new sections
 
-Each section is set up the same way. There is a `<div>` element with the class `class="section"` or `class="everyOtherSection"`.
+Each section is set up the same way. A `<div>` element with the class `class="section"` or `class="everyOtherSection"` surrounds the elements that define the content for the new section.
 
-The landing page has a color scheme in which every other section has the `background-color: var(--lightbluegrey)`. This is manually done by alternating between applying the class `<div class="section"> `and `<div class="everyOtherSection">` to the landing page sections. When adding a new section, make sure to update this class in every section to maintain an alternating pattern and keep the landing page consistent.
+The landing page has a color scheme in which every other section has the `background-color: var(--lightbluegrey)`. This is implemented by alternating between applying the class `<div class="section"> `and `<div class="everyOtherSection">` to the landing page sections. When adding a new section, make sure to maintain the alternating pattern in every section to keep the landing page consistent.
 
-After that `<div>` element, there is a `<div class="newSectionHeader">` with an `<h1>` element in it. The `<h1>` element has an `id` that the navigation bar in the header of the landing page uses to skip to that section of the page.
+Inside that `<div>` element, there is a `<div class="newSectionHeader">` with an `<h1>` element in it. The `<h1>` element has an `id` that the navigation bar in the header of the landing page uses to skip to that section of the page.
 
 After `<div class="newSectionHeader">`, there is a `<div class="newSectionContent">` which is the `<div>` element that contains the content of the section. In this `<div>`, you can add what you wanted in your new section.
 
@@ -681,6 +712,8 @@ Once you have created the new section in `index.html`, update the navigation bar
 </tr>
 ```
 
-The `<tr>` element represents a new row in the `<table>` element which defines the navigation bar. The `<tr>` element must have two classes. The first class must be `skipTo`, which styles the row and adds functionality to the navigation link. The second class must be the `id` attribute of the `<h1>` header of your new section. The `<p>` element must have the class `class="skipItem"`, a class which styles the navigation link.
+The navigation bar in the landing page is made using a `<table>` element.
+
+The `<tr>` element represents a new row in table. The `<tr>` element must have two classes. The first class must be `skipTo`, which styles the row and adds functionality to the navigation link. The second class must be the `id` attribute of the `<h1>` header of your new section. The `<p>` element must have the class `class="skipItem"`, which styles the navigation link.
 
 After adding a new section, you can render `index.html` in a local server to check if the navigation bar link works and if the section displays as you intended.
