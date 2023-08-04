@@ -3,6 +3,7 @@ var currentScreenWidth;
 
 checkWidth();
 
+// checks the width for compatibility with mobile devices
 function checkWidth()
 {
     if (document.documentElement.clientWidth <= 767) {
@@ -13,6 +14,7 @@ function checkWidth()
         smallScreen = false;
     }
 
+    // updates the listeners on the menu with changes in width
     if(document.documentElement.clientWidth != currentScreenWidth)
     {
         listenersForMenu();
@@ -20,26 +22,35 @@ function checkWidth()
     }
 }
 
+// updates the variable for width when the window size changes
 window.onresize = checkWidth();
 
+// the menu opens and closes depending on if the user is hovering
+// on the three bars in the header
+
+// if you click on three bars the navigation bar in the headers
+// then the navigation menu stays open
+
+// click_menuOn is true if the menu should be open whether or not
+// the user has hovered on the menu because they have clicked on the three bars
 var click_menuOn = false;
 
+// if the menu is open but the user is on a laptop,
+// they will not be able to close the menu with the hovering listeners
+// so this removes the listeners for hovering
+// at the window width when the navigation menu takes up the whole page (767px)
 function listenersForMenu() {
-    var smallWindow = false;
 
-        if(document.documentElement.clientWidth <= 767)
-        {
-            smallWindow = true;
-        }
-
+    // resets all listeners
     $("#naviconholder").off();
     $("#navElement").off();
     $("#naviconholder").unbind();
 
     //if the screen is not a small window (and won't open the full-screen navigation)
     //allows for hovering
-    if(!smallWindow)
+    if(!smallScreen)
     {
+        // listeners for hovering on icon
         $("#naviconholder").on("mouseover", function() {
             var iconForSkip = document.getElementById("iconForSkip");
             iconForSkip.style.color = "var(--white)";
@@ -55,6 +66,7 @@ function listenersForMenu() {
             }
         });
     
+        // listeners for hovering on the menu itself when it is expanded
         $("#navElement").on("mouseover", function() {
             toggleMenu();
         });
@@ -67,6 +79,7 @@ function listenersForMenu() {
         });
     }
 
+    // separate listeners for when the user clicks on the icon
     $("#naviconholder").click(function() {
         click_menuOn = !click_menuOn;
         var iconForSkip = document.getElementById("iconForSkip");
@@ -129,6 +142,10 @@ function PictureSlideShow(n) {
 // END CAROUSEL for pictures
 
 // CAROUSEL for animations
+// The code needs to be different if we wanted to implement another carousel,
+// so this is that code
+
+
 // var animeSlidePosition = 0;
 
 // animeSlideShow(animeSlidePosition);
@@ -172,6 +189,7 @@ function PictureSlideShow(n) {
 
 // END CAROUSEL for animations
 
+// sets up way to simulate clicking a link in JavaScript
 function clickLink(hrefTag, target_Blank = true)
 {
     var a = document.createElement("a");
@@ -185,6 +203,7 @@ function clickLink(hrefTag, target_Blank = true)
     a.click();
 }
 
+// opens and closes the menu depending on inputted parameters
 function toggleMenu(closeMenu = false)
 {
     checkWidth();
@@ -228,21 +247,14 @@ function toggleMenu(closeMenu = false)
     }
 }
 
+// scrolls to top with smoothscrolling
 function scrollToTop() {
 
     window.scrollTo({top: 0, behavior: 'smooth'});
     
 }
 
-function smoothScrollingToTag(id)
-{
-    var element = document.getElementById(id);
-
-    console.log(element.getBoundingClientRect())
-    var position = element.getBoundingClientRect().top;
-    window.scrollTo({top: (position + scrollY - 115), behavior: 'smooth'});
-}
-
+// opens and closes the license terms in the Download section
 function toggleLicense()
 {
     var element = document.getElementById("toggleLicense");
@@ -257,6 +269,7 @@ function toggleLicense()
     }
 }
 
+// listeners for skipToTop and logo
 $("#skipToTop").click(function() {
     scrollToTop();
 });
@@ -265,20 +278,32 @@ $("#logo").click(function() {
     clickLink("/index.html", false);
 });
 
+// listeners for clicks on an element with the class "skipTo"
 $(".skipTo").click(function() {
     var classes = $(this).attr("class");
+
+    // this reads the class after the "skipTo" class
     var id = classes.split(/\s+/)[1];
+
+    // it directs the page to the section with that id
     clickLink("#" + id, false);
+
+    // if the viewer is viewing a small window
+    // then clicking on a link in the navigation bar
+    // will close the menu and reset the color of the icon
     if(smallScreen)
     {
         //closes menu if smallScreen
         var iconForSkip = document.getElementById("iconForSkip");
         iconForSkip.style.color = "var(--blue)";
+
+        // closes and resets the icon functionality
         toggleMenu(true);
         click_menuOn = false;
     }
 });
 
+// listeners for the license terms in the Download section
 $("#licenseTerms").click(function() {
     toggleLicense();
 });

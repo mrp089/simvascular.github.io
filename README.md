@@ -47,6 +47,8 @@ Thank you for updating SimVascular's documentation.
 
 The SimVascular website user guides can be found in the documentation folder, and the SimVascular website clinical test cases can be found in the clinical folder. In each folder, there are `html` files and their corresponding folder, which share the same name. For example, the folder associated with the `quickguide.html` file is named quickguide.
 
+The JavaScript that adds functionality to the navigation bar and navigation section in the documentation is read from `documentation.js`.
+
 In each folder, there are markdown files from which the content in the `html` files is generated. [Markdown](https://daringfireball.net/projects/markdown) is a lightweight markup language with plain text formatting syntax that can be editied using a text editor.
 
 The markdown files are accessed and translated into `html` with the `<zero-md>` element, which is placed in the `html` file. Documentation on `<zero-md>` can be found [here](https://zerodevx.github.io/zero-md/).
@@ -420,7 +422,7 @@ Try to keep the order of the pages in the Documentation section of the landing p
 
 Thank you for updating SimVascular's landing page.
 
-Unlike the user guide and clinical test case pages, the landing page is written purely in `html` and is not generated from markdown files.
+Unlike the user guide and clinical test case pages, the landing page is written purely in `html` and is not generated from markdown files. The JavaScript that adds functionality to the links and gallery in the landing page is read from `home.js`.
 
 The landing page using styling from [Bootstrap](https://getbootstrap.com/), a library for responsive layout because we want the website to be as compatible with mobile devices as possible.
 
