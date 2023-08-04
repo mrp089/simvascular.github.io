@@ -162,14 +162,16 @@ For this reason, the way LaTex is written in markdown differs slightly from the 
 
 When the markdown is translated to `html`, the single `\` disappears, which removes the ability to properly convert the LaTex with Mathjax. By making the single `\` a double `\\`, when the markdown is translated, the `html` will have a single `\`, which will properly render.
 
-#### How to write the paths and links
+#### Notes on paths and links
 
+##### Relative paths in markdown files
 When the markdown file is rendered using the `<zero-md>` element, the element translates the file to `html`, which is read directly when viewing the `html` page. For this reason, the paths in the markdown files should be written relative to the `html` page, not relative to the markdown file.
 
 For example, in the `template` markdown files, which is placed in multiple folders, the path to the `quickguide.html` file would normally be "../../quickguide.html". However, because the file is rendered into an `html` page that will be next to the `quickguide.html` page, you should write the path as only "quickguide.html." This is because "quickguide.html" is the path relative to the `html` page into which the markdown will be translated.
 
 A note about referencing `id` attributes in anchor links:
 
+##### Referencing `id` attributes
 Anchor links in markdown files can reference the following `id` attributes:
 
 1. `id`s that are inside the same markdown file
@@ -178,6 +180,8 @@ Anchor links in markdown files can reference the following `id` attributes:
 4. All `id`s that are referenced in the landing page
 
 They cannot, however, reference `id`s that are inside other markdown files.
+
+##### Image paths on github.io
 
 #### Other notes for writing markdown
 
