@@ -49,9 +49,9 @@ The SimVascular website user guides can be found in the documentation folder, an
 
 In each folder, there are markdown files from which the content in the `html` files is generated. [Markdown](https://daringfireball.net/projects/markdown) is a lightweight markup language with plain text formatting syntax that can be editied using a text editor.
 
-The markdown files are accessed and translated into `html` through the `<zero-md>` element, which is placed in the `html` file. Documentation on `<zero-md>` can be found [here](https://zerodevx.github.io/zero-md/).
+The markdown files are accessed and translated into `html` with the `<zero-md>` element, which is placed in the `html` file. Documentation on `<zero-md>` can be found [here](https://zerodevx.github.io/zero-md/).
 
-The icons used in this website come from [fontawesome](https://fontawesome.com/search?o=r&m=free).
+The icons used in this website come from [fontawesome](https://fontawesome.com/search?o=r&m=free). Some styling comes from [Bootstrap](https://getbootstrap.com/) because we want to make the website as compatible with mobile phones as possible.
 
 Before editing, you should first fork **simvascular.github.io** to your own repository and sync it with https://github.com/SimVascular/simvascular.github.io.
 
