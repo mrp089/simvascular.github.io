@@ -2,7 +2,7 @@
 
 This is the repository for the SimVascular website.
 
-Click on the following links to skip to that section.
+You can use the following table with links to quickly skip to sections.
 
 <table>
         <tr>
