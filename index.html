@@ -19,7 +19,7 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-  <!-- Style CSS -->
+  <!-- This applies styling to the elements that aren't generated from markdown -->
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/grayscale.css">
   <link rel="stylesheet" href="css/standards.css">
@@ -47,13 +47,18 @@
   <body>
   <section class="header">
   <div class="navBar" id="navBar">
+      <!-- icon of three bars to open navigation section -->
       <div id="naviconholder">
         <i class="fa-solid fa-bars" id="iconForSkip"></i>
       </div>
         <nav id="navElement">
-        <!-- <div class="navBarRow rowFormat"> -->
           <div id="navigationSection">
+            <!-- using a <table> element for the navigation bar -->
             <table id="contentOfSkip">
+              <!-- first class is always "skipTo" -->
+              <!-- second class is the id corresponding to the section 
+                that the user will skip to with the link -->
+              <!-- each new section has a new row in the table -->
                 <tr class="skipTo capabilities">
                   <th>
                     <p class="skipItem">Capabilities</p>
@@ -119,9 +124,7 @@
                     <p class="skipItem">Acknowledgements</p>
                   </th>
                 </tr>
-            </table>
-          <!-- </div> -->
-        
+            </table>       
         </div>
       </nav>
     </div>
@@ -133,6 +136,7 @@
   </section>
   <section class="body">
     <div class="firstHeader" style="height: 100%">
+      <!-- background-image is the hero image -->
       <div class="introDescription">
         <h1 class="hero_title">Simvascular</h1>
       </div>
@@ -149,6 +153,7 @@
           and analysis.
         </p>
         <div class="checklist container">
+          <!-- uses <ul> and <li> to organize capabilities section -->
           <div class="row gx-5" style="width: 100%;">
             <ul class="col-lg-6 col-12 p-5">
               <li class="capabilitiesHeader">
@@ -232,6 +237,7 @@
         <h1 id="applications">Suite of Applications</h1>
       </div>
       <div class="newSectionContent">
+        <!-- the applications section has two rows -->
         <div class="row justify-content-center">
           <div class="col-lg-4 col-md-6 col-12">
             <div class="applicationsHeader">
@@ -291,72 +297,73 @@
       <h1 id="download">Download Simvascular</h1>
     </div>
     <div class="newSectionContent removePadding">
-        <div>
-          <div style="width: 100%;">
-              <h4 class="media-heading centerTitleText" id="licenseTerms">License Terms</h4><br>
-          </div>
-          <div class="media-body" id="toggleLicense" style="display: none">
-              <div class="BioPar justifiedText">
-                <h6 class="media-heading text-Left top-buffer">SimVascular components svModel, svMesh, svPre, and svPost are provided under the full BSD license subject to the terms below:</h6>
-                <p class="LegalStuff">
-                  Copyright © 1998-2007 Stanford University, Charles Taylor, Nathan Wilson, Ken Wang. See SimVascular Acknowledgements file for additional contributors to the source code.
-                  <br>
-                  <br>
-                  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-                  <br>
-                  <br>
-                  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-                  <br>
-                  <br>
-                  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-                </p>
-                <h6 class="media-heading text-Left">The SimVascular solver, including svSolver and svLS, is provided under a modified BSD-license subject to the permissions below:</h6>
-                <p class="LegalStuff">
-                  This software is Copyright © 2014 The Regents of the University of California. All Rights Reserved.
-                  Permission to copy, modify, and distribute this software and its documentation for educational, research and non-profit purposes, without fee, and without a  written agreement is hereby granted, provided that the above copyright notice, this paragraph and the following three paragraphs appear in all copies.
-                  <br>
-                  <br>
-                  Permission to make commercial use of this software may be obtained by contacting:
-                  <br>
-                  <br>
-                  Technology Transfer Office<br>
-                  9500 Gilman Drive, Mail Code 0910<br>
-                  University of California<br>
-                  La Jolla, CA 92093-0910<br>
-                  (858) 534-5815<br>
-                  invent@ucsd.edu
-                  <br>
-                  <br>
-                  This software program and documentation are copyrighted by The Regents of the University of California. The software program and documentation are supplied "as is", without any accompanying services from The Regents. The Regents does not warrant that the operation of the program will be uninterrupted or error-free. The end-user understands that the program was developed for research purposes and is advised not to rely exclusively on the program for any reason.
-                  <br>
-                  <br>
-                  IN NO EVENT SHALL THE UNIVERSITY OF CALIFORNIA BE LIABLE TO ANY PARTY FOR DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, INCLUDING LOST PROFITS, ARISING OUT OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF THE UNIVERSITY OF CALIFORNIA HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. THE  UNIVERSITY OF CALIFORNIA SPECIFICALLY DISCLAIMS ANY WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE SOFTWARE PROVIDED HEREUNDER IS ON AN "AS IS" BASIS, AND THE UNIVERSITY OF CALIFORNIA HAS NO OBLIGATIONS TO PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
-                </p>
-                <h6 class="media-heading text-Left">Licensing terms for external open source packages</h6>
-                <p class="LegalStuff">
-                  ITK: <a target="_blank" href="https://www.itk.org/ITK/project/license.html">https://www.itk.org/ITK/project/license.html</a><br>
-                  VTK: <a target="_blank" href="https://www.vtk.org/VTK/project/license.html">https://www.vtk.org/VTK/project/license.html</a><br>
-                  Tetgen: <a target="_blank" href="https://wias-berlin.de/software/tetgen/1.5/agpl-3.0-standalone.html">https://wias-berlin.de/software/tetgen/1.5/agpl-3.0-standalone.html</a><br>
-                </p>
-                <h6 class="media-heading text-Left">Commercial components</h6>
-                <p class="LegalStuff">
-                  MeshSim users should contact simmetrix for licensing information.
-                </p>
-                <h6 class="media-heading text-Left">Additional license information</h6>
-                <p class="LegalStuff">
-                  Please see the additional license information contained in the SimVascular source code.
-                </p>
-              </div>
-          </div>
+      <!-- this <div> contains the license terms button and terms -->
+      <div>
+        <div style="width: 100%;">
+            <h4 class="media-heading centerTitleText" id="licenseTerms">License Terms</h4><br>
         </div>
-        <div class="row">
-          <div class="col-lg-6 col-12 downloadLinks">
-            <a role="button" target="_blank" href="https://simtk.org/frs/index.php?group_id=188" class="btn btn-outline-light">Access installation package</a>
-          </div>
-          <div class="col-lg-6 col-12 downloadLinks">
-            <a role="button" target="_blank" href="https://simtk.org/projects/sv_tests" class="btn btn-outline-light">Download example projects</a>
-          </div>
+        <div class="media-body" id="toggleLicense" style="display: none">
+            <div class="BioPar justifiedText">
+              <h6 class="media-heading text-Left top-buffer">SimVascular components svModel, svMesh, svPre, and svPost are provided under the full BSD license subject to the terms below:</h6>
+              <p class="LegalStuff">
+                Copyright © 1998-2007 Stanford University, Charles Taylor, Nathan Wilson, Ken Wang. See SimVascular Acknowledgements file for additional contributors to the source code.
+                <br>
+                <br>
+                Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+                <br>
+                <br>
+                The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+                <br>
+                <br>
+                THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+              </p>
+              <h6 class="media-heading text-Left">The SimVascular solver, including svSolver and svLS, is provided under a modified BSD-license subject to the permissions below:</h6>
+              <p class="LegalStuff">
+                This software is Copyright © 2014 The Regents of the University of California. All Rights Reserved.
+                Permission to copy, modify, and distribute this software and its documentation for educational, research and non-profit purposes, without fee, and without a  written agreement is hereby granted, provided that the above copyright notice, this paragraph and the following three paragraphs appear in all copies.
+                <br>
+                <br>
+                Permission to make commercial use of this software may be obtained by contacting:
+                <br>
+                <br>
+                Technology Transfer Office<br>
+                9500 Gilman Drive, Mail Code 0910<br>
+                University of California<br>
+                La Jolla, CA 92093-0910<br>
+                (858) 534-5815<br>
+                invent@ucsd.edu
+                <br>
+                <br>
+                This software program and documentation are copyrighted by The Regents of the University of California. The software program and documentation are supplied "as is", without any accompanying services from The Regents. The Regents does not warrant that the operation of the program will be uninterrupted or error-free. The end-user understands that the program was developed for research purposes and is advised not to rely exclusively on the program for any reason.
+                <br>
+                <br>
+                IN NO EVENT SHALL THE UNIVERSITY OF CALIFORNIA BE LIABLE TO ANY PARTY FOR DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, INCLUDING LOST PROFITS, ARISING OUT OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF THE UNIVERSITY OF CALIFORNIA HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. THE  UNIVERSITY OF CALIFORNIA SPECIFICALLY DISCLAIMS ANY WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE SOFTWARE PROVIDED HEREUNDER IS ON AN "AS IS" BASIS, AND THE UNIVERSITY OF CALIFORNIA HAS NO OBLIGATIONS TO PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
+              </p>
+              <h6 class="media-heading text-Left">Licensing terms for external open source packages</h6>
+              <p class="LegalStuff">
+                ITK: <a target="_blank" href="https://www.itk.org/ITK/project/license.html">https://www.itk.org/ITK/project/license.html</a><br>
+                VTK: <a target="_blank" href="https://www.vtk.org/VTK/project/license.html">https://www.vtk.org/VTK/project/license.html</a><br>
+                Tetgen: <a target="_blank" href="https://wias-berlin.de/software/tetgen/1.5/agpl-3.0-standalone.html">https://wias-berlin.de/software/tetgen/1.5/agpl-3.0-standalone.html</a><br>
+              </p>
+              <h6 class="media-heading text-Left">Commercial components</h6>
+              <p class="LegalStuff">
+                MeshSim users should contact simmetrix for licensing information.
+              </p>
+              <h6 class="media-heading text-Left">Additional license information</h6>
+              <p class="LegalStuff">
+                Please see the additional license information contained in the SimVascular source code.
+              </p>
+            </div>
         </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-12 downloadLinks">
+          <a role="button" target="_blank" href="https://simtk.org/frs/index.php?group_id=188" class="btn btn-outline-light">Access installation package</a>
+        </div>
+        <div class="col-lg-6 col-12 downloadLinks">
+          <a role="button" target="_blank" href="https://simtk.org/projects/sv_tests" class="btn btn-outline-light">Download example projects</a>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -373,6 +380,7 @@
           </h2>
         </div>
         <div class="docSection">
+          <!-- place User Guide documentation links here -->
           <div class="col-md-6 col-12">
             <a class="docLinks" target="_blank" href="documentation/quickguide.html">Getting Started</a><br>
             <a class="docLinks" target="_blank" href="documentation/modeling.html">Modeling</a><br>
@@ -396,6 +404,7 @@
             Clinical Case Studies</h2> 
         </div>
         <div class="docSection">
+          <!-- place Clinical Test Case documentation links here -->
           <a class="docLinks" target="_blank" href="clinical/coronary.html">Coronary Normal</a><br>
           <a class="docLinks" target="_blank" href="clinical/aortofemoral1.html">Aortofemoral Normal - 1</a><br>
           <a class="docLinks" target="_blank" href="clinical/aortofemoral2.html">Aortofemoral Normal - 2</a><br>
@@ -422,6 +431,8 @@
       <h1 id="gallery">Gallery</h1>
     </div>
 
+    <!-- the commented code below can be used to add animations -->
+    <!-- code for animations can be found in home.js -->
     <div class="newSectionContent" style="padding-bottom: 30px;">
       <!-- <div class="col-sm-6 col-12">
         <div class="col-sm-6 col-12 headerForGalleryContainer">
@@ -540,6 +551,7 @@
           <p style="text-align: justify; margin: 0">These models can be used to simulate cardiovascular and pulmonary solid and fluid mechanics and will provide spatially and temporally-resolved benchmark solutions that can be used by academic, government and industry researchers to verify their computational methods. The SimVascular project provides an open source package for simulation to accompany the data provided in the model repository.</p>
         </div>
       </span>
+      <!-- the code below embeds the VMR website -->
       <span class="embedVMRcontainer col-lg-6 col-12">
         <embed id="embedVMR" type="text/html" src="https://www.vascularmodel.com/" width="100%" height="100%">
       </span>
@@ -608,64 +620,41 @@
       <h1 id="news">Recent News</h1>
     </div>
     <div class="newSectionContent removePadding">
-    <div class="newNews">
-      <div class="row">
-        <div class="col-sm-6 col-12 news_label"><i class="iconInHeader fa-regular fa-calendar"></i>Event</div>
-        <div class="col-sm-6 col-12 news_date"><p>MAY 3 - 5, 2023</p></div>
+      <!-- add newNews panels here -->
+      <div class="newNews">
+        <div class="row">
+          <div class="col-sm-6 col-12 news_label"><i class="iconInHeader fa-regular fa-calendar"></i>Event</div>
+          <div class="col-sm-6 col-12 news_date"><p>MAY 3 - 5, 2023</p></div>
+        </div>
+        <div class="news_name">
+          <a target="_blank" href="https://www.cmbbe-symposium.com/2023/workshops/">
+            Workshop at the CMBBE symposium
+          </a>
+        </div>
+        <div class="news_place">
+          Takes place in Paris, France
+        </div>
       </div>
-      <div class="news_name">
-        <a target="_blank" href="https://www.cmbbe-symposium.com/2023/workshops/">
-          Workshop at the CMBBE symposium
-        </a>
+      <div class="newNews">
+        <div class="row">
+          <div class="col-sm-6 col-12 news_label"><i class="iconInHeader fa-regular fa-calendar"></i>Event</div>
+          <div class="col-sm-6 col-12 news_date"><p>JUNE 4 - 8, 2023</p></div>
+        </div>
+        <div class="news_name">
+          <a target="_blank" href="https://sb3c.org/program-at-a-glance/workshops/">
+            Workshop at SB<sup>3</sup>C
+          </a>
+        </div>
+        <div class="news_place">
+          Takes place in Vail, Colorado
+        </div>
       </div>
-      <div class="news_place">
-        Takes place in Paris, France
-      </div>
-    </div>
-    <div class="newNews">
-      <div class="row">
-        <div class="col-sm-6 col-12 news_label"><i class="iconInHeader fa-regular fa-calendar"></i>Event</div>
-        <div class="col-sm-6 col-12 news_date"><p>JUNE 4 - 8, 2023</p></div>
-      </div>
-      <div class="news_name">
-        <a target="_blank" href="https://sb3c.org/program-at-a-glance/workshops/">
-          Workshop at SB<sup>3</sup>C
-        </a>
-      </div>
-      <div class="news_place">
-        Takes place in Vail, Colorado
-      </div>
-    </div>
-    <!-- <div class="listingOfWorkshops">
-      <p class="date">
-        MAY 3 - 5, 2023
-      </p>
-      <p class="workshopName">
-        <a target="_blank" href="https://www.cmbbe-symposium.com/2023/workshops/">
-          CMBBE SYMPOSIUM
-        </a>
-      </p>
-      <p class="date">
-        JUNE 4 - 8, 2023
-      </p>
-      <p class="workshopName">
-        <a target="_blank" href="https://sb3c.org/program-at-a-glance/workshops/">
-          SB<sup>3</sup>C
-        </a>
-      </p>
-    </div> -->
-  </div> 
+    </div> 
   </div>  
 
   <div class="section" style="padding-bottom: 30px">
     <div class="newSectionHeader">
       <h1 id="team">Team</h1>
-      <!-- <p class="subText">
-        <a style="font-size: 22px;" href="contributors.html" target="_blank">
-          For complete list of contributors
-          <i style="font-size: 18px;" class="fa-solid fa-arrow-up-right-from-square"></i>
-        </a>
-      </p> -->
     </div>
     <div class="team-container">
       <div class="row">
@@ -779,12 +768,6 @@
   <div class="section">
     <div class="newSectionHeader">
       <h1 id="acknowledgements">Acknowledgements</h1>
-      <!-- <p class="subText">
-        <a style="font-size: 22px;" href="sponsors_info.html" target="_blank">
-          For more details on sponsors
-          <i style="font-size: 18px;" class="fa-solid fa-arrow-up-right-from-square"></i>
-        </a>
-      </p> -->
     </div>
     <div class="newSectionContent">
       <div class="row creditsRow gx-5">
@@ -804,27 +787,11 @@
     </div>
     <div class="copyright">
       <h5 class="innerCopyright">Copyright © SimVascular Development Team - 2023</h5>
-  </div>
-  </div>
-
-  <!-- <div class="everyOtherSection" style="padding-bottom: 30px; margin-bottom: 0"> 
-    <div class="newSectionHeader">
-      <h1 id="contact">Contact Us</h1>
-      </div>
-
-      <div class="newSectionContent">
-        <h2 class= "contactHeaders">We are very interested in your feedback and comments.</h2>
-        <h3 class="contactDescription">Interact with other SimVascular users:</h3>
-        <h3 class="contactLinks">
-          <a href="https://simtk.org/forums/viewforum.php?f=188" target="_blank">SimVascular Public Forum</a>
-        </h3>
-        <h3 class="contactDescription">Help us to improve SimVascular:</h3>
-        <h3 class="contactLinks">
-          <a href="https://github.com/SimVascular/SimVascular/issues" target="_blank">Suggest new features or report bugs</a>
-        </h6>
     </div>
-  </div> -->
+  </div>
+
   </section>
+  
   <section class="skipToTopSection">
     <p id="skipToTop"><i class="fa-solid fa-arrow-up"></i></p>
   </section>

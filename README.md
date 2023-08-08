@@ -41,6 +41,8 @@ You can use the following table with links to quickly skip to sections.
 
 If markdown does not seem to be rendering properly, check out the <a href="#notes-on-writing-markdown-files">Notes on writing markdown files</a> section.
 
+If you still have questions after reading through this documentation, you can contact the developer of this website Carole Darve at carole.darve@gmail.com.
+
 ## Updating the documentation
 
 Thank you for updating SimVascular's documentation.
