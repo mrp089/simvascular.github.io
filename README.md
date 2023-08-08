@@ -148,7 +148,7 @@ To check that the markdown you have written will render correctly, you can rende
 
 #### Writing math equations in markdown
 
-Math in markdown files that are written in LaTex is rendered using [Mathjax](https://www.mathjax.org/). Inline math symbols are set apart with a set of $ and math equations that have their own line are set apart with a set of $$.
+Math in markdown files that are written in LaTeX is rendered using [Mathjax](https://www.mathjax.org/). Inline math symbols are set apart with a set of $ and math equations that have their own line are set apart with a set of $$.
 
 In order to render the math equations correctly, the `<zero-md>` elements must have the `no-shadow` attribute, and one `<zero-md>` element must have the `id="math"` attribute. The `id="math"` is used later to link each `<zero-md>` element with a Mathjax CDN with the following code.
 
@@ -162,9 +162,9 @@ In order to render the math equations correctly, the `<zero-md>` elements must h
 </script>
 ```
 
-This code adds the script to display LaTex with Mathjax after the markdown has been translated to `html` through the `<zero-md>` element. Because the markdown file is first translated to `html` then converted with Mathjax, the way LaTex is written in markdown differs slightly from the default.
+This code adds the script to display LaTeX with Mathjax after the markdown has been translated to `html` through the `<zero-md>` element. Because the markdown file is first translated to `html` then converted with Mathjax, the way LaTeX is written in markdown differs slightly from the default.
 
-The symbols `\,`, `\_`, and `\~` in LaTex should be written as `\\,`, `\\_`, and `\\~` in the markdown file.
+The symbols `\,`, `\_`, and `\~` in LaTeX should be written as `\\,`, `\\_`, and `\\~` in the markdown file.
 
 The single `\` in markdown will be removed when the code is translated to `html`, which will prevent Mathjax from rendering the styling correctly. This is the reason a double `\\` should be used. Markdown with `\\` is translated into `html` as `\`, which will then be properly rendered with Mathjax.
 
@@ -357,7 +357,7 @@ Once you have updated the navigationSection, you can render the `html` file you 
 
 In the `<section class="docsSection">`, the `template.html` page has a template structure that exemplifies how to set up the `<zero-md>` element to link markdown files to your `html` file. Every `<zero-md>` element is surrounded with a `<span>` element, which has an `id` attribute. This `id` should be referenced to skip to the section written in the markdown file that is linked to the `<zero-md>` element.
 
-The first `<zero-md>` element must have the `id="math"` attribute, but the following <zero-md> elements should not have this. Having at least one `<zero-md>` element with the `id="math"` attribute will allow any mathematical equations written in LaTex in the markdown files to be rendered correctly on the page using [Mathjax](https://www.mathjax.org/).
+The first `<zero-md>` element must have the `id="math"` attribute, but the following <zero-md> elements should not have this. Having at least one `<zero-md>` element with the `id="math"` attribute will allow any mathematical equations written in LaTeX in the markdown files to be rendered correctly on the page using [Mathjax](https://www.mathjax.org/).
 
 The example structure of this code is below.
 
