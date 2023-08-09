@@ -1,3 +1,9 @@
+/*------------------------------------------ 
+
+            THE ENTIRE PAGE
+
+---------------------------------------------*/
+
 html, body {
     background-color: white;
     color: var(--black);
@@ -15,9 +21,14 @@ html, body {
     background: var(--lighterpink); /* Gecko Browsers */
 }
 
+/*------------------------------------------ 
+
+            FONT AND STYLES FORMATTING
+
+---------------------------------------------*/
 
 html { 
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
     scroll-padding-top: 90px;
  }
 
@@ -59,6 +70,11 @@ h3 {
     font-size: 24px;
 }
 
+h4 {
+    margin: 15px 15px;
+    font-size: 20px;
+}
+
 @media only screen and (max-width: 767px) {
     h1 {
         font-size: 7vw;
@@ -71,19 +87,25 @@ h3 {
     h3 {
         font-size: 5vw;
     }
+
+    h4 {
+        font-size: 4vw;
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: var(--black)
+    color: var(--black);
+    margin: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 p {
     color: var(--black);
     font-size: 17px;
-}
-
-#text {
-    color: red;
+    margin: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .subText {
@@ -104,24 +126,11 @@ p {
     padding-right: 20px;
 }
 
-.mainSection {
-    overflow-x: hidden;
-    overflow-y: auto;
-    float: left;
-    width: 100%;
-    display: block;
-    height: fit-content;
-    position: relative;
-    /* padding: 25px; */
-    padding-top: 75px;
-    background-color: white;
-}
+/*------------------------------------------ 
 
-h1, h2, h3, h4, h5, h6, p {
-    margin: 0;
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
+            HEADER STYLING
+
+---------------------------------------------*/
 
 .navRow {
     /* padding-right: 10px; */
@@ -156,6 +165,16 @@ h1, h2, h3, h4, h5, h6, p {
     background-color: var(--black);
 }
 
+#logo {
+    cursor: pointer;
+}
+
+/*------------------------------------------ 
+
+            HEADER LOGO STYLING
+
+---------------------------------------------*/
+
 .headerLogoContainer {
     float: left;
     height: 100%;
@@ -172,148 +191,11 @@ h1, h2, h3, h4, h5, h6, p {
     }  
 }
 
-.everyOtherSection {
-    background-color: var(--lightbluegrey);
-    height: fit-content;
-    width: 100%;
-    display: block;
-    float: left;
-    padding: 15px;
-    margin-bottom: 15px;
-}
+/*------------------------------------------ 
 
-:host {
-    display: inline-block;
-}
+            headerNavBar STYLING
 
-.docsSection {
-    padding: 35px;
-    background-color: white;
-    width: calc(100% - 300px);
-}
-
-.navigationSection {
-    padding-top: 20px;
-    padding-right: 10px;
-    padding-left: 20px;
-    padding-bottom: 5px;
-    position: fixed;
-    overflow: auto;
-    height: calc(100% - 75px);
-    width: 300px;
-    background-color: var(--white);
-    display: inline-block;
-    z-index: 10;
-}
-
-@media only screen and (max-width: 768px) {
-    .navigationSection {
-       display: none;
-    }
-    .docsSection{
-        width: 100%;
-    }
-}
-
-.skipTo, #skipToTop, .clickLink {
-    padding: 5px;
-}
-
-.navigationSection div {
-    padding-bottom: 15px;
-}
-
-.navigationSection div h3 {
-    text-transform: none;
-    font-size: 22px;
-    text-align: center;
-}
-
-.navigationSection div h4 {
-    text-transform: none;
-    font-size: 19px;
-    padding: 0;
-    padding-left: 5px;
-    padding-top: 7px;
-    padding-bottom: 5px;
-    line-height: 25px;
-}
-
-.navigationSection div div h5 {
-    text-transform: none;
-    font-size: 17px;
-    line-height: 23px;
-}
-
-.navigationSection div div {
-    padding-left: 15px;
-}
-
-.navigationSection div div p {
-    padding-left: 5px;
-    margin: 0;
-    display: block;
-    font-size: 17px;
-    line-height: 20px;
-}
-
-.navigationSection div div p,  .navigationSection div h4, .navigationSection div div h5{
-    color: var(--black);
-    font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
-    cursor: pointer;
-    font-weight: normal;
-    letter-spacing: 0.2px;
-}
-
-.navigationSection div h4.clickLink {
-    color: var(--darkblue);
-}
-
-
-span:has(zero-md) {
-    height: fit-content;
-    display: block;
-    overflow-x: auto;
-}
-
-zero-md {
-    width: 100%;
-    overflow: auto;
-}
-
-.skipTo:hover, .clickLink:hover{
-    background-color: var(--lightbluegrey);
-}
-
-.skipToTopSection {
-    position: fixed;
-    bottom: 15px;
-    right: 15px;
-    height: 68px;
-    width: 68px;
-    background-color: var(--verydarkblue);
-    border-radius: 50px;
-    text-align: center;
-    cursor: pointer;
-    opacity: 0.5;
-}
-
-.skipToTopSection:hover {
-    opacity: 1;
-}
-
-#skipToTop {
-    font-size: 38px;
-    color: white;
-}
-
-.skipTo, .clickLink {
-    cursor: pointer;
-}
-
-#logo {
-    cursor: pointer;
-}
+---------------------------------------------*/
 
 #iconForSkip {
     padding-top: 0;
@@ -398,12 +280,169 @@ details summary::-webkit-details-marker {
     margin: 0;
     font-size: 17px;
 }
-/* 
-.navTitle:hover, .navSubLink:hover, .navLink:hover {
-    background-color: white;
-    color: var(--black);
-} */
 
 .navTitle:hover, .navTitle:has(+ div .navSubLink:hover), .navSubLink:hover a, .navLink:hover a {
+    color: white;
+}
+
+/*------------------------------------------ 
+
+        mainSection sections STYLING
+
+---------------------------------------------*/
+
+.mainSection {
+    overflow-x: hidden;
+    overflow-y: auto;
+    float: left;
+    width: 100%;
+    display: block;
+    height: fit-content;
+    position: relative;
+    /* padding: 25px; */
+    padding-top: 75px;
+    background-color: white;
+}
+
+:host {
+    display: inline-block;
+}
+
+.docsSection {
+    padding: 35px;
+    background-color: white;
+    width: calc(100% - 300px);
+}
+
+.navigationSection {
+    padding-top: 20px;
+    padding-right: 10px;
+    padding-left: 20px;
+    padding-bottom: 5px;
+    position: fixed;
+    overflow: auto;
+    height: calc(100% - 75px);
+    width: 300px;
+    background-color: var(--white);
+    display: inline-block;
+    z-index: 10;
+}
+
+@media only screen and (max-width: 768px) {
+    .navigationSection {
+       display: none;
+    }
+    .docsSection{
+        width: 100%;
+    }
+}
+
+/*------------------------------------------ 
+
+        navigationSection STYLING
+
+---------------------------------------------*/
+
+.skipTo, #skipToTop, .clickLink {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.skipTo:hover, .clickLink:hover{
+    background-color: var(--lightbluegrey);
+}
+
+.navigationSection div {
+    padding-bottom: 15px;
+}
+
+.navigationSection div h3 {
+    text-transform: none;
+    font-size: 22px;
+    text-align: center;
+}
+
+.navigationSection div h4 {
+    text-transform: none;
+    font-size: 19px;
+    padding: 0;
+    padding-left: 5px;
+    padding-top: 7px;
+    padding-bottom: 5px;
+    line-height: 25px;
+}
+
+.navigationSection div div h5 {
+    text-transform: none;
+    font-size: 17px;
+    line-height: 23px;
+}
+
+.navigationSection div div {
+    padding-left: 15px;
+}
+
+.navigationSection div div p {
+    padding-left: 5px;
+    margin: 0;
+    display: block;
+    font-size: 17px;
+    line-height: 20px;
+}
+
+.navigationSection div div p,  .navigationSection div h4, .navigationSection div div h5{
+    color: var(--black);
+    font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+    cursor: pointer;
+    font-weight: normal;
+    letter-spacing: 0.2px;
+}
+
+.navigationSection div h4.clickLink {
+    color: var(--darkblue);
+}
+
+/*------------------------------------------ 
+
+            zero-md STYLING
+
+---------------------------------------------*/
+
+span:has(zero-md) {
+    height: fit-content;
+    display: block;
+    overflow-x: auto;
+}
+
+zero-md {
+    width: 100%;
+    overflow: auto;
+}
+
+/*------------------------------------------ 
+
+            skipToTop button STYLING
+
+---------------------------------------------*/
+
+.skipToTopSection {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    height: 68px;
+    width: 68px;
+    background-color: var(--verydarkblue);
+    border-radius: 50px;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.skipToTopSection:hover {
+    opacity: 1;
+}
+
+#skipToTop {
+    font-size: 38px;
     color: white;
 }

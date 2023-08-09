@@ -262,7 +262,6 @@ p {
 table {
     z-index: 20;
     top: 75px;
-
     display: block;
     overflow: auto;
     margin-bottom: 65px;
@@ -425,31 +424,6 @@ th:hover {
         display: none;
     }
 }
-
-/*------------------------------------------ 
-
-            EMBEDDED TWITTER
-
----------------------------------------------*/
-/* .twitterBox {
-    border: 15px solid var(--lightblue);
-    padding: 50px;
-    margin: 20px;
-    height: 150px;
-}
-
-.twitter-timeline {
-    width: 100%;
-}
-
-.twitterContainer {
-    height: 420px;
-    width: 100%;
-    overflow: auto;
-    float: left;
-    padding-bottom: 15px;
-    border-radius: 25px;
-} */
 
 /*------------------------------------------ 
 
