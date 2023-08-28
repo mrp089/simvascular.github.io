@@ -35,7 +35,7 @@ We are interested in solving the DAE system for the solutions, $\textbf{y}\_{n+1
 
    $$\textbf{K}\left(\dot{\textbf{y}}\_{n+\alpha\_{m}}^{k}, \textbf{y}\_{n+\alpha\_{f}}^{k}, t\_{n+\alpha\_{f}}\right)\cdot\Delta \textbf{y}\_{n+\alpha\_{f}}^{k} = -\textbf{r}\left(\dot{\textbf{y}}\_{n+\alpha\_{m}}^{k}, \textbf{y}\_{n+\alpha\_{f}}^{k}, t\_{n+\alpha\_{f}}\right),$$
 
-   where $\textbf{K}\left(\dot{\textbf{y}}\_{n+\alpha\_{m}}, \textbf{y}\_{n+\alpha\_{f}}, t\_{n+\alpha\_{f}}\right) = \frac{\partial \textbf{r}\left(\dot{\textbf{y}}\_{n+\alpha\_{m}}, \textbf{y}\_{n+\alpha\_{f}}, t\_{n+\alpha\_{f}}\right)}{\partial \textbf{y}\_{n+\alpha\_{f}}}$ is the consistent tangent matrix.
+   where $\textbf{K}\left(\dot{\textbf{y}}\_{n+\alpha\_{m}}, \textbf{y}\_{n+\alpha\_{f}}, t\_{n+\alpha\_{f}}\right) = \frac{\partial \textbf{r}\left(\dot{\textbf{y}}\_{n+\alpha\_{m}}, \textbf{y}\_{n+\alpha\_{f}}, t\_{n+\alpha\_{f}}\right)}{\partial \textbf{y}\_{n+\alpha\_{f}}}$ is the tangent matrix.
 
    We solve this equation to find $\Delta \textbf{y}\_{n+\alpha\_{f}}^{k}$ and update our guess of $\dot{\textbf{y}}\_{n+\alpha\_{m}}$ and $\textbf{y}\_{n+\alpha\_{f}}$,
 
@@ -45,7 +45,7 @@ We are interested in solving the DAE system for the solutions, $\textbf{y}\_{n+1
 
    $$\dot{\textbf{y}}\_{n+\alpha\_{m}}^{k+1} = \dot{\textbf{y}}\_{n+\alpha\_{m}}^{k} + \frac{\alpha\_{m}}{\Delta t\alpha\_{f}\gamma}\Delta \textbf{y}\_{n+\alpha\_{f}}^{k}.$$
 
-   The consistent tangent matrix is
+   The tangent matrix is
 
    $$\textbf{K}\left(\dot{\textbf{y}}\_{n+\alpha\_{m}}, \textbf{y}\_{n+\alpha\_{f}}, t\_{n+\alpha\_{f}}\right) = \underset{\text{Term 1}}{\underbrace{\frac{\partial \textbf{E}\left(\textbf{y}\_{n+\alpha\_{f}}, t\_{n+\alpha\_{f}}\right)}{\partial \textbf{y}\_{n+\alpha\_{f}}}\cdot\dot{\textbf{y}}\_{n+\alpha\_{m}}}} + \frac{\alpha\_{m}}{\Delta t\alpha\_{f}\gamma}\textbf{E}\left(\textbf{y}\_{n+\alpha\_{f}}, t\_{n+\alpha\_{f}}\right) + \underset{\text{Term 2}}{\underbrace{\frac{\partial \textbf{F}\left(\textbf{y}\_{n+\alpha\_{f}}, t\_{n+\alpha\_{f}}\right)}{\partial \textbf{y}\_{n+\alpha\_{f}}}\cdot\textbf{y}\_{n+\alpha\_{f}}}} + \textbf{F}\left(\textbf{y}\_{n+\alpha\_{f}}, t\_{n+\alpha\_{f}}\right) + \underset{\text{Term 3}}{\underbrace{\frac{\partial \textbf{c}\left(\textbf{y}\_{n+\alpha\_{f}}, t\_{n+\alpha\_{f}}\right)}{\partial \textbf{y}\_{n+\alpha\_{f}}}}}.$$
 
@@ -93,285 +93,65 @@ $$\textbf{E}^{e}\left(\textbf{y}^{e}, t\right)\cdot\dot{\textbf{y}}^{e} + \textb
 
 <h4> Vessel elements </h4>
 
-<h5> Resistor </h5>
-
-<br>
-<figure>
-  <img class="svImg svImgMd" src="/documentation/rom_simulation/0d-solver/images/resistor.png">
-  <figcaption class="svCaption"> Resistor element.
-  </figcaption>
-</figure>
-
-The governing equations for the local resistor element are
-
-<!-- https://github.com/mathjax/MathJax/issues/329 -- need to add a backslash before all underscore in an equation -->
-
-$$P\_{in}^{e} - P\_{out}^{e} - RQ\_{in}^{e} = 0$$
-
-$$Q\_{in}^{e} - Q\_{out}^{e} = 0.$$
-
-The local contributions to the global arrays are
-
-\begin{gather}
-\textbf{y}^{e} =
-\begin{bmatrix}
-P\_{in}^{e} & Q\_{in}^{e} & P\_{out}^{e} & Q\_{out}^{e}
-\end{bmatrix}^T,
-\end{gather}
-
-\begin{gather}
-\textbf{F}^{e} =
-\begin{bmatrix}
-1 & -R & -1 & 0 \ \cr
-0 & 1 & 0 & -1
-\end{bmatrix}.
-\end{gather}
-
-<h5> Capacitor </h5>
-
-<br>
-<figure>
-  <img class="svImg svImgMd" src="/documentation/rom_simulation/0d-solver/images/capacitor.png">
-  <figcaption class="svCaption"> Capacitor element.
-  </figcaption>
-</figure>
-
-The governing equations for the local capacitor element are
-
-$$C\frac{d\left( P\_{in}^{e} - P\_{out}^{e} \right)}{dt} - Q\_{in}^{e} = 0$$
-
-$$Q\_{in}^{e} - Q\_{out}^{e} = 0.$$
-
-The local contributions to the global arrays are
-
-\begin{gather}
-\textbf{y}^{e} =
-\begin{bmatrix}
-P\_{in}^{e} & Q\_{in}^{e} & P\_{out}^{e} & Q\_{out}^{e}
-\end{bmatrix}^T,
-\end{gather}
-
-\begin{gather}
-\textbf{E}^{e} =
-\begin{bmatrix}
-C & 0 & -C & 0 \ \cr
-0 & 0 & 0 & 0
-\end{bmatrix},
-\end{gather}
-
-\begin{gather}
-\textbf{F}^{e} =
-\begin{bmatrix}
-0 & -1 & 0 & 0 \ \cr
-0 & 1 & 0 & -1
-\end{bmatrix}.
-\end{gather}
-
-<h5> Inductor </h5>
-
-<br>
-<figure>
-  <img class="svImg svImgMd" src="/documentation/rom_simulation/0d-solver/images/inductor.png">
-  <figcaption class="svCaption"> Inductor element.
-  </figcaption>
-</figure>
-
-The governing equations for the local inductor element are
-
-$$P\_{in}^{e} - P\_{out}^{e} - L\frac{dQ\_{in}^{e}}{dt} = 0$$
-
-$$Q\_{in}^{e} - Q\_{out}^{e} = 0.$$
-
-The local contributions to the global arrays are
-
-\begin{gather}
-\textbf{y}^{e} =
-\begin{bmatrix}
-P\_{in}^{e} & Q\_{in}^{e} & P\_{out}^{e} & Q\_{out}^{e}
-\end{bmatrix}^T,
-\end{gather}
-
-\begin{gather}
-\textbf{E}^{e} =
-\begin{bmatrix}
-0 & -L & 0 & 0 \ \cr
-0 & 0 & 0 & 0
-\end{bmatrix},
-\end{gather}
-
-\begin{gather}
-\textbf{F}^{e} =
-\begin{bmatrix}
-1 & 0 & -1 & 0 \ \cr
-0 & 1 & 0 & -1
-\end{bmatrix}.
-\end{gather}
-
-<h5> Resistor-Capacitor </h5>
-
-<br>
-<figure>
-  <img class="svImg svImgMd" src="/documentation/rom_simulation/0d-solver/images/RC.png">
-  <figcaption class="svCaption"> Resistor-Capacitor element.
-  </figcaption>
-</figure>
-
-The governing equations for the local resistor-capacitor element are
-
-$$P\_{in}^{e} - P\_{out}^{e} - RQ\_{in}^{e} = 0$$
-
-$$Q\_{in}^{e} - Q\_{out}^{e} - C\frac{dP\_{out}^{e}}{dt} = 0.$$
-
-The local contributions to the global arrays are
-
-\begin{gather}
-\textbf{y}^{e} =
-\begin{bmatrix}
-P\_{in}^{e} & Q\_{in}^{e} & P\_{out}^{e} & Q\_{out}^{e}
-\end{bmatrix}^T,
-\end{gather}
-
-\begin{gather}
-\textbf{E}^{e} =
-\begin{bmatrix}
-0 & 0 & 0 & 0 \ \cr
-0 & 0 & -C & 0
-\end{bmatrix},
-\end{gather}
-
-\begin{gather}
-\textbf{F}^{e} =
-\begin{bmatrix}
-1 & -R & -1 & 0 \ \cr
-0 & 1 & 0 & -1
-\end{bmatrix}.
-\end{gather}
-
-<h5> Resistor-Inductor </h5>
-
-<br>
-<figure>
-  <img class="svImg svImgMd" src="/documentation/rom_simulation/0d-solver/images/RL.png">
-  <figcaption class="svCaption"> Resistor-Inductor element.
-  </figcaption>
-</figure>
-
-The governing equations for the local resistor-inductor element are
-
-$$P\_{in}^{e} - P\_{out}^{e} - RQ\_{in}^{e} - L\frac{dQ\_{out}^{e}}{dt} = 0$$
-
-$$Q\_{in}^{e} - Q\_{out}^{e} = 0.$$
-
-The local contributions to the global arrays are
-
-\begin{gather}
-\textbf{y}^{e} =
-\begin{bmatrix}
-P\_{in}^{e} & Q\_{in}^{e} & P\_{out}^{e} & Q\_{out}^{e}
-\end{bmatrix}^T,
-\end{gather}
-
-\begin{gather}
-\textbf{E}^{e} =
-\begin{bmatrix}
-0 & 0 & 0 & -L \ \cr
-0 & 0 & 0 & 0
-\end{bmatrix},
-\end{gather}
-
-\begin{gather}
-\textbf{F}^{e} =
-\begin{bmatrix}
-1 & -R & -1 & 0 \ \cr
-0 & 1 & 0 & -1
-\end{bmatrix}.
-\end{gather}
-
-<h5> Resistor-Capacitor-Inductor </h5>
+<h5> BloodVessel </h5>
 
 <br>
 <figure>
   <img class="svImg svImgMd" src="/documentation/rom_simulation/0d-solver/images/RCL.png">
-  <figcaption class="svCaption"> Resistor-Capacitor-Inductor element.
+  <figcaption class="svCaption"> BloodVessel element.
   </figcaption>
 </figure>
 
-The governing equations for the local resistor-capacitor-inductor element are
+The BloodVessel element is a general block for modeling blood vessels. To use this block, the Poiseuille-based resistance must be specified. All other components (capacitance, inductance, and stenosis-based resistance) are optional. 
 
-$$P\_{in}^{e} - P\_{out}^{e} - RQ\_{in}^{e} - L\frac{dQ\_{out}^{e}}{dt} = 0$$
+<!-- All have a default value of zero, except for the curvature coefficient, which has a default value of 1. -->
+
+The governing equations for the local BloodVessel element, including the stenosis contribution [3], are
+
+$$P\_{in}^{e} - P\_{out}^{e} - R\left(Q\_{in}^{e}\right)Q\_{in}^{e} - L\frac{dQ\_{out}^{e}}{dt} = 0$$
 
 $$Q\_{in}^{e} - Q\_{out}^{e} - C\frac{dP\_{c}^{e}}{dt} = 0.$$
 
-$$P\_{in}^{e} - RQ\_{in}^{e} - P\_{c} = 0$$
+$$P\_{in}^{e} - R\left(Q\_{in}^{e}\right)Q\_{in}^{e} - P\_{c} = 0$$
+
+where $R\left(Q\right) = R\_{s}\left(Q\right) + R\_{p}$, $R\_{s}\left(Q\right) = K\_{t}\frac{\rho}{2A\_{o}^{2}}\left(\frac{A\_{o}}{A\_{s}} - 1\right)^{2}|Q|$, and $R\_{p} = \frac{8\mu L}{\pi r^{4}}.$
 
 The local contributions to the global arrays are
 
 \begin{gather}
-\textbf{y}^{e} =
-\begin{bmatrix}
-P\_{in}^{e} & Q\_{in}^{e} & P\_{out}^{e} & Q\_{out}^{e} & P\_{c}
-\end{bmatrix}^T,
+    \textbf{y}^{e} =
+        \begin{bmatrix}
+            P\_{in}^{e} & Q\_{in}^{e} & P\_{out}^{e} & Q\_{out}^{e} & P\_{c}
+        \end{bmatrix}^T,
 \end{gather}
 
 \begin{gather}
-\textbf{E}^{e} =
-\begin{bmatrix}
-0 & 0 & 0 & -L & 0 \ \cr
-0 & 0 & 0 & 0 & -C \ \cr
-0 & 0 & 0 & 0 & 0
-\end{bmatrix},
+    \textbf{E}^{e} =
+        \begin{bmatrix}
+            0 &  0 &  0 & -L &  0 \ \cr
+            0 &  0 &  0 &  0 & -C \ \cr
+            0 &  0 &  0 &  0 &  0
+        \end{bmatrix},
 \end{gather}
 
 \begin{gather}
-\textbf{F}^{e} =
-\begin{bmatrix}
-1 & -R & -1 & 0 & 0 \ \cr
-0 & 1 & 0 & -1 & 0 \ \cr
-1 & -R & 0 & 0 & -1
-\end{bmatrix}.
-\end{gather}
-
-<h5> Stenosis </h5>
-
-<br>
-<figure>
-  <img class="svImg svImgMd" src="/documentation/rom_simulation/0d-solver/images/stenosis.png">
-  <figcaption class="svCaption"> Stenosis element.
-  </figcaption>
-</figure>
-
-The governing equations for the local stenosis element [3] are
-
-$$P\_{in}^{e} - P\_{out}^{e} - R\_{pre}\left(Q\_{in}^{e}\right)Q\_{in}^{e} = 0$$
-
-$$Q\_{in}^{e} - Q\_{out}^{e} = 0,$$
-
-where $R\_{pre}\left(Q\right) = K\_{t}\frac{\rho}{2A\_{o}^{2}}\left(\frac{A\_{o}}{A\_{s}} - 1\right)^{2}|Q| + R\_{p}$ and $R\_{p} = \frac{8\mu L}{\pi r^{4}}.$
-
-The local contributions to the global arrays are
-
-\begin{gather}
-\textbf{y}^{e} =
-\begin{bmatrix}
-P\_{in}^{e} & Q\_{in}^{e} & P\_{out}^{e} & Q\_{out}^{e}
-\end{bmatrix}^T,
+    \textbf{F}^{e} =
+        \begin{bmatrix}
+            1 & -R\left(Q\_{in}^{e}\right) & -1 &  0 &  0 \ \cr
+            0 &  1 &  0 & -1 &  0 \ \cr
+            1 & -R\left(Q\_{in}^{e}\right) &  0 &  0 & -1
+        \end{bmatrix}.
 \end{gather}
 
 \begin{gather}
-\textbf{F}^{e} =
-\begin{bmatrix}
-1 & -R\_{pre}|Q\_{in}^{e}| - R\_{p} & -1 & 0 \ \cr
-0 & 1 & 0 & -1
-\end{bmatrix}.
+    \textbf{dF}^{e} =
+        \begin{bmatrix}
+            0 & -R\_{s}\left(Q\_{in}^{e}\right) & 0 &  0 & 0 \ \cr
+            0 &  0 &  0 & 0 & 0 \ \cr
+            0 & -R\_{s}\left(Q\_{in}^{e}\right) & 0 &  0 & 0
+        \end{bmatrix}.
 \end{gather}
 
-\begin{gather}
-\textbf{dF}^{e} =
-\begin{bmatrix}
-1 & -R\_{pre}|Q\_{in}^{e}| & -1 & 0 \ \cr
-0 & 0 & 0 & 0
-\end{bmatrix}.
-\end{gather}
 
 <h5> Junction </h5>
 
