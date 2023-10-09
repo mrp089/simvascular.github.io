@@ -43,6 +43,10 @@ If markdown does not seem to be rendering properly, check out the <a href="#note
 
 If you still have questions after reading through this documentation, you can contact the developer of this website Carole Darve at carole.darve@gmail.com.
 
+## Viewing the documentation locally
+
+When updating the documentation (see below), you can build it locally on your computer. If you're using Visual Studio Code, you can download the [Live Server Plugin](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer). Then, right-click anywhere in `index.html` and select `Open with Live Server`.
+
 ## Updating the documentation
 
 Thank you for updating SimVascular's documentation.
