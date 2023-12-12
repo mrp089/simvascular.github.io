@@ -17,7 +17,7 @@ this ROM can be complex enough to provide a good approximatation of circulatory 
 
 ## Centerlines Geometry
 
-The geometry of the one-dimensional networks used by the **sv1DSolver** is based on the centerlines computed from the surface
+The geometry of the vascular networks used by **1D** and **0D** solvers is based on the centerlines computed from the surface
 of a 3D geometric model. The 3D geometric model is created from image data using the typical
 SimVascular <a href="modeling.html"> modeling workflow</a>.
 
@@ -34,6 +34,27 @@ The source and target points are selected from the model caps defined in the Sim
   <figcaption> <i>The centerlines (right) computed from a 3D geometric model of the aorta and femoral arteries (left). </i></figcaption>
 </figure>
 <br>
+
+The centerline `.vtp` file contains a number of point arrays that contain useful information about the vascular network:
+- **BifurcationId**: Junction number in junctions and $-1$ in branches
+- **BifurcationIdTmp**: Internal junction number used during branch/junction splitting
+- **BranchId**: Branch number in branches and $-1$ in junctions
+- **BranchIdTmp**: Internal branch number used during branch/junction splitting
+- **CenterlineId**: Contains an $n$-dimensional array for $n$ outlets (and thus $n$ centerlines). Here, each centerline is one inlet-outlet connection. The CenterlineId array is 1 on all points that belong to a centerline and 0 otherwise. A point can belong to several centerlines, e.g., all points on the inlet branch will belong to all centerlines.
+- **CenterlineSectionBifurcation**: 1 if a point is inside a junction and 0 otherwise
+- **CenterlineSectionNormal**: Normal vector to centerline sections, obtained from the tangent vector to the centerline
+- **GlobalNodeId**: Sequential numbering of centerline points
+- **Path**: Starts from zero in every branch and contains the path length along the centerline
+
+Arrays inherited from [vmtkcenterlinesections](https://www.vmtk.org/vmtkscripts/vmtkcenterlinesections.html):
+- **CenterlineSectionArea**: Cross-sectional area of the vessel. Obtained from slicing the vessel at each centerline perpendicular to the centerline path.
+- **CenterlineSectionClosed**: 1 if a section is closed and 0 otherwise
+- **CenterlineSectionMaxSize**: Maximum diameter of each section
+- **CenterlineSectionMinSize**: Minimum diameter of each section
+- **CenterlineSectionShape**: Shape index, i.e. the ratio between minimum and maximum diameter
+
+Array inherited from [vmtkcenterlines](https://www.vmtk.org/vmtkscripts/vmtkcenterlines.html):
+- **MaximumInscribedSphereRadius**: Radius values of maximal inscribed spheres
 
 ### Network Geometry and 1D Simulation Mesh
 
